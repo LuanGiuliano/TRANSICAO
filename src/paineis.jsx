@@ -29,7 +29,11 @@ const C = {
 export function resumoCapa(id) {
   const c = capaDe(id)
   const get = (k) => Object.entries(c).find(([a]) => a.trim() === k)?.[1]
-  return { unidade: get(C.unidade), colab: get(C.colab) }
+  let u = get(C.unidade)
+  if (u && /DE PESSOAS/i.test(u) && !/GEST[AÃ]O DE PESSOAS/i.test(u)) {
+    u = u.replace(/DE PESSOAS/gi, 'DE PESSOAL')
+  }
+  return { unidade: u, colab: get(C.colab) }
 }
 
 /* ---------- Capa de identificação ---------- */
@@ -40,6 +44,9 @@ export function Capa({ id }) {
     .map(([k, v]) => {
       if (/AUTORIDADE QUE CONFIRMA/i.test(k) || /saul/i.test(v)) {
         return [k, 'Hellen Nyde da Silva e Souza']
+      }
+      if (/DE PESSOAS/i.test(v) && /DIRETORIA/i.test(v) && !/GEST[AÃ]O DE PESSOAS/i.test(v)) {
+        return [k, v.replace(/DE PESSOAS/gi, 'DE PESSOAL')]
       }
       return [k, v]
     })
@@ -188,32 +195,47 @@ function F02() {
 /* ---------- F-03 ---------- */
 function F03() {
   const d = dados.DIPSE['F-03']
-  const [limiteMaisVagos, setLimiteMaisVagos] = useState(8)
+  const [filtroQuadro, setFiltroQuadro] = useState('ativos_extincao')
 
-  // Estagiário não é temporário: segregação conforme Lei Federal nº 11.788
-  const contratosTemporarios = d.contratos.filter((c) => !/ESTAGI/i.test(c.categoria))
-  const estagiariosContrato = d.contratos.filter((c) => /ESTAGI/i.test(c.categoria))
-
-  // Total de temporários (Magistério: 8.564 + Adm. Geral: 885 = 9.449)
-  const temporariosAtivos = contratosTemporarios.reduce((s, c) => s + (c.total || 0), 0)
-  // Total de estagiários (1.600)
-  const estagiariosAtivos = estagiariosContrato.reduce((s, c) => s + (c.total || 0), 0)
-
-  // Desligamentos de temporários até mar/2027 (585)
-  const desligTemporarios = contratosTemporarios.reduce((s, c) => s + c.desligamentos.slice(0, 4).reduce((a, b) => a + b, 0), 0)
-  const criado = d.cargos.reduce((s, c) => s + c.criado, 0)
-  const vago = d.cargos.reduce((s, c) => s + c.vago, 0)
+  // Cargos efetivos e comissionados
   const efetivos = d.cargos.filter((c) => /EFETIVO|Estáveis/i.test(c.natureza || ''))
+  const cargosAtivosExt = d.cargos.filter((c) => c.situacao === 'Ativo' || c.situacao === 'Em extinção')
+  const cargosComissao = d.cargos.filter((c) => c.situacao === 'Comissionado')
+
+  const cargosExibidos = d.cargos.filter((c) => {
+    if (filtroQuadro === 'ativos_extincao') return c.situacao === 'Ativo' || c.situacao === 'Em extinção'
+    if (filtroQuadro === 'comissionados') return c.situacao === 'Comissionado'
+    return true
+  })
+
+  const totQuadro = cargosExibidos.reduce(
+    (acc, c) => {
+      acc.criado += c.criado || 0
+      acc.ocupado += c.ocupado || 0
+      acc.vago += c.vago || 0
+      return acc
+    },
+    { criado: 0, ocupado: 0, vago: 0 }
+  )
+  const pctMedioQuadro = totQuadro.criado > 0 ? ((totQuadro.ocupado / totQuadro.criado) * 100).toFixed(1) : '0.0'
+
   const porCat = {}
   efetivos.forEach((c) => {
     const k = c.categoria.trim()
     porCat[k] ||= { o: 0, v: 0 }
-    porCat[k].o += c.ocupado; porCat[k].v += c.vago
+    porCat[k].o += c.ocupado
+    porCat[k].v += c.vago
   })
   const cats = Object.keys(porCat)
-  
-  const todosMaisVagos = [...efetivos].sort((a, b) => b.vago - a.vago).map((c) => [c.cargo, c.vago])
-  const maisVagosExibidos = aplicarLimite(todosMaisVagos, limiteMaisVagos)
+
+  // Composição geral dos cargos efetivos (Ativos vs Em Extinção)
+  const totAtivosCriado = d.cargos.filter((c) => c.situacao === 'Ativo').reduce((s, c) => s + c.criado, 0)
+  const totExtincaoCriado = d.cargos.filter((c) => c.situacao === 'Em extinção').reduce((s, c) => s + c.criado, 0)
+  const propEfetivos = [
+    ['Cargos Ativos', totAtivosCriado],
+    ['Em Extinção (Art. 19 ADCT)', totExtincaoCriado],
+  ]
+
   const listaPss = (d.pss || []).filter((p) => !/03\/2024/i.test(p.nome))
 
   return (
@@ -235,16 +257,137 @@ function F03() {
             series={contratosTemporarios.map((c) => ({ nome: c.categoria.replace('TEMPORARIOS ATIVOS - ', '').trim(), valores: c.desligamentos }))}
           />
         </Bloco>
-        <Bloco titulo="Cargos efetivos: ocupados × vagos">
-          <Colunas categorias={cats.map((c) => c.toLowerCase())}
-            series={[{ nome: 'Ocupados', valores: cats.map((c) => porCat[c].o) }, { nome: 'Vagos', valores: cats.map((c) => porCat[c].v) }]} />
+        <Bloco titulo="Cargos efetivos: ocupados × vagos por categoria" nota="Magistério e Administração Geral da SEDUC.">
+          <Colunas
+            categorias={cats.map((c) => c.toLowerCase())}
+            series={[
+              { nome: 'Ocupados', valores: cats.map((c) => porCat[c].o) },
+              { nome: 'Vagos', valores: cats.map((c) => porCat[c].v) },
+            ]}
+          />
+        </Bloco>
+        <Bloco titulo="Composição do quadro efetivo (ativos × extinção)" nota="Professor Assistente PA-A a PA-D integra quadro suplementar em extinção.">
+          <Donut dados={propEfetivos} centro={fmt(totAtivosCriado + totExtincaoCriado)} sub="cargos criados" />
         </Bloco>
         <Bloco
-          titulo="Cargos efetivos com mais vagas"
-          extra={<LimiteControle total={todosMaisVagos.length} limite={limiteMaisVagos} onChange={setLimiteMaisVagos} opcoes={[8, 20, 'Todos']} />}
-          nota={`Distribuição de vagas em aberto na rede. Exibindo ${maisVagosExibidos.length} de ${todosMaisVagos.length}.`}
+          titulo="QUADRO DE RESUMO DOS CARGOS (ATIVOS E EXTINÇÃO)"
+          span="full"
+          nota="Detalhamento funcional e legal das carreiras ativas e em extinção da SEDUC conforme Lei nº 9.890/2023, Lei nº 7.442/2010 e atos normativos. Extraído das colunas oficiais da planilha DIPSE (Legislação, Natureza, Vagas Criadas, Ocupadas e Disponíveis)."
+          extra={
+            <div className="abas" style={{ gap: 6 }}>
+              <button
+                type="button"
+                className={`aba ${filtroQuadro === 'ativos_extincao' ? 'aba--on' : ''}`}
+                onClick={() => setFiltroQuadro('ativos_extincao')}
+                style={{ padding: '5px 12px', fontSize: 12 }}
+              >
+                Ativos e Extinção ({cargosAtivosExt.length})
+              </button>
+              <button
+                type="button"
+                className={`aba ${filtroQuadro === 'comissionados' ? 'aba--on' : ''}`}
+                onClick={() => setFiltroQuadro('comissionados')}
+                style={{ padding: '5px 12px', fontSize: 12 }}
+              >
+                Livre Nomeação ({cargosComissao.length})
+              </button>
+              <button
+                type="button"
+                className={`aba ${filtroQuadro === 'todos' ? 'aba--on' : ''}`}
+                onClick={() => setFiltroQuadro('todos')}
+                style={{ padding: '5px 12px', fontSize: 12 }}
+              >
+                Todos os Cargos ({d.cargos.length})
+              </button>
+            </div>
+          }
         >
-          <HBars dados={maisVagosExibidos} cor="#c4841d" />
+          <div className="tabela-wrap">
+            <table className="tabela">
+              <thead>
+                <tr>
+                  <th>Cargo</th>
+                  <th>Categoria</th>
+                  <th>Legislação Básica</th>
+                  <th>Natureza do Cargo</th>
+                  <th>Situação</th>
+                  <th className="num">Criado</th>
+                  <th className="num">Ocupado</th>
+                  <th className="num">Vago</th>
+                  <th>% Ocupação</th>
+                </tr>
+              </thead>
+              <tbody>
+                {cargosExibidos.map((c, idx) => {
+                  const pct = c.criado > 0 ? (c.ocupado / c.criado) * 100 : 0
+                  const corBarra = pct > 80 ? '#2e9e6b' : pct > 40 ? '#00838a' : '#c4841d'
+                  return (
+                    <tr key={idx} style={{ background: c.situacao === 'Em extinção' ? 'rgba(255, 243, 224, 0.35)' : undefined }}>
+                      <td>
+                        <strong>{c.cargo}</strong>
+                      </td>
+                      <td>
+                        <span style={{ fontSize: 11.5, color: 'var(--muted)', fontWeight: 600 }}>{c.categoria}</span>
+                      </td>
+                      <td>
+                        <div style={{ maxWidth: 360 }}>
+                          <span style={{ fontWeight: 600, color: 'var(--ink)' }}>{c.legislacao || '–'}</span>
+                          {c.ementa && (
+                            <div style={{ fontSize: 11, color: 'var(--muted)', marginTop: 2, lineHeight: 1.3 }} title={c.ementa}>
+                              {c.ementa}
+                            </div>
+                          )}
+                        </div>
+                      </td>
+                      <td>{c.natureza || '–'}</td>
+                      <td>
+                        {c.situacao === 'Ativo' && <span className="badge-tag badge-tag--ativo">Ativo</span>}
+                        {c.situacao === 'Em extinção' && <span className="badge-tag badge-tag--extincao">Em extinção</span>}
+                        {c.situacao === 'Comissionado' && <span className="badge-tag badge-tag--comissao">Comissionado</span>}
+                      </td>
+                      <td className="num">{fmt(c.criado)}</td>
+                      <td className="num">{fmt(c.ocupado)}</td>
+                      <td className="num">
+                        {c.vago > 0 ? (
+                          <span style={{ color: '#c0504d', fontWeight: 700 }}>{fmt(c.vago)}</span>
+                        ) : (
+                          '0'
+                        )}
+                      </td>
+                      <td>
+                        <div className="barra-taxa">
+                          <div className="barra-taxa__trilho">
+                            <div className="barra-taxa__fill" style={{ width: `${Math.min(pct, 100)}%`, background: corBarra }} />
+                          </div>
+                          <span className="barra-taxa__num">{pct.toFixed(1)}%</span>
+                        </div>
+                      </td>
+                    </tr>
+                  )
+                })}
+              </tbody>
+              <tfoot>
+                <tr style={{ background: '#eef3f6', fontWeight: 800 }}>
+                  <td colSpan="5">
+                    TOTAL ({filtroQuadro === 'ativos_extincao' ? 'CARGOS ATIVOS E EM EXTINÇÃO' : filtroQuadro === 'comissionados' ? 'LIVRE NOMEAÇÃO / COMISSIONADOS' : 'QUADRO GERAL'})
+                  </td>
+                  <td className="num">{fmt(totQuadro.criado)}</td>
+                  <td className="num">{fmt(totQuadro.ocupado)}</td>
+                  <td className="num" style={{ color: totQuadro.vago > 0 ? '#c0504d' : 'inherit' }}>
+                    {fmt(totQuadro.vago)}
+                  </td>
+                  <td>
+                    <div className="barra-taxa">
+                      <div className="barra-taxa__trilho">
+                        <div className="barra-taxa__fill" style={{ width: `${Math.min(Number(pctMedioQuadro), 100)}%`, background: '#00838a' }} />
+                      </div>
+                      <span className="barra-taxa__num">{pctMedioQuadro}%</span>
+                    </div>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
         </Bloco>
       </div>
       <Bloco titulo="Inventário – Processos seletivos simplificados" span="full">

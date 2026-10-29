@@ -155,6 +155,7 @@ textarea:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px
 .detalhe > .dados { grid-column: 1 / -1; }
 .dados { display: flex; flex-direction: column; gap: 22px; margin-bottom: 22px; }
 .bloco { background: #fff; border-radius: var(--radius); padding: 22px 24px; box-shadow: 0 2px 8px rgba(21,58,77,.06); min-width: 0; }
+.bloco--full { grid-column: 1 / -1; }
 .bloco__head { margin-bottom: 8px; }
 .bloco__titulo-linha { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
 .bloco__titulo { color: var(--ink); font-size: 15px; font-weight: 800; margin: 0; }
@@ -272,6 +273,49 @@ textarea:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px
 
 /* Tag destacada para AGA */
 .tag-aga { background: #e0f2f1; color: #00695c; border: 1px solid #b2dfdb; padding: 4px 10px; border-radius: 8px; font-size: 12px; font-weight: 700; display: inline-flex; align-items: center; gap: 6px; }
+
+/* Badges de situação dos cargos */
+.badge-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+.badge-tag--ativo { background: #e8f5e9; color: #2e7d32; }
+.badge-tag--extincao { background: #fff3e0; color: #b78103; border: 1px solid #ffe0b2; }
+.badge-tag--comissao { background: #e1f5fe; color: #0277bd; }
+
+/* Barra de proporção/taxa na tabela de cargos */
+.barra-taxa {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 100px;
+}
+.barra-taxa__trilho {
+  flex: 1;
+  height: 6px;
+  background: #edf2f5;
+  border-radius: 99px;
+  overflow: hidden;
+}
+.barra-taxa__fill {
+  height: 100%;
+  border-radius: 99px;
+  transition: width .4s ease;
+}
+.barra-taxa__num {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--ink);
+  min-width: 38px;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
 
 /* ===== Tooltip Padronizado do Sistema (SAGEP) ===== */
 .custom-tooltip {
@@ -412,6 +456,52 @@ textarea:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px
 }
 .hbars-wrap--scroll::-webkit-scrollbar-thumb:hover {
   background: var(--teal);
+}
+
+/* ===== Rodapé e Área de Créditos ===== */
+.rodape {
+  margin-top: 36px;
+  padding-top: 24px;
+  border-top: 1px solid #dce5ea;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.rodape p {
+  margin-bottom: 8px;
+}
+.rodape--detalhe {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px dashed #dce5ea;
+}
+.rodape__creditos {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border: 1px solid #cfe0e8;
+  box-shadow: 0 2px 6px rgba(21, 58, 77, 0.05);
+  color: var(--ink);
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 99px;
+  margin-bottom: 14px;
+}
+.rodape__creditos a {
+  color: var(--teal);
+  text-decoration: none;
+  font-weight: 700;
+}
+.rodape__creditos a:hover {
+  text-decoration: underline;
+}
+.relatorio-print-footer__dev {
+  margin-top: 5px;
+  font-size: 8.5pt;
+  color: #555555;
+  font-weight: 600;
 }
 
 /* ===== Cabeçalho e Rodapé de Impressão Oficial (PDF) ===== */

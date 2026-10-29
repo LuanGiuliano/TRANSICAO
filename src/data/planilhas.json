@@ -1,7 +1,7 @@
 {
  "DIOP": {
   "capa": {
-   "UNIDADE E RESPONSÁVEL PRINCIPAL": "DIRETORIA DE ORGANIZAÇÃO DE PESSOAS",
+   "UNIDADE E RESPONSÁVEL PRINCIPAL": "DIRETORIA DE ORGANIZAÇÃO DE PESSOAL",
    "COLABORADORES E RESPECTIVAS FONTES": "ANTHONY SAUL PINHEIRO MAGALHÃES, TAMARA DE SOUSA PEREIRA, ROSINELMA MEIRELES DA SILVA, ANA LUIZA LIMA DOS SANTOS",
    "ELABORADOR E CARGO": "ANTHONY SAUL PINHEIRO MAGALHÃES, ASSISTENTE DE GESTÃO GOVERNAMENTAL E EDUCACIONAL B",
    "AUTORIDADE QUE CONFIRMA ORIGEM E LOCALIZAÇÃO": "Hellen Nyde da Silva e Souza",
@@ -2766,10 +2766,6 @@
     {
      "titulo": "Link de acesso à planilha de gráficos referente aos meses de 2026",
      "url": "https://docs.google.com/spreadsheets/d/1v2PiKgiIvuys_q75-0At-Rl1XgR2XoJT6E1zsrPDZ_I/edit?gid=670181989#gid=670181989"
-    },
-    {
-     "titulo": "PLANILHA GERAL CAPO - ACESSE CLICANDO NO LINK ABAIXO",
-     "url": "https://docs.google.com/spreadsheets/d/19plv1xkG_ZwlyyeUOvUMCh9yMupAHnqYjRbPVa0se3I/edit?usp=sharing"
     }
    ]
   }
@@ -2789,7 +2785,7 @@
     {
      "produto": "LICENÇA PRÊMIO",
      "SOLICITAÇÕES": 4211.0,
-     "DEFERIDOS": 4283,
+     "DEFERIDOS": 4139.0,
      "INDEFERIDOS": 72.0,
      "SALDO": "não se aplica*",
      "EM ANALISE 3.0": 700.0,
@@ -2799,49 +2795,85 @@
      "produto": "LICENÇA METERNIDADE",
      "SOLICITAÇÕES": 297.0,
      "DEFERIDOS": 293.0,
-     "INDEFERIDOS": null,
-     "SALDO": null,
-     "EM ANALISE 3.0": null,
+     "INDEFERIDOS": "não se aplica",
+     "SALDO": "não se aplica",
+     "EM ANALISE 3.0": "não se aplica",
      "EM ANALISE 4.0": 7.0
     },
     {
      "produto": "LICENÇA APRIMORAMENTO",
      "SOLICITAÇÕES": 94.0,
-     "DEFERIDOS": null,
-     "INDEFERIDOS": null,
-     "SALDO": null,
-     "EM ANALISE 3.0": null,
+     "DEFERIDOS": "não se aplica",
+     "INDEFERIDOS": "não se aplica",
+     "SALDO": "não se aplica",
+     "EM ANALISE 3.0": "não se aplica",
      "EM ANALISE 4.0": 7.0
     },
     {
-     "produto": "LICENÇA SAÚDE",
-     "SOLICITAÇÕES": null,
-     "DEFERIDOS": null,
-     "INDEFERIDOS": null,
-     "SALDO": null,
-     "EM ANALISE 3.0": null,
-     "EM ANALISE 4.0": null
-    },
-    {
      "produto": "READAPTAÇÃO",
-     "SOLICITAÇÕES": null,
-     "DEFERIDOS": null,
-     "INDEFERIDOS": null,
-     "SALDO": null,
-     "EM ANALISE 3.0": null,
-     "EM ANALISE 4.0": null
+     "SOLICITAÇÕES": 102.0,
+     "DEFERIDOS": "não se aplica",
+     "INDEFERIDOS": "não se aplica",
+     "SALDO": "não se aplica",
+     "EM ANALISE 3.0": "não se aplica",
+     "EM ANALISE 4.0": 102.0
     },
     {
-     "produto": "PERÍCIA MEDICA",
-     "SOLICITAÇÕES": null,
-     "DEFERIDOS": null,
-     "INDEFERIDOS": null,
-     "SALDO": null,
-     "EM ANALISE 3.0": null,
-     "EM ANALISE 4.0": null
+     "produto": "PERÍCIA SIMPLES",
+     "SOLICITAÇÕES": 1635.0,
+     "DEFERIDOS": "não se aplica",
+     "INDEFERIDOS": "não se aplica",
+     "SALDO": "não se aplica",
+     "EM ANALISE 3.0": "não se aplica",
+     "EM ANALISE 4.0": 1635.0
+    },
+    {
+     "produto": "JUNTA MÉDICA",
+     "SOLICITAÇÕES": 348.0,
+     "DEFERIDOS": "não se aplica",
+     "INDEFERIDOS": "não se aplica",
+     "SALDO": "não se aplica",
+     "EM ANALISE 3.0": "não se aplica",
+     "EM ANALISE 4.0": 348.0
+    },
+    {
+     "produto": "LICENÇA ASSITÊNCIA",
+     "SOLICITAÇÕES": 74.0,
+     "DEFERIDOS": "não se aplica",
+     "INDEFERIDOS": "não se aplica",
+     "SALDO": "não se aplica",
+     "EM ANALISE 3.0": "não se aplica",
+     "EM ANALISE 4.0": 74.0
+    },
+    {
+     "produto": "ACIDENTEDE TRABALHO",
+     "SOLICITAÇÕES": 3.0,
+     "DEFERIDOS": "não se aplica",
+     "INDEFERIDOS": "não se aplica",
+     "SALDO": "não se aplica",
+     "EM ANALISE 3.0": "não se aplica",
+     "EM ANALISE 4.0": 3.0
+    },
+    {
+     "produto": "INCAPACIDADE DEFINITIVA",
+     "SOLICITAÇÕES": 1.0,
+     "DEFERIDOS": "não se aplica",
+     "INDEFERIDOS": "não se aplica",
+     "SALDO": "não se aplica",
+     "EM ANALISE 3.0": "não se aplica",
+     "EM ANALISE 4.0": 1.0
+    },
+    {
+     "produto": "AGENDAMNTO DE PERÍCIA",
+     "SOLICITAÇÕES": 2163.0,
+     "DEFERIDOS": "não se aplica",
+     "INDEFERIDOS": "não se aplica",
+     "SALDO": "não se aplica",
+     "EM ANALISE 3.0": "não se aplica",
+     "EM ANALISE 4.0": 2163.0
     }
    ],
-   "link": "https://datastudio.google.com/u/0/reporting/21160219-ab66-479e-910a-cbc2721b6d65/page/p_3vm1t80r8d",
+   "link": "https://docs.google.com/spreadsheets/d/1QsV4NS9dtzLkEZp0OSFFSCJpYH0WOfpbdSrEz_PHm4U/edit?gid=880278574#gid=880278574",
    "nota": "*Considerando o quantitativo de servidores ativos que possuem direito ao benefício, não é possível mensurar, de forma global, o saldo remanescente para gozo sem a prévia análise individualizada da situação funcional de cada servidor."
   },
   "F-04": {},
@@ -2956,259 +2988,387 @@
    "cargos": [
     {
      "categoria": "ADMINISTRAÇÃO GERAL",
+     "legislacao": "Lei nº 9.890, de 13 de abril de 2023",
+     "ementa": "Cria e estrutura as Carreiras de Gestão Governamental, Infraestrutura e Política Educacional e Gestão em \nSuporte Educacional na Secretaria de Estado de Educação (SEDUC); altera a Lei Estadual nº 7.442, de 2 de \njulho de 2010, que dispõe sobre o Plano de Cargos, Carreira e Remuneração dos Profissionais da Educação \nBásica da Rede Pública de Ensino do Estado do Pará.",
      "cargo": "ANALISTA DE GESTÃO GOVERNAMENTAL E POLÍTICA EDUCACIONAL",
      "natureza": "EFETIVO",
      "criado": 318.0,
      "ocupado": 127.0,
-     "vago": 191.0
+     "vago": 191.0,
+     "coluna_i": "",
+     "situacao": "Ativo"
     },
     {
      "categoria": "ADMINISTRAÇÃO GERAL",
+     "legislacao": "Lei nº 9.890, de 13 de abril de 2023",
+     "ementa": "Cria e estrutura as Carreiras de Gestão Governamental, Infraestrutura e Política Educacional e Gestão em \nSuporte Educacional na Secretaria de Estado de Educação (SEDUC); altera a Lei Estadual nº 7.442, de 2 de \njulho de 2010, que dispõe sobre o Plano de Cargos, Carreira e Remuneração dos Profissionais da Educação \nBásica da Rede Pública de Ensino do Estado do Pará.",
      "cargo": "ANALISTA DE SUPORTE EDUCACIONAL",
      "natureza": "EFETIVO",
      "criado": 259.0,
      "ocupado": 118.0,
-     "vago": 141.0
+     "vago": 141.0,
+     "coluna_i": "",
+     "situacao": "Ativo"
     },
     {
      "categoria": "ADMINISTRAÇÃO GERAL",
+     "legislacao": "Lei nº 9.890, de 13 de abril de 2023",
+     "ementa": "Cria e estrutura as Carreiras de Gestão Governamental, Infraestrutura e Política Educacional e Gestão em \nSuporte Educacional na Secretaria de Estado de Educação (SEDUC); altera a Lei Estadual nº 7.442, de 2 de \njulho de 2010, que dispõe sobre o Plano de Cargos, Carreira e Remuneração dos Profissionais da Educação \nBásica da Rede Pública de Ensino do Estado do Pará.",
      "cargo": "ANALISTA DE GESTÃO GOVERNAMENTAL E INFRAESTRUTURA EDUCACIONAL",
      "natureza": "EFETIVO",
      "criado": 65.0,
      "ocupado": 25.0,
-     "vago": 40.0
+     "vago": 40.0,
+     "coluna_i": "",
+     "situacao": "Ativo"
     },
     {
      "categoria": "ADMINISTRAÇÃO GERAL",
+     "legislacao": "Lei nº 9.890, de 13 de abril de 2023",
+     "ementa": "Cria e estrutura as Carreiras de Gestão Governamental, Infraestrutura e Política Educacional e Gestão em \nSuporte Educacional na Secretaria de Estado de Educação (SEDUC); altera a Lei Estadual nº 7.442, de 2 de \njulho de 2010, que dispõe sobre o Plano de Cargos, Carreira e Remuneração dos Profissionais da Educação \nBásica da Rede Pública de Ensino do Estado do Pará.",
      "cargo": "ASSISTENTE DE GESTÃO GOVERNAMENTAL E EDUCACIONAL",
      "natureza": "EFETIVO",
      "criado": 2194.0,
      "ocupado": 1537.0,
-     "vago": 657.0
+     "vago": 657.0,
+     "coluna_i": "",
+     "situacao": "Ativo"
     },
     {
      "categoria": "ADMINISTRAÇÃO GERAL",
+     "legislacao": "Lei nº 9.890, de 13 de abril de 2023",
+     "ementa": "Cria e estrutura as Carreiras de Gestão Governamental, Infraestrutura e Política Educacional e Gestão em \nSuporte Educacional na Secretaria de Estado de Educação (SEDUC); altera a Lei Estadual nº 7.442, de 2 de \njulho de 2010, que dispõe sobre o Plano de Cargos, Carreira e Remuneração dos Profissionais da Educação \nBásica da Rede Pública de Ensino do Estado do Pará.",
      "cargo": "AUXILIAR OPERACIONAL E EDUCACIONAL",
      "natureza": "EFETIVO",
      "criado": 5427.0,
      "ocupado": 3844.0,
-     "vago": 1583.0
+     "vago": 1583.0,
+     "coluna_i": "",
+     "situacao": "Ativo"
     },
     {
      "categoria": "ADMINISTRAÇÃO GERAL",
+     "legislacao": "Lei nº 9.890, de 13 de abril de 2023",
+     "ementa": "Cria e estrutura as Carreiras de Gestão Governamental, Infraestrutura e Política Educacional e Gestão em \nSuporte Educacional na Secretaria de Estado de Educação (SEDUC); altera a Lei Estadual nº 7.442, de 2 de \njulho de 2010, que dispõe sobre o Plano de Cargos, Carreira e Remuneração dos Profissionais da Educação \nBásica da Rede Pública de Ensino do Estado do Pará.",
      "cargo": "ASSISTENTE EM EDUCAÇÃO ESPECIAL",
      "natureza": "EFETIVO",
      "criado": 1872.0,
      "ocupado": 0,
-     "vago": 1872.0
+     "vago": 1872.0,
+     "coluna_i": "",
+     "situacao": "Ativo"
     },
     {
      "categoria": "MAGISTERIO",
+     "legislacao": "LEI Nº 7.643 DE 12/07/2012 (D.O DE 16/0/2012):",
+     "ementa": "ALTEROU OS ANEXOS I E II DA LEI Nº 7.442/2010 DO ARTIGO 38 E 46",
      "cargo": "PROFESSOR CLASSE ESPECIAL (AD-1, AD-2, AD-3 e AD-4) CLASSE I CLASSE II CLASSE III CLASSE IV",
      "natureza": "EFETIVO/Quadro Suplementar",
      "criado": 17934.0,
      "ocupado": 16263.0,
-     "vago": 1671.0
+     "vago": 1671.0,
+     "coluna_i": "",
+     "situacao": "Ativo"
     },
     {
      "categoria": "MAGISTERIO",
+     "legislacao": "LEI N° 7.047 DE 19/10/2007 (D.O DE 22/10/2007):",
+     "ementa": "CRIOU 4.827 CARGOS",
      "cargo": "ESPECIALISTA EM EDUCAÇÃO CLASSE I CLASSE II CLASSE II CLASSE IV",
      "natureza": "EFETIVO/Quadro Suplementar",
      "criado": 4287.0,
      "ocupado": 3738.0,
-     "vago": 549.0
+     "vago": 549.0,
+     "coluna_i": "",
+     "situacao": "Ativo"
     },
     {
      "categoria": "MAGISTERIO",
+     "legislacao": "DECRETO N° 11.008 DE 07/12/1978 (D.O DE 12/12/1978): FIXOU LOTAÇÃO EM 542 PARA PA-A E PA-B\nDECRETO N° 11.042 DE 21/12/1978 (D.O DE 27/12/1978): FIXOU LOTAÇÃO EM 3.180 PARA PA-A E PA-B\nLEI N° 5.351 DE 21/11/1986: CARGOS PERTENCENTES A QUADRO SUPLEMENTAR CONFORME ART. 11 ANEXO II\nLEI N° 7.442 DE 02/07/2010 (D.O DE 02/07/2010):CARGOS PERTENCENTES A QUADRO SUPLEMENTAR CONFORME ANEXO V\nLEI Nº 7.643 DE 12/07/2012 (D.O DE 16/0/2012): ALTEROU OS ANEXOS I E II DA LEI Nº 7.442/2010 DO ARTIGO 38 E 46",
+     "ementa": "Histórico Normativo de Lotação e Enquadramento de Cargos (PA-A e PA-B)",
      "cargo": "PROFESSOR ASSISTENTE PA-A PA-B PA-C PA-D",
      "natureza": "Estáveis (Art. 19 do ADCT) / Quadro Suplementar",
      "criado": 3722.0,
      "ocupado": 192.0,
-     "vago": 3530.0
+     "vago": 3530.0,
+     "coluna_i": "",
+     "situacao": "Em extinção"
     },
     {
      "categoria": "LIVRE NOMEAÇÃO",
+     "legislacao": "LEI 9.901/2023 (DOE de 03/05/2023)",
+     "ementa": "Dispõe sobre a reestruturação organizacional da SEDUC",
      "cargo": "SECRETÁRIO ESTADUAL DE EDUCAÇÃO",
      "natureza": "COMISSIONADO",
      "criado": 1.0,
      "ocupado": 1.0,
-     "vago": 0
+     "vago": 0,
+     "coluna_i": "",
+     "situacao": "Comissionado"
     },
     {
      "categoria": "LIVRE NOMEAÇÃO",
+     "legislacao": "LEI 9.901/2023 (DOE de 03/05/2023)",
+     "ementa": "Dispõe sobre a reestruturação organizacional da SEDUC",
      "cargo": "SECRETÁRIO ADJUNTO DE EDUCAÇÃO BÁSICA",
      "natureza": "COMISSIONADO",
      "criado": 1.0,
      "ocupado": 1.0,
-     "vago": 0
+     "vago": 0,
+     "coluna_i": "",
+     "situacao": "Comissionado"
     },
     {
      "categoria": "LIVRE NOMEAÇÃO",
+     "legislacao": "LEI 9.901/2023 (DOE de 03/05/2023)",
+     "ementa": "Dispõe sobre a reestruturação organizacional da SEDUC",
      "cargo": "SECRETÁRIO ADJUNTO DE GESTÃO E REGIME DE COLABORAÇÃO",
      "natureza": "COMISSIONADO",
      "criado": 1.0,
      "ocupado": 1.0,
-     "vago": 0
+     "vago": 0,
+     "coluna_i": "",
+     "situacao": "Comissionado"
     },
     {
      "categoria": "LIVRE NOMEAÇÃO",
+     "legislacao": "LEI 9.901/2023 (DOE de 03/05/2023)",
+     "ementa": "Dispõe sobre a reestruturação organizacional da SEDUC",
      "cargo": "SECRETÁRIO ADJUNTO DE PLENAJEMANTO E FINANÇAS",
      "natureza": "COMISSIONADO",
      "criado": 1.0,
      "ocupado": 1.0,
-     "vago": 0
+     "vago": 0,
+     "coluna_i": "",
+     "situacao": "Comissionado"
     },
     {
      "categoria": "LIVRE NOMEAÇÃO",
+     "legislacao": "LEI 9.901/2023 (DOE de 03/05/2023)",
+     "ementa": "Dispõe sobre a reestruturação organizacional da SEDUC",
      "cargo": "SECRETÁRIO ADJUNTO DE GESTÃO DE PESSOAS",
      "natureza": "COMISSIONADO",
      "criado": 1.0,
      "ocupado": 1.0,
-     "vago": 0
+     "vago": 0,
+     "coluna_i": "",
+     "situacao": "Comissionado"
     },
     {
      "categoria": "LIVRE NOMEAÇÃO",
+     "legislacao": "LEI 9.901/2023 (DOE de 03/05/2023)",
+     "ementa": "Dispõe sobre a reestruturação organizacional da SEDUC",
      "cargo": "SECRETÁRIO ADJUNTO DE LOGÍSTICA",
      "natureza": "COMISSIONADO",
      "criado": 1.0,
      "ocupado": 1.0,
-     "vago": 0
+     "vago": 0,
+     "coluna_i": "",
+     "situacao": "Comissionado"
     },
     {
      "categoria": "LIVRE NOMEAÇÃO",
+     "legislacao": "LEI 9.901/2023 (DOE de 03/05/2023)",
+     "ementa": "Dispõe sobre a reestruturação organizacional da SEDUC",
      "cargo": "SECRETÁRIO ADJUNTO DE INFRAESTRUTURA",
      "natureza": "COMISSIONADO",
      "criado": 1.0,
      "ocupado": 1.0,
-     "vago": 0
+     "vago": 0,
+     "coluna_i": "",
+     "situacao": "Comissionado"
     },
     {
      "categoria": "LIVRE NOMEAÇÃO",
+     "legislacao": "LEI 9.901/2023 (DOE de 03/05/2023)",
+     "ementa": "Dispõe sobre a reestruturação organizacional da SEDUC",
      "cargo": "CORREGEDOR",
      "natureza": "COMISSIONADO",
      "criado": 1.0,
      "ocupado": 1.0,
-     "vago": 0
+     "vago": 0,
+     "coluna_i": "",
+     "situacao": "Comissionado"
     },
     {
      "categoria": "LIVRE NOMEAÇÃO",
+     "legislacao": "LEI 9.901/2023 (DOE de 03/05/2023)",
+     "ementa": "Dispõe sobre a reestruturação organizacional da SEDUC",
      "cargo": "COORDENADOR DO NÚCLEO DE COMUNICAÇÃO",
      "natureza": "COMISSIONADO",
      "criado": 1.0,
      "ocupado": 1.0,
-     "vago": 0
+     "vago": 0,
+     "coluna_i": "",
+     "situacao": "Comissionado"
     },
     {
      "categoria": "LIVRE NOMEAÇÃO",
+     "legislacao": "LEI 9.901/2023 (DOE de 03/05/2023)",
+     "ementa": "Dispõe sobre a reestruturação organizacional da SEDUC",
      "cargo": "COORDENADOR DA CONSULTORIA JURÍDICA",
      "natureza": "COMISSIONADO",
      "criado": 1.0,
      "ocupado": 1.0,
-     "vago": 0
+     "vago": 0,
+     "coluna_i": "",
+     "situacao": "Comissionado"
     },
     {
      "categoria": "LIVRE NOMEAÇÃO",
+     "legislacao": "LEI 9.901/2023 (DOE de 03/05/2023)",
+     "ementa": "Dispõe sobre a reestruturação organizacional da SEDUC",
      "cargo": "CHEFE DE GABINETE",
      "natureza": "COMISSIONADO",
      "criado": 1.0,
      "ocupado": 1.0,
-     "vago": 0
+     "vago": 0,
+     "coluna_i": "",
+     "situacao": "Comissionado"
     },
     {
      "categoria": "LIVRE NOMEAÇÃO",
+     "legislacao": "LEI 9.901/2023 (DOE de 03/05/2023)",
+     "ementa": "Dispõe sobre a reestruturação organizacional da SEDUC",
      "cargo": "CHEFE DE GABINETE DE SECRETÁRIO ADJUNTO",
      "natureza": "COMISSIONADO",
      "criado": 6.0,
      "ocupado": 6.0,
-     "vago": 0
+     "vago": 0,
+     "coluna_i": "",
+     "situacao": "Comissionado"
     },
     {
      "categoria": "LIVRE NOMEAÇÃO",
+     "legislacao": "LEI 9.901/2023 (DOE de 03/05/2023)",
+     "ementa": "Dispõe sobre a reestruturação organizacional da SEDUC",
      "cargo": "COORDENADOR DO NÚCLEO DE CONTRATAÇÕES",
      "natureza": "COMISSIONADO",
      "criado": 1.0,
      "ocupado": 1.0,
-     "vago": 0
+     "vago": 0,
+     "coluna_i": "",
+     "situacao": "Comissionado"
     },
     {
      "categoria": "LIVRE NOMEAÇÃO",
+     "legislacao": "LEI 9.901/2023 (DOE de 03/05/2023)",
+     "ementa": "Dispõe sobre a reestruturação organizacional da SEDUC",
      "cargo": "COORDENADOR DO NÚCLEO DE CONTROLE INTERNO",
      "natureza": "COMISSIONADO",
      "criado": 1.0,
      "ocupado": 1.0,
-     "vago": 0
+     "vago": 0,
+     "coluna_i": "",
+     "situacao": "Comissionado"
     },
     {
      "categoria": "LIVRE NOMEAÇÃO",
+     "legislacao": "LEI 9.901/2023 (DOE de 03/05/2023)",
+     "ementa": "Dispõe sobre a reestruturação organizacional da SEDUC",
      "cargo": "COORDENADOR DO NÚCLEO DE GESTÃO ESTRATÉGICA",
      "natureza": "COMISSIONADO",
      "criado": 1.0,
      "ocupado": 1.0,
-     "vago": 0
+     "vago": 0,
+     "coluna_i": "",
+     "situacao": "Comissionado"
     },
     {
      "categoria": "LIVRE NOMEAÇÃO",
+     "legislacao": "LEI 9.901/2023 (DOE de 03/05/2023)",
+     "ementa": "Dispõe sobre a reestruturação organizacional da SEDUC",
      "cargo": "DIRETOR",
      "natureza": "COMISSIONADO",
      "criado": 23.0,
      "ocupado": 23.0,
-     "vago": 0
+     "vago": 0,
+     "coluna_i": "",
+     "situacao": "Comissionado"
     },
     {
      "categoria": "LIVRE NOMEAÇÃO",
+     "legislacao": "LEI 9.901/2023 (DOE de 03/05/2023)",
+     "ementa": "Dispõe sobre a reestruturação organizacional da SEDUC",
      "cargo": "ASSESSOR",
      "natureza": "COMISSIONADO",
      "criado": 9.0,
      "ocupado": 9.0,
-     "vago": 0
+     "vago": 0,
+     "coluna_i": "",
+     "situacao": "Comissionado"
     },
     {
      "categoria": "LIVRE NOMEAÇÃO",
+     "legislacao": "LEI 9.901/2023 (DOE de 03/05/2023)",
+     "ementa": "Dispõe sobre a reestruturação organizacional da SEDUC",
      "cargo": "ASSESSOR",
      "natureza": "COMISSIONADO",
      "criado": 6.0,
      "ocupado": 6.0,
-     "vago": 0
+     "vago": 0,
+     "coluna_i": "",
+     "situacao": "Comissionado"
     },
     {
      "categoria": "LIVRE NOMEAÇÃO",
+     "legislacao": "LEI 9.901/2023 (DOE de 03/05/2023)",
+     "ementa": "Dispõe sobre a reestruturação organizacional da SEDUC",
      "cargo": "ASSESSOR",
      "natureza": "COMISSIONADO",
      "criado": 5.0,
      "ocupado": 5.0,
-     "vago": 0
+     "vago": 0,
+     "coluna_i": "",
+     "situacao": "Comissionado"
     },
     {
      "categoria": "LIVRE NOMEAÇÃO",
+     "legislacao": "LEI 9.901/2023 (DOE de 03/05/2023)",
+     "ementa": "Dispõe sobre a reestruturação organizacional da SEDUC",
      "cargo": "ASSESSORIA",
      "natureza": "COMISSIONADO",
      "criado": 2.0,
      "ocupado": 2.0,
-     "vago": 0
+     "vago": 0,
+     "coluna_i": "",
+     "situacao": "Comissionado"
     },
     {
      "categoria": "LIVRE NOMEAÇÃO",
+     "legislacao": "LEI 9.901/2023 (DOE de 03/05/2023)",
+     "ementa": "Dispõe sobre a reestruturação organizacional da SEDUC",
      "cargo": "ASSESSORIA",
      "natureza": "COMISSIONADO",
      "criado": 1.0,
      "ocupado": 1.0,
-     "vago": 0
+     "vago": 0,
+     "coluna_i": "",
+     "situacao": "Comissionado"
     },
     {
      "categoria": "LIVRE NOMEAÇÃO",
+     "legislacao": "LEI 9.901/2023 (DOE de 03/05/2023)",
+     "ementa": "Dispõe sobre a reestruturação organizacional da SEDUC",
      "cargo": "COORDENADOR",
      "natureza": "COMISSIONADO",
      "criado": 59.0,
      "ocupado": 59.0,
-     "vago": 0
+     "vago": 0,
+     "coluna_i": "",
+     "situacao": "Comissionado"
     },
     {
      "categoria": "LIVRE NOMEAÇÃO",
+     "legislacao": "LEI 11.623 de 30/06/2026 (DOE 36.679)",
+     "ementa": "Cria cargos de provimento destinado ao assessoramento da direção das unidades escolas.",
      "cargo": "ASSESSOR ESCOLA DE APOIO A GESTAO - INDIGENAS",
      "natureza": "COMISSIONADO",
      "criado": 384.0,
      "ocupado": 275.0,
-     "vago": 109.0
+     "vago": 109.0,
+     "coluna_i": "",
+     "situacao": "Comissionado"
     }
    ]
   }

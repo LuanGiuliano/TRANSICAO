@@ -29,6 +29,8 @@ def capa(ws):
         if k and v:
             if 'AUTORIDADE QUE CONFIRMA' in k.upper():
                 v = 'Hellen Nyde da Silva e Souza'
+            if 'DE PESSOAS' in v.upper() and 'GESTÃO DE PESSOAS' not in v.upper():
+                v = re.sub(r'DE PESSOAS', 'DE PESSOAL', v, flags=re.I)
             d[k] = v
     return d
 
@@ -185,11 +187,35 @@ for r in range(21, 24):
 conc = {'nome': txt(s.cell(28, 1).value), 'validade': txt(s.cell(28, 2).value), 'obs': txt(s.cell(28, 5).value)}
 cargos = []
 for r in range(37, s.max_row + 1):
-    cat, nome = txt(s.cell(r, 1).value), txt(s.cell(r, 4).value)
-    cr, oc, vg = num(s.cell(r, 6).value), num(s.cell(r, 7).value), num(s.cell(r, 8).value)
-    if cat and nome and cr is not None:
-        cargos.append({'categoria': cat, 'cargo': re.sub(r'\s+', ' ', nome), 'natureza': txt(s.cell(r, 5).value),
-                       'criado': cr, 'ocupado': oc or 0, 'vago': vg or 0})
+    cat = txt(s.cell(r, 1).value)
+    leg = txt(s.cell(r, 2).value)
+    eme = txt(s.cell(r, 3).value)
+    nome = txt(s.cell(r, 4).value)
+    nat = txt(s.cell(r, 5).value)
+    cr = num(s.cell(r, 6).value)
+    oc = num(s.cell(r, 7).value)
+    vg = num(s.cell(r, 8).value)
+    col_i = txt(s.cell(r, 9).value)
+    if cat and nome and cr is not None and not cat.upper().startswith('TOTAL'):
+        nat_lower = (nat or '').lower()
+        if 'art. 19' in nat_lower or 'extinção' in nat_lower or 'pa-a' in (nome or '').lower():
+            sit = 'Em extinção'
+        elif 'comissionado' in nat_lower:
+            sit = 'Comissionado'
+        else:
+            sit = 'Ativo'
+        cargos.append({
+            'categoria': cat,
+            'legislacao': leg or '',
+            'ementa': eme or '',
+            'cargo': re.sub(r'\s+', ' ', nome).strip(),
+            'natureza': nat or '',
+            'criado': cr,
+            'ocupado': oc or 0,
+            'vago': vg or 0,
+            'coluna_i': col_i or '',
+            'situacao': sit
+        })
 res['DIPSE']['F-03'] = {'pss': pss, 'contratos': cont,
                         'contratos_cab': ['Dez/2026', 'Jan/2027', 'Fev/2027', 'Mar/2027', 'A partir de abr/2027'],
                         'concurso': conc, 'cargos': cargos}
