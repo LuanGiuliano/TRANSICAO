@@ -1,0 +1,390 @@
+import { useState } from 'react'
+import dados from './data/planilhas.json'
+import { F07 as DF07 } from './data/f07.js'
+import agaData from './data/aga_data.json'
+import { Kpi, Bloco, HBars, HBarsPct, Donut, Colunas, ColunasEixo, Linhas, Proporcao, Abas, fmt } from './charts.jsx'
+
+export const PLANILHA_DE = {
+  'F-01': 'DIOP', 'F-02': 'DIOP', 'F-07': 'DIOP',
+  'F-03': 'DIPSE',
+  'F-04': 'DIFOB', 'F-05': 'DIFOB', 'F-06': 'DIFOB', 'F-08': 'DIFOB',
+}
+
+export const temDados = (id) => {
+  const d = dados[PLANILHA_DE[id]]?.[id]
+  return !!d && Object.keys(d).length > 0
+}
+
+export const capaDe = (id) => dados[PLANILHA_DE[id]]?.capa || {}
+
+const C = {
+  unidade: 'UNIDADE E RESPONSÁVEL PRINCIPAL',
+  colab: 'COLABORADORES E RESPECTIVAS FONTES',
+}
+export function resumoCapa(id) {
+  const c = capaDe(id)
+  const get = (k) => Object.entries(c).find(([a]) => a.trim() === k)?.[1]
+  return { unidade: get(C.unidade), colab: get(C.colab) }
+}
+
+/* ---------- Capa de identificação ---------- */
+export function Capa({ id }) {
+  const c = capaDe(id)
+  const itens = Object.entries(c).filter(([, v]) => v && !/^n[aã]o se aplica/i.test(v))
+  return (
+    <Bloco titulo="Capa de identificação (planilha)" span="full">
+      {itens.length === 0 ? (
+        <p className="vazio-txt">A capa de identificação desta planilha ainda não foi preenchida pela diretoria.</p>
+      ) : (
+        <dl className="capa">
+          {itens.map(([k, v]) => (
+            <div key={k}><dt>{k.trim()}</dt><dd>{v}</dd></div>
+          ))}
+        </dl>
+      )}
+    </Bloco>
+  )
+}
+
+function Vazio({ id }) {
+  return (
+    <Bloco titulo="Painel de dados" span="full">
+      <div className="vazio">
+        <span className="vazio__ico">⌛</span>
+        <p><strong>{id}</strong>: a planilha da {PLANILHA_DE[id]} não traz dados preenchidos para este relatório até o momento.</p>
+        <p className="muted">Assim que a aba for preenchida, rode <code>python scripts/extract.py</code> para atualizar o painel.</p>
+      </div>
+    </Bloco>
+  )
+}
+
+/* ---------- F-01 ---------- */
+function F01() {
+  const d = dados.DIOP['F-01']
+  const dres = d.por_dre.slice(0, 15).map(([n, v]) => [n.replace(/^DRE /, ''), v])
+  return (
+    <>
+      <div className="kpis">
+        <Kpi rotulo="Servidores (total geral)" valor={fmt(d.total)} sub="base SAS de 28/09/2026" />
+        <Kpi rotulo="DREs" valor={fmt(d.n_dres)} cor="#153a4d" />
+        <Kpi rotulo="Escolas / unidades" valor={fmt(d.n_escolas)} cor="#c4841d" />
+        <Kpi rotulo="Componentes curriculares" valor={fmt(d.n_componentes)} cor="#7b5ea7" />
+      </div>
+      <div className="blocos">
+        <Bloco titulo="Profissionais por vínculo">
+          <Donut dados={d.sintese.filter((x) => x[1] > 0).sort((a, b) => b[1] - a[1])} centro={fmt(d.total)} sub="total" />
+        </Bloco>
+        <Bloco titulo="Lotações por DRE (top 15)" nota="Soma de profissionais por escola/vínculo/cargo; quem atua em mais de uma escola pode aparecer mais de uma vez.">
+          <HBars dados={dres} />
+        </Bloco>
+        <Bloco titulo="Cargos com mais profissionais (top 12)">
+          <HBars dados={d.cargos_top.map(([n, v]) => [n.toLowerCase(), v])} cor="#153a4d" />
+        </Bloco>
+        <Bloco titulo="Professores por componente curricular (top 25)">
+          <HBars dados={d.componentes.map(([n, v]) => [n.toLowerCase(), v])} cor="#7b5ea7" />
+        </Bloco>
+      </div>
+      {d.link && <a className="btn-link" href={d.link} target="_blank" rel="noreferrer">Abrir base de referência SAS ↗</a>}
+    </>
+  )
+}
+
+/* ---------- F-02 ---------- */
+function F02() {
+  const d = dados.DIOP['F-02']
+  const [regiao, setRegiao] = useState('INTERIOR')
+  const mods = d[regiao]
+  const nomes = Object.keys(mods)
+  const [mod, setMod] = useState(null)
+  const atual = mods[mod] ? mod : nomes[0]
+  const tot = (k) => Object.values(mods).reduce((s, m) => s + m[k], 0)
+  const m = mods[atual]
+  return (
+    <>
+      <Abas opcoes={['INTERIOR', 'RMB']} valor={regiao} onChange={(r) => { setRegiao(r); setMod(null) }} />
+      <div className="kpis">
+        <Kpi rotulo="CH semanal demandada" valor={fmt(tot('ch'))} sub="horas-aula/semana" />
+        <Kpi rotulo="Profissionais (quant. prof.)" valor={fmt(tot('prof'))} cor="#153a4d" />
+        <Kpi rotulo="Modalidades" valor={nomes.length} cor="#c4841d" />
+      </div>
+      <div className="blocos">
+        <Bloco titulo={`CH semanal por modalidade – ${regiao}`}>
+          <HBars dados={nomes.map((n) => [n, mods[n].ch])} />
+        </Bloco>
+        <Bloco titulo="Profissionais por modalidade">
+          <Donut dados={nomes.map((n) => [n, mods[n].prof])} centro={fmt(tot('prof'))} sub="profissionais" />
+        </Bloco>
+      </div>
+      <Abas opcoes={nomes} valor={atual} onChange={setMod} />
+      <div className="blocos">
+        <Bloco titulo={`DREs com maior CH – ${atual}`}>
+          <HBars dados={m.dres.map(([n, v]) => [n.replace(/^DRE /, ''), v])} cor="#c4841d" />
+        </Bloco>
+        <Bloco titulo={`Disciplinas com maior CH – ${atual}`}>
+          <HBars dados={m.disciplinas.map(([n, v]) => [n.toLowerCase(), v])} cor="#7b5ea7" />
+        </Bloco>
+      </div>
+    </>
+  )
+}
+
+/* ---------- F-03 ---------- */
+function F03() {
+  const d = dados.DIPSE['F-03']
+  const ativos = d.contratos.reduce((s, c) => s + (c.total || 0), 0)
+  const deslig = d.contratos.reduce((s, c) => s + c.desligamentos.slice(0, 4).reduce((a, b) => a + b, 0), 0)
+  const criado = d.cargos.reduce((s, c) => s + c.criado, 0)
+  const vago = d.cargos.reduce((s, c) => s + c.vago, 0)
+  const efetivos = d.cargos.filter((c) => /EFETIVO|Estáveis/i.test(c.natureza || ''))
+  const porCat = {}
+  efetivos.forEach((c) => {
+    const k = c.categoria.trim()
+    porCat[k] ||= { o: 0, v: 0 }
+    porCat[k].o += c.ocupado; porCat[k].v += c.vago
+  })
+  const cats = Object.keys(porCat)
+  const maisVagos = [...efetivos].sort((a, b) => b.vago - a.vago).slice(0, 8)
+    .map((c) => [c.cargo.toLowerCase().slice(0, 55), c.vago])
+  return (
+    <>
+      <div className="kpis">
+        <Kpi rotulo="Temporários ativos" valor={fmt(ativos)} sub="magistério, adm. geral e estagiários" />
+        <Kpi rotulo="Desligamentos até mar/2027" valor={fmt(deslig)} sub="contratos que vencem até 31/03/2027" cor="#c0504d" />
+        <Kpi rotulo="Processos seletivos vigentes" valor={d.pss.length} cor="#153a4d" />
+        <Kpi rotulo="Cargos efetivos vagos" valor={fmt(efetivos.reduce((s, c) => s + c.vago, 0))} sub={`de ${fmt(efetivos.reduce((s, c) => s + c.criado, 0))} criados`} cor="#c4841d" />
+      </div>
+      <div className="blocos">
+        <Bloco titulo="Temporários ativos por categoria">
+          <HBars dados={d.contratos.map((c) => [c.categoria.replace('TEMPORARIOS ATIVOS - ', '').trim(), c.total])} />
+        </Bloco>
+        <Bloco titulo="Desligamentos previstos de temporários" nota="Contratos com vencimento por período.">
+          <Colunas
+            categorias={d.contratos_cab}
+            series={d.contratos.map((c) => ({ nome: c.categoria.replace('TEMPORARIOS ATIVOS - ', '').trim(), valores: c.desligamentos }))}
+          />
+        </Bloco>
+        <Bloco titulo="Cargos efetivos: ocupados × vagos">
+          <Colunas categorias={cats.map((c) => c.toLowerCase())}
+            series={[{ nome: 'Ocupados', valores: cats.map((c) => porCat[c].o) }, { nome: 'Vagos', valores: cats.map((c) => porCat[c].v) }]} />
+        </Bloco>
+        <Bloco titulo="Cargos efetivos com mais vagas">
+          <HBars dados={maisVagos} cor="#c4841d" />
+        </Bloco>
+      </div>
+      <Bloco titulo="Inventário – Processos seletivos simplificados" span="full">
+        <div className="tabela-wrap">
+          <table className="tabela">
+            <thead><tr><th>Processo</th><th>Vigência até</th><th>Modalidade</th><th>Edital</th></tr></thead>
+            <tbody>
+              {d.pss.map((p) => (
+                <tr key={p.nome}>
+                  <td>{p.nome}</td><td>{p.vigencia}</td><td>{p.modalidade}</td>
+                  <td>{p.link && <a href={p.link} target="_blank" rel="noreferrer">abrir ↗</a>}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </Bloco>
+      <Bloco titulo="Concurso público" span="full">
+        <p><strong>{d.concurso.nome}</strong></p>
+        <p className="muted">{d.concurso.obs}</p>
+      </Bloco>
+    </>
+  )
+}
+
+/* ---------- F-05 ---------- */
+function F05() {
+  const d = dados.DIFOB['F-05']
+  const val = (l, k) => l[k]
+  const [premio] = d.linhas
+  const preenchidas = d.linhas.filter((l) => d.colunas.some((c) => typeof l[c] === 'number'))
+  const vazias = d.linhas.filter((l) => !preenchidas.includes(l))
+  return (
+    <>
+      <div className="kpis">
+        <Kpi rotulo="Licença-prêmio – solicitações" valor={fmt(premio['SOLICITAÇÕES'])} sub="01/01 a 30/09/2026" />
+        <Kpi rotulo="Deferidos" valor={fmt(premio['DEFERIDOS'])} cor="#2e9e6b" />
+        <Kpi rotulo="Indeferidos" valor={fmt(premio['INDEFERIDOS'])} cor="#c0504d" />
+        <Kpi rotulo="Em análise (PAE 3.0 + 4.0)" valor={fmt((premio['EM ANALISE 3.0'] || 0) + (premio['EM ANALISE 4.0'] || 0))} cor="#c4841d" />
+      </div>
+      <div className="blocos">
+        <Bloco titulo="Licença-prêmio por situação">
+          <Donut dados={[['Deferidos', premio['DEFERIDOS']], ['Indeferidos', premio['INDEFERIDOS']],
+            ['Em análise 3.0', premio['EM ANALISE 3.0']], ['Em análise 4.0', premio['EM ANALISE 4.0']]].filter((x) => x[1])} />
+        </Bloco>
+        <Bloco titulo="Solicitações por tipo de licença">
+          <HBars dados={preenchidas.map((l) => [l.produto.toLowerCase(), l['SOLICITAÇÕES'] || 0])} cor="#153a4d" />
+        </Bloco>
+      </div>
+      <Bloco titulo="Afastamentos de 01/01/2026 a 30/09/2026" span="full">
+        <div className="tabela-wrap">
+          <table className="tabela">
+            <thead><tr><th>Produto</th>{d.colunas.map((c) => <th key={c} className="num">{c.toLowerCase()}</th>)}</tr></thead>
+            <tbody>
+              {d.linhas.map((l) => (
+                <tr key={l.produto}>
+                  <td>{l.produto}</td>
+                  {d.colunas.map((c) => <td key={c} className="num">{typeof val(l, c) === 'number' ? fmt(val(l, c)) : val(l, c) ?? '–'}</td>)}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        {vazias.length > 0 && <p className="muted" style={{ marginTop: 10 }}>Aguardando preenchimento: {vazias.map((v) => v.produto.toLowerCase()).join(', ')}.</p>}
+        {d.nota && <p className="muted" style={{ marginTop: 6 }}>{d.nota}</p>}
+        {d.link && <a className="btn-link" href={d.link} target="_blank" rel="noreferrer">Abrir plano de acompanhamento (Data Studio) ↗</a>}
+      </Bloco>
+    </>
+  )
+}
+
+/* ---------- F-07 ---------- */
+function F07() {
+  const d = dados.DIOP['F-07']
+  const x = DF07
+  const aga = agaData
+  const p26 = x.publicacoes[2026], p25 = x.publicacoes[2025]
+  const tot = (p, i) => (p.professor[i] ?? null) == null ? null : p.professor[i] + p.adm[i]
+  const comp26 = x.meses.map((_, i) => tot(p26, i))
+  const comp25 = x.meses.map((_, i) => tot(p25, i))
+  const pae = x.pae
+
+  return (
+    <>
+      {/* Banner de origem do arquivo AGA Atualizado */}
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12, marginBottom: 12 }}>
+        <span className="tag-aga">
+          📁 Base de Dados Integrada: <strong>AGA ATUALIZADO .xlsx</strong> (Aguardando Aposentadoria)
+        </span>
+        <span style={{ fontSize: 12, color: 'var(--muted)' }}>
+          Posição da carteira: 4.130 vínculos · 4.066 servidores únicos (CPF)
+        </span>
+      </div>
+
+      {/* Indicadores Principais (KPIs) */}
+      <div className="kpis">
+        <Kpi rotulo="Servidores em AGA (Total)" valor={fmt(aga.total_servidores)} sub={`${fmt(aga.total_vinculos)} vínculos funcionais`} cor="#00838a" />
+        <Kpi rotulo="Docentes / Magistério em AGA" valor={fmt(aga.categorias[0][1])} sub="85,3% da carteira de AGA" cor="#153a4d" />
+        <Kpi rotulo="Administrativo / Apoio em AGA" valor={fmt(aga.categorias[1][1])} sub="14,7% da carteira de AGA" cor="#c4841d" />
+        <Kpi rotulo="Processos com PAE Identificado" valor={fmt(aga.tem_pae[0][1])} sub="81,2% com número de processo" cor="#2e9e6b" />
+        <Kpi rotulo="Processos Físicos no IGEPPS" valor={fmt(aga.localizacoes[0][1])} sub="2.211 já tramitaram no órgão" cor="#7b5ea7" />
+      </div>
+
+      {/* Seção 1: Diagnóstico da Carteira AGA */}
+      <div className="blocos">
+        <Bloco titulo="Composição da Carteira AGA por Categoria">
+          <Proporcao dados={aga.categorias} cores={['#00838a', '#c4841d']} />
+          <p className="bloco__nota" style={{ marginTop: 12 }}>
+            A grande maioria da carteira que aguarda aposentadoria pertence ao magistério (3.523 professores), gerando impacto direto no planejamento de cobertura docente.
+          </p>
+        </Bloco>
+
+        <Bloco titulo="Motivo do Afastamento para Aposentadoria (AGA)">
+          <Donut dados={aga.mnemonicos} centro={fmt(aga.total_vinculos)} sub="vínculos" />
+        </Bloco>
+
+        <Bloco titulo="Vínculo Funcional dos Servidores em AGA">
+          <HBarsPct dados={aga.vinculos} cor="#153a4d" />
+        </Bloco>
+
+        <Bloco titulo="Ano de Entrada na Situação de AGA (2017 a 2026)" nota="Ano de início da lotação em afastamento para aposentadoria.">
+          <ColunasEixo categorias={aga.anos_inicio_aga.map(a => a[0])} cores={['#00838a']} altura={280} destaque
+            series={[{ nome: 'Servidores', valores: aga.anos_inicio_aga.map(a => a[1]) }]} />
+        </Bloco>
+      </div>
+
+      {/* Seção 2: Cargos com mais servidores em AGA */}
+      <Bloco titulo="Cargos com Maior Quantitativo em AGA (Top 10)" span="full"
+        nota="Distribuição nominal conforme registrado na base da folha e lotação.">
+        <HBarsPct dados={aga.top_cargos.map(([c, n]) => [c.toLowerCase(), n])} cor="#00838a" />
+      </Bloco>
+
+      {/* Seção 3: Tramitação Previdenciária e IGEPPS */}
+      <Bloco titulo="Trâmite Previdenciário e Fluxo no IGEPPS" span="full"
+        nota="Acompanhamento da remessa e retorno dos processos junto ao Instituto de Gestão Previdenciária do Pará.">
+        <div className="blocos">
+          <div>
+            <h4 className="sub">Processos Encaminhados ao IGEPPS</h4>
+            <Proporcao dados={[['Foram ao IGEPPS', aga.igepps_foi[0][1]], ['Ainda não foram ao IGEPPS', aga.igepps_foi[1][1]]]} cores={['#2e9e6b', '#c0504d']} />
+            <h4 className="sub" style={{ marginTop: 20 }}>Situação de Retorno dos Processos Remetidos</h4>
+            <Donut dados={aga.igepps_retorno} centro={fmt(aga.igepps_foi[0][1])} sub="no IGEPPS" />
+          </div>
+          <div>
+            <h4 className="sub">Localização Atual dos Processos</h4>
+            <HBarsPct dados={aga.localizacoes} cor="#7b5ea7" />
+          </div>
+        </div>
+      </Bloco>
+
+      {/* Seção 4: Pendências Mapeadas na Carteira */}
+      <div className="blocos">
+        <Bloco titulo="Mapeamento de Pendências da Carteira AGA">
+          <HBarsPct dados={aga.pendencias} cor="#c4841d" />
+        </Bloco>
+
+        <Bloco titulo="Tempo Médio entre Movimentações (Dias)" nota="Média, mediana e P90 por atividade na tramitação PAE.">
+          <div className="tabela-wrap">
+            <table className="tabela">
+              <thead><tr><th>Atividade</th><th className="num">Média</th><th className="num">Mediana</th><th className="num">P90</th></tr></thead>
+              <tbody>
+                {pae.tempoEntre.map(([a, m, md, p]) => (
+                  <tr key={a}><td>{a}</td><td className="num">{fmt(m, 1)}</td><td className="num">{md}</td><td className="num">{p}</td></tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </Bloco>
+      </div>
+
+      {/* Seção 5: Publicações e Projeções Plurianuais */}
+      <Bloco titulo="Publicações de Aposentadoria – Comparativo Mensal 2025 × 2026" span="full"
+        nota="Concessões publicadas no Diário Oficial (Professor + Adm. Geral).">
+        <Linhas categorias={x.meses} altura={300}
+          series={[{ nome: '2025', valores: comp25 }, { nome: '2026', valores: comp26 }]} />
+      </Bloco>
+
+      <div className="blocos">
+        <Bloco titulo="Projeção Plurianual de Aposentadorias (2026–2028)" nota={x.projecao.premissa}>
+          <ColunasEixo categorias={x.projecao.anos} cores={['#00838a', '#c4841d']} altura={280}
+            series={[{ nome: 'Professor', valores: x.projecao.professor }, { nome: 'Adm. geral', valores: x.projecao.adm }]} />
+        </Bloco>
+
+        <Bloco titulo="Cenários de Projeção Anual (Sensibilidade)" nota="Estimativas para planejamento de recomposição do quadro.">
+          <div className="tabela-wrap">
+            <table className="tabela">
+              <thead><tr><th>Cenário</th><th className="num">2026 (base)</th><th className="num">2027</th><th className="num">2028</th></tr></thead>
+              <tbody>
+                {x.cenarios.map((c) => (
+                  <tr key={c.nome}><td>{c.nome}</td>{c.v.map((n, i) => <td key={i} className="num">{fmt(n)}</td>)}</tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </Bloco>
+      </div>
+
+      {/* Seção 6: Links Institucionais */}
+      <Bloco titulo="Links Oficiais de Acompanhamento" span="full">
+        <div className="links">
+          {d.links.map((l) => (
+            <a key={l.url} className="btn-link" href={l.url} target="_blank" rel="noreferrer">{l.titulo.replace(/\s*-\s*ACESSE.*$/i, '')} ↗</a>
+          ))}
+        </div>
+      </Bloco>
+    </>
+  )
+}
+
+const PAINEIS = { 'F-01': F01, 'F-02': F02, 'F-03': F03, 'F-05': F05, 'F-07': F07 }
+
+export default function Painel({ id }) {
+  const P = PAINEIS[id]
+  return (
+    <div className="dados">
+      <Capa id={id} />
+      {P ? <P /> : <Vazio id={id} />}
+    </div>
+  )
+}

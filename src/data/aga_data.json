@@ -1,0 +1,254 @@
+{
+  "total_vinculos": 4130,
+  "total_servidores": 4066,
+  "categorias": [
+    [
+      "Professor / Magistério",
+      3523
+    ],
+    [
+      "Administrativo / Apoio",
+      607
+    ]
+  ],
+  "mnemonicos": [
+    [
+      "Aguardando Aposentadoria",
+      3249
+    ],
+    [
+      "Aguardando Aposentadoria Incapacidade Permanente",
+      877
+    ]
+  ],
+  "vinculos": [
+    [
+      "Efetivo",
+      3728
+    ],
+    [
+      "Não Estável",
+      393
+    ],
+    [
+      "Estável Const. Fed.",
+      7
+    ],
+    [
+      "Outros",
+      1
+    ]
+  ],
+  "igepps_foi": [
+    [
+      "SIM",
+      2211
+    ],
+    [
+      "NÃO",
+      627
+    ]
+  ],
+  "igepps_retorno": [
+    [
+      "Retornou do IGEPPS",
+      1338
+    ],
+    [
+      "Ainda não retornou",
+      877
+    ],
+    [
+      "Em andamento no IGEPPS",
+      591
+    ]
+  ],
+  "localizacoes": [
+    [
+      "IGEPPS (Previdência)",
+      1088
+    ],
+    [
+      "CAPO (Aposentadorias)",
+      696
+    ],
+    [
+      "DREs / Interior",
+      627
+    ],
+    [
+      "Outros setores",
+      211
+    ],
+    [
+      "CCM (Movimentação)",
+      172
+    ],
+    [
+      "CFOP (Folha)",
+      62
+    ],
+    [
+      "SAGEP (Gabinete)",
+      54
+    ],
+    [
+      "CVAS (Vantagens/Saúde)",
+      38
+    ]
+  ],
+  "pendencias": [
+    [
+      "Outras pendências",
+      463
+    ],
+    [
+      "Pendência documental",
+      451
+    ],
+    [
+      "Em análise",
+      284
+    ],
+    [
+      "Reconstituição de autos",
+      219
+    ],
+    [
+      "Aguardando CTC",
+      77
+    ],
+    [
+      "Concluído / Aposentado",
+      5
+    ]
+  ],
+  "tem_pae": [
+    [
+      "Com PAE identificado",
+      3353
+    ],
+    [
+      "Sem PAE / Não localizado",
+      777
+    ]
+  ],
+  "top_cargos": [
+    [
+      "PROFESSOR CLASSE II",
+      1164
+    ],
+    [
+      "PROFESSOR CLASSE I",
+      814
+    ],
+    [
+      "PROFESSOR CLASSE ESPECIAL",
+      609
+    ],
+    [
+      "ESPECIALISTA EM EDUCACAO CLASSE II",
+      194
+    ],
+    [
+      "PROFESSOR NIVEL MEDIO",
+      170
+    ],
+    [
+      "SERVENTE REFERENCIA I",
+      139
+    ],
+    [
+      "PROFESSOR ASSISTENTE PA-A",
+      124
+    ],
+    [
+      "PROF. COLABORADOR NIVEL SUPERIOR",
+      108
+    ],
+    [
+      "PROFESSOR CLASSE III",
+      87
+    ],
+    [
+      "ESCREVENTE DATILOGRAFO REFERENCIA III",
+      72
+    ]
+  ],
+  "top_atividades": [
+    [
+      "PROF AGUARD APOSENTADORIA",
+      1920
+    ],
+    [
+      "AGUARD APOSENTADORIA ADM",
+      831
+    ],
+    [
+      "AGUARD APOSENTADORIA PROF P/INVALIDEZ",
+      526
+    ],
+    [
+      "JORNADA PROF AGA ART 4 LEI 8030/14",
+      485
+    ],
+    [
+      "AGUARD APOSENTADORIA ADM P/INVALIDEZ",
+      265
+    ],
+    [
+      "JORNADA PORF AGA INVAL ART 4 LEI 8030/14",
+      48
+    ],
+    [
+      "READAPT CLASSE NORMAL",
+      9
+    ],
+    [
+      "LICENÇA SAUDE PROFESSOR",
+      7
+    ]
+  ],
+  "anos_inicio_aga": [
+    [
+      "2017",
+      446
+    ],
+    [
+      "2018",
+      71
+    ],
+    [
+      "2019",
+      109
+    ],
+    [
+      "2020",
+      94
+    ],
+    [
+      "2021",
+      257
+    ],
+    [
+      "2022",
+      65
+    ],
+    [
+      "2023",
+      103
+    ],
+    [
+      "2024",
+      2447
+    ],
+    [
+      "2025",
+      399
+    ],
+    [
+      "2026",
+      108
+    ]
+  ]
+}

@@ -1,0 +1,1729 @@
+{
+ "DIOP": {
+  "capa": {
+   "UNIDADE E RESPONSÁVEL PRINCIPAL": "DIRETORIA DE ORGANIZAÇÃO DE PESSOAS",
+   "COLABORADORES E RESPECTIVAS FONTES": "ANTHONY SAUL PINHEIRO MAGALHÃES, TAMARA DE SOUSA PEREIRA, ROSINELMA MEIRELES DA SILVA, ANA LUIZA LIMA DOS SANTOS",
+   "ELABORADOR E CARGO": "ANTHONY SAUL PINHEIRO MAGALHÃES, ASSISTENTE DE GESTÃO GOVERNAMENTAL E EDUCACIONAL B",
+   "AUTORIDADE QUE CONFIRMA ORIGEM E LOCALIZAÇÃO": "ANTHONY SAUL PINHEIRO MAGALHÃES",
+   "DATA-BASE": "28/09/2026",
+   "DATA DE ENTREGA": "29/10/2026",
+   "FONTE": "SIGEP/ERGON/PAE 4.0 E 3.0/SAS MONTREAL",
+   "MÉTODO": "Não se aplica",
+   "SERVIDOR DE REFERÊNCIA E CONTATO INSTITUCIONAL": "ANTHONY SAUL PINHEIRO MAGALHÃES, 3001-0705"
+  },
+  "F-01": {
+   "sintese": [
+    [
+     "A DISPOSICAO",
+     5.0
+    ],
+    [
+     "CESSÃO ORIGEM: ESTADO AMAZONAS",
+     7.0
+    ],
+    [
+     "COMISSAO",
+     60.0
+    ],
+    [
+     "CONTR TEMP INDIGENA",
+     735.0
+    ],
+    [
+     "CONTRATO TEMPORARIO",
+     8676.0
+    ],
+    [
+     "EFETIVO",
+     26027.0
+    ],
+    [
+     "ESTAGIARIOS",
+     1368.0
+    ],
+    [
+     "ESTAVEL CONST FED",
+     13.0
+    ],
+    [
+     "NAO ESTAVEL",
+     941.0
+    ]
+   ],
+   "total": 37832.0,
+   "link": "https://docs.google.com/spreadsheets/d/1iZn_vL2xkFRnT5uKlrjOww8QhTnI_NcPAufhHMku1jo/edit?gid=1572449159#gid=1572449159",
+   "por_dre": [
+    [
+     "SEDUC SEDE",
+     5848.0
+    ],
+    [
+     "DRE ABAETETUBA",
+     2547.0
+    ],
+    [
+     "DRE CASTANHAL",
+     2411.0
+    ],
+    [
+     "DRE MARABA",
+     2071.0
+    ],
+    [
+     "DRE SANTAREM",
+     1896.0
+    ],
+    [
+     "DRE BRAGANCA",
+     1650.0
+    ],
+    [
+     "DRE CAPANEMA",
+     1615.0
+    ],
+    [
+     "DRE SANTA IZABEL DO PARA",
+     1605.0
+    ],
+    [
+     "DRE BELEM 7",
+     1290.0
+    ],
+    [
+     "DRE BELEM 1",
+     1152.0
+    ],
+    [
+     "DRE BELEM 4",
+     1148.0
+    ],
+    [
+     "DRE BELEM 2",
+     1083.0
+    ],
+    [
+     "DRE BELEM 10",
+     1041.0
+    ],
+    [
+     "DRE BELEM 5",
+     1005.0
+    ],
+    [
+     "DRE ALTAMIRA",
+     957.0
+    ],
+    [
+     "DRE PARAUAPEBAS",
+     952.0
+    ],
+    [
+     "DRE MAE DO RIO",
+     933.0
+    ],
+    [
+     "DRE BELEM 9",
+     904.0
+    ],
+    [
+     "DRE BELEM 6",
+     902.0
+    ],
+    [
+     "DRE ANANINDEUA 2",
+     896.0
+    ],
+    [
+     "DRE CAMETA",
+     882.0
+    ],
+    [
+     "DRE BREVES",
+     879.0
+    ],
+    [
+     "DRE BELEM 3",
+     848.0
+    ],
+    [
+     "DRE BENEVIDES",
+     833.0
+    ],
+    [
+     "DRE TUCURUI",
+     821.0
+    ],
+    [
+     "DRE OBIDOS",
+     802.0
+    ],
+    [
+     "DRE BELEM 8",
+     798.0
+    ],
+    [
+     "DRE ANANINDEUA 3",
+     742.0
+    ],
+    [
+     "DRE MARACANA",
+     729.0
+    ],
+    [
+     "DRE MONTE ALEGRE",
+     717.0
+    ],
+    [
+     "DRE ANANINDEUA 5",
+     710.0
+    ],
+    [
+     "DRE CONCEICAO DO ARAGUAIA",
+     702.0
+    ],
+    [
+     "DRE ANANINDEUA 1",
+     666.0
+    ],
+    [
+     "DRE ANANINDEUA 4",
+     666.0
+    ],
+    [
+     "DRE ITAITUBA",
+     661.0
+    ],
+    [
+     "DRE CAPITAO POCO",
+     654.0
+    ],
+    [
+     "DRE CURRALINHO",
+     607.0
+    ],
+    [
+     "DRE CACHOEIRA DO ARARI",
+     540.0
+    ],
+    [
+     "DRE XINGUARA",
+     518.0
+    ],
+    [
+     "DRE SANTA BARBARA",
+     410.0
+    ]
+   ],
+   "por_dre_vinculo": {
+    "DRE ABAETETUBA": {
+     "CONTRATO TEMPORARIO": 513.0,
+     "EFETIVO": 1922.0,
+     "NAO ESTAVEL": 39.0,
+     "ESTAGIARIO CURRICUL": 67.0,
+     "CONTR TEMP INDIGENA": 6.0
+    },
+    "DRE AFUA": {
+     "CONTRATO TEMPORARIO": 116.0,
+     "EFETIVO": 30.0,
+     "ESTAGIARIO CURRICUL": 4.0
+    },
+    "DRE ALTAMIRA": {
+     "CEDIDO EXECUT ESTAD": 1.0,
+     "CONTRATO TEMPORARIO": 376.0,
+     "EFETIVO": 504.0,
+     "NAO ESTAVEL": 14.0,
+     "ESTAGIARIO CURRICUL": 13.0,
+     "CONTR TEMP INDIGENA": 49.0
+    },
+    "DRE ANANINDEUA 1": {
+     "CONTRATO TEMPORARIO": 96.0,
+     "EFETIVO": 524.0,
+     "ESTAGIARIO CURRICUL": 32.0,
+     "NAO ESTAVEL": 14.0
+    },
+    "DRE ANANINDEUA 2": {
+     "CONTRATO TEMPORARIO": 132.0,
+     "EFETIVO": 708.0,
+     "ESTAGIARIO CURRICUL": 50.0,
+     "NAO ESTAVEL": 6.0
+    },
+    "DRE ANANINDEUA 3": {
+     "CONTRATO TEMPORARIO": 133.0,
+     "EFETIVO": 561.0,
+     "ESTAGIARIO CURRICUL": 38.0,
+     "NAO ESTAVEL": 10.0
+    },
+    "DRE ANANINDEUA 4": {
+     "EFETIVO": 535.0,
+     "CONTRATO TEMPORARIO": 87.0,
+     "ESTAGIARIO CURRICUL": 38.0,
+     "NAO ESTAVEL": 6.0
+    },
+    "DRE ANANINDEUA 5": {
+     "CONTRATO TEMPORARIO": 143.0,
+     "EFETIVO": 501.0,
+     "ESTAGIARIO CURRICUL": 47.0,
+     "NAO ESTAVEL": 19.0
+    },
+    "DRE BELEM 1": {
+     "CONTRATO TEMPORARIO": 264.0,
+     "EFETIVO": 817.0,
+     "ESTAGIARIO CURRICUL": 44.0,
+     "NAO ESTAVEL": 27.0
+    },
+    "DRE BELEM 10": {
+     "CONTRATO TEMPORARIO": 285.0,
+     "EFETIVO": 687.0,
+     "ESTAGIARIO CURRICUL": 56.0,
+     "NAO ESTAVEL": 13.0
+    },
+    "DRE BELEM 2": {
+     "EFETIVO": 854.0,
+     "NAO ESTAVEL": 11.0,
+     "CONTRATO TEMPORARIO": 164.0,
+     "ESTAGIARIO CURRICUL": 54.0
+    },
+    "DRE BELEM 3": {
+     "CONTRATO TEMPORARIO": 150.0,
+     "EFETIVO": 652.0,
+     "ESTAGIARIO CURRICUL": 31.0,
+     "NAO ESTAVEL": 15.0
+    },
+    "DRE BELEM 4": {
+     "CONTRATO TEMPORARIO": 134.0,
+     "EFETIVO": 920.0,
+     "ESTAGIARIO CURRICUL": 84.0,
+     "ESTAVEL CONST FED": 1.0,
+     "NAO ESTAVEL": 9.0
+    },
+    "DRE BELEM 5": {
+     "CONTRATO TEMPORARIO": 160.0,
+     "EFETIVO": 767.0,
+     "ESTAGIARIO CURRICUL": 69.0,
+     "NAO ESTAVEL": 9.0
+    },
+    "DRE BELEM 6": {
+     "CONTRATO TEMPORARIO": 176.0,
+     "EFETIVO": 663.0,
+     "ESTAGIARIO CURRICUL": 45.0,
+     "NAO ESTAVEL": 18.0
+    },
+    "DRE BELEM 7": {
+     "EFETIVO": 1065.0,
+     "CONTRATO TEMPORARIO": 129.0,
+     "ESTAGIARIO CURRICUL": 79.0,
+     "NAO ESTAVEL": 16.0,
+     "ESTAVEL CONST FED": 1.0
+    },
+    "DRE BELEM 8": {
+     "CONTRATO TEMPORARIO": 189.0,
+     "EFETIVO": 565.0,
+     "ESTAGIARIO CURRICUL": 38.0,
+     "NAO ESTAVEL": 6.0
+    },
+    "DRE BELEM 9": {
+     "EFETIVO": 662.0,
+     "CONTRATO TEMPORARIO": 153.0,
+     "ESTAGIARIO CURRICUL": 64.0,
+     "NAO ESTAVEL": 25.0
+    },
+    "DRE BENEVIDES": {
+     "CONTRATO TEMPORARIO": 255.0,
+     "EFETIVO": 539.0,
+     "ESTAGIARIO CURRICUL": 12.0,
+     "NAO ESTAVEL": 27.0
+    },
+    "DRE BRAGANCA": {
+     "CONTRATO TEMPORARIO": 404.0,
+     "EFETIVO": 1154.0,
+     "ESTAVEL CONST FED": 1.0,
+     "NAO ESTAVEL": 52.0,
+     "ESTAGIARIO CURRICUL": 38.0,
+     "CEDIDO EXECUT ESTAD": 1.0
+    },
+    "DRE BREVES": {
+     "CONTRATO TEMPORARIO": 403.0,
+     "EFETIVO": 463.0,
+     "ESTAGIARIO CURRICUL": 11.0,
+     "NAO ESTAVEL": 2.0
+    },
+    "DRE CACHOEIRA DO ARARI": {
+     "CONTRATO TEMPORARIO": 229.0,
+     "EFETIVO": 288.0,
+     "NAO ESTAVEL": 17.0,
+     "ESTAGIARIO CURRICUL": 6.0
+    },
+    "DRE CAMETA": {
+     "CONTRATO TEMPORARIO": 269.0,
+     "EFETIVO": 572.0,
+     "NAO ESTAVEL": 16.0,
+     "ESTAGIARIO CURRICUL": 25.0
+    },
+    "DRE CAPANEMA": {
+     "CONTRATO TEMPORARIO": 545.0,
+     "EFETIVO": 1016.0,
+     "NAO ESTAVEL": 31.0,
+     "ESTAGIARIO CURRICUL": 22.0,
+     "ESTAVEL CONST FED": 1.0
+    },
+    "DRE CAPITAO POCO": {
+     "CEDIDO EXECUT ESTAD": 1.0,
+     "CONTR TEMP INDIGENA": 112.0,
+     "CONTRATO TEMPORARIO": 281.0,
+     "EFETIVO": 253.0,
+     "ESTAGIARIO CURRICUL": 4.0,
+     "NAO ESTAVEL": 3.0
+    },
+    "DRE CASTANHAL": {
+     "CONTRATO TEMPORARIO": 506.0,
+     "EFETIVO": 1808.0,
+     "NAO ESTAVEL": 44.0,
+     "ESTAGIARIO CURRICUL": 30.0,
+     "CONTR TEMP INDIGENA": 23.0
+    },
+    "DRE CONCEICAO DO ARAGUAIA": {
+     "CONTRATO TEMPORARIO": 216.0,
+     "EFETIVO": 464.0,
+     "NAO ESTAVEL": 12.0,
+     "CONTR TEMP INDIGENA": 6.0,
+     "ESTAGIARIO CURRICUL": 4.0
+    },
+    "DRE CURRALINHO": {
+     "EFETIVO": 304.0,
+     "CONTRATO TEMPORARIO": 292.0,
+     "ESTAGIARIO CURRICUL": 9.0,
+     "NAO ESTAVEL": 2.0
+    },
+    "DRE ITAITUBA": {
+     "CONTRATO TEMPORARIO": 283.0,
+     "EFETIVO": 334.0,
+     "ESTAGIARIO CURRICUL": 1.0,
+     "CONTR TEMP INDIGENA": 43.0
+    },
+    "DRE MAE DO RIO": {
+     "CONTRATO TEMPORARIO": 362.0,
+     "EFETIVO": 521.0,
+     "NAO ESTAVEL": 15.0,
+     "CONTR TEMP INDIGENA": 18.0,
+     "ESTAGIARIO CURRICUL": 17.0
+    },
+    "DRE MARABA": {
+     "CONTRATO TEMPORARIO": 606.0,
+     "EFETIVO": 1084.0,
+     "NAO ESTAVEL": 30.0,
+     "ESTAGIARIO CURRICUL": 21.0,
+     "CONTR TEMP INDIGENA": 330.0
+    },
+    "DRE MARACANA": {
+     "CONTRATO TEMPORARIO": 233.0,
+     "EFETIVO": 458.0,
+     "NAO ESTAVEL": 12.0,
+     "ESTAGIARIO CURRICUL": 26.0
+    },
+    "DRE MONTE ALEGRE": {
+     "CONTRATO TEMPORARIO": 277.0,
+     "EFETIVO": 406.0,
+     "NAO ESTAVEL": 12.0,
+     "ESTAGIARIO CURRICUL": 22.0
+    },
+    "DRE OBIDOS": {
+     "CONTRATO TEMPORARIO": 355.0,
+     "EFETIVO": 373.0,
+     "ESTAGIARIO CURRICUL": 40.0,
+     "CONTR TEMP INDIGENA": 28.0,
+     "NAO ESTAVEL": 6.0
+    },
+    "DRE PARAUAPEBAS": {
+     "CEDIDO EXECUT ESTAD": 1.0,
+     "CONTRATO TEMPORARIO": 459.0,
+     "EFETIVO": 481.0,
+     "NAO ESTAVEL": 5.0,
+     "ESTAGIARIO CURRICUL": 2.0,
+     "CONTR TEMP INDIGENA": 4.0
+    },
+    "DRE SANTA BARBARA": {
+     "CONTRATO TEMPORARIO": 110.0,
+     "EFETIVO": 286.0,
+     "ESTAGIARIO CURRICUL": 8.0,
+     "NAO ESTAVEL": 5.0,
+     "ESTAVEL CONST FED": 1.0
+    },
+    "DRE SANTA IZABEL DO PARA": {
+     "CONTRATO TEMPORARIO": 454.0,
+     "EFETIVO": 1075.0,
+     "NAO ESTAVEL": 27.0,
+     "ESTAGIARIO CURRICUL": 31.0,
+     "CONTR TEMP INDIGENA": 18.0
+    },
+    "DRE SANTAREM": {
+     "CONTR TEMP INDIGENA": 68.0,
+     "CONTRATO TEMPORARIO": 269.0,
+     "EFETIVO": 1494.0,
+     "NAO ESTAVEL": 18.0,
+     "ESTAGIARIO CURRICUL": 47.0
+    },
+    "DRE TUCURUI": {
+     "CONTRATO TEMPORARIO": 270.0,
+     "EFETIVO": 498.0,
+     "ESTAGIARIO CURRICUL": 33.0,
+     "NAO ESTAVEL": 3.0,
+     "CONTR TEMP INDIGENA": 17.0
+    },
+    "DRE XINGUARA": {
+     "CEDIDO EXECUT ESTAD": 1.0,
+     "CONTRATO TEMPORARIO": 293.0,
+     "EFETIVO": 195.0,
+     "NAO ESTAVEL": 6.0,
+     "CONTR TEMP INDIGENA": 22.0,
+     "ESTAGIARIO CURRICUL": 1.0
+    },
+    "SEDUC SEDE": {
+     "COMISSAO": 60.0,
+     "EFETIVO": 5108.0,
+     "ESTAGIARIO CURRICUL": 105.0,
+     "A DISPOSICAO": 5.0,
+     "CONTRATO TEMPORARIO": 152.0,
+     "NAO ESTAVEL": 406.0,
+     "CEDIDO EXECUT ESTAD": 2.0,
+     "CONTR TEMP INDIGENA": 2.0,
+     "ESTAVEL CONST FED": 8.0
+    }
+   },
+   "cargos_top": [
+    [
+     "PROFESSOR NIVEL SUPERIOR LP",
+     10142.0
+    ],
+    [
+     "PROFESSOR CLASSE I",
+     9475.0
+    ],
+    [
+     "PROFESSOR CLASSE II",
+     7333.0
+    ],
+    [
+     "ESPECIALISTA EM EDUCACAO CLASSE II",
+     2412.0
+    ],
+    [
+     "AUXILIAR OPERACIONAL E EDUCACIONAL B",
+     2307.0
+    ],
+    [
+     "VICE DIRETOR DA REDE ESTADUAL DE ENSINO",
+     1383.0
+    ],
+    [
+     "ESPECIALISTA EM EDUCACAO CLASSE I",
+     1221.0
+    ],
+    [
+     "ASSISTENTE DE GESTAO GOVERNAMENTAL E EDUCACIONAL B",
+     1161.0
+    ],
+    [
+     "DIRETOR DA REDE ESTADUAL DE ENSINO",
+     910.0
+    ],
+    [
+     "SECRETARIO ESCOLAR",
+     806.0
+    ],
+    [
+     "PROFESSOR CLASSE ESPECIAL",
+     747.0
+    ],
+    [
+     "AUXILIAR OPERACIONAL E EDUCACIONAL A",
+     674.0
+    ]
+   ],
+   "n_escolas": 1102,
+   "n_dres": 41,
+   "componentes": [
+    [
+     "MATEMATICA",
+     4437.0
+    ],
+    [
+     "GEOGRAFIA",
+     3060.0
+    ],
+    [
+     "HISTORIA",
+     2986.0
+    ],
+    [
+     "LINGUA PORTUGUESA E SUAS LITERATURAS",
+     2934.0
+    ],
+    [
+     "EDUCACAO AMBIENTAL, SUSTENTABILIDADE E CLIMA",
+     2079.0
+    ],
+    [
+     "LINGUA PORTUGUESA",
+     2069.0
+    ],
+    [
+     "ARTES",
+     1998.0
+    ],
+    [
+     "FISICA",
+     1852.0
+    ],
+    [
+     "BIOLOGIA",
+     1831.0
+    ],
+    [
+     "PROJETO DE VIDA",
+     1811.0
+    ],
+    [
+     "CIENCIAS",
+     1699.0
+    ],
+    [
+     "QUIMICA",
+     1691.0
+    ],
+    [
+     "LINGUA INGLESA",
+     1617.0
+    ],
+    [
+     "FILOSOFIA",
+     1591.0
+    ],
+    [
+     "EDUCACAO FISICA",
+     1475.0
+    ],
+    [
+     "SOCIOLOGIA",
+     1454.0
+    ],
+    [
+     "LGG - APROF DE AREAS DE LINGUAGENS E SUAS TECNOLOGIAS",
+     1233.0
+    ],
+    [
+     "MAT - APROF DE AREAS DE LINGUAGENS E SUAS TECNOLOGIAS",
+     1211.0
+    ],
+    [
+     "MAT - APROF DE AREAS DE MATEMATICA E SUAS TECNOLOGIAS",
+     1165.0
+    ],
+    [
+     "ELETIVA",
+     1075.0
+    ],
+    [
+     "MAT - EDUCACAO AMBIENTAL, SUSTENTABILIDADE E CLIMA",
+     1059.0
+    ],
+    [
+     "LGG - EDUCACAO AMBIENTAL, SUSTENTABILIDADE E CLIMA",
+     1010.0
+    ],
+    [
+     "LGG - APROF DE AREAS DE MATEMATICA E SUAS TECNOLOGIAS",
+     944.0
+    ],
+    [
+     "LGG - PRODUCAO TEXTUAL",
+     911.0
+    ],
+    [
+     "EDUCACAO ESPECIAL",
+     813.0
+    ]
+   ],
+   "n_componentes": 140
+  },
+  "F-02": {
+   "INTERIOR": {
+    "Educação especial": {
+     "ch": 4000.0,
+     "prof": 120.0,
+     "total_planilha": 120.0,
+     "dres": [
+      [
+       "DRE CAPANEMA",
+       820.0
+      ],
+      [
+       "DRE MARABA",
+       500.0
+      ],
+      [
+       "DRE ABAETETUBA",
+       320.0
+      ],
+      [
+       "DRE PARAUAPEBAS",
+       320.0
+      ],
+      [
+       "DRE OBIDOS",
+       260.0
+      ],
+      [
+       "DRE CASTANHAL",
+       240.0
+      ],
+      [
+       "DRE SANTA IZABEL DO PARA",
+       220.0
+      ],
+      [
+       "DRE BRAGANCA",
+       180.0
+      ],
+      [
+       "DRE MAE DO RIO",
+       180.0
+      ],
+      [
+       "DRE CACHOEIRA DO ARARI",
+       160.0
+      ]
+     ],
+     "disciplinas": [
+      [
+       "EDUCACAO ESPECIAL",
+       4000.0
+      ]
+     ]
+    },
+    "Integral": {
+     "ch": 1412.0,
+     "prof": 14.0,
+     "total_planilha": 14.0,
+     "dres": [
+      [
+       "DRE CASTANHAL",
+       228.0
+      ],
+      [
+       "DRE CAPANEMA",
+       187.0
+      ],
+      [
+       "DRE XINGUARA",
+       144.0
+      ],
+      [
+       "DRE SANTA IZABEL DO PARA",
+       128.0
+      ],
+      [
+       "DRE MONTE ALEGRE",
+       110.0
+      ],
+      [
+       "DRE MARABA",
+       96.0
+      ],
+      [
+       "DRE CAMETA",
+       80.0
+      ],
+      [
+       "DRE CURRALINHO",
+       54.0
+      ],
+      [
+       "DRE MAE DO RIO",
+       54.0
+      ],
+      [
+       "DRE ITAITUBA",
+       53.0
+      ]
+     ],
+     "disciplinas": [
+      [
+       "APROF DE AREAS DE CIENCIAS DA NATUREZA E SUAS TECNOLOGIAS",
+       116.0
+      ],
+      [
+       "MATEMATICA",
+       116.0
+      ],
+      [
+       "APROF DE AREAS DE CIENCIAS HUMANAS E SOCIAIS APLICADAS",
+       89.0
+      ],
+      [
+       "BIOLOGIA",
+       82.0
+      ],
+      [
+       "LINGUA PORTUGUESA E SUAS LITERATURAS",
+       82.0
+      ],
+      [
+       "HISTORIA",
+       78.0
+      ],
+      [
+       "APROF DE AREAS DE MATEMATICA E SUAS TECNOLOGIAS",
+       68.0
+      ],
+      [
+       "QUIMICA",
+       68.0
+      ],
+      [
+       "APROF DE AREAS DE LINGUAGENS E SUAS TECNOLOGIAS",
+       67.0
+      ],
+      [
+       "ESTUDO ORIENTADO - LING PORTUGUESA",
+       65.0
+      ]
+     ]
+    },
+    "Regular e EJA": {
+     "ch": 7368.0,
+     "prof": 113.0,
+     "total_planilha": 113.0,
+     "dres": [
+      [
+       "DRE CASTANHAL",
+       1026.0
+      ],
+      [
+       "DRE SANTA IZABEL DO PARA",
+       659.0
+      ],
+      [
+       "DRE MARABA",
+       621.0
+      ],
+      [
+       "DRE MAE DO RIO",
+       551.0
+      ],
+      [
+       "DRE SANTAREM",
+       505.0
+      ],
+      [
+       "DRE PARAUAPEBAS",
+       480.0
+      ],
+      [
+       "DRE ABAETETUBA",
+       461.0
+      ],
+      [
+       "DRE CAPANEMA",
+       377.0
+      ],
+      [
+       "DRE TUCURUI",
+       367.0
+      ],
+      [
+       "DRE BRAGANCA",
+       330.0
+      ]
+     ],
+     "disciplinas": [
+      [
+       "LINGUA PORTUGUESA E SUAS LITERATURAS",
+       603.0
+      ],
+      [
+       "MATEMATICA",
+       581.0
+      ],
+      [
+       "MAT - APROF DE AREAS DE MATEMATICA E SUAS TECNOLOGIAS",
+       447.0
+      ],
+      [
+       "HISTORIA",
+       405.0
+      ],
+      [
+       "LINGUA INGLESA",
+       405.0
+      ],
+      [
+       "EDUCACAO FISICA",
+       402.0
+      ],
+      [
+       "GEOGRAFIA",
+       340.0
+      ],
+      [
+       "QUIMICA",
+       311.0
+      ],
+      [
+       "FILOSOFIA",
+       307.0
+      ],
+      [
+       "CIENCIAS HUMANAS E SOCIAIS APLICADAS",
+       302.0
+      ]
+     ]
+    }
+   },
+   "RMB": {
+    "Educação especial": {
+     "ch": 1460.0,
+     "prof": 41.0,
+     "total_planilha": 41.0,
+     "dres": [
+      [
+       "DRE BELEM 7",
+       240.0
+      ],
+      [
+       "DRE SANTA BARBARA",
+       160.0
+      ],
+      [
+       "DRE BENEVIDES",
+       140.0
+      ],
+      [
+       "DRE BELEM 1",
+       100.0
+      ],
+      [
+       "DRE BELEM 10",
+       100.0
+      ],
+      [
+       "DRE BELEM 2",
+       100.0
+      ],
+      [
+       "DRE BELEM 6",
+       100.0
+      ],
+      [
+       "DRE BELEM 9",
+       100.0
+      ],
+      [
+       "DRE ANANINDEUA 4",
+       80.0
+      ],
+      [
+       "DRE BELEM 8",
+       80.0
+      ]
+     ],
+     "disciplinas": [
+      [
+       "EDUCACAO ESPECIAL",
+       1460.0
+      ]
+     ]
+    },
+    "Fundamental I": {
+     "ch": 2136.0,
+     "prof": 91.0,
+     "total_planilha": 91.0,
+     "dres": [
+      [
+       "DRE BELEM 9",
+       352.0
+      ],
+      [
+       "DRE BELEM 1",
+       260.0
+      ],
+      [
+       "DRE BELEM 3",
+       198.0
+      ],
+      [
+       "DRE ANANINDEUA 4",
+       196.0
+      ],
+      [
+       "DRE BELEM 7",
+       176.0
+      ],
+      [
+       "DRE BELEM 8",
+       164.0
+      ],
+      [
+       "DRE ANANINDEUA 1",
+       158.0
+      ],
+      [
+       "DRE BELEM 6",
+       140.0
+      ],
+      [
+       "DRE ANANINDEUA 2",
+       120.0
+      ],
+      [
+       "DRE ANANINDEUA 3",
+       120.0
+      ]
+     ],
+     "disciplinas": [
+      [
+       "EDUCACAO AMBIENTAL, SUSTENTABILIDADE E CLIMA",
+       828.0
+      ],
+      [
+       "PROJETO DE CONVIVENCIA",
+       728.0
+      ],
+      [
+       "EDUCACAO FISICA",
+       202.0
+      ],
+      [
+       "ARTES",
+       186.0
+      ],
+      [
+       "LINGUA PORTUGUESA",
+       66.0
+      ],
+      [
+       "MATEMATICA",
+       66.0
+      ],
+      [
+       "CIENCIAS",
+       22.0
+      ],
+      [
+       "GEOGRAFIA",
+       18.0
+      ],
+      [
+       "HISTORIA",
+       18.0
+      ],
+      [
+       "PROJETO DE VIDA",
+       2.0
+      ]
+     ]
+    },
+    "Fund. I integral": {
+     "ch": 71.0,
+     "prof": 2.0,
+     "total_planilha": 2.0,
+     "dres": [
+      [
+       "DRE BELEM 3",
+       36.0
+      ],
+      [
+       "DRE BELEM 1",
+       20.0
+      ],
+      [
+       "DRE ANANINDEUA 5",
+       15.0
+      ]
+     ],
+     "disciplinas": [
+      [
+       "ARTES",
+       30.0
+      ],
+      [
+       "ESTUDO ORIENTADO",
+       15.0
+      ],
+      [
+       "LEITURA, ARTE E MOVIMENTO",
+       12.0
+      ],
+      [
+       "ASSEMBLEIA",
+       4.0
+      ],
+      [
+       "EDUCACAO AMBIENTAL, SUSTENTABILIDADE E CLIMA",
+       4.0
+      ],
+      [
+       "LINGUA INGLESA",
+       4.0
+      ],
+      [
+       "PROJETO DE CONVIVENCIA",
+       2.0
+      ]
+     ]
+    },
+    "Integral": {
+     "ch": 656.0,
+     "prof": 7.0,
+     "total_planilha": 7.0,
+     "dres": [
+      [
+       "DRE BELEM 5",
+       110.0
+      ],
+      [
+       "DRE BELEM 7",
+       108.0
+      ],
+      [
+       "DRE BELEM 3",
+       92.0
+      ],
+      [
+       "DRE BELEM 1",
+       90.0
+      ],
+      [
+       "DRE ANANINDEUA 3",
+       66.0
+      ],
+      [
+       "DRE ANANINDEUA 1",
+       51.0
+      ],
+      [
+       "DRE BELEM 6",
+       37.0
+      ],
+      [
+       "DRE BENEVIDES",
+       37.0
+      ],
+      [
+       "DRE BELEM 9",
+       24.0
+      ],
+      [
+       "DRE BELEM 10",
+       17.0
+      ]
+     ],
+     "disciplinas": [
+      [
+       "HISTORIA",
+       68.0
+      ],
+      [
+       "MATEMATICA",
+       53.0
+      ],
+      [
+       "ARTES",
+       46.0
+      ],
+      [
+       "EDUCACAO FISICA",
+       41.0
+      ],
+      [
+       "LINGUA PORTUGUESA E SUAS LITERATURAS",
+       41.0
+      ],
+      [
+       "FISICA",
+       40.0
+      ],
+      [
+       "APROF DE AREAS DE CIENCIAS HUMANAS E SOCIAIS APLICADAS",
+       30.0
+      ],
+      [
+       "APROF DE AREAS DE CIENCIAS DA NATUREZA E SUAS TECNOLOGIAS",
+       26.0
+      ],
+      [
+       "GEOGRAFIA",
+       26.0
+      ],
+      [
+       "APROF DE AREAS DE MATEMATICA E SUAS TECNOLOGIAS",
+       24.0
+      ]
+     ]
+    },
+    "Regular e EJA": {
+     "ch": 3732.0,
+     "prof": 65.0,
+     "total_planilha": 65.0,
+     "dres": [
+      [
+       "DRE BELEM 9",
+       436.0
+      ],
+      [
+       "DRE BELEM 1",
+       337.0
+      ],
+      [
+       "DRE ANANINDEUA 3",
+       326.0
+      ],
+      [
+       "DRE ANANINDEUA 5",
+       318.0
+      ],
+      [
+       "DRE BELEM 10",
+       293.0
+      ],
+      [
+       "DRE BELEM 4",
+       254.0
+      ],
+      [
+       "DRE BELEM 7",
+       235.0
+      ],
+      [
+       "DRE BELEM 8",
+       235.0
+      ],
+      [
+       "DRE ANANINDEUA 2",
+       204.0
+      ],
+      [
+       "DRE ANANINDEUA 1",
+       195.0
+      ]
+     ],
+     "disciplinas": [
+      [
+       "ARTES",
+       365.0
+      ],
+      [
+       "ENSINO RELIGIOSO",
+       272.0
+      ],
+      [
+       "MATEMATICA",
+       263.0
+      ],
+      [
+       "LINGUA INGLESA",
+       222.0
+      ],
+      [
+       "EDUCACAO FISICA",
+       209.0
+      ],
+      [
+       "PROJETO DE VIDA",
+       157.0
+      ],
+      [
+       "HISTORIA",
+       156.0
+      ],
+      [
+       "MAT - APROF DE AREAS DE MATEMATICA E SUAS TECNOLOGIAS",
+       156.0
+      ],
+      [
+       "GEOGRAFIA",
+       143.0
+      ],
+      [
+       "LINGUA PORTUGUESA E SUAS LITERATURAS",
+       133.0
+      ]
+     ]
+    }
+   }
+  },
+  "F-07": {
+   "links": [
+    {
+     "titulo": "Link de acesso à planilha de Estatística",
+     "url": "https://gestaopaebd02.pages.dev/producao/estatisticas"
+    },
+    {
+     "titulo": "Link de acesso à planilha de gráficos referente aos meses de 2025",
+     "url": "https://docs.google.com/spreadsheets/d/1H_nu9a_mk6NrGKFGiCD_CKL0lBPH-qShxOzZ4TTOzqU/edit?gid=26149330#gid=26149330"
+    },
+    {
+     "titulo": "Link de acesso à planilha de gráficos referente aos meses de 2026",
+     "url": "https://docs.google.com/spreadsheets/d/1v2PiKgiIvuys_q75-0At-Rl1XgR2XoJT6E1zsrPDZ_I/edit?gid=670181989#gid=670181989"
+    },
+    {
+     "titulo": "PLANILHA GERAL CAPO - ACESSE CLICANDO NO LINK ABAIXO",
+     "url": "https://docs.google.com/spreadsheets/d/19plv1xkG_ZwlyyeUOvUMCh9yMupAHnqYjRbPVa0se3I/edit?usp=sharing"
+    }
+   ],
+   "imagens": [
+    "/f07/image5.jpg",
+    "/f07/image2.jpg",
+    "/f07/image3.jpg",
+    "/f07/image4.png",
+    "/f07/image7.png",
+    "/f07/image6.png",
+    "/f07/image8.png"
+   ]
+  }
+ },
+ "DIFOB": {
+  "capa": {},
+  "F-05": {
+   "colunas": [
+    "SOLICITAÇÕES",
+    "DEFERIDOS",
+    "INDEFERIDOS",
+    "SALDO",
+    "EM ANALISE 3.0",
+    "EM ANALISE 4.0"
+   ],
+   "linhas": [
+    {
+     "produto": "LICENÇA PREMIO",
+     "SOLICITAÇÕES": 4211.0,
+     "DEFERIDOS": 4283,
+     "INDEFERIDOS": 72.0,
+     "SALDO": "não se aplica*",
+     "EM ANALISE 3.0": 700.0,
+     "EM ANALISE 4.0": 1700.0
+    },
+    {
+     "produto": "LICENÇA METERNIDADE",
+     "SOLICITAÇÕES": 297.0,
+     "DEFERIDOS": 293.0,
+     "INDEFERIDOS": null,
+     "SALDO": null,
+     "EM ANALISE 3.0": null,
+     "EM ANALISE 4.0": 7.0
+    },
+    {
+     "produto": "LICENÇA APRIMORAMENTO",
+     "SOLICITAÇÕES": 94.0,
+     "DEFERIDOS": null,
+     "INDEFERIDOS": null,
+     "SALDO": null,
+     "EM ANALISE 3.0": null,
+     "EM ANALISE 4.0": 7.0
+    },
+    {
+     "produto": "LICENÇA SAÚDE",
+     "SOLICITAÇÕES": null,
+     "DEFERIDOS": null,
+     "INDEFERIDOS": null,
+     "SALDO": null,
+     "EM ANALISE 3.0": null,
+     "EM ANALISE 4.0": null
+    },
+    {
+     "produto": "READAPTAÇÃO",
+     "SOLICITAÇÕES": null,
+     "DEFERIDOS": null,
+     "INDEFERIDOS": null,
+     "SALDO": null,
+     "EM ANALISE 3.0": null,
+     "EM ANALISE 4.0": null
+    },
+    {
+     "produto": "PERÍCIA MEDICA",
+     "SOLICITAÇÕES": null,
+     "DEFERIDOS": null,
+     "INDEFERIDOS": null,
+     "SALDO": null,
+     "EM ANALISE 3.0": null,
+     "EM ANALISE 4.0": null
+    }
+   ],
+   "link": "https://datastudio.google.com/u/0/reporting/21160219-ab66-479e-910a-cbc2721b6d65/page/p_3vm1t80r8d",
+   "nota": "*Considerando o quantitativo de servidores ativos que possuem direito ao benefício, não é possível mensurar, de forma global, o saldo remanescente para gozo sem a prévia análise individualizada da situação funcional de cada servidor."
+  },
+  "F-04": {},
+  "F-06": {},
+  "F-08": {}
+ },
+ "DIPSE": {
+  "capa": {
+   "CÓDIGO E TÍTULO": "F-03 - Processos Seletivos, concursos  e contratações temporárias",
+   "UNIDADE E RESPONSÁVEL PRINCIPAL": "Diretoria de Planejamento, Seleção e Evidências - DIPSE - Dayane Garcez Bacelar - Diretora DIPSE, em exercício.",
+   "COLABORADORES E RESPECTIVAS FONTES": "Maria Raimunda Martins Gonçalves - Coordenadoria de Avaliação de Desempenho e Desenvolvimento Profissional - CADDEP\nDayane Garcez Bacelar - Coordenadoria de Planejamento de Planejamento e Seleção - CPS.",
+   "ELABORADOR E CARGO": "Dayane Garcez Bacelar - Diretora DIPSE, em exercício.",
+   "AUTORIDADE QUE CONFIRMA ORIGEM E LOCALIZAÇÃO": "Hellen Nyde da Silva e Souza - Secretária adjunta SAGEP",
+   "DATA-BASE": "Mês de setembro",
+   "PERÍODO": "01/01/2026 a 30/09/2026",
+   "DATA DE ENTREGA": "28/10/2026",
+   "VERSÃO": "planilha XLSX",
+   "FONTE": "Dados fornecidos pelas coordenadorias CPS e CADDEP.",
+   "SISTEMA DE ORIGEM": "CPS - Sistema de Processo Seletivo - https://pss.seduc.pa.gov.br/gestao/index.php\n\nCADDEP - Monitoramento do setor - Estágio Probatório https://datastudio.google.com/reporting/a30548e0-24fa-4655-bc14-49f781604682/page/p_ppqziwervd",
+   "MÉTODO": "Monitoramento por meio de intercruzamento de informações por meio de planilhas.",
+   "EVIDÊNCIA": "Dados fornecidos pelas coordenadorias CPS e CADDEP.",
+   "LIMITAÇÕES": "Não se aplica",
+   "DOCUMENTOS ANEXOS": "Não se aplica",
+   "LOCALIZAÇÃO NO REPOSITÓRIO": "Não se aplica",
+   "DADOS PESSOAIS": "Não se aplica",
+   "SIGILO / FUNDAMENTO": "Lei Geral de Proteção de Dados Pessoais (LGPD) - Lei n. 13709/2018.",
+   "PENDÊNCIAS": "Não se aplica",
+   "RISCOS": "Não se aplica",
+   "PROVIDÊNCIAS": "Não se aplica",
+   "SERVIDOR DE REFERÊNCIA E CONTATO INSTITUCIONAL": "Dayane Garcez Bacelar - email: dayane.oliveira@seduc.pa.gov.br"
+  },
+  "F-03": {
+   "pss": [
+    {
+     "nome": "PSS 03/2024 - EDITAL N. 01/2024 - PROFESSOR DE EDUCAÇÃO BÁSICA",
+     "vigencia": "02/01/2027",
+     "modalidade": "Cadastro de reserva",
+     "link": "https://www.seduc.pa.gov.br/site/public/upload/arquivo/portal_seduc/EDITAL%20PSS%20032024%20-%20PROFESSOR%20DE%20EDUCACAO%20BASICA-a60ef.pdf"
+    },
+    {
+     "nome": "CHAMADA PÚBLICA - EDITAL N. 01/2025 - PROGRAMA BRASIL ALFABETIZADO (PBA)",
+     "vigencia": "29/04/2027",
+     "modalidade": "Cadastro de reserva",
+     "link": "https://www.seduc.pa.gov.br/site/public/upload/arquivo/portal_seduc/EDITAL%20CHAMADA%20PUBLICA%20(PBA)%2001_2025docx-798d9.pdf"
+    },
+    {
+     "nome": "PSS 03/2025 - ANALISTA E ASSISTENTE ADMINISTRATIVO",
+     "vigencia": "14/05/2027",
+     "modalidade": "Vagas ofertadas",
+     "link": "https://www.seduc.pa.gov.br/site/public/upload/arquivo/portal_seduc/Edital%20_PSS%2003_2025_ADMINISTRACAO%20GERAL-a9887.pdf"
+    },
+    {
+     "nome": "PSS 04/2025 SECTET - EDITAL N. 01/2025 - PROFESSOR NÍVEL SUPERIOR E ESPECIALISTA EM EDUCAÇÃO",
+     "vigencia": "07/07/2027",
+     "modalidade": "Cadastro de reserva",
+     "link": "https://www.seduc.pa.gov.br/site/public/upload/arquivo/portal_seduc/EDITAL%2001_%20PSS%2004_2025_%20SECTET_SEDUC-ea0bd.pdf"
+    },
+    {
+     "nome": "PSS 07/2025 - EDITAL N. 01/2025 - PROFESSOR NÍVEL SUPERIOR",
+     "vigencia": "19/01/2027",
+     "modalidade": "Cadastro de reserva",
+     "link": "https://www.seduc.pa.gov.br/site/public/upload/arquivo/portal_seduc/EDITAL%2007_2025%20PROFESSOR%20SEDUC_PA-8de84.pdf"
+    },
+    {
+     "nome": "ESTAGIÁRIOS - CHAMADA PÚBLICA 01/2026",
+     "vigencia": "01/07/2027",
+     "modalidade": "Cadastro de reserva",
+     "link": "https://www.seduc.pa.gov.br/pagina/14677-pss-01-2026---estagiario-bolsista-de-nivel-superior"
+    }
+   ],
+   "contratos": [
+    {
+     "categoria": "TEMPORARIOS ATIVOS - MAGISTERIO BÁSICO",
+     "total": 8564.0,
+     "desligamentos": [
+      455.0,
+      1.0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "categoria": "TEMPORARIOS ATIVOS - ADMINISTRAÇÃO GERAL",
+     "total": 885.0,
+     "desligamentos": [
+      43.0,
+      86.0,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "categoria": "TEMPORARIOS ATIVOS - ESTAGIÁRIOS",
+     "total": 1600.0,
+     "desligamentos": [
+      966.0,
+      14.0,
+      27.0,
+      83.0,
+      510.0
+     ]
+    }
+   ],
+   "contratos_cab": [
+    "Dez/2026",
+    "Jan/2027",
+    "Fev/2027",
+    "Mar/2027",
+    "A partir de abr/2027"
+   ],
+   "concurso": {
+    "nome": "C-223 - Provimento de professores e demais cargos da administração geral",
+    "validade": "em andamento com previsão de publicação do resultado final para 30/07/2027.",
+    "obs": "Não há outro concurso vigente aguardando nomeação."
+   },
+   "cargos": [
+    {
+     "categoria": "ADMINISTRAÇÃO GERAL",
+     "cargo": "ANALISTA DE GESTÃO GOVERNAMENTAL E POLÍTICA EDUCACIONAL",
+     "natureza": "EFETIVO",
+     "criado": 318.0,
+     "ocupado": 127.0,
+     "vago": 191.0
+    },
+    {
+     "categoria": "ADMINISTRAÇÃO GERAL",
+     "cargo": "ANALISTA DE SUPORTE EDUCACIONAL",
+     "natureza": "EFETIVO",
+     "criado": 259.0,
+     "ocupado": 118.0,
+     "vago": 141.0
+    },
+    {
+     "categoria": "ADMINISTRAÇÃO GERAL",
+     "cargo": "ANALISTA DE GESTÃO GOVERNAMENTAL E INFRAESTRUTURA EDUCACIONAL",
+     "natureza": "EFETIVO",
+     "criado": 65.0,
+     "ocupado": 25.0,
+     "vago": 40.0
+    },
+    {
+     "categoria": "ADMINISTRAÇÃO GERAL",
+     "cargo": "ASSISTENTE DE GESTÃO GOVERNAMENTAL E EDUCACIONAL",
+     "natureza": "EFETIVO",
+     "criado": 2194.0,
+     "ocupado": 1537.0,
+     "vago": 657.0
+    },
+    {
+     "categoria": "ADMINISTRAÇÃO GERAL",
+     "cargo": "AUXILIAR OPERACIONAL E EDUCACIONAL",
+     "natureza": "EFETIVO",
+     "criado": 5427.0,
+     "ocupado": 3844.0,
+     "vago": 1583.0
+    },
+    {
+     "categoria": "ADMINISTRAÇÃO GERAL",
+     "cargo": "ASSISTENTE EM EDUCAÇÃO ESPECIAL",
+     "natureza": "EFETIVO",
+     "criado": 1872.0,
+     "ocupado": 0,
+     "vago": 1872.0
+    },
+    {
+     "categoria": "MAGISTERIO",
+     "cargo": "PROFESSOR CLASSE ESPECIAL (AD-1, AD-2, AD-3 e AD-4) CLASSE I CLASSE II CLASSE III CLASSE IV",
+     "natureza": "EFETIVO/Quadro Suplementar",
+     "criado": 17934.0,
+     "ocupado": 16263.0,
+     "vago": 1671.0
+    },
+    {
+     "categoria": "MAGISTERIO",
+     "cargo": "ESPECIALISTA EM EDUCAÇÃO CLASSE I CLASSE II CLASSE II CLASSE IV",
+     "natureza": "EFETIVO/Quadro Suplementar",
+     "criado": 4287.0,
+     "ocupado": 3738.0,
+     "vago": 549.0
+    },
+    {
+     "categoria": "MAGISTERIO",
+     "cargo": "PROFESSOR ASSISTENTE PA-A PA-B PA-C PA-D",
+     "natureza": "Estáveis (Art. 19 do ADCT) / Quadro Suplementar",
+     "criado": 3722.0,
+     "ocupado": 192.0,
+     "vago": 3530.0
+    },
+    {
+     "categoria": "LIVRE NOMEAÇÃO",
+     "cargo": "SECRETÁRIO ESTADUAL DE EDUCAÇÃO",
+     "natureza": "COMISSIONADO",
+     "criado": 1.0,
+     "ocupado": 1.0,
+     "vago": 0
+    },
+    {
+     "categoria": "LIVRE NOMEAÇÃO",
+     "cargo": "SECRETÁRIO ADJUNTO DE EDUCAÇÃO BÁSICA",
+     "natureza": "COMISSIONADO",
+     "criado": 1.0,
+     "ocupado": 1.0,
+     "vago": 0
+    },
+    {
+     "categoria": "LIVRE NOMEAÇÃO",
+     "cargo": "SECRETÁRIO ADJUNTO DE GESTÃO E REGIME DE COLABORAÇÃO",
+     "natureza": "COMISSIONADO",
+     "criado": 1.0,
+     "ocupado": 1.0,
+     "vago": 0
+    },
+    {
+     "categoria": "LIVRE NOMEAÇÃO",
+     "cargo": "SECRETÁRIO ADJUNTO DE PLENAJEMANTO E FINANÇAS",
+     "natureza": "COMISSIONADO",
+     "criado": 1.0,
+     "ocupado": 1.0,
+     "vago": 0
+    },
+    {
+     "categoria": "LIVRE NOMEAÇÃO",
+     "cargo": "SECRETÁRIO ADJUNTO DE GESTÃO DE PESSOAS",
+     "natureza": "COMISSIONADO",
+     "criado": 1.0,
+     "ocupado": 1.0,
+     "vago": 0
+    },
+    {
+     "categoria": "LIVRE NOMEAÇÃO",
+     "cargo": "SECRETÁRIO ADJUNTO DE LOGÍSTICA",
+     "natureza": "COMISSIONADO",
+     "criado": 1.0,
+     "ocupado": 1.0,
+     "vago": 0
+    },
+    {
+     "categoria": "LIVRE NOMEAÇÃO",
+     "cargo": "SECRETÁRIO ADJUNTO DE INFRAESTRUTURA",
+     "natureza": "COMISSIONADO",
+     "criado": 1.0,
+     "ocupado": 1.0,
+     "vago": 0
+    },
+    {
+     "categoria": "LIVRE NOMEAÇÃO",
+     "cargo": "CORREGEDOR",
+     "natureza": "COMISSIONADO",
+     "criado": 1.0,
+     "ocupado": 1.0,
+     "vago": 0
+    },
+    {
+     "categoria": "LIVRE NOMEAÇÃO",
+     "cargo": "COORDENADOR DO NÚCLEO DE COMUNICAÇÃO",
+     "natureza": "COMISSIONADO",
+     "criado": 1.0,
+     "ocupado": 1.0,
+     "vago": 0
+    },
+    {
+     "categoria": "LIVRE NOMEAÇÃO",
+     "cargo": "COORDENADOR DA CONSULTORIA JURÍDICA",
+     "natureza": "COMISSIONADO",
+     "criado": 1.0,
+     "ocupado": 1.0,
+     "vago": 0
+    },
+    {
+     "categoria": "LIVRE NOMEAÇÃO",
+     "cargo": "CHEFE DE GABINETE",
+     "natureza": "COMISSIONADO",
+     "criado": 1.0,
+     "ocupado": 1.0,
+     "vago": 0
+    },
+    {
+     "categoria": "LIVRE NOMEAÇÃO",
+     "cargo": "CHEFE DE GABINETE DE SECRETÁRIO ADJUNTO",
+     "natureza": "COMISSIONADO",
+     "criado": 6.0,
+     "ocupado": 6.0,
+     "vago": 0
+    },
+    {
+     "categoria": "LIVRE NOMEAÇÃO",
+     "cargo": "COORDENADOR DO NÚCLEO DE CONTRATAÇÕES",
+     "natureza": "COMISSIONADO",
+     "criado": 1.0,
+     "ocupado": 1.0,
+     "vago": 0
+    },
+    {
+     "categoria": "LIVRE NOMEAÇÃO",
+     "cargo": "COORDENADOR DO NÚCLEO DE CONTROLE INTERNO",
+     "natureza": "COMISSIONADO",
+     "criado": 1.0,
+     "ocupado": 1.0,
+     "vago": 0
+    },
+    {
+     "categoria": "LIVRE NOMEAÇÃO",
+     "cargo": "COORDENADOR DO NÚCLEO DE GESTÃO ESTRATÉGICA",
+     "natureza": "COMISSIONADO",
+     "criado": 1.0,
+     "ocupado": 1.0,
+     "vago": 0
+    },
+    {
+     "categoria": "LIVRE NOMEAÇÃO",
+     "cargo": "DIRETOR",
+     "natureza": "COMISSIONADO",
+     "criado": 23.0,
+     "ocupado": 23.0,
+     "vago": 0
+    },
+    {
+     "categoria": "LIVRE NOMEAÇÃO",
+     "cargo": "ASSESSOR",
+     "natureza": "COMISSIONADO",
+     "criado": 9.0,
+     "ocupado": 9.0,
+     "vago": 0
+    },
+    {
+     "categoria": "LIVRE NOMEAÇÃO",
+     "cargo": "ASSESSOR",
+     "natureza": "COMISSIONADO",
+     "criado": 6.0,
+     "ocupado": 6.0,
+     "vago": 0
+    },
+    {
+     "categoria": "LIVRE NOMEAÇÃO",
+     "cargo": "ASSESSOR",
+     "natureza": "COMISSIONADO",
+     "criado": 5.0,
+     "ocupado": 5.0,
+     "vago": 0
+    },
+    {
+     "categoria": "LIVRE NOMEAÇÃO",
+     "cargo": "ASSESSORIA",
+     "natureza": "COMISSIONADO",
+     "criado": 2.0,
+     "ocupado": 2.0,
+     "vago": 0
+    },
+    {
+     "categoria": "LIVRE NOMEAÇÃO",
+     "cargo": "ASSESSORIA",
+     "natureza": "COMISSIONADO",
+     "criado": 1.0,
+     "ocupado": 1.0,
+     "vago": 0
+    },
+    {
+     "categoria": "LIVRE NOMEAÇÃO",
+     "cargo": "COORDENADOR",
+     "natureza": "COMISSIONADO",
+     "criado": 59.0,
+     "ocupado": 59.0,
+     "vago": 0
+    },
+    {
+     "categoria": "LIVRE NOMEAÇÃO",
+     "cargo": "ASSESSOR ESCOLA DE APOIO A GESTAO - INDIGENAS",
+     "natureza": "COMISSIONADO",
+     "criado": 384.0,
+     "ocupado": 275.0,
+     "vago": 109.0
+    }
+   ]
+  }
+ }
+}
