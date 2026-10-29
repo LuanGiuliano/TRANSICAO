@@ -174,7 +174,7 @@ s = wb.worksheets[1]
 pss = []
 for r in range(9, 16):
     n = txt(s.cell(r, 1).value)
-    if n and not n.startswith('Produto'):
+    if n and not n.startswith('Produto') and '03/2024' not in n:
         pss.append({'nome': n, 'vigencia': txt(s.cell(r, 2).value), 'modalidade': txt(s.cell(r, 3).value),
                     'link': txt(s.cell(r, 4).value)})
 cab = [txt(s.cell(20, c).value) or '' for c in range(3, 8)]

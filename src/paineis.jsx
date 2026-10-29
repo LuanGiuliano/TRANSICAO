@@ -214,6 +214,7 @@ function F03() {
   
   const todosMaisVagos = [...efetivos].sort((a, b) => b.vago - a.vago).map((c) => [c.cargo, c.vago])
   const maisVagosExibidos = aplicarLimite(todosMaisVagos, limiteMaisVagos)
+  const listaPss = (d.pss || []).filter((p) => !/03\/2024/i.test(p.nome))
 
   return (
     <>
@@ -221,7 +222,7 @@ function F03() {
         <Kpi rotulo="Temporários ativos" valor={fmt(temporariosAtivos)} sub="magistério básico e adm. geral" cor="#00838a" />
         <Kpi rotulo="Estagiários ativos" valor={fmt(estagiariosAtivos)} sub="programa de estágio SEDUC" cor="#7b5ea7" />
         <Kpi rotulo="Término temporários até mar/2027" valor={fmt(desligTemporarios)} sub="contratos a vencer até 31/03/2027" cor="#c0504d" />
-        <Kpi rotulo="Processos seletivos vigentes" valor={d.pss.length} cor="#153a4d" />
+        <Kpi rotulo="Processos seletivos vigentes" valor={listaPss.length} cor="#153a4d" />
         <Kpi rotulo="Cargos efetivos vagos" valor={fmt(efetivos.reduce((s, c) => s + c.vago, 0))} sub="vagas abertas na rede estadual" cor="#c4841d" />
       </div>
       <div className="blocos">
@@ -251,7 +252,7 @@ function F03() {
           <table className="tabela">
             <thead><tr><th>Processo</th><th>Vigência até</th><th>Modalidade</th><th>Edital</th></tr></thead>
             <tbody>
-              {d.pss.map((p) => (
+              {listaPss.map((p) => (
                 <tr key={p.nome}>
                   <td>{p.nome}</td><td>{p.vigencia}</td><td>{p.modalidade}</td>
                   <td>{p.link && <a href={p.link} target="_blank" rel="noreferrer">abrir ↗</a>}</td>
