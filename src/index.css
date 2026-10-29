@@ -178,13 +178,33 @@ textarea:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px
 .vazio p { margin-top: 6px; }
 .vazio code { background: #eef3f6; padding: 2px 6px; border-radius: 6px; }
 
-.hbars { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 7px; }
-.hbars li { display: grid; grid-template-columns: minmax(90px, 36%) 1fr auto; align-items: center; gap: 10px; font-size: 12.5px; }
-.hbars__r { color: var(--text); text-transform: capitalize; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.hbars__trilho { height: 14px; background: #edf2f5; border-radius: 99px; overflow: hidden; }
+.hbars { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.hbars li {
+  display: grid;
+  grid-template-columns: minmax(140px, 44%) 1fr auto;
+  align-items: center;
+  gap: 12px;
+  font-size: 12.5px;
+  padding: 3px 6px;
+  border-radius: 6px;
+  transition: background-color .15s ease;
+  cursor: pointer;
+}
+.hbars li:hover {
+  background: rgba(0, 131, 138, 0.05);
+}
+.hbars__r {
+  color: var(--ink);
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 1.25;
+}
+.hbars__trilho { height: 13px; background: #edf2f5; border-radius: 99px; overflow: hidden; }
 .hbars__trilho i { display: block; height: 100%; border-radius: 99px; transform-origin: left; animation: cresce .7s ease both; }
 @keyframes cresce { from { transform: scaleX(0); } to { transform: scaleX(1); } }
-.hbars__v { color: var(--ink); font-variant-numeric: tabular-nums; min-width: 44px; text-align: right; }
+.hbars__v { color: var(--ink); font-variant-numeric: tabular-nums; min-width: 48px; text-align: right; font-weight: 700; }
 
 .donut { display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
 .donut__svg { width: 190px; height: 190px; flex-shrink: 0; transform: rotate(0deg); }
@@ -243,12 +263,90 @@ textarea:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px
 .prop .legenda small { color: var(--muted); }
 
 /* Barras horizontais com percentual */
-.hbars--pct li { grid-template-columns: minmax(140px, 38%) 1fr auto; padding: 4px 0; }
-.hbars--pct .hbars__v { min-width: 95px; font-size: 12.5px; }
+.hbars--pct li {
+  grid-template-columns: minmax(160px, 46%) 1fr auto;
+  padding: 4px 6px;
+}
+.hbars--pct .hbars__v { min-width: 95px; font-size: 12px; }
 .hbars--pct small { color: var(--teal); font-weight: 700; margin-left: 5px; background: rgba(0,131,138,.08); padding: 2px 6px; border-radius: 6px; }
 
 /* Tag destacada para AGA */
 .tag-aga { background: #e0f2f1; color: #00695c; border: 1px solid #b2dfdb; padding: 4px 10px; border-radius: 8px; font-size: 12px; font-weight: 700; display: inline-flex; align-items: center; gap: 6px; }
+
+/* ===== Tooltip Padronizado do Sistema (SAGEP) ===== */
+.custom-tooltip {
+  position: fixed;
+  pointer-events: none;
+  z-index: 10000;
+  background: #ffffff;
+  color: #153a4d;
+  border: 1px solid #cfe0e8;
+  border-radius: 8px;
+  padding: 8px 12px;
+  box-shadow: 0 8px 24px rgba(21, 58, 77, 0.16), 0 2px 6px rgba(21, 58, 77, 0.08);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 12px;
+  max-width: 340px;
+  min-width: 140px;
+  transform: translate(12px, 12px);
+  animation: tooltipFade .12s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes tooltipFade {
+  from { opacity: 0; transform: translate(12px, 16px); }
+  to { opacity: 1; transform: translate(12px, 12px); }
+}
+.custom-tooltip__head {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 3px;
+}
+.custom-tooltip__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 1.5px rgba(255, 255, 255, 0.8);
+}
+.custom-tooltip__titulo {
+  font-weight: 700;
+  font-size: 12px;
+  color: #153a4d;
+  line-height: 1.25;
+}
+.custom-tooltip__serie {
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.custom-tooltip__corpo {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-top: 2px;
+}
+.custom-tooltip__valor {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--teal);
+  font-variant-numeric: tabular-nums;
+}
+.custom-tooltip__pct {
+  font-size: 11px;
+  font-weight: 700;
+  color: #2e7d32;
+  background: #e8f5e9;
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+.custom-tooltip__extra {
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 4px;
+  border-top: 1px solid #edf2f5;
+  padding-top: 4px;
+}
 
 /* ===== Controles de Limite (15 / 50 / Todos) ===== */
 .limite-ctrl {

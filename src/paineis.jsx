@@ -188,8 +188,19 @@ function F02() {
 /* ---------- F-03 ---------- */
 function F03() {
   const d = dados.DIPSE['F-03']
-  const ativos = d.contratos.reduce((s, c) => s + (c.total || 0), 0)
-  const deslig = d.contratos.reduce((s, c) => s + c.desligamentos.slice(0, 4).reduce((a, b) => a + b, 0), 0)
+  const [limiteMaisVagos, setLimiteMaisVagos] = useState(8)
+
+  // Estagiário não é temporário: segregação conforme Lei Federal nº 11.788
+  const contratosTemporarios = d.contratos.filter((c) => !/ESTAGI/i.test(c.categoria))
+  const estagiariosContrato = d.contratos.filter((c) => /ESTAGI/i.test(c.categoria))
+
+  // Total de temporários (Magistério: 8.564 + Adm. Geral: 885 = 9.449)
+  const temporariosAtivos = contratosTemporarios.reduce((s, c) => s + (c.total || 0), 0)
+  // Total de estagiários (1.600)
+  const estagiariosAtivos = estagiariosContrato.reduce((s, c) => s + (c.total || 0), 0)
+
+  // Desligamentos de temporários até mar/2027 (585)
+  const desligTemporarios = contratosTemporarios.reduce((s, c) => s + c.desligamentos.slice(0, 4).reduce((a, b) => a + b, 0), 0)
   const criado = d.cargos.reduce((s, c) => s + c.criado, 0)
   const vago = d.cargos.reduce((s, c) => s + c.vago, 0)
   const efetivos = d.cargos.filter((c) => /EFETIVO|Estáveis/i.test(c.natureza || ''))
@@ -200,32 +211,39 @@ function F03() {
     porCat[k].o += c.ocupado; porCat[k].v += c.vago
   })
   const cats = Object.keys(porCat)
-  const maisVagos = [...efetivos].sort((a, b) => b.vago - a.vago).slice(0, 8)
-    .map((c) => [c.cargo.toLowerCase().slice(0, 55), c.vago])
+  
+  const todosMaisVagos = [...efetivos].sort((a, b) => b.vago - a.vago).map((c) => [c.cargo, c.vago])
+  const maisVagosExibidos = aplicarLimite(todosMaisVagos, limiteMaisVagos)
+
   return (
     <>
       <div className="kpis">
-        <Kpi rotulo="Temporários ativos" valor={fmt(ativos)} sub="magistério, adm. geral e estagiários" />
-        <Kpi rotulo="Desligamentos até mar/2027" valor={fmt(deslig)} sub="contratos que vencem até 31/03/2027" cor="#c0504d" />
+        <Kpi rotulo="Temporários ativos" valor={fmt(temporariosAtivos)} sub="magistério básico e adm. geral" cor="#00838a" />
+        <Kpi rotulo="Estagiários ativos" valor={fmt(estagiariosAtivos)} sub="programa de estágio SEDUC" cor="#7b5ea7" />
+        <Kpi rotulo="Término temporários até mar/2027" valor={fmt(desligTemporarios)} sub="contratos a vencer até 31/03/2027" cor="#c0504d" />
         <Kpi rotulo="Processos seletivos vigentes" valor={d.pss.length} cor="#153a4d" />
-        <Kpi rotulo="Cargos efetivos vagos" valor={fmt(efetivos.reduce((s, c) => s + c.vago, 0))} sub={`de ${fmt(efetivos.reduce((s, c) => s + c.criado, 0))} criados`} cor="#c4841d" />
+        <Kpi rotulo="Cargos efetivos vagos" valor={fmt(efetivos.reduce((s, c) => s + c.vago, 0))} sub="vagas abertas na rede estadual" cor="#c4841d" />
       </div>
       <div className="blocos">
-        <Bloco titulo="Temporários ativos por categoria">
-          <HBars dados={d.contratos.map((c) => [c.categoria.replace('TEMPORARIOS ATIVOS - ', '').trim(), c.total])} />
+        <Bloco titulo="Temporários ativos por categoria" nota="Estagiários não são temporários e estão segregados por lei.">
+          <HBars dados={contratosTemporarios.map((c) => [c.categoria.replace('TEMPORARIOS ATIVOS - ', '').trim(), c.total])} />
         </Bloco>
-        <Bloco titulo="Desligamentos previstos de temporários" nota="Contratos com vencimento por período.">
+        <Bloco titulo="Desligamentos previstos de temporários" nota="Término da vigência de contratos temporários por período.">
           <Colunas
             categorias={d.contratos_cab}
-            series={d.contratos.map((c) => ({ nome: c.categoria.replace('TEMPORARIOS ATIVOS - ', '').trim(), valores: c.desligamentos }))}
+            series={contratosTemporarios.map((c) => ({ nome: c.categoria.replace('TEMPORARIOS ATIVOS - ', '').trim(), valores: c.desligamentos }))}
           />
         </Bloco>
         <Bloco titulo="Cargos efetivos: ocupados × vagos">
           <Colunas categorias={cats.map((c) => c.toLowerCase())}
             series={[{ nome: 'Ocupados', valores: cats.map((c) => porCat[c].o) }, { nome: 'Vagos', valores: cats.map((c) => porCat[c].v) }]} />
         </Bloco>
-        <Bloco titulo="Cargos efetivos com mais vagas">
-          <HBars dados={maisVagos} cor="#c4841d" />
+        <Bloco
+          titulo="Cargos efetivos com mais vagas"
+          extra={<LimiteControle total={todosMaisVagos.length} limite={limiteMaisVagos} onChange={setLimiteMaisVagos} opcoes={[8, 20, 'Todos']} />}
+          nota={`Distribuição de vagas em aberto na rede. Exibindo ${maisVagosExibidos.length} de ${todosMaisVagos.length}.`}
+        >
+          <HBars dados={maisVagosExibidos} cor="#c4841d" />
         </Bloco>
       </div>
       <Bloco titulo="Inventário – Processos seletivos simplificados" span="full">
