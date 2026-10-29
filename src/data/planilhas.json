@@ -4,7 +4,7 @@
    "UNIDADE E RESPONSÁVEL PRINCIPAL": "DIRETORIA DE ORGANIZAÇÃO DE PESSOAS",
    "COLABORADORES E RESPECTIVAS FONTES": "ANTHONY SAUL PINHEIRO MAGALHÃES, TAMARA DE SOUSA PEREIRA, ROSINELMA MEIRELES DA SILVA, ANA LUIZA LIMA DOS SANTOS",
    "ELABORADOR E CARGO": "ANTHONY SAUL PINHEIRO MAGALHÃES, ASSISTENTE DE GESTÃO GOVERNAMENTAL E EDUCACIONAL B",
-   "AUTORIDADE QUE CONFIRMA ORIGEM E LOCALIZAÇÃO": "ANTHONY SAUL PINHEIRO MAGALHÃES",
+   "AUTORIDADE QUE CONFIRMA ORIGEM E LOCALIZAÇÃO": "Hellen Nyde da Silva e Souza",
    "DATA-BASE": "28/09/2026",
    "DATA DE ENTREGA": "29/10/2026",
    "FONTE": "SIGEP/ERGON/PAE 4.0 E 3.0/SAS MONTREAL",
@@ -53,10 +53,6 @@
    "total": 37832.0,
    "link": "https://docs.google.com/spreadsheets/d/1iZn_vL2xkFRnT5uKlrjOww8QhTnI_NcPAufhHMku1jo/edit?gid=1572449159#gid=1572449159",
    "por_dre": [
-    [
-     "SEDUC SEDE",
-     5848.0
-    ],
     [
      "DRE ABAETETUBA",
      2547.0
@@ -212,6 +208,10 @@
     [
      "DRE SANTA BARBARA",
      410.0
+    ],
+    [
+     "DRE AFUA",
+     150.0
     ]
    ],
    "por_dre_vinculo": {
@@ -476,17 +476,6 @@
      "NAO ESTAVEL": 6.0,
      "CONTR TEMP INDIGENA": 22.0,
      "ESTAGIARIO CURRICUL": 1.0
-    },
-    "SEDUC SEDE": {
-     "COMISSAO": 60.0,
-     "EFETIVO": 5108.0,
-     "ESTAGIARIO CURRICUL": 105.0,
-     "A DISPOSICAO": 5.0,
-     "CONTRATO TEMPORARIO": 152.0,
-     "NAO ESTAVEL": 406.0,
-     "CEDIDO EXECUT ESTAD": 2.0,
-     "CONTR TEMP INDIGENA": 2.0,
-     "ESTAVEL CONST FED": 8.0
     }
    },
    "cargos_top": [
@@ -537,10 +526,459 @@
     [
      "AUXILIAR OPERACIONAL E EDUCACIONAL A",
      674.0
+    ],
+    [
+     "PROFESSOR CLASSE III",
+     656.0
+    ],
+    [
+     "ESTAGIARIO NS-RE-20HS",
+     595.0
+    ],
+    [
+     "ESTAGIARIO NS-AC-20HS",
+     555.0
+    ],
+    [
+     "PROFESSOR BACHARELADO",
+     534.0
+    ],
+    [
+     "ASSISTENTE EM EDUCACAO ESPECIAL A",
+     519.0
+    ],
+    [
+     "SERVENTE REFERENCIA I",
+     490.0
+    ],
+    [
+     "PROFESSOR NIVEL MEDIO",
+     414.0
+    ],
+    [
+     "ESCREVENTE DATILOGRAFO REFERENCIA III",
+     402.0
+    ],
+    [
+     "ASSISTENTE DE GESTAO GOVERNAMENTAL E EDUCACIONAL A",
+     376.0
+    ],
+    [
+     "ASSISTENTE ADMINISTRATIVO",
+     285.0
+    ],
+    [
+     "SERVENTE",
+     244.0
+    ],
+    [
+     "AGENTE DE PORTARIA",
+     228.0
+    ],
+    [
+     "ESTAGIARIO NS - 20HS",
+     218.0
+    ],
+    [
+     "ANALISTA DE SUPORTE EDUCACIONAL A",
+     217.0
+    ],
+    [
+     "ESCREVENTE DATILOGRAFO",
+     189.0
+    ],
+    [
+     "PROFESSOR ASSISTENTE PA-A",
+     137.0
+    ],
+    [
+     "COORDENADOR REGIONAL DE ENSINO",
+     132.0
+    ],
+    [
+     "PROF. COLABORADOR NIVEL SUPERIOR",
+     132.0
+    ],
+    [
+     "ANALISTA DE GESTAO GOVERNAMENTAL E POLITICA EDUCACIONAL A",
+     107.0
+    ],
+    [
+     "VIGIA REF. I",
+     106.0
+    ],
+    [
+     "ANALISTA DE GESTAO GOVERNAM E INFRAESTRUTURA  EDUCACIONAL A",
+     97.0
+    ],
+    [
+     "VIGIA",
+     87.0
+    ],
+    [
+     "ANALISTA DE GESTAO GOVERNAMENTAL E POLITICA EDUCACIONAL B",
+     73.0
+    ],
+    [
+     "PROFESSOR AD-4",
+     73.0
+    ],
+    [
+     "CHEFE DE GRUPO",
+     73.0
+    ],
+    [
+     "ANALISTA DE SUPORTE EDUCACIONAL B",
+     71.0
+    ],
+    [
+     "COORDENADOR",
+     61.0
+    ],
+    [
+     "ESPECIALISTA EM EDUCACAO CLASSE III",
+     55.0
+    ],
+    [
+     "DIRIGENTE REGIONAL DE ENSINO",
+     53.0
+    ],
+    [
+     "MERENDEIRA",
+     43.0
+    ],
+    [
+     "PROFESSOR CLASSE IV",
+     35.0
+    ],
+    [
+     "PROFESSOR COLABORADOR NIVEL MEDIO",
+     29.0
+    ],
+    [
+     "DIRETOR",
+     26.0
+    ],
+    [
+     "PROFESSOR ASSISTENTE PA-D",
+     25.0
+    ],
+    [
+     "TECNICO EM GESTAO PUBLICA",
+     20.0
+    ],
+    [
+     "ASSESSOR",
+     20.0
+    ],
+    [
+     "AGENTE DE ARTES PRATICAS",
+     17.0
+    ],
+    [
+     "PROFESSOR NIVEL SUPERIOR LC",
+     17.0
+    ],
+    [
+     "PROFESSOR ASSISTENTE PA-B",
+     17.0
+    ],
+    [
+     "ANALISTA DE GESTAO GOVERNAM E INFRAESTRUTURA  EDUCACIONAL B",
+     17.0
+    ],
+    [
+     "INSPETOR DE ALUNOS",
+     16.0
+    ],
+    [
+     "TECNICO EM EDUCACAO",
+     14.0
+    ],
+    [
+     "PROFESSOR AD-1",
+     11.0
+    ],
+    [
+     "AUX. DE SERV. GERAIS A",
+     11.0
+    ],
+    [
+     "VIGILANTE",
+     11.0
+    ],
+    [
+     "ORIENTADOR EDUCACIONAL EE-2",
+     10.0
+    ],
+    [
+     "ASSISTENTE TECNICO REFERENCIA XXVII",
+     10.0
+    ],
+    [
+     "AGENTE ADMINISTRATIVO",
+     9.0
+    ],
+    [
+     "AUXILIAR DE SECRETARIA",
+     9.0
+    ],
+    [
+     "FAXINEIRO",
+     9.0
+    ],
+    [
+     "MOTORISTA",
+     8.0
+    ],
+    [
+     "CHEFE DE GABINETE",
+     7.0
+    ],
+    [
+     "CHEFE DE GRUPO II",
+     6.0
+    ],
+    [
+     "MOTORISTA NIVEL 8",
+     5.0
+    ],
+    [
+     "ESPECIALISTA EM EDUCACAO EM EXTINCAO",
+     5.0
+    ],
+    [
+     "AUXILIAR DE DISCIPLINA",
+     4.0
+    ],
+    [
+     "COORDENADOR DE NUCLEO",
+     4.0
+    ],
+    [
+     "MEDICO",
+     4.0
+    ],
+    [
+     "ESPECIALISTA EM EDUCAÇÃO EM EXTINCAO",
+     3.0
+    ],
+    [
+     "PROFESSOR AD-2",
+     3.0
+    ],
+    [
+     "ESPECIALISTA EM EDUCACAO CLASSE IV",
+     3.0
+    ],
+    [
+     "AUXILIAR TECNICO",
+     3.0
+    ],
+    [
+     "ASSESSORIA",
+     3.0
+    ],
+    [
+     "PROFESSOR AD-3",
+     3.0
+    ],
+    [
+     "PINTOR DE OBRAS",
+     2.0
+    ],
+    [
+     "TECNICO",
+     2.0
+    ],
+    [
+     "ADMINISTRADOR ESCOLAR EE-2",
+     2.0
+    ],
+    [
+     "ECONOMISTA",
+     2.0
+    ],
+    [
+     "AUXILIAR  SOCIAL",
+     2.0
+    ],
+    [
+     "INSPETOR DE ENSINO EE/2",
+     2.0
+    ],
+    [
+     "PROFESSOR DE EDUCACAO FISICA",
+     1.0
+    ],
+    [
+     "COORDENADOR REGIONAL POR AREA ESPECIFICA",
+     1.0
+    ],
+    [
+     "AUXILIAR TECNICO REFERENCIA XXVI",
+     1.0
+    ],
+    [
+     "AUXILIAR OPERACIONAL",
+     1.0
+    ],
+    [
+     "INSPETOR DE ALUNOS REFERENCIA II",
+     1.0
+    ],
+    [
+     "AGENTE DE OPERACOES GRAFICAS",
+     1.0
+    ],
+    [
+     "AGENTE DE FOTOGRAFIA",
+     1.0
+    ],
+    [
+     "PROFESSOR PF40.LPL-IV",
+     1.0
+    ],
+    [
+     "TECNICO PEDAGOGICO",
+     1.0
+    ],
+    [
+     "SECRETARIO",
+     1.0
+    ],
+    [
+     "PROFESSOR AREA 2",
+     1.0
+    ],
+    [
+     "PROFESSOR NIVEL SUPERIOR",
+     1.0
+    ],
+    [
+     "SECRETARIO ADJUNTO DE PLANEJAMENTO E FINANCAS",
+     1.0
+    ],
+    [
+     "SECRETARIO ADJUNTO DE INFRAESTRUTURA",
+     1.0
+    ],
+    [
+     "SECRETARIO ADJUNTO DE LOGISTICA",
+     1.0
+    ],
+    [
+     "ASSISTENTE DE INFRA-ESTRUTURA",
+     1.0
+    ],
+    [
+     "CORREGEDOR",
+     1.0
+    ],
+    [
+     "SEC.DEP.EDUCACAO ESPECIAL",
+     1.0
+    ],
+    [
+     "NUTRICIONISTA",
+     1.0
+    ],
+    [
+     "SECRETARIO ADJUNTO DE EDUCACAO BASICA",
+     1.0
+    ],
+    [
+     "SECR. DPTO. ENS. SUPLETIV",
+     1.0
+    ],
+    [
+     "SECRETARIO ADJUNTO DE GESTAO DE PESSOAS",
+     1.0
+    ],
+    [
+     "ENFERMEIRO",
+     1.0
+    ],
+    [
+     "CH.SEC.DOC.E INFORMACAO",
+     1.0
+    ],
+    [
+     "CH.DA SEC.PROG.DE MATER.",
+     1.0
+    ],
+    [
+     "CH.SEC.INSPECAO ESCOLAR",
+     1.0
+    ],
+    [
+     "CH.SEC.RECEBIM.E GUARDA",
+     1.0
+    ],
+    [
+     "CH.SEC.EXEC.FINANCEIRA",
+     1.0
+    ],
+    [
+     "RESPONSAVEL P/REPROGRAFIA",
+     1.0
+    ],
+    [
+     "TECNICO DE CONTABILIDADE",
+     1.0
+    ],
+    [
+     "ASSIST. ADMINIST.II A",
+     1.0
+    ],
+    [
+     "PEDREIRO",
+     1.0
+    ],
+    [
+     "CH.SEC.DE CONT.FISCALIZAC",
+     1.0
+    ],
+    [
+     "PROFESSOR NIVEL VI CLASSE F",
+     1.0
+    ],
+    [
+     "SECRETARIO ADJUNTO DE GESTAO E REGIME DE COLABORACAO",
+     1.0
+    ],
+    [
+     "SECRETARIO DE ESTADO",
+     1.0
+    ],
+    [
+     "OFICIAL ADMINISTRATIVO",
+     1.0
+    ],
+    [
+     "TEC. DE CONTABILIDADE D",
+     1.0
+    ],
+    [
+     "ODONTOLOGO",
+     1.0
+    ],
+    [
+     "AUXILIAR ADMINISTRATIVO",
+     1.0
+    ],
+    [
+     "ANALISTA DE SISTEMAS",
+     1.0
+    ],
+    [
+     "PROFESSOR",
+     1.0
     ]
    ],
-   "n_escolas": 1102,
-   "n_dres": 41,
+   "n_escolas": 1061,
+   "n_dres": 40,
+   "sede_servidores": 5848.0,
    "componentes": [
     [
      "MATEMATICA",
@@ -641,6 +1079,466 @@
     [
      "EDUCACAO ESPECIAL",
      813.0
+    ],
+    [
+     "CHSA - APROF DE AREAS DE LINGUAGENS E SUAS TECNOLOGIAS",
+     770.0
+    ],
+    [
+     "CHSA - EDUCACAO AMBIENTAL, SUSTENTABILIDADE E CLIMA",
+     748.0
+    ],
+    [
+     "CHSA - SOCIEDADE, CULTURA E TECNOLOGIA",
+     732.0
+    ],
+    [
+     "CHSA - APROF DE AREAS DE CIENCIAS HUMANAS E SOCIAIS APLICADAS",
+     709.0
+    ],
+    [
+     "EDUCACAO FINANCEIRA",
+     651.0
+    ],
+    [
+     "APROF DE AREAS DE CIENCIAS HUMANAS E SOCIAIS APLICADAS",
+     616.0
+    ],
+    [
+     "APROF DE AREAS DE CIENCIAS DA NATUREZA E SUAS TECNOLOGIAS",
+     592.0
+    ],
+    [
+     "PROJETO PERMANENTE POR AFINIDADE",
+     579.0
+    ],
+    [
+     "PROJETO DE CONVIVENCIA",
+     524.0
+    ],
+    [
+     "ESTUDO ORIENTADO - MATEMATICA",
+     502.0
+    ],
+    [
+     "PRATICAS EXPERIMENTAIS",
+     500.0
+    ],
+    [
+     "ESTUDOS AMAZONICOS",
+     498.0
+    ],
+    [
+     "ESTUDO ORIENTADO - LING PORTUGUESA",
+     495.0
+    ],
+    [
+     "APROF DE AREAS DE LINGUAGENS E SUAS TECNOLOGIAS",
+     427.0
+    ],
+    [
+     "APROF DE AREAS DE MATEMATICA E SUAS TECNOLOGIAS",
+     366.0
+    ],
+    [
+     "CNT - CIENCIA, TECNOLOGIA E INOVACAO",
+     360.0
+    ],
+    [
+     "CNT - EDUCACAO AMBIENTAL, SUSTENTABILIDADE E CLIMA",
+     357.0
+    ],
+    [
+     "CNT - APROF DE AREAS DE MATEMATICA E SUAS TECNOLOGIAS",
+     336.0
+    ],
+    [
+     "CNT - APROF DE AREAS DE CIENCIAS DA NATUREZA E SUAS TECNOLOGIAS",
+     288.0
+    ],
+    [
+     "ENSINO RELIGIOSO",
+     281.0
+    ],
+    [
+     "PRODUCAO TEXTUAL",
+     245.0
+    ],
+    [
+     "LINGUA INDIGENA",
+     154.0
+    ],
+    [
+     "CIENCIAS HUMANAS E SOCIAIS APLICADAS",
+     118.0
+    ],
+    [
+     "LINGUAGENS E SUAS TECNOLOGIAS II",
+     112.0
+    ],
+    [
+     "CIENCIAS HUMANAS E SOCIAIS APLICADAS II",
+     110.0
+    ],
+    [
+     "MATEMATIVA E SUAS TECNOLOGIAS II",
+     110.0
+    ],
+    [
+     "CIENCIAS DA NATUREZA E SUAS TECNOLOGIAS II",
+     101.0
+    ],
+    [
+     "CIENCIAS HUMANAS",
+     92.0
+    ],
+    [
+     "ESTUDO ORIENTADO",
+     88.0
+    ],
+    [
+     "CIENCIAS DA NATUREZA E SUAS TECNOLOGIAS",
+     83.0
+    ],
+    [
+     "CTAGE - INTRODUCAO A AGROECOLOGIA",
+     70.0
+    ],
+    [
+     "CTAGE - MANEJO E CONSERVACAO DO SOLO E DA AGUA",
+     70.0
+    ],
+    [
+     "CTAGE - TECNOLOGIAS SOCIAIS AGROECOLOGICAS",
+     70.0
+    ],
+    [
+     "LINGUA INGLESA II",
+     66.0
+    ],
+    [
+     "APROF AREA DE LINGUAGENS PERSPECTIV TERRIT INDIGEN",
+     54.0
+    ],
+    [
+     "APROF AREA DE HUMANAS PERSPECTIV TERRIT INDIGENA",
+     47.0
+    ],
+    [
+     "APROF AREA DE NATUREZA PERSPECTIV TERRIT INDIGENA",
+     45.0
+    ],
+    [
+     "CTAGE - GERENCIAMENTO DO ESTABELECIMENTO FAMILIAR",
+     44.0
+    ],
+    [
+     "CTAGE - SIST DE PROD E BENEFI PRODUTOS AGROECOLOGICOS",
+     42.0
+    ],
+    [
+     "CTAGE - MANEJO AGROECOLOGICO DE PEQUENOS ANIMAIS",
+     40.0
+    ],
+    [
+     "CTAGE - SIST DE PROD E BENEFI DOS PROD AGROECOLOGICOS II",
+     40.0
+    ],
+    [
+     "CTAGE - SIST DE PROD E BENEFICI DOS PROD AGROECOLOGICOS I",
+     40.0
+    ],
+    [
+     "CTAGE- MANEJO AGROECOLOGICO DE MEDIOS E GRANDES ANIMAIS",
+     40.0
+    ],
+    [
+     "ASSEMBLEIA",
+     35.0
+    ],
+    [
+     "ESTUDO AMAZONICOS, CULTURA E IDENTIDADE E HISTORIA",
+     34.0
+    ],
+    [
+     "APROF AREA DE MATEMATICA PERSPECTIV TERRIT INDIGEN",
+     31.0
+    ],
+    [
+     "LEITURA, ARTE E MOVIMENTO",
+     30.0
+    ],
+    [
+     "CTAGE - ASSOCIATIVISMO COOPERATIVISMO E ECONOMIA SOLIDARIA",
+     29.0
+    ],
+    [
+     "CTAGE - GESTAO DE PROJETOS SOCIOAMBIENTAIS",
+     29.0
+    ],
+    [
+     "CTAGE - RECURSOS FLOREST CERTIF E LEGISL AMBIENTAL",
+     29.0
+    ],
+    [
+     "CTAGE - SISTEMA DE PRODUCAO AGROEXTRATIVISTA",
+     29.0
+    ],
+    [
+     "PROTAGONISMO",
+     29.0
+    ],
+    [
+     "APROFUNDAMENTO CURRICULAR",
+     17.0
+    ],
+    [
+     "ENSINO DA HISTORIA E DA GEOGRAFIA",
+     12.0
+    ],
+    [
+     "EDUCACAO GERAL (BILINGUE DE SURDOS)",
+     8.0
+    ],
+    [
+     "CTAL - CONTR DE QUALI HIGIENE E LEGISLACAO DOS ALIMENTOS",
+     7.0
+    ],
+    [
+     "CTAL - PROC E BENEF PROD ORIUNDOS APICULT E MELIPONICULT",
+     7.0
+    ],
+    [
+     "CTAL - TECNOLOGIA DE FRUTAS E HORTALICAS",
+     7.0
+    ],
+    [
+     "EDUCACAO DIGITAL",
+     7.0
+    ],
+    [
+     "CTAL - INTRODUCAO A AGROECOLOGIA",
+     6.0
+    ],
+    [
+     "CTFL - ASSOCIAT COOP E ECONOMIA SOLIDARIA E POPULAR",
+     6.0
+    ],
+    [
+     "CTFL - GERENCIAMENTO DO ESTABELECIMENTO FAMILIAR",
+     6.0
+    ],
+    [
+     "CTFL - GESTAO EM PROJETOS FLORESTAIS",
+     6.0
+    ],
+    [
+     "CTFL - PROPAG E DESENVOLVIMENTO DE ESPECIES FLORESTAIS",
+     6.0
+    ],
+    [
+     "CTMA - LIMINOLOGIA E HIDROLOGIA",
+     6.0
+    ],
+    [
+     "EDUCACAO GERAL EJA ESPECIAL",
+     6.0
+    ],
+    [
+     "ENSINO LINGUA TENETEHAR",
+     6.0
+    ],
+    [
+     "CTMA - INTRODUCAO A AGROECOLOGIA",
+     5.0
+    ],
+    [
+     "CTMA - TECNOLOGIAS SOCIAIS AGROECOLOGICAS",
+     5.0
+    ],
+    [
+     "ARTE INDIGENA",
+     4.0
+    ],
+    [
+     "CTMA - MANEJO E CONSERVACAO DO SOLO E DA AGUA",
+     4.0
+    ],
+    [
+     "ATIV TEORICO-PRATICAS DE FORMACAO PROFISSIONAL",
+     3.0
+    ],
+    [
+     "CTFL - INTRODUCAO A AGROECOLOGIA",
+     3.0
+    ],
+    [
+     "CTFL - LEGISLACAO AMBIENTAL",
+     3.0
+    ],
+    [
+     "CTFL - MANEJO E CONSERVACAO DO SOLO E DA AGUA",
+     3.0
+    ],
+    [
+     "CTFL - RECUPERACAO DE AREAS DEGRADADAS",
+     3.0
+    ],
+    [
+     "HISTORIA INDIGENA TEMBE",
+     3.0
+    ],
+    [
+     "LIBRAS",
+     3.0
+    ],
+    [
+     "ARTE",
+     2.0
+    ],
+    [
+     "ARTE I",
+     2.0
+    ],
+    [
+     "CIENCIAS FISICAS  E BIOLOGICAS",
+     2.0
+    ],
+    [
+     "CTFL - ANAT E PROPR FIS MEC E ORGANOLEPTICAS DA MADEIRA",
+     2.0
+    ],
+    [
+     "CTFL - MENSURACAO FLORESTAL",
+     2.0
+    ],
+    [
+     "CTFL - RECURSOS FLORESTAIS E CERTIFICACAO",
+     2.0
+    ],
+    [
+     "CTFL - SIST DE PROD E BENEFICIAMENTO AGROEXTRATIVISTA",
+     2.0
+    ],
+    [
+     "CTRP - GESTAO E LEGISLACAO PESQUEIRA",
+     2.0
+    ],
+    [
+     "CTRP - GESTAO E PLAN DE EMPREENDIMENTOS PESQUEIROS",
+     2.0
+    ],
+    [
+     "CTRP - HIGIENE E SEGURANCA NO TRABALHO",
+     2.0
+    ],
+    [
+     "CTRP - PISCICULTURA I",
+     2.0
+    ],
+    [
+     "CULTURA E IDENTIDADE",
+     2.0
+    ],
+    [
+     "LINGUA ESTRANGEIRA MODERNA",
+     2.0
+    ],
+    [
+     "LINGUA PORTUGUESA L2",
+     2.0
+    ],
+    [
+     "COMPON ESPEC DA FORMACAO PROFISSIONAL",
+     1.0
+    ],
+    [
+     "COMPONENTES ESPECIFICOS DA QUALIFICACAO PROFISSION",
+     1.0
+    ],
+    [
+     "CTAL - AGROECOLOGIA E AGROINDUSTRIA",
+     1.0
+    ],
+    [
+     "CTAL - BIOQUIMICA DE ALIMENTOS",
+     1.0
+    ],
+    [
+     "CTAL - LEGISLACAO AMBIENTAL E TRATAMENTO DE RESIDUOS",
+     1.0
+    ],
+    [
+     "CTAL - MAT PRIM REG E APROVEITAMENTO INTEGRAL",
+     1.0
+    ],
+    [
+     "CTAL - TECNOLOGIA DE BEBIDAS E PRODUTOS ACUCARADOS",
+     1.0
+    ],
+    [
+     "CTMA - GERENCIAMENTO DE RESIDUOS SOLIDOS",
+     1.0
+    ],
+    [
+     "CTMA - GESTAO DE PROJETOS SOCIOAMBIENTAIS",
+     1.0
+    ],
+    [
+     "CTMA - HIGIENE SAUDE E SEGURANCA DO TRABALHO",
+     1.0
+    ],
+    [
+     "CTMA - INTRODUCAO AO CONTROLE AMBIENTAL",
+     1.0
+    ],
+    [
+     "CTMA - NOCOES DE GEORREFERENCIAMENTO E CARTOGRAFIA",
+     1.0
+    ],
+    [
+     "CTMA - PROCEDIMENTOS DE REGULARIZACAO AMBIENTAL RURAL",
+     1.0
+    ],
+    [
+     "CTMA - REGULARIZACAO AMBIENTAL",
+     1.0
+    ],
+    [
+     "CTRP - BIOLOGIA DE PEIXES AMAZONICOS",
+     1.0
+    ],
+    [
+     "CTRP - INTRODUCAO A AGROECOLOGIA",
+     1.0
+    ],
+    [
+     "CTRP - INTRODUCAO AOS RECURSOS PESQUEIROS",
+     1.0
+    ],
+    [
+     "CTRP - TECNICAS E CONFECCAO DE APETRECHOS DE PESCA",
+     1.0
+    ],
+    [
+     "INFORMATICA NA EDUCACAO",
+     1.0
+    ],
+    [
+     "INGLES",
+     1.0
+    ],
+    [
+     "LINGUA ESPANHOLA",
+     1.0
+    ],
+    [
+     "PROJETO DE VIDA APLICADA A FORMACAO PROFISSIONAL",
+     1.0
+    ],
+    [
+     "REDACAO",
+     1.0
     ]
    ],
    "n_componentes": 140
@@ -691,6 +1589,50 @@
       [
        "DRE CACHOEIRA DO ARARI",
        160.0
+      ],
+      [
+       "DRE ALTAMIRA",
+       140.0
+      ],
+      [
+       "DRE MARACANA",
+       120.0
+      ],
+      [
+       "DRE MONTE ALEGRE",
+       100.0
+      ],
+      [
+       "DRE CURRALINHO",
+       80.0
+      ],
+      [
+       "DRE ITAITUBA",
+       80.0
+      ],
+      [
+       "DRE SANTAREM",
+       80.0
+      ],
+      [
+       "DRE BREVES",
+       60.0
+      ],
+      [
+       "DRE CAMETA",
+       60.0
+      ],
+      [
+       "DRE TUCURUI",
+       40.0
+      ],
+      [
+       "DRE AFUA",
+       20.0
+      ],
+      [
+       "DRE XINGUARA",
+       20.0
       ]
      ],
      "disciplinas": [
@@ -744,6 +1686,42 @@
       [
        "DRE ITAITUBA",
        53.0
+      ],
+      [
+       "DRE PARAUAPEBAS",
+       46.0
+      ],
+      [
+       "DRE ALTAMIRA",
+       45.0
+      ],
+      [
+       "DRE MARACANA",
+       42.0
+      ],
+      [
+       "DRE CACHOEIRA DO ARARI",
+       40.0
+      ],
+      [
+       "DRE CAPITAO POCO",
+       38.0
+      ],
+      [
+       "DRE ABAETETUBA",
+       37.0
+      ],
+      [
+       "DRE TUCURUI",
+       22.0
+      ],
+      [
+       "DRE SANTAREM",
+       6.0
+      ],
+      [
+       "DRE CONCEICAO DO ARAGUAIA",
+       2.0
       ]
      ],
      "disciplinas": [
@@ -786,6 +1764,70 @@
       [
        "ESTUDO ORIENTADO - LING PORTUGUESA",
        65.0
+      ],
+      [
+       "FISICA",
+       64.0
+      ],
+      [
+       "GEOGRAFIA",
+       62.0
+      ],
+      [
+       "ESTUDO ORIENTADO - MATEMATICA",
+       58.0
+      ],
+      [
+       "ARTES",
+       55.0
+      ],
+      [
+       "PROJETO DE VIDA",
+       52.0
+      ],
+      [
+       "SOCIOLOGIA",
+       47.0
+      ],
+      [
+       "FILOSOFIA",
+       44.0
+      ],
+      [
+       "PROJETO PERMANENTE POR AFINIDADE",
+       40.0
+      ],
+      [
+       "EDUCACAO AMBIENTAL, SUSTENTABILIDADE E CLIMA",
+       38.0
+      ],
+      [
+       "EDUCACAO FISICA",
+       29.0
+      ],
+      [
+       "LINGUA INGLESA",
+       26.0
+      ],
+      [
+       "ELETIVA",
+       26.0
+      ],
+      [
+       "PRATICAS EXPERIMENTAIS",
+       21.0
+      ],
+      [
+       "LINGUA INGLESA II",
+       7.0
+      ],
+      [
+       "EDUCACAO FINANCEIRA",
+       6.0
+      ],
+      [
+       "LINGUA PORTUGUESA",
+       6.0
       ]
      ]
     },
@@ -833,6 +1875,58 @@
       [
        "DRE BRAGANCA",
        330.0
+      ],
+      [
+       "DRE CAMETA",
+       287.0
+      ],
+      [
+       "DRE OBIDOS",
+       254.0
+      ],
+      [
+       "DRE ALTAMIRA",
+       232.0
+      ],
+      [
+       "DRE CONCEICAO DO ARAGUAIA",
+       228.0
+      ],
+      [
+       "DRE CURRALINHO",
+       176.0
+      ],
+      [
+       "DRE XINGUARA",
+       155.0
+      ],
+      [
+       "DRE BREVES",
+       133.0
+      ],
+      [
+       "DRE MONTE ALEGRE",
+       128.0
+      ],
+      [
+       "DRE CAPITAO POCO",
+       104.0
+      ],
+      [
+       "DRE CACHOEIRA DO ARARI",
+       101.0
+      ],
+      [
+       "DRE MARACANA",
+       98.0
+      ],
+      [
+       "DRE ITAITUBA",
+       65.0
+      ],
+      [
+       "DRE AFUA",
+       30.0
       ]
      ],
      "disciplinas": [
@@ -875,6 +1969,126 @@
       [
        "CIENCIAS HUMANAS E SOCIAIS APLICADAS",
        302.0
+      ],
+      [
+       "FISICA",
+       293.0
+      ],
+      [
+       "LGG - APROF DE AREAS DE MATEMATICA E SUAS TECNOLOGIAS",
+       272.0
+      ],
+      [
+       "ARTES",
+       258.0
+      ],
+      [
+       "CIENCIAS DA NATUREZA E SUAS TECNOLOGIAS",
+       256.0
+      ],
+      [
+       "SOCIOLOGIA",
+       239.0
+      ],
+      [
+       "BIOLOGIA",
+       229.0
+      ],
+      [
+       "MAT - APROF DE AREAS DE LINGUAGENS E SUAS TECNOLOGIAS",
+       198.0
+      ],
+      [
+       "EDUCACAO AMBIENTAL, SUSTENTABILIDADE E CLIMA",
+       149.0
+      ],
+      [
+       "LGG - APROF DE AREAS DE LINGUAGENS E SUAS TECNOLOGIAS",
+       146.0
+      ],
+      [
+       "CHSA - APROF DE AREAS DE LINGUAGENS E SUAS TECNOLOGIAS",
+       108.0
+      ],
+      [
+       "LGG - PRODUCAO TEXTUAL",
+       108.0
+      ],
+      [
+       "ENSINO RELIGIOSO",
+       91.0
+      ],
+      [
+       "LGG - EDUCACAO AMBIENTAL, SUSTENTABILIDADE E CLIMA",
+       88.0
+      ],
+      [
+       "MAT - EDUCACAO AMBIENTAL, SUSTENTABILIDADE E CLIMA",
+       87.0
+      ],
+      [
+       "CHSA - APROF DE AREAS DE CIENCIAS HUMANAS E SOCIAIS APLICADAS",
+       82.0
+      ],
+      [
+       "APROF DE AREAS DE CIENCIAS HUMANAS E SOCIAIS APLICADAS",
+       74.0
+      ],
+      [
+       "CHSA - SOCIEDADE, CULTURA E TECNOLOGIA",
+       72.0
+      ],
+      [
+       "PROJETO DE VIDA",
+       69.0
+      ],
+      [
+       "CNT - APROF DE AREAS DE CIENCIAS DA NATUREZA E SUAS TECNOLOGIAS",
+       62.0
+      ],
+      [
+       "APROF DE AREAS DE CIENCIAS DA NATUREZA E SUAS TECNOLOGIAS",
+       56.0
+      ],
+      [
+       "EDUCACAO FINANCEIRA",
+       53.0
+      ],
+      [
+       "CNT - APROF DE AREAS DE MATEMATICA E SUAS TECNOLOGIAS",
+       42.0
+      ],
+      [
+       "CNT - CIENCIA, TECNOLOGIA E INOVACAO",
+       38.0
+      ],
+      [
+       "CHSA - EDUCACAO AMBIENTAL, SUSTENTABILIDADE E CLIMA",
+       37.0
+      ],
+      [
+       "LINGUA PORTUGUESA",
+       36.0
+      ],
+      [
+       "ELETIVA",
+       32.0
+      ],
+      [
+       "CIENCIAS",
+       30.0
+      ],
+      [
+       "ESTUDOS AMAZONICOS",
+       25.0
+      ],
+      [
+       "PRODUCAO TEXTUAL",
+       19.0
+      ],
+      [
+       "CNT - EDUCACAO AMBIENTAL, SUSTENTABILIDADE E CLIMA",
+       16.0
       ]
      ]
     }
@@ -924,6 +2138,30 @@
       [
        "DRE BELEM 8",
        80.0
+      ],
+      [
+       "DRE ANANINDEUA 2",
+       60.0
+      ],
+      [
+       "DRE ANANINDEUA 5",
+       60.0
+      ],
+      [
+       "DRE ANANINDEUA 1",
+       40.0
+      ],
+      [
+       "DRE ANANINDEUA 3",
+       40.0
+      ],
+      [
+       "DRE BELEM 4",
+       40.0
+      ],
+      [
+       "DRE BELEM 3",
+       20.0
       ]
      ],
      "disciplinas": [
@@ -977,6 +2215,30 @@
       [
        "DRE ANANINDEUA 3",
        120.0
+      ],
+      [
+       "DRE BELEM 4",
+       96.0
+      ],
+      [
+       "DRE BELEM 5",
+       90.0
+      ],
+      [
+       "DRE BELEM 10",
+       32.0
+      ],
+      [
+       "DRE BELEM 2",
+       16.0
+      ],
+      [
+       "DRE ANANINDEUA 5",
+       10.0
+      ],
+      [
+       "DRE SANTA BARBARA",
+       8.0
       ]
      ],
      "disciplinas": [
@@ -1115,6 +2377,26 @@
       [
        "DRE BELEM 10",
        17.0
+      ],
+      [
+       "DRE ANANINDEUA 2",
+       14.0
+      ],
+      [
+       "DRE BELEM 8",
+       3.0
+      ],
+      [
+       "DRE SANTA BARBARA",
+       3.0
+      ],
+      [
+       "DRE ANANINDEUA 4",
+       2.0
+      ],
+      [
+       "DRE ANANINDEUA 5",
+       2.0
       ]
      ],
      "disciplinas": [
@@ -1157,6 +2439,78 @@
       [
        "APROF DE AREAS DE MATEMATICA E SUAS TECNOLOGIAS",
        24.0
+      ],
+      [
+       "LINGUA PORTUGUESA",
+       24.0
+      ],
+      [
+       "FILOSOFIA",
+       22.0
+      ],
+      [
+       "QUIMICA",
+       20.0
+      ],
+      [
+       "PROJETO PERMANENTE POR AFINIDADE",
+       19.0
+      ],
+      [
+       "ESTUDO ORIENTADO - MATEMATICA",
+       19.0
+      ],
+      [
+       "BIOLOGIA",
+       18.0
+      ],
+      [
+       "ELETIVA",
+       16.0
+      ],
+      [
+       "SOCIOLOGIA",
+       16.0
+      ],
+      [
+       "PROJETO DE VIDA",
+       16.0
+      ],
+      [
+       "APROF DE AREAS DE LINGUAGENS E SUAS TECNOLOGIAS",
+       15.0
+      ],
+      [
+       "LINGUA INGLESA",
+       15.0
+      ],
+      [
+       "LINGUA INGLESA II",
+       15.0
+      ],
+      [
+       "ESTUDO ORIENTADO - LING PORTUGUESA",
+       15.0
+      ],
+      [
+       "EDUCACAO AMBIENTAL, SUSTENTABILIDADE E CLIMA",
+       12.0
+      ],
+      [
+       "PRATICAS EXPERIMENTAIS",
+       7.0
+      ],
+      [
+       "ESTUDOS AMAZONICOS",
+       6.0
+      ],
+      [
+       "CIENCIAS",
+       4.0
+      ],
+      [
+       "EDUCACAO FINANCEIRA",
+       2.0
       ]
      ]
     },
@@ -1204,6 +2558,34 @@
       [
        "DRE ANANINDEUA 1",
        195.0
+      ],
+      [
+       "DRE BELEM 5",
+       188.0
+      ],
+      [
+       "DRE ANANINDEUA 4",
+       160.0
+      ],
+      [
+       "DRE BELEM 2",
+       159.0
+      ],
+      [
+       "DRE BENEVIDES",
+       140.0
+      ],
+      [
+       "DRE BELEM 3",
+       94.0
+      ],
+      [
+       "DRE BELEM 6",
+       85.0
+      ],
+      [
+       "DRE SANTA BARBARA",
+       73.0
       ]
      ],
      "disciplinas": [
@@ -1246,6 +2628,126 @@
       [
        "LINGUA PORTUGUESA E SUAS LITERATURAS",
        133.0
+      ],
+      [
+       "EDUCACAO FINANCEIRA",
+       131.0
+      ],
+      [
+       "EDUCACAO AMBIENTAL, SUSTENTABILIDADE E CLIMA",
+       129.0
+      ],
+      [
+       "FISICA",
+       120.0
+      ],
+      [
+       "LGG - APROF DE AREAS DE MATEMATICA E SUAS TECNOLOGIAS",
+       112.0
+      ],
+      [
+       "CIENCIAS",
+       110.0
+      ],
+      [
+       "CIENCIAS DA NATUREZA E SUAS TECNOLOGIAS",
+       108.0
+      ],
+      [
+       "CIENCIAS HUMANAS E SOCIAIS APLICADAS",
+       106.0
+      ],
+      [
+       "FILOSOFIA",
+       93.0
+      ],
+      [
+       "SOCIOLOGIA",
+       80.0
+      ],
+      [
+       "ESTUDOS AMAZONICOS",
+       79.0
+      ],
+      [
+       "BIOLOGIA",
+       60.0
+      ],
+      [
+       "MAT - APROF DE AREAS DE LINGUAGENS E SUAS TECNOLOGIAS",
+       58.0
+      ],
+      [
+       "LINGUA PORTUGUESA",
+       57.0
+      ],
+      [
+       "LGG - PRODUCAO TEXTUAL",
+       53.0
+      ],
+      [
+       "LGG - APROF DE AREAS DE LINGUAGENS E SUAS TECNOLOGIAS",
+       52.0
+      ],
+      [
+       "QUIMICA",
+       45.0
+      ],
+      [
+       "CHSA - APROF DE AREAS DE LINGUAGENS E SUAS TECNOLOGIAS",
+       36.0
+      ],
+      [
+       "LGG - EDUCACAO AMBIENTAL, SUSTENTABILIDADE E CLIMA",
+       29.0
+      ],
+      [
+       "APROF DE AREAS DE CIENCIAS DA NATUREZA E SUAS TECNOLOGIAS",
+       24.0
+      ],
+      [
+       "CHSA - SOCIEDADE, CULTURA E TECNOLOGIA",
+       21.0
+      ],
+      [
+       "CNT - APROF DE AREAS DE CIENCIAS DA NATUREZA E SUAS TECNOLOGIAS",
+       20.0
+      ],
+      [
+       "CNT - APROF DE AREAS DE MATEMATICA E SUAS TECNOLOGIAS",
+       20.0
+      ],
+      [
+       "CNT - CIENCIA, TECNOLOGIA E INOVACAO",
+       19.0
+      ],
+      [
+       "MAT - EDUCACAO AMBIENTAL, SUSTENTABILIDADE E CLIMA",
+       19.0
+      ],
+      [
+       "APROF DE AREAS DE CIENCIAS HUMANAS E SOCIAIS APLICADAS",
+       18.0
+      ],
+      [
+       "CHSA - APROF DE AREAS DE CIENCIAS HUMANAS E SOCIAIS APLICADAS",
+       16.0
+      ],
+      [
+       "CHSA - EDUCACAO AMBIENTAL, SUSTENTABILIDADE E CLIMA",
+       14.0
+      ],
+      [
+       "PRODUCAO TEXTUAL",
+       11.0
+      ],
+      [
+       "ELETIVA",
+       11.0
+      ],
+      [
+       "CNT - EDUCACAO AMBIENTAL, SUSTENTABILIDADE E CLIMA",
+       5.0
       ]
      ]
     }
@@ -1269,15 +2771,6 @@
      "titulo": "PLANILHA GERAL CAPO - ACESSE CLICANDO NO LINK ABAIXO",
      "url": "https://docs.google.com/spreadsheets/d/19plv1xkG_ZwlyyeUOvUMCh9yMupAHnqYjRbPVa0se3I/edit?usp=sharing"
     }
-   ],
-   "imagens": [
-    "/f07/image5.jpg",
-    "/f07/image2.jpg",
-    "/f07/image3.jpg",
-    "/f07/image4.png",
-    "/f07/image7.png",
-    "/f07/image6.png",
-    "/f07/image8.png"
    ]
   }
  },
@@ -1294,7 +2787,7 @@
    ],
    "linhas": [
     {
-     "produto": "LICENÇA PREMIO",
+     "produto": "LICENÇA PRÊMIO",
      "SOLICITAÇÕES": 4211.0,
      "DEFERIDOS": 4283,
      "INDEFERIDOS": 72.0,
@@ -1361,7 +2854,7 @@
    "UNIDADE E RESPONSÁVEL PRINCIPAL": "Diretoria de Planejamento, Seleção e Evidências - DIPSE - Dayane Garcez Bacelar - Diretora DIPSE, em exercício.",
    "COLABORADORES E RESPECTIVAS FONTES": "Maria Raimunda Martins Gonçalves - Coordenadoria de Avaliação de Desempenho e Desenvolvimento Profissional - CADDEP\nDayane Garcez Bacelar - Coordenadoria de Planejamento de Planejamento e Seleção - CPS.",
    "ELABORADOR E CARGO": "Dayane Garcez Bacelar - Diretora DIPSE, em exercício.",
-   "AUTORIDADE QUE CONFIRMA ORIGEM E LOCALIZAÇÃO": "Hellen Nyde da Silva e Souza - Secretária adjunta SAGEP",
+   "AUTORIDADE QUE CONFIRMA ORIGEM E LOCALIZAÇÃO": "Hellen Nyde da Silva e Souza",
    "DATA-BASE": "Mês de setembro",
    "PERÍODO": "01/01/2026 a 30/09/2026",
    "DATA DE ENTREGA": "28/10/2026",

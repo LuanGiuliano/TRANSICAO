@@ -120,8 +120,8 @@ for r in range(2, ws.max_row + 1):
     if d_l and 2005 <= d_l.year <= 2026:
         anos_inicio_aga[str(d_l.year)] += 1
 
-top_cargos = [[c, count] for c, count in cargos.most_common(10)]
-top_atividades = [[a, count] for a, count in atividades.most_common(8)]
+top_cargos = [[c, count] for c, count in cargos.most_common()]
+top_atividades = [[a, count] for a, count in atividades.most_common()]
 
 out_data = {
     'total_vinculos': total_reg,

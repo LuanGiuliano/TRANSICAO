@@ -4,6 +4,18 @@ export const PALETA = ['#00838a', '#153a4d', '#c4841d', '#7b5ea7', '#2e9e6b', '#
 export const fmt = (n, d = 0) =>
   n == null ? '–' : Number(n).toLocaleString('pt-BR', { minimumFractionDigits: d, maximumFractionDigits: d })
 
+export const fmtMoeda = (n) => {
+  if (n == null) return '–'
+  const v = Number(n)
+  if (Math.abs(v) >= 1e9) return `R$ ${(v / 1e9).toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} Bi`
+  if (Math.abs(v) >= 1e6) return `R$ ${(v / 1e6).toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 })} Mi`
+  return `R$ ${v.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`
+}
+
+export const fmtBRL = (n) =>
+  n == null ? '–' : Number(n).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+
+
 export function Kpi({ rotulo, valor, sub, cor = 'var(--teal)' }) {
   return (
     <div className="kpi" style={{ '--c': cor }}>
@@ -14,31 +26,72 @@ export function Kpi({ rotulo, valor, sub, cor = 'var(--teal)' }) {
   )
 }
 
-export function Bloco({ titulo, nota, children, span }) {
+export function Bloco({ titulo, nota, extra, children, span }) {
   return (
     <section className={`bloco ${span ? 'bloco--' + span : ''}`}>
-      <h3 className="bloco__titulo">{titulo}</h3>
-      {nota && <p className="bloco__nota">{nota}</p>}
+      <div className="bloco__head">
+        <div className="bloco__titulo-linha">
+          <h3 className="bloco__titulo">{titulo}</h3>
+          {extra && <div className="bloco__extra">{extra}</div>}
+        </div>
+        {nota && <p className="bloco__nota">{nota}</p>}
+      </div>
       {children}
     </section>
   )
 }
 
+export function LimiteControle({ total, limite, onChange, opcoes = [15, 50, 'Todos'] }) {
+  if (!total || total <= opcoes[0]) return null
+  return (
+    <div className="limite-ctrl">
+      <span className="limite-ctrl__rotulo">Ver:</span>
+      <div className="limite-ctrl__botoes">
+        {opcoes.map((op) => {
+          const ativo = limite === op
+          const label = op === 'Todos' ? `Todos (${total})` : op >= total ? `Todos (${total})` : `${op}`
+          return (
+            <button
+              key={String(op)}
+              type="button"
+              className={`limite-ctrl__btn ${ativo ? 'limite-ctrl__btn--ativo' : ''}`}
+              onClick={() => onChange(op)}
+              title={`Exibir ${label}`}
+            >
+              {label}
+            </button>
+          )
+        })}
+      </div>
+    </div>
+  )
+}
+
+export function aplicarLimite(lista, limite) {
+  if (!lista) return []
+  if (limite === 'Todos') return lista
+  const n = typeof limite === 'number' ? limite : parseInt(limite, 10)
+  return n > 0 ? lista.slice(0, n) : lista
+}
+
 /** Barras horizontais. dados: [[rótulo, valor], ...] */
 export function HBars({ dados, cor = 'var(--teal)', unidade = '', max }) {
   const m = max ?? Math.max(...dados.map((d) => d[1]), 1)
+  const longo = dados.length > 16
   return (
-    <ul className="hbars">
-      {dados.map(([r, v], i) => (
-        <li key={r + i} title={`${r}: ${fmt(v)}${unidade}`}>
-          <span className="hbars__r">{r}</span>
-          <span className="hbars__trilho">
-            <i style={{ width: `${(v / m) * 100}%`, background: cor, animationDelay: `${i * 40}ms` }} />
-          </span>
-          <b className="hbars__v">{fmt(v)}{unidade}</b>
-        </li>
-      ))}
-    </ul>
+    <div className={`hbars-wrap ${longo ? 'hbars-wrap--scroll' : ''}`}>
+      <ul className="hbars">
+        {dados.map(([r, v], i) => (
+          <li key={r + i} title={`${r}: ${fmt(v)}${unidade}`}>
+            <span className="hbars__r">{r}</span>
+            <span className="hbars__trilho">
+              <i style={{ width: `${(v / m) * 100}%`, background: cor, animationDelay: `${Math.min(i, 15) * 30}ms` }} />
+            </span>
+            <b className="hbars__v">{fmt(v)}{unidade}</b>
+          </li>
+        ))}
+      </ul>
+    </div>
   )
 }
 
@@ -259,15 +312,18 @@ export function Proporcao({ dados, cores = PALETA }) {
 export function HBarsPct({ dados, cor = 'var(--teal)' }) {
   const total = dados.reduce((s, d) => s + d[1], 0) || 1
   const m = Math.max(...dados.map((d) => d[1]), 1)
+  const longo = dados.length > 16
   return (
-    <ul className="hbars hbars--pct">
-      {dados.map(([r, v], i) => (
-        <li key={r}>
-          <span className="hbars__r">{r}</span>
-          <span className="hbars__trilho"><i style={{ width: `${(v / m) * 100}%`, background: cor, animationDelay: `${i * 40}ms` }} /></span>
-          <b className="hbars__v">{fmt(v)} <small>{fmt((v / total) * 100, 1)}%</small></b>
-        </li>
-      ))}
-    </ul>
+    <div className={`hbars-wrap ${longo ? 'hbars-wrap--scroll' : ''}`}>
+      <ul className="hbars hbars--pct">
+        {dados.map(([r, v], i) => (
+          <li key={r + i}>
+            <span className="hbars__r">{r}</span>
+            <span className="hbars__trilho"><i style={{ width: `${(v / m) * 100}%`, background: cor, animationDelay: `${Math.min(i, 15) * 30}ms` }} /></span>
+            <b className="hbars__v">{fmt(v)} <small>{fmt((v / total) * 100, 1)}%</small></b>
+          </li>
+        ))}
+      </ul>
+    </div>
   )
 }

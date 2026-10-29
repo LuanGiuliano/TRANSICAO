@@ -55,9 +55,45 @@ function Card({ r, onOpen }) {
 }
 
 function Detalhe({ r, onBack }) {
+  const imprimir = () => {
+    window.print()
+  }
+
   return (
     <main className="container detalhe">
-      <button id="btn-voltar" className="voltar" onClick={onBack}>‹ Voltar ao painel</button>
+      <div className="detalhe__barra-topo">
+        <button id="btn-voltar" className="voltar" onClick={onBack}>‹ Voltar ao painel</button>
+        <button id="btn-imprimir" className="btn-imprimir" onClick={imprimir} title="Imprimir Relatório Oficial em PDF">
+          <svg className="btn-imprimir__svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="6 9 6 2 18 2 18 9"></polyline>
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+            <rect x="6" y="14" width="12" height="8"></rect>
+          </svg>
+          <span>Imprimir Relatório (PDF)</span>
+        </button>
+      </div>
+
+      {/* Cabeçalho Oficial de Impressão / PDF */}
+      <div className="relatorio-print-header">
+        <div className="relatorio-print-header__brand">
+          <img className="relatorio-print-header__brasao" src={brasao} alt="Brasão do Estado do Pará" />
+          <div className="relatorio-print-header__textos">
+            <span className="relatorio-print-header__governo">GOVERNO DO ESTADO DO PARÁ</span>
+            <span className="relatorio-print-header__seduc">SECRETARIA DE ESTADO DE EDUCAÇÃO – SEDUC</span>
+            <span className="relatorio-print-header__sagep">SAGEP – SECRETARIA ADJUNTA DE GESTÃO DE PESSOAS</span>
+            <h2 className="relatorio-print-header__doc">RELATÓRIO DE TRANSIÇÃO GOVERNAMENTAL 2026/2027</h2>
+          </div>
+        </div>
+        <div className="relatorio-print-header__card">
+          <div className="relatorio-print-header__id">{r.id}</div>
+          <div className="relatorio-print-header__metadados">
+            <div><strong>Diretoria:</strong> {r.diretorias.join(' / ')}</div>
+            <div><strong>Prazo Oficial:</strong> {r.prazo}</div>
+            <div><strong>Data de Emissão:</strong> {new Date().toLocaleDateString('pt-BR')}</div>
+          </div>
+        </div>
+      </div>
+
       <section className={`painel ${r.prioridade ? 'painel--prio' : ''}`}>
         <div className="card__head">
           <span className="card__id card__id--lg">{r.id}</span>
@@ -82,6 +118,12 @@ function Detalhe({ r, onBack }) {
         <h2 className="painel__titulo">Padrão comum para todas as entregas</h2>
         <p>{PADRAO_COMUM}</p>
       </section>
+
+      {/* Rodapé Oficial de Impressão */}
+      <footer className="relatorio-print-footer">
+        <p>Governo do Estado do Pará • Secretaria de Estado de Educação (SEDUC) • Secretaria Adjunta de GestÃO DE PESSOAS (SAGEP)</p>
+        <p>Painel de Transição Governamental • {r.id} - {r.titulo} • Emissão: {new Date().toLocaleDateString('pt-BR')} às {new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })}</p>
+      </footer>
     </main>
   )
 }

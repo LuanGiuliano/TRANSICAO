@@ -117,12 +117,17 @@ main.container { padding-top: 28px; padding-bottom: 40px; }
 .rodape p + p { margin-top: 4px; }
 
 /* Detalhe */
-.detalhe { display: grid; grid-template-columns: 1.4fr 1fr; gap: 0 26px; align-items: start; }
-.detalhe > .voltar, .detalhe > .painel--soft { grid-column: 1 / -1; justify-self: start; }
+.detalhe { display: grid; grid-template-columns: 1fr; gap: 0 26px; align-items: start; }
+.detalhe > .detalhe__barra-topo, .detalhe > .voltar, .detalhe > .painel--soft { grid-column: 1 / -1; }
 .detalhe > .painel--soft { justify-self: stretch; }
 @media (max-width: 900px) { .detalhe { grid-template-columns: 1fr; } }
-.voltar { font: inherit; font-weight: 600; font-size: 14px; background: none; border: none; color: var(--teal); cursor: pointer; padding: 4px 0; margin-bottom: 16px; }
-.voltar:hover { text-decoration: underline; }
+.detalhe__barra-topo { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 18px; grid-column: 1 / -1; width: 100%; }
+.voltar { font: inherit; font-weight: 700; font-size: 13.5px; background: #ffffff; border: 1.5px solid #d4e2e8; border-radius: 99px; color: var(--teal); cursor: pointer; padding: 8px 20px; transition: all .2s ease; display: inline-flex; align-items: center; box-shadow: 0 1px 4px rgba(21,58,77,.04); }
+.voltar:hover { background: #eef5f8; border-color: var(--teal); color: var(--navy); transform: translateX(-2px); }
+.btn-imprimir { font: inherit; display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, #00838a 0%, #153a4d 100%); color: #ffffff; border: none; border-radius: 99px; padding: 8px 22px; font-size: 13.5px; font-weight: 700; cursor: pointer; box-shadow: 0 4px 14px rgba(0, 131, 138, 0.28); transition: all .2s ease; }
+.btn-imprimir:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0, 131, 138, 0.38); filter: brightness(1.08); }
+.btn-imprimir:active { transform: translateY(0); }
+.btn-imprimir__ico { font-size: 16px; }
 .painel { background: #fff; border-left: 6px solid var(--teal); border-radius: var(--radius); padding: 28px 30px; margin-bottom: 22px; box-shadow: 0 2px 8px rgba(21,58,77,.06); }
 .painel--prio { border-left-color: var(--amber); }
 .painel--soft { background: var(--teal-soft); box-shadow: none; }
@@ -150,9 +155,12 @@ textarea:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px
 .detalhe > .dados { grid-column: 1 / -1; }
 .dados { display: flex; flex-direction: column; gap: 22px; margin-bottom: 22px; }
 .bloco { background: #fff; border-radius: var(--radius); padding: 22px 24px; box-shadow: 0 2px 8px rgba(21,58,77,.06); min-width: 0; }
-.bloco__titulo { color: var(--ink); font-size: 15px; font-weight: 800; margin-bottom: 4px; }
-.bloco__nota { font-size: 12px; color: var(--muted); margin-bottom: 12px; }
-.bloco > .hbars, .bloco > .donut, .bloco > .colunas { margin-top: 14px; }
+.bloco__head { margin-bottom: 8px; }
+.bloco__titulo-linha { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+.bloco__titulo { color: var(--ink); font-size: 15px; font-weight: 800; margin: 0; }
+.bloco__extra { display: inline-flex; }
+.bloco__nota { font-size: 12px; color: var(--muted); margin-top: 4px; margin-bottom: 6px; }
+.bloco > .hbars, .bloco > .hbars-wrap, .bloco > .donut, .bloco > .colunas { margin-top: 14px; }
 .blocos { display: grid; grid-template-columns: repeat(auto-fit, minmax(420px, 1fr)); gap: 22px; }
 @media (max-width: 520px) { .blocos { grid-template-columns: 1fr; } }
 .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
@@ -241,3 +249,299 @@ textarea:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px
 
 /* Tag destacada para AGA */
 .tag-aga { background: #e0f2f1; color: #00695c; border: 1px solid #b2dfdb; padding: 4px 10px; border-radius: 8px; font-size: 12px; font-weight: 700; display: inline-flex; align-items: center; gap: 6px; }
+
+/* ===== Controles de Limite (15 / 50 / Todos) ===== */
+.limite-ctrl {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #f1f6f8;
+  border-radius: 8px;
+  padding: 3px 6px;
+  font-size: 11.5px;
+}
+.limite-ctrl__rotulo {
+  font-size: 10px;
+  font-weight: 800;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  margin-right: 2px;
+}
+.limite-ctrl__botoes {
+  display: inline-flex;
+  gap: 3px;
+}
+.limite-ctrl__btn {
+  font: inherit;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  padding: 3px 8px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+  transition: all .15s ease;
+}
+.limite-ctrl__btn:hover {
+  background: #e1ebf0;
+  color: var(--teal);
+}
+.limite-ctrl__btn--ativo {
+  background: var(--teal);
+  color: #fff !important;
+  font-weight: 700;
+  box-shadow: 0 1px 4px rgba(0, 131, 138, 0.3);
+}
+
+/* Rolagem elegante para barras com 15+ itens */
+.hbars-wrap--scroll {
+  max-height: 480px;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+.hbars-wrap--scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.hbars-wrap--scroll::-webkit-scrollbar-track {
+  background: #f1f5f8;
+  border-radius: 99px;
+}
+.hbars-wrap--scroll::-webkit-scrollbar-thumb {
+  background: #c3d3dc;
+  border-radius: 99px;
+}
+.hbars-wrap--scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--teal);
+}
+
+/* ===== Cabeçalho e Rodapé de Impressão Oficial (PDF) ===== */
+.relatorio-print-header,
+.relatorio-print-footer {
+  display: none;
+}
+
+/* ===== Regras de Impressão e Geração de PDF Oficial ===== */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 12mm 14mm 14mm 14mm;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #111111 !important;
+    font-size: 10.5pt !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Ocultar elementos da interface que não devem sair no PDF */
+  header.hero,
+  .detalhe__barra-topo,
+  .voltar,
+  .btn-imprimir,
+  .limite-ctrl,
+  .btn-link,
+  .filtros,
+  .card__abrir,
+  .abas {
+    display: none !important;
+  }
+
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Cabeçalho Oficial do Estado do Pará */
+  .relatorio-print-header {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2.5px solid #00838a;
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+  }
+
+  .relatorio-print-header__brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .relatorio-print-header__brasao {
+    width: 65px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .relatorio-print-header__textos {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.25;
+  }
+
+  .relatorio-print-header__governo {
+    font-size: 11pt;
+    font-weight: 800;
+    letter-spacing: .05em;
+    color: #153a4d;
+  }
+
+  .relatorio-print-header__seduc {
+    font-size: 9pt;
+    font-weight: 700;
+    color: #436373;
+  }
+
+  .relatorio-print-header__sagep {
+    font-size: 9.5pt;
+    font-weight: 800;
+    color: #00838a;
+    margin-top: 1px;
+  }
+
+  .relatorio-print-header__doc {
+    font-size: 10.5pt;
+    font-weight: 800;
+    color: #111111;
+    margin-top: 4px;
+    letter-spacing: -0.01em;
+  }
+
+  .relatorio-print-header__card {
+    text-align: right;
+    border-left: 2px solid #dbe6ec;
+    padding-left: 14px;
+  }
+
+  .relatorio-print-header__id {
+    font-size: 22pt;
+    font-weight: 900;
+    color: #00838a;
+    line-height: 1;
+  }
+
+  .relatorio-print-header__metadados {
+    font-size: 8pt;
+    color: #555555;
+    margin-top: 4px;
+    line-height: 1.35;
+  }
+
+  /* Rodapé oficial no final */
+  .relatorio-print-footer {
+    display: block !important;
+    margin-top: 24px;
+    padding-top: 10px;
+    border-top: 1.5px solid #d4dfe5;
+    font-size: 7.5pt;
+    color: #666666;
+    text-align: center;
+  }
+
+  /* Painel principal e detalhes */
+  .painel {
+    box-shadow: none !important;
+    border: 1px solid #d8e3e8 !important;
+    border-left: 5px solid var(--teal) !important;
+    padding: 16px 20px !important;
+    margin-bottom: 16px !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .painel--prio {
+    border-left-color: var(--amber) !important;
+  }
+  .painel--soft {
+    background: #f7fafc !important;
+    border: 1px solid #e1e9ed !important;
+  }
+
+  .detalhe__titulo {
+    font-size: 20pt !important;
+    margin: 6px 0 10px !important;
+  }
+
+  .card__texto--lg {
+    font-size: 10pt !important;
+  }
+
+  /* KPIs limpos para folha A4 */
+  .kpis {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 10px !important;
+    margin-bottom: 16px !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  .kpi {
+    box-shadow: none !important;
+    border: 1px solid #d8e3e8 !important;
+    border-top: 3.5px solid var(--c) !important;
+    padding: 10px 12px !important;
+    background: #ffffff !important;
+  }
+  .kpi__valor {
+    font-size: 20pt !important;
+  }
+
+  /* Blocos sem corte de página */
+  .blocos {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 14px !important;
+  }
+  .bloco {
+    box-shadow: none !important;
+    border: 1px solid #d8e3e8 !important;
+    padding: 14px 16px !important;
+    margin-bottom: 14px !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    background: #ffffff !important;
+  }
+  .bloco--full {
+    grid-column: 1 / -1 !important;
+  }
+
+  /* Desativar restrição de altura das barras no print para sair completo */
+  .hbars-wrap--scroll {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  .hbars__trilho {
+    background: #eef2f5 !important;
+  }
+  .hbars__trilho i {
+    animation: none !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .tabela-wrap {
+    overflow: visible !important;
+  }
+  .tabela {
+    font-size: 8.5pt !important;
+  }
+  .tabela th {
+    padding: 5px 6px !important;
+  }
+  .tabela td {
+    padding: 5px 6px !important;
+  }
+  tr {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Garantir que SVGs e gráficos caibam sem vazar */
+  .grafico__svg {
+    max-height: 240px !important;
+  }
+}
