@@ -39,9 +39,9 @@ body {
 .hero__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; position: relative; z-index: 1; }
 .hero__brasao { height: clamp(120px, 14vw, 190px); width: auto; flex-shrink: 0; filter: drop-shadow(0 6px 18px rgba(0,0,0,.35)); }
 @media (max-width: 600px) { .hero__brasao { display: none; } }
-.hero__titulo { font-size: 52px; font-weight: 800; line-height: 1.1; margin-top: 12px; }
-.hero__sub { font-size: 28px; font-weight: 700; margin-top: 4px; }
-.hero__meta { color: #cfe0e8; margin-top: 12px; font-size: 15px; }
+.hero__titulo { font-size: clamp(24px, 3.2vw, 42px); font-weight: 800; line-height: 1.15; margin-top: 10px; letter-spacing: -0.01em; }
+.hero__sub { font-size: 24px; font-weight: 700; margin-top: 4px; }
+.hero__meta { color: #cfe0e8; margin-top: 10px; font-size: 15px; }
 .progresso { display: flex; align-items: center; gap: 14px; margin-top: 22px; font-size: 13px; color: #cfe0e8; position: relative; z-index: 1; }
 .progresso__barra { width: 220px; height: 8px; background: rgba(255,255,255,.18); border-radius: 99px; overflow: hidden; }
 .progresso__barra span { display: block; height: 100%; background: linear-gradient(90deg, #35c0c6, #8fd6d9); border-radius: 99px; transition: width .5s ease; }

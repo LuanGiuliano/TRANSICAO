@@ -111,8 +111,7 @@ export default function App() {
         <div className="container hero__inner">
           <div className="hero__texto">
           <p className="hero__eyebrow">Transição governamental • Educação / Pará</p>
-          <h1 className="hero__titulo">SAGP / SAGEP</h1>
-          <h2 className="hero__sub">Mapa de solicitações e entregas</h2>
+          <h1 className="hero__titulo">SAGEP - SECRETARIA ADJUNTA DE GESTÃO DE PESSOAS</h1>
           <p className="hero__meta">
             {RELATORIOS.length} relatórios principais • Bloco F • {PROCESSO}
           </p>
