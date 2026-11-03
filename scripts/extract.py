@@ -28,7 +28,8 @@ def capa(ws):
         k, v = txt(r[0].value), txt(r[1].value)
         if k and v:
             if 'AUTORIDADE QUE CONFIRMA' in k.upper():
-                v = 'Hellen Nyde da Silva e Souza'
+                if 'SECRET' not in v.upper():
+                    v = 'Hellen Nyde da Silva e Souza - Secretária Adjunta SAGEP'
             if 'DE PESSOAS' in v.upper() and 'GESTÃO DE PESSOAS' not in v.upper():
                 v = re.sub(r'DE PESSOAS', 'DE PESSOAL', v, flags=re.I)
             d[k] = v

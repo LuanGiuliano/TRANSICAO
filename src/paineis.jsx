@@ -42,8 +42,8 @@ export function Capa({ id }) {
   const itens = Object.entries(c)
     .filter(([, v]) => v && !/^n[aã]o se aplica/i.test(v))
     .map(([k, v]) => {
-      if (/AUTORIDADE QUE CONFIRMA/i.test(k) || /saul/i.test(v)) {
-        return [k, 'Hellen Nyde da Silva e Souza']
+      if (/AUTORIDADE QUE CONFIRMA/i.test(k)) {
+        return [k, 'Hellen Nyde da Silva e Souza - Secretária Adjunta SAGEP']
       }
       if (/DE PESSOAS/i.test(v) && /DIRETORIA/i.test(v) && !/GEST[AÃ]O DE PESSOAS/i.test(v)) {
         return [k, v.replace(/DE PESSOAS/gi, 'DE PESSOAL')]
