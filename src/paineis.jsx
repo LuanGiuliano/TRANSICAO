@@ -197,6 +197,19 @@ function F03() {
   const d = dados.DIPSE['F-03']
   const [filtroQuadro, setFiltroQuadro] = useState('ativos_extincao')
 
+  // Temporários e Estagiários
+  const contratosTemporarios = (d.contratos || []).filter((c) => !/ESTAGI/i.test(c.categoria || ''))
+  const contratoEstagiarios = (d.contratos || []).find((c) => /ESTAGI/i.test(c.categoria || ''))
+
+  const temporariosAtivos = contratosTemporarios.reduce((s, c) => s + (c.total || 0), 0)
+  const estagiariosAtivos = contratoEstagiarios?.total || 0
+
+  // Término de vigência de contratos temporários até mar/2027 (Dez/2026 a Mar/2027)
+  const desligTemporarios = contratosTemporarios.reduce((s, c) => {
+    const primeirosMeses = (c.desligamentos || []).slice(0, 4)
+    return s + primeirosMeses.reduce((acc, v) => acc + (v || 0), 0)
+  }, 0)
+
   // Cargos efetivos e comissionados
   const efetivos = d.cargos.filter((c) => /EFETIVO|Estáveis/i.test(c.natureza || ''))
   const cargosAtivosExt = d.cargos.filter((c) => c.situacao === 'Ativo' || c.situacao === 'Em extinção')
