@@ -118,15 +118,20 @@ export function Kpi({ rotulo, valor, sub, cor = 'var(--teal)' }) {
 }
 
 export function Bloco({ titulo, nota, extra, children, span }) {
+  const temHead = titulo || nota || extra
   return (
     <section className={`bloco ${span ? 'bloco--' + span : ''}`}>
-      <div className="bloco__head">
-        <div className="bloco__titulo-linha">
-          <h3 className="bloco__titulo">{titulo}</h3>
-          {extra && <div className="bloco__extra">{extra}</div>}
+      {temHead && (
+        <div className="bloco__head">
+          {(titulo || extra) && (
+            <div className="bloco__titulo-linha">
+              {titulo && <h3 className="bloco__titulo">{titulo}</h3>}
+              {extra && <div className="bloco__extra">{extra}</div>}
+            </div>
+          )}
+          {nota && <p className="bloco__nota">{nota}</p>}
         </div>
-        {nota && <p className="bloco__nota">{nota}</p>}
-      </div>
+      )}
       {children}
     </section>
   )

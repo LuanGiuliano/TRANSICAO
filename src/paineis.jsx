@@ -52,9 +52,9 @@ export function Capa({ id }) {
     })
 
   return (
-    <Bloco titulo="Capa de identificação (planilha)" span="full">
+    <Bloco span="full">
       {itens.length === 0 ? (
-        <p className="vazio-txt">A capa de identificação desta planilha ainda não foi preenchida pela diretoria.</p>
+        <p className="vazio-txt">Informações ainda não preenchidas pela diretoria.</p>
       ) : (
         <dl className="capa">
           {itens.map(([k, v]) => (
