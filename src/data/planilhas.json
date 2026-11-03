@@ -2771,7 +2771,30 @@
   }
  },
  "DIFOB": {
-  "capa": {},
+  "capa": {
+   "CÓDIGO E TÍTULO": "F-04, F-05, F-06 e F-08 - Gestão de Pessoas e Folha de Pagamento - DIFOB",
+   "UNIDADE E RESPONSÁVEL PRINCIPAL": "Diretoria de Folha e Benefícios - DIFOB - Giselle Almeida de Barros Santos - Diretora",
+   "COLABORADORES E RESPECTIVAS FONTES": "Olga Ferreira Nascimento - Coordenadoria de Folha de Pagamento (CFOP), Márcia Maneschy Horta Barreira - Coordenadoria de Valorização e Assistência ao Servidor (CVAS)",
+   "ELABORADOR E CARGO": "Giselle Almeida de Barros Santos - Diretora de Folha e Benefícios (DIFOB)",
+   "AUTORIDADE QUE CONFIRMA ORIGEM E LOCALIZAÇÃO": "Hellen Nyde da Silva e Souza",
+   "DATA-BASE": "30/09/2026",
+   "PERÍODO": "01/01/2026 a 30/09/2026",
+   "DATA DE ENTREGA": "29/10/2026",
+   "VERSÃO": "Planilha XLSX",
+   "FONTE": "Dados fornecidos pelas coordenadorias CFOP e CVAS (Sistemas SIGRH e PAE)",
+   "SISTEMA DE ORIGEM": "SIGRH / PAE 3.0 e 4.0 / CFOP (Folha de Pagamento) / CVAS (Saúde e Benefícios)",
+   "MÉTODO": "Consolidação e monitoramento de dados funcionais e de folha de pagamento por meio de cruzamento de relatórios e sistemas.",
+   "EVIDÊNCIA": "Folhas de pagamento mensais, relatórios funcionais e processos administrativos PAE.",
+   "LIMITAÇÕES": "Não se aplica",
+   "DOCUMENTOS ANEXOS": "Não se aplica",
+   "LOCALIZAÇÃO NO REPOSITÓRIO": "Não se aplica",
+   "DADOS PESSOAIS": "Não se aplica",
+   "SIGILO / FUNDAMENTO": "Lei Geral de Proteção de Dados Pessoais (LGPD) - Lei nº 13.709/2018.",
+   "PENDÊNCIAS": "Não se aplica",
+   "RISCOS": "Não se aplica",
+   "PROVIDÊNCIAS": "Não se aplica",
+   "SERVIDOR DE REFERÊNCIA E CONTATO INSTITUCIONAL": "Giselle Almeida de Barros Santos - Diretora DIFOB"
+  },
   "F-05": {
    "colunas": [
     "SOLICITAÇÕES",
@@ -2784,93 +2807,93 @@
    "linhas": [
     {
      "produto": "LICENÇA PRÊMIO",
-     "SOLICITAÇÕES": 4211.0,
-     "DEFERIDOS": 4139.0,
-     "INDEFERIDOS": 72.0,
+     "SOLICITAÇÕES": 4211,
+     "DEFERIDOS": 4139,
+     "INDEFERIDOS": 72,
      "SALDO": "não se aplica*",
-     "EM ANALISE 3.0": 700.0,
-     "EM ANALISE 4.0": 1700.0
+     "EM ANALISE 3.0": 700,
+     "EM ANALISE 4.0": 1700
     },
     {
      "produto": "LICENÇA METERNIDADE",
-     "SOLICITAÇÕES": 297.0,
-     "DEFERIDOS": 293.0,
+     "SOLICITAÇÕES": 297,
+     "DEFERIDOS": 293,
      "INDEFERIDOS": "não se aplica",
      "SALDO": "não se aplica",
      "EM ANALISE 3.0": "não se aplica",
-     "EM ANALISE 4.0": 7.0
+     "EM ANALISE 4.0": 7
     },
     {
      "produto": "LICENÇA APRIMORAMENTO",
-     "SOLICITAÇÕES": 94.0,
+     "SOLICITAÇÕES": 94,
      "DEFERIDOS": "não se aplica",
      "INDEFERIDOS": "não se aplica",
      "SALDO": "não se aplica",
      "EM ANALISE 3.0": "não se aplica",
-     "EM ANALISE 4.0": 7.0
+     "EM ANALISE 4.0": 7
     },
     {
      "produto": "READAPTAÇÃO",
-     "SOLICITAÇÕES": 102.0,
+     "SOLICITAÇÕES": 102,
      "DEFERIDOS": "não se aplica",
      "INDEFERIDOS": "não se aplica",
      "SALDO": "não se aplica",
      "EM ANALISE 3.0": "não se aplica",
-     "EM ANALISE 4.0": 102.0
+     "EM ANALISE 4.0": 102
     },
     {
      "produto": "PERÍCIA SIMPLES",
-     "SOLICITAÇÕES": 1635.0,
+     "SOLICITAÇÕES": 1635,
      "DEFERIDOS": "não se aplica",
      "INDEFERIDOS": "não se aplica",
      "SALDO": "não se aplica",
      "EM ANALISE 3.0": "não se aplica",
-     "EM ANALISE 4.0": 1635.0
+     "EM ANALISE 4.0": 1635
     },
     {
      "produto": "JUNTA MÉDICA",
-     "SOLICITAÇÕES": 348.0,
+     "SOLICITAÇÕES": 348,
      "DEFERIDOS": "não se aplica",
      "INDEFERIDOS": "não se aplica",
      "SALDO": "não se aplica",
      "EM ANALISE 3.0": "não se aplica",
-     "EM ANALISE 4.0": 348.0
+     "EM ANALISE 4.0": 348
     },
     {
      "produto": "LICENÇA ASSITÊNCIA",
-     "SOLICITAÇÕES": 74.0,
+     "SOLICITAÇÕES": 74,
      "DEFERIDOS": "não se aplica",
      "INDEFERIDOS": "não se aplica",
      "SALDO": "não se aplica",
      "EM ANALISE 3.0": "não se aplica",
-     "EM ANALISE 4.0": 74.0
+     "EM ANALISE 4.0": 74
     },
     {
      "produto": "ACIDENTEDE TRABALHO",
-     "SOLICITAÇÕES": 3.0,
+     "SOLICITAÇÕES": 3,
      "DEFERIDOS": "não se aplica",
      "INDEFERIDOS": "não se aplica",
      "SALDO": "não se aplica",
      "EM ANALISE 3.0": "não se aplica",
-     "EM ANALISE 4.0": 3.0
+     "EM ANALISE 4.0": 3
     },
     {
      "produto": "INCAPACIDADE DEFINITIVA",
-     "SOLICITAÇÕES": 1.0,
+     "SOLICITAÇÕES": 1,
      "DEFERIDOS": "não se aplica",
      "INDEFERIDOS": "não se aplica",
      "SALDO": "não se aplica",
      "EM ANALISE 3.0": "não se aplica",
-     "EM ANALISE 4.0": 1.0
+     "EM ANALISE 4.0": 1
     },
     {
      "produto": "AGENDAMNTO DE PERÍCIA",
-     "SOLICITAÇÕES": 2163.0,
+     "SOLICITAÇÕES": 2163,
      "DEFERIDOS": "não se aplica",
      "INDEFERIDOS": "não se aplica",
      "SALDO": "não se aplica",
      "EM ANALISE 3.0": "não se aplica",
-     "EM ANALISE 4.0": 2163.0
+     "EM ANALISE 4.0": 2163
     }
    ],
    "link": "https://docs.google.com/spreadsheets/d/1QsV4NS9dtzLkEZp0OSFFSCJpYH0WOfpbdSrEz_PHm4U/edit?gid=880278574#gid=880278574",
@@ -2888,19 +2911,19 @@
    "linhas": [
     {
      "produto": "GRATIFICAÇÃO DE TITULARIDADE E ADICIONAL DE TITULAÇÃO",
-     "SOLICITAÇÕES": 420.0,
-     "DEFERIDOS": 399.0,
-     "INDEFERIDOS": 3.0,
+     "SOLICITAÇÕES": 420,
+     "DEFERIDOS": 399,
+     "INDEFERIDOS": 3,
      "SALDO": "não se aplica",
      "EM ANALISE 3.0": "não se aplica",
-     "EM ANALISE 4.0": 21.0,
+     "EM ANALISE 4.0": 21,
      "link": "https://drive.google.com/drive/u/1/folders/0AD3EUdRbJvb_Uk9PVA"
     },
     {
      "produto": "PROGRESSÃO FUNCIONAL ADMINISTRAÇÃO GERAL",
      "SOLICITAÇÕES": "não se aplica",
-     "DEFERIDOS": 3544.0,
-     "INDEFERIDOS": 62.0,
+     "DEFERIDOS": 3544,
+     "INDEFERIDOS": 62,
      "SALDO": "não se aplica",
      "EM ANALISE 3.0": "não se aplica",
      "EM ANALISE 4.0": null,
@@ -2909,11 +2932,11 @@
     {
      "produto": "PROGRESSÃO FUNCIONAL HORIZONTAL MAGISTÉRIO",
      "SOLICITAÇÕES": "não se aplica",
-     "DEFERIDOS": 19890.0,
+     "DEFERIDOS": 19890,
      "INDEFERIDOS": "não se aplica",
      "SALDO": "não se aplica",
      "EM ANALISE 3.0": "não se aplica",
-     "EM ANALISE 4.0": 19890.0,
+     "EM ANALISE 4.0": 19890,
      "link": "https://drive.google.com/drive/u/1/folders/1QqvLOZcvj5wcaU_qYbwMcozB0kXzWzdn"
     }
    ]

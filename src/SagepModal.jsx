@@ -240,3 +240,4 @@ export default function SagepModal({ aberto, onClose }) {
     </div>
   )
 }
+
