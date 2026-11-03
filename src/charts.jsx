@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { createPortal } from 'react-dom'
 
-export const PALETA = ['#00838a', '#153a4d', '#c4841d', '#7b5ea7', '#2e9e6b', '#c0504d', '#2f6690', '#8a9aa6', '#d1a23a', '#35c0c6']
+export const PALETA = ['#07547b', '#c81a38', '#10334a', '#2e9e6b', '#16658a', '#587080', '#d97706', '#8f1225', '#0d486b', '#3b82f6']
 
 export const fmt = (n, d = 0) =>
   n == null ? '–' : Number(n).toLocaleString('pt-BR', { minimumFractionDigits: d, maximumFractionDigits: d })

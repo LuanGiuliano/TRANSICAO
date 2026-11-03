@@ -1,14 +1,29 @@
 import { useEffect, useMemo, useState } from 'react'
 import brasao from './assets/brasao.png'
 import Painel, { resumoCapa, temDados } from './paineis.jsx'
+import SagepModal from './SagepModal.jsx'
 import {
   RELATORIOS, DIRETORIAS, PROCESSO,
 } from './data.js'
 
-
-function Tag({ sigla }) {
-  const d = DIRETORIAS[sigla]
-  return <span className="tag" style={{ '--c': d.cor }}>{d.sigla}</span>
+function Tag({ sigla, onOpenSagep }) {
+  const d = DIRETORIAS[sigla] || { sigla, cor: '#07547b' }
+  const isSagep = sigla === 'SAGEP'
+  return (
+    <span
+      className={`tag ${isSagep ? 'tag--sagep-clicavel' : ''}`}
+      style={{ '--c': d.cor }}
+      onClick={(e) => {
+        if (isSagep && onOpenSagep) {
+          e.stopPropagation()
+          onOpenSagep()
+        }
+      }}
+      title={isSagep ? 'Clique para abrir o documento detalhado da SAGEP (PDF / Apresentação)' : undefined}
+    >
+      {d.sigla}
+    </span>
+  )
 }
 
 function Campo({ rotulo, texto }) {
@@ -16,7 +31,47 @@ function Campo({ rotulo, texto }) {
   return <p><strong>{rotulo}:</strong> {texto}</p>
 }
 
-function Card({ r, onOpen }) {
+function CardSagep({ onOpenSagep }) {
+  return (
+    <button
+      id="card-SAGEP"
+      type="button"
+      className="card card--sagep-destaque"
+      onClick={onOpenSagep}
+    >
+      <div className="card__head">
+        <span className="card__id card__id--sagep">SAGEP</span>
+        <span className="card__prazo card__prazo--sagep">DOCUMENTO OFICIAL &bull; 11 PÁGINAS</span>
+      </div>
+      <h3 className="card__titulo">Estrutura organizacional e escopo de atuação</h3>
+      <div className="card__texto">
+        <Campo rotulo="Gabinete" texto="Estrutura e fluxos de processos, chefia e Núcleos de Conformidade." />
+        <Campo rotulo="Diretorias" texto="DIPSE, DIOP e DIFOB com suas respectivas coordenadorias." />
+        <Campo rotulo="Coordenadorias" texto="Vinculações, atribuições e eixos operacionais das equipes." />
+        <Campo rotulo="Formato" texto="Janela interativa com 11 slides em alta resolução e PDF integrado." />
+      </div>
+      <div className="card__resp">
+        <span className="card__resp-rot">Secretaria Adjunta de Gestão de Pessoas</span>
+        <p className="card__resp-txt">Hellen Nyde da Silva e Souza (Secretária Adjunta)</p>
+        <p className="card__resp-sub">Documento-base da transição governamental 2026/2027</p>
+        <span className="dados-badge dados-badge--sagep">
+          ★ Clique para abrir a visão detalhada (PDF / Slides)
+        </span>
+      </div>
+      <div className="card__foot">
+        <div className="tags">
+          <span className="tag tag--sagep">SAGEP</span>
+          <span className="tag tag--diop">DIOP</span>
+          <span className="tag tag--dipse">DIPSE</span>
+          <span className="tag tag--difob">DIFOB</span>
+        </div>
+      </div>
+      <span className="card__abrir card__abrir--sagep" aria-hidden>Abrir visão detalhada ›</span>
+    </button>
+  )
+}
+
+function Card({ r, onOpen, onOpenSagep }) {
   const { unidade, colab } = resumoCapa(r.id)
   const ok = temDados(r.id)
   return (
@@ -46,14 +101,18 @@ function Card({ r, onOpen }) {
         </span>
       </div>
       <div className="card__foot">
-        <div className="tags">{r.diretorias.map((d) => <Tag key={d} sigla={d} />)}</div>
+        <div className="tags">
+          {r.diretorias.map((d) => (
+            <Tag key={d} sigla={d} onOpenSagep={onOpenSagep} />
+          ))}
+        </div>
       </div>
       <span className="card__abrir" aria-hidden>Abrir ›</span>
     </button>
   )
 }
 
-function Detalhe({ r, onBack }) {
+function Detalhe({ r, onBack, onOpenSagep }) {
   const imprimir = () => {
     window.print()
   }
@@ -100,7 +159,7 @@ function Detalhe({ r, onBack }) {
         </div>
         <h1 className="detalhe__titulo">{r.titulo}</h1>
         <div className="tags" style={{ marginBottom: 18 }}>
-          {r.diretorias.map((d) => <Tag key={d} sigla={d} />)}
+          {r.diretorias.map((d) => <Tag key={d} sigla={d} onOpenSagep={onOpenSagep} />)}
         </div>
         <div className="card__texto card__texto--lg">
           <Campo rotulo="Entregar" texto={r.entregar} />
@@ -134,6 +193,7 @@ function Detalhe({ r, onBack }) {
 export default function App() {
   const [aberto, setAberto] = useState(() => window.location.hash.replace('#', '') || null)
   const [filtro, setFiltro] = useState('TODAS')
+  const [sagepModalAberto, setSagepModalAberto] = useState(false)
 
   useEffect(() => {
     const onHash = () => setAberto(window.location.hash.replace('#', '') || null)
@@ -155,36 +215,62 @@ export default function App() {
       <header className="hero">
         <div className="container hero__inner">
           <div className="hero__texto">
-          <p className="hero__eyebrow">Transição governamental • Educação / Pará</p>
-          <h1 className="hero__titulo">SAGEP - SECRETARIA ADJUNTA DE GESTÃO DE PESSOAS</h1>
-          <p className="hero__meta">
-            {RELATORIOS.length} relatórios principais • Bloco F • {PROCESSO}
-          </p>
+            <p className="hero__eyebrow">Secretaria de Estado de Educação do Pará</p>
+            <h1 className="hero__titulo">SAGEP &bull; SECRETARIA ADJUNTA DE GESTÃO DE PESSOAS</h1>
+            <div className="hero__red-bar" aria-hidden="true" />
+            <p className="hero__sub">Estrutura Organizacional, Escopo de Atuação e Relatórios de Transição</p>
+            <div className="hero__meta">
+              <span className="hero__badge-pae">{PROCESSO}</span>
+              <span>{RELATORIOS.length} relatórios principais</span>
+              <span>&bull;</span>
+              <span>Bloco F &bull; Gestão de Pessoas</span>
+            </div>
           </div>
           <img className="hero__brasao" src={brasao} alt="Brasão do Estado do Pará" />
         </div>
       </header>
 
       {atual ? (
-        <Detalhe r={atual} onBack={voltar} />
+        <Detalhe r={atual} onBack={voltar} onOpenSagep={() => setSagepModalAberto(true)} />
       ) : (
         <main className="container">
           <nav className="filtros" aria-label="Filtrar por diretoria">
-            {['TODAS', ...Object.keys(DIRETORIAS)].map((f) => (
-              <button
-                key={f}
-                id={`filtro-${f}`}
-                className={`filtro ${filtro === f ? 'filtro--on' : ''}`}
-                onClick={() => setFiltro(f)}
-              >
-                {f === 'TODAS' ? 'Todas' : f}
-              </button>
-            ))}
+            {['TODAS', ...Object.keys(DIRETORIAS)].map((f) => {
+              const isSagep = f === 'SAGEP'
+              return (
+                <button
+                  key={f}
+                  id={`filtro-${f}`}
+                  className={`filtro ${filtro === f ? 'filtro--on' : ''} ${isSagep ? 'filtro--sagep' : ''}`}
+                  onClick={() => {
+                    if (isSagep) {
+                      setSagepModalAberto(true)
+                    } else {
+                      setFiltro(f)
+                    }
+                  }}
+                  title={isSagep ? 'Abrir Estrutura e Escopo da SAGEP (PDF e Apresentação)' : `Filtrar por ${f}`}
+                >
+                  {isSagep ? (
+                    <>
+                      <span className="filtro__dot-sagep">●</span>
+                      <span>SAGEP</span>
+                      <span className="filtro__tag-doc">Visão PDF</span>
+                    </>
+                  ) : (
+                    f === 'TODAS' ? 'Todas as Diretorias' : f
+                  )}
+                </button>
+              )
+            })}
           </nav>
 
           <section className="grid" aria-label="Relatórios do Bloco F">
+            {(filtro === 'TODAS' || filtro === 'SAGEP') && (
+              <CardSagep onOpenSagep={() => setSagepModalAberto(true)} />
+            )}
             {lista.map((r) => (
-              <Card key={r.id} r={r} onOpen={abrir} />
+              <Card key={r.id} r={r} onOpen={abrir} onOpenSagep={() => setSagepModalAberto(true)} />
             ))}
           </section>
 
@@ -198,6 +284,9 @@ export default function App() {
           </footer>
         </main>
       )}
+
+      {/* Janela Modal do PDF / Apresentação da SAGEP */}
+      <SagepModal aberto={sagepModalAberto} onClose={() => setSagepModalAberto(false)} />
     </>
   )
 }

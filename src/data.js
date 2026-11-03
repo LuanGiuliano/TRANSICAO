@@ -1,8 +1,8 @@
 export const DIRETORIAS = {
-  DIOP: { sigla: 'DIOP', cor: '#0e7c86' },
-  DIPSE: { sigla: 'DIPSE', cor: '#7b5ea7' },
-  DIFOB: { sigla: 'DIFOB', cor: '#c4841d' },
-  GABINETE: { sigla: 'GABINETE', cor: '#2f6690' },
+  DIOP: { sigla: 'DIOP', nome: 'Diretoria de Organização de Pessoal', cor: '#07547b' },
+  DIPSE: { sigla: 'DIPSE', nome: 'Diretoria de Planejamento, Seleção e Evidências', cor: '#16658a' },
+  DIFOB: { sigla: 'DIFOB', nome: 'Diretoria de Folha e Benefícios', cor: '#0d486b' },
+  SAGEP: { sigla: 'SAGEP', nome: 'Secretaria Adjunta de Gestão de Pessoas', cor: '#c81a38', especial: true },
 }
 
 export const STATUS = [
@@ -16,7 +16,7 @@ export const PROCESSO = 'PAE 2026/3605765'
 
 export const RELATORIOS = [
   {
-    id: 'F-01', titulo: 'Quadro de pessoal', prazo: 'D+10', diretorias: ['DIOP', 'GABINETE'],
+    id: 'F-01', titulo: 'Quadro de pessoal', prazo: 'D+10', diretorias: ['DIOP', 'SAGEP'],
     entregar: 'mapa da força de trabalho por vínculo, cargo, carreira, jornada e lotação; quadro docente por escola, componente, etapa e turno.',
     incluir: 'cessões e órgão pagador; vagas, concursos e nomeações pendentes; regência, planejamento e formação.',
     indicadores: 'profissionais por vínculo, vagas e distribuição territorial.',
