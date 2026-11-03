@@ -158,15 +158,8 @@ function Detalhe({ r, onBack, onOpenSagep }) {
           <span className={`card__prazo ${r.prioridade ? 'card__prazo--prio' : ''}`}>{r.prazo}</span>
         </div>
         <h1 className="detalhe__titulo">{r.titulo}</h1>
-        <div className="tags" style={{ marginBottom: 18 }}>
+        <div className="tags">
           {r.diretorias.map((d) => <Tag key={d} sigla={d} onOpenSagep={onOpenSagep} />)}
-        </div>
-        <div className="card__texto card__texto--lg">
-          <Campo rotulo="Entregar" texto={r.entregar} />
-          <Campo rotulo="Incluir" texto={r.incluir} />
-          <Campo rotulo="Separar" texto={r.separar} />
-          <Campo rotulo="Indicadores" texto={r.indicadores} />
-          <Campo rotulo="Apoio" texto={r.apoio} />
         </div>
       </section>
 

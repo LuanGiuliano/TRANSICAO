@@ -2,13 +2,11 @@
  "DIOP": {
   "capa": {
    "UNIDADE E RESPONSÁVEL PRINCIPAL": "DIRETORIA DE ORGANIZAÇÃO DE PESSOAL",
-   "COLABORADORES E RESPECTIVAS FONTES": "TAMARA DE SOUSA PEREIRA, ROSINELMA MEIRELES DA SILVA, ANA LUIZA LIMA DOS SANTOS",
+   "COLABORADORES": "TAMARA DE SOUSA PEREIRA, ROSINELMA MEIRELES DA SILVA, ANA LUIZA LIMA DOS SANTOS",
    "ELABORADOR E CARGO": "ANTHONY SAUL PINHEIRO MAGALHÃES, ASSISTENTE DE GESTÃO GOVERNAMENTAL E EDUCACIONAL B",
    "AUTORIDADE QUE CONFIRMA ORIGEM E LOCALIZAÇÃO": "Hellen Nyde da Silva e Souza - Secretária Adjunta SAGEP",
    "DATA-BASE": "28/09/2026",
    "DATA DE ENTREGA": "29/10/2026",
-   "FONTE": "SIGEP/ERGON/PAE 4.0 E 3.0/SAS MONTREAL",
-   "MÉTODO": "Não se aplica",
    "SERVIDOR DE REFERÊNCIA E CONTATO INSTITUCIONAL": "ANTHONY SAUL PINHEIRO MAGALHÃES, 3001-0705"
   },
   "F-01": {
@@ -2772,12 +2770,11 @@
  },
  "DIFOB": {
   "capa": {
-   "CÓDIGO E TÍTULO": "F-06 - Folha de Pagamento",
    "UNIDADE E RESPONSÁVEL PRINCIPAL": "Diretoria de Folha e Benefícios (DIFOB)",
-   "COLABORADORES E RESPECTIVAS FONTES": "Olga Ferreira Nascimento - CFOP",
+   "COLABORADORES": "Olga Ferreira Nascimento - CFOP",
    "ELABORADOR E CARGO": "Olga Ferreira Nascimento - Coordenadoria de Folha de Pagamento (CFOP)",
    "AUTORIDADE QUE CONFIRMA ORIGEM E LOCALIZAÇÃO": "Hellen Nyde da Silva e Souza - Secretária Adjunta SAGEP",
-   "DATA-BASE": "Mês de setembro",
+   "DATA-BASE": "30/09/2026",
    "SERVIDOR DE REFERÊNCIA E CONTATO INSTITUCIONAL": "Gisele Almeida de Barros - Diretora de Folha e Benefícios (DIFOB) - (91)98132-5391"
   },
   "F-05": {
@@ -3109,27 +3106,12 @@
  },
  "DIPSE": {
   "capa": {
-   "CÓDIGO E TÍTULO": "F-03 - Processos Seletivos, concursos  e contratações temporárias",
    "UNIDADE E RESPONSÁVEL PRINCIPAL": "Diretoria de Planejamento, Seleção e Evidências - DIPSE - Dayane Garcez Bacelar - Diretora DIPSE, em exercício.",
-   "COLABORADORES E RESPECTIVAS FONTES": "Maria Raimunda Martins Gonçalves - Coordenadoria de Avaliação de Desempenho e Desenvolvimento Profissional - CADDEP\nDayane Garcez Bacelar - Coordenadoria de Planejamento de Planejamento e Seleção - CPS.",
+   "COLABORADORES": "Maria Raimunda Martins Gonçalves - Coordenadoria de Avaliação de Desempenho e Desenvolvimento Profissional - CADDEP\nDayane Garcez Bacelar - Coordenadoria de Planejamento de Planejamento e Seleção - CPS.",
    "ELABORADOR E CARGO": "Dayane Garcez Bacelar - Diretora DIPSE, em exercício.",
-   "AUTORIDADE QUE CONFIRMA ORIGEM E LOCALIZAÇÃO": "Hellen Nyde da Silva e Souza - Secretária adjunta SAGEP",
-   "DATA-BASE": "Mês de setembro",
-   "PERÍODO": "01/01/2026 a 30/09/2026",
+   "AUTORIDADE QUE CONFIRMA ORIGEM E LOCALIZAÇÃO": "Hellen Nyde da Silva e Souza - Secretária Adjunta SAGEP",
+   "DATA-BASE": "30/09/2026",
    "DATA DE ENTREGA": "28/10/2026",
-   "VERSÃO": "planilha XLSX",
-   "FONTE": "Dados fornecidos pelas coordenadorias CPS e CADDEP.",
-   "SISTEMA DE ORIGEM": "CPS - Sistema de Processo Seletivo - https://pss.seduc.pa.gov.br/gestao/index.php\n\nCADDEP - Monitoramento do setor - Estágio Probatório https://datastudio.google.com/reporting/a30548e0-24fa-4655-bc14-49f781604682/page/p_ppqziwervd",
-   "MÉTODO": "Monitoramento por meio de intercruzamento de informações por meio de planilhas.",
-   "EVIDÊNCIA": "Dados fornecidos pelas coordenadorias CPS e CADDEP.",
-   "LIMITAÇÕES": "Não se aplica",
-   "DOCUMENTOS ANEXOS": "Não se aplica",
-   "LOCALIZAÇÃO NO REPOSITÓRIO": "Não se aplica",
-   "DADOS PESSOAIS": "Não se aplica",
-   "SIGILO / FUNDAMENTO": "Lei Geral de Proteção de Dados Pessoais (LGPD) - Lei n. 13709/2018.",
-   "PENDÊNCIAS": "Não se aplica",
-   "RISCOS": "Não se aplica",
-   "PROVIDÊNCIAS": "Não se aplica",
    "SERVIDOR DE REFERÊNCIA E CONTATO INSTITUCIONAL": "Dayane Garcez Bacelar - email: dayane.oliveira@seduc.pa.gov.br"
   },
   "F-03": {

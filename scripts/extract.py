@@ -1,6 +1,6 @@
 """Extrai dados das planilhas DIOP/DIFOB/DIPSE para src/data/planilhas.json
 e as imagens da F-07 para public/f07/. Rode: python scripts/extract.py"""
-import json, re, zipfile, datetime, os
+import json, re, zipfile, datetime, os, unicodedata
 from collections import defaultdict
 import openpyxl
 
@@ -22,14 +22,37 @@ def txt(v):
     return s or None
 
 
+CAPA_REMOVER = {
+    'CODIGO E TITULO',
+    'PERIODO',
+    'VERSAO',
+    'SISTEMA DE ORIGEM',
+    'EVIDENCIA',
+    'FONTE',
+    'METODO',
+    'SIGILO / FUNDAMENTO',
+}
+
+
+def sem_acento(s):
+    return unicodedata.normalize('NFKD', s).encode('ascii', 'ignore').decode('ascii').strip().upper()
+
+
 def capa(ws):
     d = {}
     for r in ws.iter_rows(min_row=4, max_row=30, max_col=2):
         k, v = txt(r[0].value), txt(r[1].value)
         if k and v:
-            if 'AUTORIDADE QUE CONFIRMA' in k.upper():
-                if 'SECRET' not in v.upper():
-                    v = 'Hellen Nyde da Silva e Souza - Secretária Adjunta SAGEP'
+            kn = sem_acento(k)
+            vn = sem_acento(v)
+            if kn in CAPA_REMOVER or vn.startswith('NAO SE APLICA'):
+                continue
+            if kn.startswith('COLABORADORES'):
+                k = 'COLABORADORES'
+            if kn == 'DATA-BASE' and 'SETEMBRO' in vn:
+                v = '30/09/2026'
+            if 'AUTORIDADE QUE CONFIRMA' in kn:
+                v = 'Hellen Nyde da Silva e Souza - Secretária Adjunta SAGEP'
             if 'DE PESSOAS' in v.upper() and 'GESTÃO DE PESSOAS' not in v.upper():
                 v = re.sub(r'DE PESSOAS', 'DE PESSOAL', v, flags=re.I)
             d[k] = v

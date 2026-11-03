@@ -24,7 +24,8 @@ export const capaDe = (id) => dados[PLANILHA_DE[id]]?.capa || {}
 
 const C = {
   unidade: 'UNIDADE E RESPONSÁVEL PRINCIPAL',
-  colab: 'COLABORADORES E RESPECTIVAS FONTES',
+  colab: 'COLABORADORES',
+  colabAntigo: 'COLABORADORES E RESPECTIVAS FONTES',
 }
 export function resumoCapa(id) {
   const c = capaDe(id)
@@ -33,22 +34,32 @@ export function resumoCapa(id) {
   if (u && /DE PESSOAS/i.test(u) && !/GEST[AÃ]O DE PESSOAS/i.test(u)) {
     u = u.replace(/DE PESSOAS/gi, 'DE PESSOAL')
   }
-  return { unidade: u, colab: get(C.colab) }
+  return { unidade: u, colab: get(C.colab) || get(C.colabAntigo) }
 }
+
+const CAPA_IGNORAR = /^(c[oó]digo e t[ií]tulo|per[ií]odo|vers[aã]o|sistema de origem|evid[eê]ncia|fonte|m[eé]todo|sigilo\s*\/\s*fundamento)$/i
 
 /* ---------- Capa de identificação ---------- */
 export function Capa({ id }) {
   const c = capaDe(id)
   const itens = Object.entries(c)
-    .filter(([, v]) => v && !/^n[aã]o se aplica/i.test(v))
+    .filter(([k, v]) => v && !/^n[aã]o se aplica/i.test(v) && !CAPA_IGNORAR.test(k.trim()))
     .map(([k, v]) => {
-      if (/AUTORIDADE QUE CONFIRMA/i.test(k)) {
-        return [k, 'Hellen Nyde da Silva e Souza - Secretária Adjunta SAGEP']
+      let chave = k.trim()
+      let valor = v
+      if (/^colaboradores/i.test(chave)) {
+        chave = 'COLABORADORES'
       }
-      if (/DE PESSOAS/i.test(v) && /DIRETORIA/i.test(v) && !/GEST[AÃ]O DE PESSOAS/i.test(v)) {
-        return [k, v.replace(/DE PESSOAS/gi, 'DE PESSOAL')]
+      if (/^data-base$/i.test(chave) && /setembro/i.test(valor)) {
+        valor = '30/09/2026'
       }
-      return [k, v]
+      if (/AUTORIDADE QUE CONFIRMA/i.test(chave)) {
+        valor = 'Hellen Nyde da Silva e Souza - Secretária Adjunta SAGEP'
+      }
+      if (/DE PESSOAS/i.test(valor) && /DIRETORIA/i.test(valor) && !/GEST[AÃ]O DE PESSOAS/i.test(valor)) {
+        valor = valor.replace(/DE PESSOAS/gi, 'DE PESSOAL')
+      }
+      return [chave, valor]
     })
 
   return (
