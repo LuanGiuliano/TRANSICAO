@@ -117,7 +117,7 @@ function Detalhe({ r, onBack }) {
       <footer className="rodape rodape--detalhe">
         <div className="rodape__creditos">
           <span><strong>Coordenação técnica:</strong> Prof. Francisco Augusto Lima Paes</span>
-          <span><strong>Desenvolvedor:</strong> Luan Giuliano Araújo Furtado · <a href="mailto:luan.furtado@seduc.pa.gov.br">luan.furtado@seduc.pa.gov.br</a></span>
+          <span><strong>Desenvolvedor:</strong> Luan Giuliano Araújo Furtado</span>
         </div>
       </footer>
 
@@ -125,7 +125,7 @@ function Detalhe({ r, onBack }) {
       <footer className="relatorio-print-footer">
         <p>Governo do Estado do Pará • Secretaria de Estado de Educação (SEDUC) • Secretaria Adjunta de Gestão de Pessoas (SAGEP)</p>
         <p>Painel de Transição Governamental • {r.id} - {r.titulo} • Emissão: {new Date().toLocaleDateString('pt-BR')} às {new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })}</p>
-        <p className="relatorio-print-footer__dev">Coordenação técnica: Prof. Francisco Augusto Lima Paes &bull; Desenvolvedor: Luan Giuliano Araújo Furtado &bull; luan.furtado@seduc.pa.gov.br</p>
+        <p className="relatorio-print-footer__dev">Coordenação técnica: Prof. Francisco Augusto Lima Paes &bull; Desenvolvedor: Luan Giuliano Araújo Furtado</p>
       </footer>
     </main>
   )
@@ -191,7 +191,7 @@ export default function App() {
           <footer className="rodape">
             <div className="rodape__creditos">
               <span><strong>Coordenação técnica:</strong> Prof. Francisco Augusto Lima Paes</span>
-              <span><strong>Desenvolvedor:</strong> Luan Giuliano Araújo Furtado · <a href="mailto:luan.furtado@seduc.pa.gov.br">luan.furtado@seduc.pa.gov.br</a></span>
+              <span><strong>Desenvolvedor:</strong> Luan Giuliano Araújo Furtado</span>
             </div>
             <p><strong>Fonte:</strong> {PROCESSO}; seq. 03, seção 6.6 / Quadro 12, pp. 36–39; J-06, p. 50; padrões e cronograma, pp. 12–14 e 19–20; seq. 02, p. 2; despacho seq. 05, pp. 2–3.</p>
             <p><strong>Nota:</strong> SAGP é a sigla do plano; SAGEP é a sigla usada no despacho. Os produtos acima são uma síntese operacional dos conteúdos exigidos, sem substituir o detalhamento do processo.</p>
