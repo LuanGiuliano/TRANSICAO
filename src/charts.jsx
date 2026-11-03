@@ -77,6 +77,7 @@ export function formatarRotuloVisual(r) {
   if (s === s.toUpperCase() && s.length > 3) {
     s = s.toLowerCase().replace(/(?:^|\s)\S/g, (a) => a.toUpperCase())
   }
+  s = s.replace(/\bmagisterio\b/gi, 'Magistério')
 
   return s
 }
@@ -352,42 +353,44 @@ export function Colunas({ categorias, series, altura = 190 }) {
   }
 
   return (
-    <div className="colunas" style={{ height: altura + 46 }} onMouseMove={handleMove}>
-      {categorias.map((c, i) => (
-        <div className="colunas__col" key={c}>
-          <b className="colunas__tot">{fmt(totais[i])}</b>
-          <div className="colunas__pilha" style={{ height: altura }}>
-            {series.map((s, j) => {
-              const val = s.valores[i] || 0
-              const cor = PALETA[j % PALETA.length]
-              return (
-                <i
-                  key={s.nome}
-                  style={{
-                    height: `${(val / m) * 100}%`,
-                    background: cor,
-                    cursor: 'pointer',
-                  }}
-                  onMouseEnter={(e) => setTooltip({
-                    x: e.clientX,
-                    y: e.clientY,
-                    titulo: c,
-                    serie: s.nome,
-                    valor: fmt(val),
-                    cor,
-                  })}
-                  onMouseLeave={() => setTooltip(null)}
-                />
-              )
-            })}
+    <div className="colunas" onMouseMove={handleMove}>
+      <div className="colunas__barras">
+        {categorias.map((c, i) => (
+          <div className="colunas__col" key={c}>
+            <b className="colunas__tot">{fmt(totais[i])}</b>
+            <div className="colunas__pilha" style={{ height: altura }}>
+              {series.map((s, j) => {
+                const val = s.valores[i] || 0
+                const cor = PALETA[j % PALETA.length]
+                return (
+                  <i
+                    key={s.nome}
+                    style={{
+                      height: `${(val / m) * 100}%`,
+                      background: cor,
+                      cursor: 'pointer',
+                    }}
+                    onMouseEnter={(e) => setTooltip({
+                      x: e.clientX,
+                      y: e.clientY,
+                      titulo: formatarRotuloVisual(c),
+                      serie: formatarRotuloVisual(s.nome),
+                      valor: fmt(val),
+                      cor,
+                    })}
+                    onMouseLeave={() => setTooltip(null)}
+                  />
+                )
+              })}
+            </div>
+            <span className="colunas__r">{formatarRotuloVisual(c)}</span>
           </div>
-          <span className="colunas__r">{formatarRotuloVisual(c)}</span>
-        </div>
-      ))}
+        ))}
+      </div>
       {series.length > 1 && (
         <ul className="legenda legenda--h">
           {series.map((s, j) => (
-            <li key={s.nome}><i style={{ background: PALETA[j % PALETA.length] }} />{s.nome}</li>
+            <li key={s.nome}><i style={{ background: PALETA[j % PALETA.length] }} /><span>{formatarRotuloVisual(s.nome)}</span></li>
           ))}
         </ul>
       )}
