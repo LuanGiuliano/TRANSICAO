@@ -3,7 +3,6 @@ import brasao from './assets/brasao.png'
 import Painel, { resumoCapa, temDados } from './paineis.jsx'
 import {
   RELATORIOS, DIRETORIAS, PROCESSO,
-  ALEM_BLOCO_F, PADRAO_COMUM, AVISO_PRAZOS,
 } from './data.js'
 
 
@@ -114,11 +113,6 @@ function Detalhe({ r, onBack }) {
 
       <Painel id={r.id} />
 
-      <section className="painel painel--soft">
-        <h2 className="painel__titulo">Padrão comum para todas as entregas</h2>
-        <p>{PADRAO_COMUM}</p>
-      </section>
-
       {/* Área de Créditos em Tela */}
       <footer className="rodape rodape--detalhe">
         <div className="rodape__creditos">
@@ -175,12 +169,6 @@ export default function App() {
         <Detalhe r={atual} onBack={voltar} />
       ) : (
         <main className="container">
-          <section className="aviso">
-            <h2>{AVISO_PRAZOS.titulo}</h2>
-            <p><strong>Quadro 12:</strong> {AVISO_PRAZOS.quadro}</p>
-            <p><strong>Atenção:</strong> {AVISO_PRAZOS.atencao}</p>
-          </section>
-
           <nav className="filtros" aria-label="Filtrar por diretoria">
             {['TODAS', ...Object.keys(DIRETORIAS)].map((f) => (
               <button
@@ -198,17 +186,6 @@ export default function App() {
             {lista.map((r) => (
               <Card key={r.id} r={r} onOpen={abrir} />
             ))}
-          </section>
-
-          <section className="alem">
-            <h2>{ALEM_BLOCO_F.titulo}</h2>
-            <p><strong>J-06:</strong> {ALEM_BLOCO_F.j06}</p>
-            <p><strong>Interfaces:</strong> {ALEM_BLOCO_F.interfaces}</p>
-          </section>
-
-          <section className="padrao">
-            <h2>Padrão comum para todas as entregas</h2>
-            <p>{PADRAO_COMUM}</p>
           </section>
 
           <footer className="rodape">
