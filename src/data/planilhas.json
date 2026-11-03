@@ -2876,9 +2876,228 @@
    "link": "https://docs.google.com/spreadsheets/d/1QsV4NS9dtzLkEZp0OSFFSCJpYH0WOfpbdSrEz_PHm4U/edit?gid=880278574#gid=880278574",
    "nota": "*Considerando o quantitativo de servidores ativos que possuem direito ao benefício, não é possível mensurar, de forma global, o saldo remanescente para gozo sem a prévia análise individualizada da situação funcional de cada servidor."
   },
-  "F-04": {},
+  "F-04": {
+   "colunas": [
+    "SOLICITAÇÕES",
+    "DEFERIDOS",
+    "INDEFERIDOS",
+    "SALDO",
+    "EM ANALISE 3.0",
+    "EM ANALISE 4.0"
+   ],
+   "linhas": [
+    {
+     "produto": "GRATIFICAÇÃO DE TITULARIDADE E ADICIONAL DE TITULAÇÃO",
+     "SOLICITAÇÕES": 420.0,
+     "DEFERIDOS": 399.0,
+     "INDEFERIDOS": 3.0,
+     "SALDO": "não se aplica",
+     "EM ANALISE 3.0": "não se aplica",
+     "EM ANALISE 4.0": 21.0,
+     "link": "https://drive.google.com/drive/u/1/folders/0AD3EUdRbJvb_Uk9PVA"
+    },
+    {
+     "produto": "PROGRESSÃO FUNCIONAL ADMINISTRAÇÃO GERAL",
+     "SOLICITAÇÕES": "não se aplica",
+     "DEFERIDOS": 3544.0,
+     "INDEFERIDOS": 62.0,
+     "SALDO": "não se aplica",
+     "EM ANALISE 3.0": "não se aplica",
+     "EM ANALISE 4.0": null,
+     "link": "https://docs.google.com/spreadsheets/d/1JuUYqmkgtPrWy7gIEo1szPEFqM4x_ZvJ/edit?gid=1552618616#gid=1552618616"
+    },
+    {
+     "produto": "PROGRESSÃO FUNCIONAL HORIZONTAL MAGISTÉRIO",
+     "SOLICITAÇÕES": "não se aplica",
+     "DEFERIDOS": 19890.0,
+     "INDEFERIDOS": "não se aplica",
+     "SALDO": "não se aplica",
+     "EM ANALISE 3.0": "não se aplica",
+     "EM ANALISE 4.0": 19890.0,
+     "link": "https://drive.google.com/drive/u/1/folders/1QqvLOZcvj5wcaU_qYbwMcozB0kXzWzdn"
+    }
+   ]
+  },
   "F-06": {},
-  "F-08": {}
+  "F-08": {
+   "nao_analisados": [
+    {
+     "descricao": "Aguardando orçamento e financeiro",
+     "qtd": 112,
+     "valor": 617882.65
+    },
+    {
+     "descricao": "Analisado pela SEPLAD - Aguardando orçamento e financeiro",
+     "qtd": 20,
+     "valor": 38588.33
+    },
+    {
+     "descricao": "Despesa acima de 10.000,00 (Decreto Estadual nº 4.025)",
+     "qtd": 112,
+     "valor": 1329002.39
+    },
+    {
+     "descricao": "Não analisado - Aguardando deliberação de fluxo de atividade",
+     "qtd": 254,
+     "valor": 1577253.33
+    }
+   ],
+   "nao_analisados_total": {
+    "qtd": 499.0,
+    "valor": 3562726.7
+   },
+   "analisados": [
+    {
+     "descricao": "13º SAL FALECIDO",
+     "qtd": 22,
+     "valor": 52810.7
+    },
+    {
+     "descricao": "13º SALÁRIO",
+     "qtd": 60,
+     "valor": 118437.13
+    },
+    {
+     "descricao": "ABONO PERM/13º SALÁRIO",
+     "qtd": 12,
+     "valor": 20222.55
+    },
+    {
+     "descricao": "ABONO PERMANENCIA",
+     "qtd": 4,
+     "valor": 150820.5
+    },
+    {
+     "descricao": "ATS/13º SALÁRIO",
+     "qtd": 1,
+     "valor": 4572.22
+    },
+    {
+     "descricao": "AULAS SUPLEM.",
+     "qtd": 3,
+     "valor": 4366.37
+    },
+    {
+     "descricao": "AUX FUNERAL",
+     "qtd": 1,
+     "valor": 5000.0
+    },
+    {
+     "descricao": "AUX. ALIM. FALECIDO",
+     "qtd": 9,
+     "valor": 7242.97
+    },
+    {
+     "descricao": "AUX. ALIMENTAÇÃO",
+     "qtd": 62,
+     "valor": 86250.91
+    },
+    {
+     "descricao": "AUX. DOENÇA",
+     "qtd": 1,
+     "valor": 9791.79
+    },
+    {
+     "descricao": "AUX. FUNERAL",
+     "qtd": 116,
+     "valor": 498399.98
+    },
+    {
+     "descricao": "AUX. NATALIDADE",
+     "qtd": 6,
+     "valor": 8376.0
+    },
+    {
+     "descricao": "AUX. TRANSPORTE",
+     "qtd": 5,
+     "valor": 1098.74
+    },
+    {
+     "descricao": "BOLSA ESTAGIO",
+     "qtd": 7,
+     "valor": 6867.27
+    },
+    {
+     "descricao": "CARGA HOR.RETRO.",
+     "qtd": 3,
+     "valor": 9311.01
+    },
+    {
+     "descricao": "CARGA HORARIA",
+     "qtd": 3,
+     "valor": 10437.15
+    },
+    {
+     "descricao": "DESCONTOS INDEV.",
+     "qtd": 1,
+     "valor": 2420.99
+    },
+    {
+     "descricao": "DEVOL.DESC.ADM.",
+     "qtd": 1,
+     "valor": 3420.99
+    },
+    {
+     "descricao": "DIAS TRAB",
+     "qtd": 34,
+     "valor": 193597.37
+    },
+    {
+     "descricao": "DIAS TRAB / 13º SAL",
+     "qtd": 9,
+     "valor": 78622.84
+    },
+    {
+     "descricao": "DIAS TRAB / FALECIDO",
+     "qtd": 1,
+     "valor": 8579.57
+    },
+    {
+     "descricao": "FERIAS",
+     "qtd": 76,
+     "valor": 563442.75
+    },
+    {
+     "descricao": "FERIAS FALECIDO",
+     "qtd": 30,
+     "valor": 288083.29
+    },
+    {
+     "descricao": "FUNPREV",
+     "qtd": 5,
+     "valor": 3221.89
+    },
+    {
+     "descricao": "GRATIF. REPRESENT",
+     "qtd": 1,
+     "valor": 5209.95
+    },
+    {
+     "descricao": "PECUNIA",
+     "qtd": 335,
+     "valor": 2099866.92
+    },
+    {
+     "descricao": "PECÚNIA - FALECIDO",
+     "qtd": 60,
+     "valor": 329703.98
+    },
+    {
+     "descricao": "PRO LABORE",
+     "qtd": 2,
+     "valor": 5880.61
+    },
+    {
+     "descricao": "SALÁRIO MATERNIDADE",
+     "qtd": 1,
+     "valor": 611.05
+    }
+   ],
+   "analisados_total": {
+    "qtd": 871,
+    "valor": 4576667.49
+   }
+  }
  },
  "DIPSE": {
   "capa": {

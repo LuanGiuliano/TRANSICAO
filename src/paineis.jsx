@@ -772,7 +772,220 @@ function F07() {
   )
 }
 
-const PAINEIS = { 'F-01': F01, 'F-02': F02, 'F-03': F03, 'F-05': F05, 'F-06': F06, 'F-07': F07 }
+/* ---------- F-04 CARREIRA E REMUNERAÇÃO ---------- */
+function F04() {
+  const d = dados.DIFOB['F-04']
+  const val = (l, k) => (typeof l[k] === 'number' ? l[k] : null)
+
+  // KPIs: somas de deferidos e em análise 4.0
+  const totalDeferidos = d.linhas.reduce((s, l) => s + (val(l, 'DEFERIDOS') || 0), 0)
+  const totalEmAnalise = d.linhas.reduce((s, l) => s + (val(l, 'EM ANALISE 4.0') || 0), 0)
+  const totalSolicitacoes = d.linhas.reduce((s, l) => s + (val(l, 'SOLICITAÇÕES') || 0), 0)
+  const totalIndeferidos = d.linhas.reduce((s, l) => s + (val(l, 'INDEFERIDOS') || 0), 0)
+
+  const fmtVal = (v) => (v == null || v === '' ? '–' : typeof v === 'number' ? fmt(v) : String(v))
+
+  return (
+    <>
+      <div className="kpis">
+        <Kpi rotulo="Deferidos (total)" valor={fmt(totalDeferidos)} sub="progressões e gratificações" cor="#2e9e6b" />
+        <Kpi rotulo="Em análise PAE 4.0" valor={fmt(totalEmAnalise)} sub="aguardando conclusão" cor="#c4841d" />
+        {totalSolicitacoes > 0 && (
+          <Kpi rotulo="Solicitações recebidas" valor={fmt(totalSolicitacoes)} cor="#153a4d" />
+        )}
+        {totalIndeferidos > 0 && (
+          <Kpi rotulo="Indeferidos" valor={fmt(totalIndeferidos)} cor="#c0504d" />
+        )}
+      </div>
+      <div className="blocos">
+        <Bloco titulo="Deferidos por produto">
+          <HBars
+            dados={d.linhas
+              .filter((l) => val(l, 'DEFERIDOS') > 0)
+              .map((l) => [l.produto.toLowerCase(), val(l, 'DEFERIDOS')])}
+            cor="#2e9e6b"
+          />
+        </Bloco>
+        <Bloco titulo="Em análise PAE 4.0 por produto">
+          <HBars
+            dados={d.linhas
+              .filter((l) => val(l, 'EM ANALISE 4.0') > 0)
+              .map((l) => [l.produto.toLowerCase(), val(l, 'EM ANALISE 4.0')])}
+            cor="#c4841d"
+          />
+        </Bloco>
+      </div>
+      <Bloco titulo="Quadro detalhado – Carreira e Remuneração" span="full"
+        nota="Quantitativo de solicitações, deferimentos, indeferimentos e situação de análise por produto da DIFOB.">
+        <div className="tabela-wrap">
+          <table className="tabela">
+            <thead>
+              <tr>
+                <th>Produto</th>
+                {d.colunas.map((c) => <th key={c} className="num">{c.toLowerCase()}</th>)}
+                <th>Planilha de acompanhamento</th>
+              </tr>
+            </thead>
+            <tbody>
+              {d.linhas.map((l, idx) => (
+                <tr key={idx}>
+                  <td><strong>{l.produto}</strong></td>
+                  {d.colunas.map((c) => (
+                    <td key={c} className="num">{fmtVal(l[c])}</td>
+                  ))}
+                  <td>
+                    {l.link
+                      ? <a href={l.link} target="_blank" rel="noreferrer">abrir ↗</a>
+                      : '–'}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+            <tfoot>
+              <tr style={{ background: '#eef3f6', fontWeight: 800 }}>
+                <td>TOTAL GERAL</td>
+                {d.colunas.map((c) => {
+                  const soma = d.linhas.reduce((acc, l) => acc + (val(l, c) || 0), 0)
+                  return <td key={c} className="num" style={{ color: 'var(--teal)' }}>{soma > 0 ? fmt(soma) : '–'}</td>
+                })}
+                <td />
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </Bloco>
+    </>
+  )
+}
+
+/* ---------- F-08 PASSIVOS E RISCO DE PESSOAL ---------- */
+function F08() {
+  const d = dados.DIFOB['F-08']
+  const fmtR = (v) => fmtBRL(v)
+
+  const analTop = [...d.analisados].sort((a, b) => b.valor - a.valor)
+  const analTopN = analTop.slice(0, 10)
+
+  const totalGeral = (d.nao_analisados_total?.valor || 0) + (d.analisados_total?.valor || 0)
+  const totalQtd = (d.nao_analisados_total?.qtd || 0) + (d.analisados_total?.qtd || 0)
+
+  return (
+    <>
+      <div className="kpis">
+        <Kpi
+          rotulo="Total DEAs (passivos)"
+          valor={fmtBRL(totalGeral)}
+          sub={`${fmt(totalQtd)} processos de 2015 a 2026`}
+          cor="#c0504d"
+        />
+        <Kpi
+          rotulo="DEAs analisados em 2026"
+          valor={fmtBRL(d.analisados_total?.valor)}
+          sub={`${fmt(d.analisados_total?.qtd)} processos concluídos`}
+          cor="#2e9e6b"
+        />
+        <Kpi
+          rotulo="Ainda não analisados"
+          valor={fmtBRL(d.nao_analisados_total?.valor)}
+          sub={`${fmt(d.nao_analisados_total?.qtd)} processos pendentes`}
+          cor="#c4841d"
+        />
+      </div>
+
+      <div className="blocos">
+        <Bloco titulo="Passivos não analisados em 2026 – por situação"
+          nota="DEAs de 2016 a 2026 ainda pendentes de análise ou execução financeira.">
+          <HBars
+            dados={d.nao_analisados.map((x) => [x.descricao, x.valor])}
+            cor="#c0504d"
+          />
+        </Bloco>
+
+        <Bloco titulo="Proporção: analisados × não analisados">
+          <Donut
+            dados={[
+              ['Analisados em 2026', d.analisados_total?.valor],
+              ['Não analisados', d.nao_analisados_total?.valor],
+            ]}
+            centro={fmtBRL(totalGeral)}
+            sub="total DEAs"
+          />
+        </Bloco>
+      </div>
+
+      <Bloco titulo="Maiores DEAs analisados em 2026 (top 10 por valor)" span="full"
+        nota="Despesas de Exercícios Anteriores (2015–2026) analisadas pela DIFOB/SAGEP em 2026, ordenadas por valor.">
+        <HBars
+          dados={analTopN.map((x) => [x.descricao.toLowerCase(), x.valor])}
+          cor="#153a4d"
+        />
+      </Bloco>
+
+      <Bloco titulo="Detalhamento completo – DEAs Analisados em 2026" span="full">
+        <div className="tabela-wrap">
+          <table className="tabela">
+            <thead>
+              <tr>
+                <th>Descrição / Rubrica</th>
+                <th className="num">Qtd. processos</th>
+                <th className="num">Valor (R$)</th>
+              </tr>
+            </thead>
+            <tbody>
+              {analTop.map((x, idx) => (
+                <tr key={idx}>
+                  <td>{x.descricao}</td>
+                  <td className="num">{fmt(x.qtd)}</td>
+                  <td className="num">{fmtR(x.valor)}</td>
+                </tr>
+              ))}
+            </tbody>
+            <tfoot>
+              <tr style={{ background: '#eef3f6', fontWeight: 800 }}>
+                <td>TOTAL ANALISADOS</td>
+                <td className="num">{fmt(d.analisados_total?.qtd)}</td>
+                <td className="num" style={{ color: 'var(--teal)' }}>{fmtR(d.analisados_total?.valor)}</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </Bloco>
+
+      <Bloco titulo="Detalhamento – DEAs Não Analisados em 2026" span="full"
+        nota="Passivos de exercícios anteriores que não foram analisados ou executados em 2026.">
+        <div className="tabela-wrap">
+          <table className="tabela">
+            <thead>
+              <tr>
+                <th>Situação</th>
+                <th className="num">Qtd.</th>
+                <th className="num">Valor (R$)</th>
+              </tr>
+            </thead>
+            <tbody>
+              {d.nao_analisados.map((x, idx) => (
+                <tr key={idx}>
+                  <td>{x.descricao}</td>
+                  <td className="num">{fmt(x.qtd)}</td>
+                  <td className="num">{fmtR(x.valor)}</td>
+                </tr>
+              ))}
+            </tbody>
+            <tfoot>
+              <tr style={{ background: '#eef3f6', fontWeight: 800 }}>
+                <td>TOTAL NÃO ANALISADOS</td>
+                <td className="num">{fmt(d.nao_analisados_total?.qtd)}</td>
+                <td className="num" style={{ color: '#c0504d' }}>{fmtR(d.nao_analisados_total?.valor)}</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </Bloco>
+    </>
+  )
+}
+
+const PAINEIS = { 'F-01': F01, 'F-02': F02, 'F-03': F03, 'F-04': F04, 'F-05': F05, 'F-06': F06, 'F-07': F07, 'F-08': F08 }
 
 export default function Painel({ id }) {
   const P = PAINEIS[id]

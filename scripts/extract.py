@@ -167,7 +167,68 @@ for r in range(5, 20):
     tab.append(row)
 nota = txt(f5.cell(7, 1).value)
 res['DIFOB']['F-05'] = {'colunas': cols[1:7], 'linhas': tab, 'link': link, 'nota': nota}
-res['DIFOB']['F-04'] = {}; res['DIFOB']['F-06'] = {}; res['DIFOB']['F-08'] = {}
+
+# F-04: Carreira e Remuneração
+f4 = [s for s in wb.worksheets if 'F-04' in s.title][0]
+cols4 = [txt(f4.cell(4, c).value) for c in range(1, 9)]
+f4_linhas = []
+for r in range(5, f4.max_row + 1):
+    prod = txt(f4.cell(r, 1).value)
+    if not prod or prod.startswith('*'):
+        continue
+    row = {'produto': prod}
+    for c in range(2, 8):
+        v = f4.cell(r, c).value
+        row[cols4[c - 1]] = v
+    lnk = txt(f4.cell(r, 8).value)
+    if lnk:
+        row['link'] = lnk
+    f4_linhas.append(row)
+res['DIFOB']['F-04'] = {'colunas': cols4[1:7], 'linhas': f4_linhas}
+
+res['DIFOB']['F-06'] = {}
+
+# F-08: Passivos e Risco de Pessoal
+f8 = [s for s in wb.worksheets if 'F-08' in s.title][0]
+
+def parse_brl(v):
+    if v is None: return 0.0
+    if isinstance(v, (int, float)): return float(v)
+    s = str(v).replace('R$', '').replace('.', '').replace(',', '.').strip()
+    try: return float(s)
+    except: return 0.0
+
+# Bloco 1: DEAs NÃO analisados em 2026 (L4..L9)
+nao_anal = []
+for r in range(5, 10):
+    nome = txt(f8.cell(r, 1).value)
+    qtd = num(f8.cell(r, 2).value)
+    val = parse_brl(f8.cell(r, 3).value)
+    if nome and nome.lower().startswith('total'):
+        nao_anal_total = {'qtd': qtd, 'valor': val}
+    elif nome:
+        nao_anal.append({'descricao': nome, 'qtd': int(qtd) if qtd else 0, 'valor': val})
+
+# Bloco 2: DEAs analisados em 2026 (L12..L41)
+anal = []
+for r in range(12, f8.max_row + 1):
+    nome = txt(f8.cell(r, 1).value)
+    qtd = num(f8.cell(r, 2).value)
+    val = num(f8.cell(r, 3).value)
+    if not nome:
+        continue
+    if nome.lower().startswith('total'):
+        anal_total = {'qtd': int(qtd) if qtd else 0, 'valor': float(val) if val else 0.0}
+    else:
+        anal.append({'descricao': nome, 'qtd': int(qtd) if qtd else 0, 'valor': float(val) if val else 0.0})
+
+res['DIFOB']['F-08'] = {
+    'nao_analisados': nao_anal,
+    'nao_analisados_total': nao_anal_total,
+    'analisados': anal,
+    'analisados_total': anal_total,
+}
+
 
 # ---------------- DIPSE ----------------
 wb = openpyxl.load_workbook(os.path.join(ROOT, 'DIPSE.xlsx'), data_only=True)
