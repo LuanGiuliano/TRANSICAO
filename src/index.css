@@ -642,3 +642,20 @@ main.container { padding-top: 26px; padding-bottom: 40px; }
 .lot-linha { cursor: pointer; transition: background-color .15s ease; }
 .lot-linha:hover { background: rgba(7, 84, 123, 0.06); }
 @media print { .lot-filtros { display: none !important; } .lot-tabela { max-height: none !important; overflow: visible !important; } }
+
+/* ===== Layout dos cards de gráficos: melhor aproveitamento do espaço ===== */
+.blocos { align-items: stretch; }
+.bloco { display: flex; flex-direction: column; }
+.bloco > .donut { flex: 1; justify-content: center; align-content: center; gap: 28px; }
+.bloco > .hbars-wrap, .bloco > .colunas, .bloco > .grafico, .bloco > .prop { flex: 1; }
+.donut__svg { width: clamp(180px, 20vw, 240px); height: clamp(180px, 20vw, 240px); }
+.donut .legenda { min-width: 210px; gap: 8px; font-size: 13px; }
+.hbars li { padding: 4px 6px; }
+.hbars__trilho { height: 15px; }
+.lot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.lot-grid .bloco--dre { grid-row: span 2; }
+.lot-grid .hbars-wrap--scroll { max-height: 640px; }
+@media (max-width: 900px) {
+  .lot-grid { grid-template-columns: 1fr; }
+  .lot-grid .bloco--dre { grid-row: auto; }
+}

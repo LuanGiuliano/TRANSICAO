@@ -125,9 +125,10 @@ export default function LotacaoDre() {
             )}
           </div>
 
-          <div className="blocos">
+          <div className="blocos lot-grid">
             {!unica && (
               <Bloco
+                span="dre"
                 titulo="Servidores por DRE"
                 extra={<LimiteControle total={filtradas.length} limite={limiteDre} onChange={setLimiteDre} opcoes={[15, 'Todos']} />}
                 nota={`Exibindo ${dresBarras.length} de ${filtradas.length} unidades.`}
