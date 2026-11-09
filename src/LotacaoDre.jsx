@@ -146,7 +146,7 @@ export default function LotacaoDre() {
               titulo="Lotação por função / atividade"
               extra={<LimiteControle total={atividades.length} limite={limiteAtiv} onChange={setLimiteAtiv} opcoes={[15, 'Todos']} />}
               nota={`Exibindo ${ativExibidas.length} de ${atividades.length} funções.`}
-              span={unica ? 'full' : undefined}
+              span="full"
             >
               <HBars dados={ativExibidas} cor="#c81a38" />
             </Bloco>
