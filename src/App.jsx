@@ -2,6 +2,8 @@ import { useEffect, useMemo, useState } from 'react'
 import brasao from './assets/brasao.png'
 import Painel, { resumoCapa, temDados } from './paineis.jsx'
 import SagepModal from './SagepModal.jsx'
+import Login from './Login.jsx'
+import { supabase, isSupabaseConfigured } from './supabase.js'
 import {
   RELATORIOS, DIRETORIAS, PROCESSO,
 } from './data.js'
@@ -184,15 +186,56 @@ function Detalhe({ r, onBack, onOpenSagep }) {
 }
 
 export default function App() {
+  const [usuario, setUsuario] = useState(null)
+  const [verificandoSessao, setVerificandoSessao] = useState(true)
   const [aberto, setAberto] = useState(() => window.location.hash.replace('#', '') || null)
   const [filtro, setFiltro] = useState('TODAS')
   const [sagepModalAberto, setSagepModalAberto] = useState(false)
+
+  useEffect(() => {
+    if (supabase) {
+      supabase.auth.getSession().then(({ data: { session } }) => {
+        setUsuario(session?.user || null)
+        setVerificandoSessao(false)
+      }).catch(() => {
+        setVerificandoSessao(false)
+      })
+
+      const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+        setUsuario(session?.user || null)
+      })
+
+      return () => subscription?.unsubscribe()
+    } else {
+      try {
+        const demo = localStorage.getItem('sagep_usuario_logado')
+        if (demo) setUsuario(JSON.parse(demo))
+      } catch {}
+      setVerificandoSessao(false)
+    }
+  }, [])
 
   useEffect(() => {
     const onHash = () => setAberto(window.location.hash.replace('#', '') || null)
     window.addEventListener('hashchange', onHash)
     return () => window.removeEventListener('hashchange', onHash)
   }, [])
+
+  const handleLogin = (user) => {
+    setUsuario(user)
+    if (!supabase) {
+      localStorage.setItem('sagep_usuario_logado', JSON.stringify(user))
+    }
+  }
+
+  const handleLogout = async () => {
+    if (supabase) {
+      await supabase.auth.signOut()
+    }
+    localStorage.removeItem('sagep_usuario_logado')
+    setUsuario(null)
+    setAberto(null)
+  }
 
   const abrir = (id) => { window.location.hash = id; window.scrollTo({ top: 0 }) }
   const voltar = () => { history.pushState('', '', window.location.pathname); setAberto(null) }
@@ -203,8 +246,44 @@ export default function App() {
   )
   const atual = RELATORIOS.find((r) => r.id === aberto)
 
+  if (verificandoSessao) {
+    return (
+      <div className="sessao-loading">
+        <div className="sessao-loading__spinner" />
+        <span className="sessao-loading__txt">Verificando autenticação no SAGEP...</span>
+      </div>
+    )
+  }
+
+  if (!usuario) {
+    return <Login onLogin={handleLogin} />
+  }
+
   return (
     <>
+      {/* Barra Superior do Usuário Conectado */}
+      <div className="barra-usuario-topo">
+        <div className="container barra-usuario-topo__inner">
+          <div className="barra-usuario-topo__info">
+            <span className="barra-usuario-topo__dot" title="Sessão ativa" />
+            <span className="barra-usuario-topo__email">{usuario.email}</span>
+            {usuario.user_metadata?.nome && (
+              <span className="barra-usuario-topo__nome">({usuario.user_metadata.nome})</span>
+            )}
+          </div>
+          <div className="barra-usuario-topo__acoes">
+            <button
+              type="button"
+              className="barra-usuario-topo__btn-sair"
+              onClick={handleLogout}
+              title="Encerrar sessão no sistema"
+            >
+              Sair / Logout
+            </button>
+          </div>
+        </div>
+      </div>
+
       <header className="hero">
         <div className="container hero__inner">
           <div className="hero__texto">

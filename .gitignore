@@ -23,6 +23,10 @@ dist-ssr
 *.sln
 *.sw?
 
+# Local env files
+.env
+.env*.local
+
 # Scratch e temporários locais
 scratch_*
 *.tmp

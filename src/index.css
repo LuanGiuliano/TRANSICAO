@@ -674,3 +674,389 @@ main.container { padding-top: 26px; padding-bottom: 40px; }
   .lot-grid { grid-template-columns: 1fr; }
   .lot-grid .bloco--dre { grid-row: auto; }
 }
+
+/* ===== Tela e Componentes de Login (Supabase) ===== */
+.login-tela {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(16px, 3vw, 36px);
+  background: radial-gradient(circle at 50% 15%, #184661 0%, #0d2838 65%, #081822 100%);
+  position: relative;
+  overflow: hidden;
+}
+.login-tela::before {
+  content: '';
+  position: absolute;
+  top: -160px;
+  right: -160px;
+  width: 440px;
+  height: 440px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200, 26, 56, 0.22), transparent 70%);
+  pointer-events: none;
+}
+.login-tela::after {
+  content: '';
+  position: absolute;
+  bottom: -180px;
+  left: -180px;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(7, 84, 123, 0.35), transparent 70%);
+  pointer-events: none;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 520px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.42), 0 4px 16px rgba(7, 84, 123, 0.12);
+  border: 1px solid var(--card-border);
+  padding: clamp(24px, 4vw, 38px);
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-card__topo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 18px;
+  border-bottom: 2.5px solid var(--petrol);
+}
+.login-card__brasao {
+  width: 62px;
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+}
+.login-card__identificacao {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+.login-card__governo {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .05em;
+  color: var(--navy);
+}
+.login-card__secretaria {
+  font-size: 9.5px;
+  font-weight: 700;
+  color: #436373;
+}
+.login-card__sagep {
+  font-size: 10.5px;
+  font-weight: 800;
+  color: var(--sagep-red);
+  margin-top: 1px;
+}
+
+.login-card__titulo-box {
+  margin-top: 18px;
+  margin-bottom: 14px;
+}
+.login-card__titulo {
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--ink);
+  line-height: 1.2;
+}
+.login-card__sub {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 3px;
+}
+
+/* Aviso de Supabase não configurado */
+.login-aviso-supabase {
+  background: #fbf6ee;
+  border: 1.5px solid #f2dbb3;
+  border-left: 4px solid #d97706;
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+  font-size: 12px;
+}
+.login-aviso-supabase__head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+  color: #8c4a00;
+}
+.login-aviso-supabase__badge {
+  background: #d97706;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 4px;
+  letter-spacing: .04em;
+}
+.login-aviso-supabase__txt {
+  color: #5f3e09;
+  line-height: 1.4;
+}
+.login-aviso-supabase__txt code {
+  background: #f1dfbf;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 11px;
+}
+.login-btn-demo {
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--petrol);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 6px 0 0 0;
+  text-decoration: underline;
+  display: inline-block;
+}
+.login-btn-demo:hover {
+  color: var(--navy);
+}
+
+/* Abas de Login / Cadastro */
+.login-abas {
+  display: flex;
+  background: #f0f4f7;
+  padding: 4px;
+  border-radius: 10px;
+  gap: 4px;
+  margin-bottom: 18px;
+}
+.login-aba {
+  flex: 1;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  background: transparent;
+  border: none;
+  border-radius: 7px;
+  padding: 8px 10px;
+  cursor: pointer;
+  transition: all .15s ease;
+  text-align: center;
+}
+.login-aba:hover {
+  color: var(--ink);
+}
+.login-aba--ativa {
+  background: #ffffff;
+  color: var(--petrol) !important;
+  box-shadow: 0 2px 6px rgba(7, 84, 123, 0.12);
+}
+
+/* Mensagens */
+.login-msg {
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 12.5px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  line-height: 1.35;
+}
+.login-msg--erro {
+  background: #fdf0f2;
+  border: 1px solid #f8c9cf;
+  color: var(--sagep-red);
+}
+.login-msg--sucesso {
+  background: #edf7f2;
+  border: 1px solid #c2e6d3;
+  color: #1b7f52;
+}
+
+/* Formulário */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.login-campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.login-campo label {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: .02em;
+}
+.login-campo__linha-rotulo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.login-btn-toggle-senha {
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--petrol);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.login-btn-toggle-senha:hover {
+  text-decoration: underline;
+}
+.login-campo input {
+  font: inherit;
+  font-size: 13.5px;
+  color: var(--ink);
+  background: #f8fafb;
+  border: 1.5px solid var(--card-border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  transition: border-color .15s, background-color .15s, box-shadow .15s;
+}
+.login-campo input:focus {
+  outline: none;
+  border-color: var(--petrol);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(7, 84, 123, 0.12);
+}
+
+.login-btn-submit {
+  font: inherit;
+  font-size: 14px;
+  font-weight: 800;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--petrol) 0%, var(--navy) 100%);
+  border: none;
+  border-radius: 10px;
+  padding: 12px 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(7, 84, 123, 0.28);
+  transition: transform .15s, box-shadow .15s, filter .15s;
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-btn-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(7, 84, 123, 0.36);
+  filter: brightness(1.08);
+}
+.login-btn-submit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.login-card__rodape {
+  margin-top: 24px;
+  padding-top: 14px;
+  border-top: 1px solid #eef2f5;
+  font-size: 11px;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  text-align: center;
+}
+.login-card__creditos {
+  font-weight: 600;
+  color: #4a6372;
+}
+
+/* Barra de Usuário Autenticado no Topo do Painel */
+.barra-usuario-topo {
+  background: #0a202d;
+  color: #ffffff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 6px 0;
+  font-size: 12px;
+}
+.barra-usuario-topo__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.barra-usuario-topo__info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.barra-usuario-topo__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2e9e6b;
+  box-shadow: 0 0 8px rgba(46, 158, 107, 0.8);
+}
+.barra-usuario-topo__email {
+  font-weight: 700;
+  color: #d6e8f2;
+}
+.barra-usuario-topo__nome {
+  color: #8da4b2;
+  font-size: 11px;
+}
+.barra-usuario-topo__acoes {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.barra-usuario-topo__btn-sair {
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  color: #ffffff;
+  background: rgba(200, 26, 56, 0.85);
+  border: 1px solid rgba(200, 26, 56, 0.6);
+  padding: 3px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all .15s ease;
+}
+.barra-usuario-topo__btn-sair:hover {
+  background: var(--sagep-red);
+  transform: translateY(-1px);
+}
+
+/* Loading de Sessão */
+.sessao-loading {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: #0f3349;
+  color: #ffffff;
+}
+.sessao-loading__spinner {
+  width: 36px;
+  height: 36px;
+  border: 3.5px solid rgba(255, 255, 255, 0.2);
+  border-top-color: var(--sagep-red);
+  border-radius: 50%;
+  animation: spin .8s linear infinite;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.sessao-loading__txt {
+  font-size: 14px;
+  font-weight: 700;
+  color: #d6e8f2;
+}
