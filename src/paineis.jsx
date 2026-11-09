@@ -142,6 +142,7 @@ function F01() {
           <HBars dados={compsExibidos} cor="#7b5ea7" />
         </Bloco>
       </div>
+      <LotacaoDre />
       {d.link && <a className="btn-link" href={d.link} target="_blank" rel="noreferrer">Abrir base de referência SAS ↗</a>}
     </>
   )
@@ -200,7 +201,6 @@ function F02() {
           <HBars dados={discsExibidas} cor="#7b5ea7" />
         </Bloco>
       </div>
-      <LotacaoDre />
     </>
   )
 }
