@@ -363,6 +363,8 @@ if lot_files:
         ativ_d[w.title] = sorted(([k, v] for k, v in itens.items()), key=lambda x: (-x[1], x[0]))
         modelo = max(modelo, m)
 
+    sede_lot = totais.pop('SEDUC SEDE', 0)  # SEDUC Sede não é DRE
+    soma_dres_lot = sum(totais.values())
     nomes_cat = {'MAGISTERIO BASICO': 'Magistério básico', 'ADMINISTRACAO GERAL': 'Administração geral', 'FUNCAO GRAT': 'Função gratificada'}
     dres_lot = []
     for nome, tot_dre in sorted(totais.items(), key=lambda x: -x[1]):
@@ -374,8 +376,8 @@ if lot_files:
             'atividades': ativ_d.get(nome, []),
         })
     lot = {
-        'fonte': fonte_lot, 'data_base': '03/11/2026', 'total_geral': total_geral_lot,
-        'soma_dres': sum(totais.values()), 'modelo_posicoes': modelo, 'dres': dres_lot,
+        'fonte': fonte_lot, 'data_base': '03/11/2026', 'total_geral': soma_dres_lot, 'sede': sede_lot,
+        'soma_dres': soma_dres_lot, 'modelo_posicoes': modelo, 'dres': dres_lot,
     }
     with open(os.path.join(OUT, 'lotacao_dre.json'), 'w', encoding='utf-8') as fh:
         json.dump(lot, fh, ensure_ascii=False, indent=1)

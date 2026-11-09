@@ -2,7 +2,8 @@
  "fonte": "SAS 260056 - DATA BASE 03/11/2026",
  "data_base": "03/11/2026",
  "total_geral": 1182.0,
- "soma_dres": 1183.0,
+ "sede": 1.0,
+ "soma_dres": 1182.0,
  "modelo_posicoes": 121.0,
  "dres": [
   {
@@ -4420,18 +4421,6 @@
      1.0
     ]
    ]
-  },
-  {
-   "dre": "SEDUC SEDE",
-   "total": 1.0,
-   "vinculo": {
-    "EFETIVO": 1
-   },
-   "categoria": {
-    "Magistério básico": 1,
-    "Função gratificada": 1
-   },
-   "atividades": []
   }
  ]
 }

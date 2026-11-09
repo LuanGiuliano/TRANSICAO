@@ -70,7 +70,7 @@ export default function LotacaoDre() {
       <Bloco
         span="full"
         titulo="Lotação nas DREs – quantitativo de servidores"
-        nota={`Fonte: ${lot.fonte}. Servidores únicos por matrícula (MATVIN) lotados em cada DRE.${
+        nota={`Fonte: ${lot.fonte}. Servidores únicos por matrícula (MATVIN) lotados em cada uma das ${lot.dres.length} DREs (SEDUC Sede não é DRE e não entra na contagem).${
           unica ? '' : ' Selecione uma faixa de quantitativo ou uma DRE para filtrar os gráficos.'}`}
       >
         <div className="lot-filtros">
