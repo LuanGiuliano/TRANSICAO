@@ -626,3 +626,19 @@ main.container { padding-top: 26px; padding-bottom: 40px; }
   .colunas__pilha, .colunas__pilha i { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
   .grafico__svg { max-height: 240px !important; }
 }
+
+/* ===== Lotação nas DREs (F-02) ===== */
+.lot-filtros { display: flex; flex-wrap: wrap; gap: 16px 28px; align-items: flex-end; margin-top: 10px; }
+.lot-filtros__grupo { display: flex; flex-direction: column; gap: 6px; }
+.lot-filtros__rot { font-size: 10.5px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--petrol); }
+.lot-select {
+  font: inherit; font-size: 13px; font-weight: 600; color: var(--ink);
+  padding: 8px 14px; min-width: 240px; border-radius: 10px;
+  border: 1.5px solid var(--card-border); background: #ffffff; cursor: pointer;
+}
+.lot-select:hover, .lot-select:focus { border-color: var(--petrol); outline: none; }
+.lot-tabela { max-height: 520px; overflow-y: auto; }
+.lot-tabela thead th { position: sticky; top: 0; z-index: 1; }
+.lot-linha { cursor: pointer; transition: background-color .15s ease; }
+.lot-linha:hover { background: rgba(7, 84, 123, 0.06); }
+@media print { .lot-filtros { display: none !important; } .lot-tabela { max-height: none !important; overflow: visible !important; } }

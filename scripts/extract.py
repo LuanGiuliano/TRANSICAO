@@ -75,7 +75,10 @@ sintese, link = [], None
 for r in range(8, 30):
     a, b = f1.cell(r, 1).value, f1.cell(r, 2).value
     if isinstance(b, (int, float)) and a:
-        sintese.append([txt(a), b])
+        rot = txt(a)
+        if sem_acento(rot) == 'COMISSAO':
+            rot = 'Exclusivamente Comissionado'
+        sintese.append([rot, b])
     elif a and isinstance(b, str) and b.startswith('http'):
         link = b
 total_geral = next((v for k, v in sintese if k.lower().startswith('total')), None)
@@ -93,6 +96,8 @@ for row in f1.iter_rows(min_row=5, min_col=4, max_col=8, values_only=True):
         escola = txt(e)
     if f and 'Total' not in str(f):
         vinc = txt(f)
+        if sem_acento(vinc) == 'COMISSAO':
+            vinc = 'Exclusivamente Comissionado'
     if g and isinstance(h, (int, float)):
         if dre and escola and vinc:
             if 'SEDUC' in dre.upper() or 'SEDE' in dre.upper():
@@ -101,7 +106,10 @@ for row in f1.iter_rows(min_row=5, min_col=4, max_col=8, values_only=True):
                 dre_tot[dre] += h
                 dre_vinc[dre][vinc] += h
                 escolas.add((dre, escola))
-            cargo_tot[txt(g)] += h
+            cg = txt(g)
+            if sem_acento(cg) == 'COMISSAO':
+                cg = 'Exclusivamente Comissionado'
+            cargo_tot[cg] += h
             vinc_tot[vinc] += h
 
 all_dres = sorted(([k, round(v, 1)] for k, v in dre_tot.items()), key=lambda x: -x[1])
@@ -304,6 +312,75 @@ for r in range(37, s.max_row + 1):
 res['DIPSE']['F-03'] = {'pss': pss, 'contratos': cont,
                         'contratos_cab': ['Dez/2026', 'Jan/2027', 'Fev/2027', 'Mar/2027', 'A partir de abr/2027'],
                         'concurso': conc, 'cargos': cargos}
+
+# ---------------- LOTAÇÃO DREs (F-02 / DIOP) ----------------
+import glob
+
+
+def fix_txt(t):
+    if t is None:
+        return t
+    t = re.sub(r'^DRE\s*-\s*', '', str(t).strip())
+    t = re.sub(r'c\?o\b', 'ção', t)
+    t = re.sub(r'\?o\b', 'ão', t)
+    t = re.sub(r'\?es\b', 'ões', t)
+    return re.sub(r'\s+', ' ', t).strip()
+
+
+lot_files = [x for x in glob.glob(os.path.join(ROOT, '*.xlsx')) if 'DREs' in os.path.basename(x)]
+if lot_files:
+    wl = openpyxl.load_workbook(lot_files[0], data_only=True)
+    totais = {}
+    total_geral_lot = None
+    for r in wl['RESUMOS DAS DRES'].iter_rows(min_row=3, max_col=2, values_only=True):
+        if r[0] and isinstance(r[1], (int, float)):
+            if r[0] == 'Total geral':
+                total_geral_lot = r[1]
+            else:
+                totais[r[0]] = r[1]
+
+    base = wl.worksheets[0]
+    cab = [c.value for c in base[1]]
+    ci = {h: i for i, h in enumerate(cab) if h}
+    vinc_d, cat_d = defaultdict(lambda: defaultdict(set)), defaultdict(lambda: defaultdict(set))
+    for r in base.iter_rows(min_row=2, values_only=True):
+        if not r[0]:
+            continue
+        vinc_d[r[0]][txt(r[ci['TIPO_VINCULO']]) or 'N/I'].add(r[ci['MATVIN']])
+        cat_d[r[0]][txt(r[ci['CATEGORIA']]) or 'N/I'].add(r[ci['MATVIN']])
+
+    ativ_d, modelo, fonte_lot = {}, 0, None
+    for w in wl.worksheets[2:]:
+        itens = defaultdict(float)
+        m = 0
+        for r in w.iter_rows(min_row=3, min_col=3, max_col=9, values_only=True):
+            if isinstance(r[1], (int, float)):
+                m += r[1]
+            if isinstance(r[3], str) and r[3].startswith('DRE') and r[5] and isinstance(r[6], (int, float)):
+                itens[fix_txt(r[5])] += r[6]
+            if r[4] == 'FONTE' and r[5]:
+                fonte_lot = txt(r[5])
+        ativ_d[w.title] = sorted(([k, v] for k, v in itens.items()), key=lambda x: (-x[1], x[0]))
+        modelo = max(modelo, m)
+
+    nomes_cat = {'MAGISTERIO BASICO': 'Magistério básico', 'ADMINISTRACAO GERAL': 'Administração geral', 'FUNCAO GRAT': 'Função gratificada'}
+    dres_lot = []
+    for nome, tot_dre in sorted(totais.items(), key=lambda x: -x[1]):
+        dres_lot.append({
+            'dre': nome,
+            'total': tot_dre,
+            'vinculo': {k: len(v) for k, v in vinc_d.get(nome, {}).items()},
+            'categoria': {nomes_cat.get(k, k): len(v) for k, v in cat_d.get(nome, {}).items()},
+            'atividades': ativ_d.get(nome, []),
+        })
+    lot = {
+        'fonte': fonte_lot, 'data_base': '03/11/2026', 'total_geral': total_geral_lot,
+        'soma_dres': sum(totais.values()), 'modelo_posicoes': modelo, 'dres': dres_lot,
+    }
+    with open(os.path.join(OUT, 'lotacao_dre.json'), 'w', encoding='utf-8') as fh:
+        json.dump(lot, fh, ensure_ascii=False, indent=1)
+    print('LOTACAO DRE', len(dres_lot), 'unidades; total geral', total_geral_lot, '; modelo', modelo)
+
 
 with open(os.path.join(OUT, 'planilhas.json'), 'w', encoding='utf-8') as fh:
     json.dump(res, fh, ensure_ascii=False, indent=1)

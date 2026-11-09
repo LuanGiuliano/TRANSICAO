@@ -1,0 +1,4437 @@
+{
+ "fonte": "SAS 260056 - DATA BASE 03/11/2026",
+ "data_base": "03/11/2026",
+ "total_geral": 1182.0,
+ "soma_dres": 1183.0,
+ "modelo_posicoes": 121.0,
+ "dres": [
+  {
+   "dre": "DRE CASTANHAL",
+   "total": 49.0,
+   "vinculo": {
+    "EFETIVO": 44,
+    "CONTRATO TEMPORARIO": 3,
+    "NAO ESTAVEL": 2
+   },
+   "categoria": {
+    "Administração geral": 18,
+    "Magistério básico": 31,
+    "Função gratificada": 4
+   },
+   "atividades": [
+    [
+     "TAP - Especialista",
+     6.0
+    ],
+    [
+     "Pedagogico c/ Hab. TI-Professor norm",
+     3.0
+    ],
+    [
+     "Apoio Administrativo da Gestão",
+     2.0
+    ],
+    [
+     "Apoio Operacional - Motorista",
+     2.0
+    ],
+    [
+     "PROFESSOR FORMADOR CIENCIAS DA NATUREZA",
+     2.0
+    ],
+    [
+     "TAP - Professor (com as vantagens)",
+     2.0
+    ],
+    [
+     "Tecnico Acompanhamento Adm - Assistente Adm",
+     2.0
+    ],
+    [
+     "Tecnico Prog e Modalidades-Especialista",
+     2.0
+    ],
+    [
+     "Tecnico Ref Gest da Vida Func Readaptado Adm",
+     2.0
+    ],
+    [
+     "Tecnico de Ref. de Lotação",
+     2.0
+    ],
+    [
+     "Apoio Operacional - Servente",
+     1.0
+    ],
+    [
+     "Apoio Pedagogico-Especialista",
+     1.0
+    ],
+    [
+     "Assessor de Gestão Pedagogica - Especialista",
+     1.0
+    ],
+    [
+     "Assistente Social",
+     1.0
+    ],
+    [
+     "Coord Regional Infra-Logistica Professor",
+     1.0
+    ],
+    [
+     "Coord. Regional Pedagogico- Especialista",
+     1.0
+    ],
+    [
+     "DRE TEC GESTAO PUBLICA CIENCIAS CONTABES",
+     1.0
+    ],
+    [
+     "Dirigente-Professor",
+     1.0
+    ],
+    [
+     "Formador Alfabetiza - Especialista",
+     1.0
+    ],
+    [
+     "Formador Alfabetiza - Professor",
+     1.0
+    ],
+    [
+     "Pedag. Professor- Tec.Acompanhamento",
+     1.0
+    ],
+    [
+     "Professor Desporto Escolar (com vantagens)",
+     1.0
+    ],
+    [
+     "Professor Formador Linguagem",
+     1.0
+    ],
+    [
+     "Professor Formador Matematica",
+     1.0
+    ],
+    [
+     "Protocolista",
+     1.0
+    ],
+    [
+     "Psicologo",
+     1.0
+    ],
+    [
+     "Tecnico Acompanhamento Adm - Tecnico em Gestao",
+     1.0
+    ],
+    [
+     "Tecnico Acompanhamento Adm-Esp em Educação",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Alfabetiza - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Censo e Matricula-Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Engenharia Civil",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Polit. de Leitura- Prof. Norm",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Tempo Integral - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Transporte Escolar",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE ALTAMIRA",
+   "total": 47.0,
+   "vinculo": {
+    "EFETIVO": 38,
+    "CONTRATO TEMPORARIO": 8,
+    "NAO ESTAVEL": 1
+   },
+   "categoria": {
+    "Administração geral": 19,
+    "Magistério básico": 28,
+    "Função gratificada": 4
+   },
+   "atividades": [
+    [
+     "TAP - Professor (com as vantagens)",
+     7.0
+    ],
+    [
+     "Apoio Operacional - Motorista",
+     2.0
+    ],
+    [
+     "Apoio Operacional - Servente",
+     2.0
+    ],
+    [
+     "Apoio Pedagogico-Especialista",
+     2.0
+    ],
+    [
+     "Psicologo",
+     2.0
+    ],
+    [
+     "Tecnico Acompanhamento Adm - Apoio Readap",
+     2.0
+    ],
+    [
+     "Tecnico Acompanhamento Adm-Esp em Educação",
+     2.0
+    ],
+    [
+     "Apoio Adm Financeiro- Assistente Adm",
+     1.0
+    ],
+    [
+     "Apoio administrativo da Gestão Readaptado",
+     1.0
+    ],
+    [
+     "Assessor de Gestão Pedagogica - Especialista",
+     1.0
+    ],
+    [
+     "Assistente Social",
+     1.0
+    ],
+    [
+     "Coord. Regional Pedagogico- Especialista",
+     1.0
+    ],
+    [
+     "Coordenador Regional Infra-Logistica Tecnico",
+     1.0
+    ],
+    [
+     "Formador Alfabetiza - Especialista",
+     1.0
+    ],
+    [
+     "Formador Alfabetiza - Professor",
+     1.0
+    ],
+    [
+     "PROFESSOR DIRIGENTE",
+     1.0
+    ],
+    [
+     "PROFESSOR FORMADOR CIENCIAS DA NATUREZA",
+     1.0
+    ],
+    [
+     "Pedag. Professor- Tec.Acompanhamento",
+     1.0
+    ],
+    [
+     "Pedagogico c/ Hab. TI-Professor norm",
+     1.0
+    ],
+    [
+     "Pedagogico com Hab TI-Professor",
+     1.0
+    ],
+    [
+     "Professor Desporto Escolar (com vantagens)",
+     1.0
+    ],
+    [
+     "Professor Formador Ciencias Humanas",
+     1.0
+    ],
+    [
+     "Professor Formador Linguagem",
+     1.0
+    ],
+    [
+     "Professor Formador Matematica",
+     1.0
+    ],
+    [
+     "Protocolista",
+     1.0
+    ],
+    [
+     "Tec Progamas e Mod - Prof. c/vantagens",
+     1.0
+    ],
+    [
+     "Tecnico Acompanhamento Adm - Assistente Adm",
+     1.0
+    ],
+    [
+     "Tecnico Censo e Matricula - Apoio Readap",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Alfabetiza - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Engenharia Civil",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Engenharia Eletrica",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Gestão da Vida Funcional",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Polit. de Leitura- Prof. Norm",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Transporte Escolar",
+     1.0
+    ],
+    [
+     "Tecnico de Ref. de Lotacao - Especialista",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE BRAGANCA",
+   "total": 46.0,
+   "vinculo": {
+    "EFETIVO": 43,
+    "CONTRATO TEMPORARIO": 3
+   },
+   "categoria": {
+    "Administração geral": 16,
+    "Magistério básico": 30,
+    "Função gratificada": 4
+   },
+   "atividades": [
+    [
+     "TAP - Especialista",
+     5.0
+    ],
+    [
+     "TAP - Professor (com as vantagens)",
+     4.0
+    ],
+    [
+     "Tecnico Acompanhamento Adm - Assistente Adm",
+     3.0
+    ],
+    [
+     "Tecnico Acompanhamento Adm-Esp em Educação",
+     3.0
+    ],
+    [
+     "Apoio Operacional - Servente",
+     2.0
+    ],
+    [
+     "Apoio Adm Financeiro- Assistente Adm",
+     1.0
+    ],
+    [
+     "Apoio Adm Infra-Logistica - Assistente Adm.",
+     1.0
+    ],
+    [
+     "Apoio Administrativo da Gestão",
+     1.0
+    ],
+    [
+     "Apoio Operacional - Motorista",
+     1.0
+    ],
+    [
+     "Apoio Pedagogico-Especialista",
+     1.0
+    ],
+    [
+     "Assessor de Gestão Pedagogica - Especialista",
+     1.0
+    ],
+    [
+     "Assistente Social",
+     1.0
+    ],
+    [
+     "Coord Regional Infra-Logistica Assistente Adm",
+     1.0
+    ],
+    [
+     "Coord. Reg. Adm-Financeiro - Especialista",
+     1.0
+    ],
+    [
+     "Coord. Regional Pedagogico- Especialista",
+     1.0
+    ],
+    [
+     "DRE TEC GESTAO PUBLICA CIENCIAS CONTABES",
+     1.0
+    ],
+    [
+     "Dirigente-Especialista",
+     1.0
+    ],
+    [
+     "Formador Alfabetiza - Professor",
+     1.0
+    ],
+    [
+     "PROFESSOR DIRIGENTE",
+     1.0
+    ],
+    [
+     "PROFESSOR FORMADOR CIENCIAS DA NATUREZA",
+     1.0
+    ],
+    [
+     "Pedagogico c/ Hab. TI-Professor norm",
+     1.0
+    ],
+    [
+     "Pedagogico com Hab TI-Professor",
+     1.0
+    ],
+    [
+     "Professor Desporto Escolar (com vantagens)",
+     1.0
+    ],
+    [
+     "Professor Formador Ciencias Humanas",
+     1.0
+    ],
+    [
+     "Professor Formador Linguagem",
+     1.0
+    ],
+    [
+     "Professor Formador Matematica",
+     1.0
+    ],
+    [
+     "Psicologo",
+     1.0
+    ],
+    [
+     "Tecnico Alfabetiza - Professor",
+     1.0
+    ],
+    [
+     "Tecnico Prog e Modalidades-Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref Gest da Vida Func Readaptado Adm",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Alfabetiza - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Censo e Matricula-Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Engenharia Civil",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Politicas de Leitura",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE SANTA IZABEL DO PARA",
+   "total": 44.0,
+   "vinculo": {
+    "EFETIVO": 33,
+    "CONTRATO TEMPORARIO": 10,
+    "NAO ESTAVEL": 1
+   },
+   "categoria": {
+    "Administração geral": 13,
+    "Magistério básico": 31,
+    "Função gratificada": 4
+   },
+   "atividades": [
+    [
+     "TAP - Professor (com as vantagens)",
+     5.0
+    ],
+    [
+     "Apoio Administrativo da Gestão",
+     2.0
+    ],
+    [
+     "Apoio Operacional - Motorista",
+     2.0
+    ],
+    [
+     "Formador Alfabetiza - Especialista",
+     2.0
+    ],
+    [
+     "Pedag. Professor- Tec.Acompanhamento",
+     2.0
+    ],
+    [
+     "Pedagogico com Hab TI-Professor",
+     2.0
+    ],
+    [
+     "Tecnico de Acompanhamento Adm - Professor",
+     2.0
+    ],
+    [
+     "Apoio Adm Infra-Logistica - Assistente Adm.",
+     1.0
+    ],
+    [
+     "Apoio Pedagogico-Especialista",
+     1.0
+    ],
+    [
+     "Assessor de Gestão Pedagogica - Especialista",
+     1.0
+    ],
+    [
+     "Assistente Social",
+     1.0
+    ],
+    [
+     "Coord Regional Infra-Logistica Assistente Adm",
+     1.0
+    ],
+    [
+     "Coord. Reg. Adm-Financeiro - Especialista",
+     1.0
+    ],
+    [
+     "Coord. Regional Pedagogico- Especialista",
+     1.0
+    ],
+    [
+     "DRE TEC GESTAO PUBLICA CIENCIAS CONTABES",
+     1.0
+    ],
+    [
+     "Dirigente-Especialista",
+     1.0
+    ],
+    [
+     "Formador Alfabetiza - Professor",
+     1.0
+    ],
+    [
+     "PROFESSOR FORMADOR CIENCIAS DA NATUREZA",
+     1.0
+    ],
+    [
+     "Professor Desporto Escolar (com vantagens)",
+     1.0
+    ],
+    [
+     "Professor Formador Ciencias Humanas",
+     1.0
+    ],
+    [
+     "Professor Formador Matematica",
+     1.0
+    ],
+    [
+     "Protocolista",
+     1.0
+    ],
+    [
+     "Psicologo",
+     1.0
+    ],
+    [
+     "TAP - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Acompanhamento Adm-Esp em Educação",
+     1.0
+    ],
+    [
+     "Tecnico Prog e Modalidades-Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Alfabetiza - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Censo e Matricula-Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Engenharia Civil",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Engenharia Eletrica",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Gestão da Vida Funcional",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Politicas de Leitura-Prof. Norm",
+     1.0
+    ],
+    [
+     "Tecnico Tempo Integral-Professor",
+     1.0
+    ],
+    [
+     "Tecnico ref. Transporte Escolar professor",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE SANTAREM",
+   "total": 42.0,
+   "vinculo": {
+    "EFETIVO": 38,
+    "CONTRATO TEMPORARIO": 3,
+    "NAO ESTAVEL": 1
+   },
+   "categoria": {
+    "Magistério básico": 25,
+    "Administração geral": 17,
+    "Função gratificada": 4
+   },
+   "atividades": [
+    [
+     "TAP - Especialista",
+     4.0
+    ],
+    [
+     "Apoio Operacional - Servente",
+     2.0
+    ],
+    [
+     "Formador Alfabetiza - Professor",
+     2.0
+    ],
+    [
+     "Pedagogico com Hab TI-Professor",
+     2.0
+    ],
+    [
+     "TAP - Professor (com as vantagens)",
+     2.0
+    ],
+    [
+     "Tecnico Ref. Gestão da Vida Funcional",
+     2.0
+    ],
+    [
+     "Tecnico de Ref. de Lotação",
+     2.0
+    ],
+    [
+     "Apoio Adm Infra-Logistica - Assistente Adm.",
+     1.0
+    ],
+    [
+     "Apoio Adm da Gestão - Prof Read NORMAL",
+     1.0
+    ],
+    [
+     "Apoio Administrativo da Gestão",
+     1.0
+    ],
+    [
+     "Apoio Operacional - Motorista",
+     1.0
+    ],
+    [
+     "Apoio Pedagogico-Especialista",
+     1.0
+    ],
+    [
+     "Assessor Gestao Pedagogico-Apoio Readap",
+     1.0
+    ],
+    [
+     "Assessor de Gestao pedagogico - Prof. normal",
+     1.0
+    ],
+    [
+     "Assistente Social",
+     1.0
+    ],
+    [
+     "Coord Regional Infra-Logistica Especialista",
+     1.0
+    ],
+    [
+     "Coord. Regional Pedagogico- Especialista",
+     1.0
+    ],
+    [
+     "Coord. reg. Adm - Financeiro - Tecnico",
+     1.0
+    ],
+    [
+     "DRE TEC GESTAO PUBLICA CIENCIAS CONTABES",
+     1.0
+    ],
+    [
+     "Dirigente-Especialista",
+     1.0
+    ],
+    [
+     "Pedagogico c/ Hab. TI-Especialista",
+     1.0
+    ],
+    [
+     "Professor Desporto Escolar (com vantagens)",
+     1.0
+    ],
+    [
+     "Professor Formador Linguagem",
+     1.0
+    ],
+    [
+     "Protocolista",
+     1.0
+    ],
+    [
+     "Psicologo",
+     1.0
+    ],
+    [
+     "Tecnico Acompanhamento Adm-Esp em Educação",
+     1.0
+    ],
+    [
+     "Tecnico Prog e Modalidades-Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Alfabetiza - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Censo e Matricula-Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Engenharia Civil",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Engenharia Eletrica",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Tempo Integral - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico de Ref. de Polit de Leit.-Prof. Readap",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE ABAETETUBA",
+   "total": 40.0,
+   "vinculo": {
+    "EFETIVO": 35,
+    "CONTRATO TEMPORARIO": 5
+   },
+   "categoria": {
+    "Administração geral": 14,
+    "Magistério básico": 26,
+    "Função gratificada": 4
+   },
+   "atividades": [
+    [
+     "TAP - Professor (com as vantagens)",
+     5.0
+    ],
+    [
+     "Pedag. Professor- Tec.Acompanhamento",
+     3.0
+    ],
+    [
+     "Apoio Operacional - Servente",
+     2.0
+    ],
+    [
+     "Formador Alfabetiza - Professor",
+     2.0
+    ],
+    [
+     "Apoio Adm Infra-Logistica - Assistente Adm.",
+     1.0
+    ],
+    [
+     "Apoio Operacional - Motorista",
+     1.0
+    ],
+    [
+     "Apoio Pedagogico - Professor",
+     1.0
+    ],
+    [
+     "Assessor de Gestão Pedagogica - Especialista",
+     1.0
+    ],
+    [
+     "Assistente Social",
+     1.0
+    ],
+    [
+     "Coord. Reg Pedagogico- Prof.(c/vantagens)",
+     1.0
+    ],
+    [
+     "Coordenador Regional Infra-Logistica Tecnico",
+     1.0
+    ],
+    [
+     "DRE TEC GESTAO PUBLICA CIENCIAS CONTABES",
+     1.0
+    ],
+    [
+     "Dirigente-Especialista",
+     1.0
+    ],
+    [
+     "PROFESSOR FORMADOR CIENCIAS DA NATUREZA",
+     1.0
+    ],
+    [
+     "Pedagogico c/ Hab. TI-Professor norm",
+     1.0
+    ],
+    [
+     "Professor Desporto Escolar (com vantagens)",
+     1.0
+    ],
+    [
+     "Professor Formador Ciencias Humanas",
+     1.0
+    ],
+    [
+     "Professor Formador Linguagem",
+     1.0
+    ],
+    [
+     "Psicologo",
+     1.0
+    ],
+    [
+     "TAP - Especialista",
+     1.0
+    ],
+    [
+     "TECNICO ALFABETIZA - PROF READ",
+     1.0
+    ],
+    [
+     "Tec Progamas e Mod - Prof. c/vantagens",
+     1.0
+    ],
+    [
+     "Tecnico Acompanhamento Adm - Assistente Adm",
+     1.0
+    ],
+    [
+     "Tecnico Acompanhamento Adm-Esp em Educação",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Censo e Matricula-Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Engenharia Civil",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Engenharia Eletrica",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Gestão da Vida Funcional",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Politicas de Leitura",
+     1.0
+    ],
+    [
+     "Tecnico Tempo Integral-Professor",
+     1.0
+    ],
+    [
+     "Tecnico de Ref. de Lotacao - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico de Ref. de Lotação",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE BELEM 3",
+   "total": 39.0,
+   "vinculo": {
+    "EFETIVO": 37,
+    "CONTRATO TEMPORARIO": 2
+   },
+   "categoria": {
+    "Administração geral": 15,
+    "Magistério básico": 24,
+    "Função gratificada": 4
+   },
+   "atividades": [
+    [
+     "Apoio Operacional - Servente",
+     3.0
+    ],
+    [
+     "Tecnico Acompanhamento Adm-Esp em Educação",
+     3.0
+    ],
+    [
+     "Assistente Social",
+     2.0
+    ],
+    [
+     "Formador Alfabetiza - Professor",
+     2.0
+    ],
+    [
+     "Psicologo",
+     2.0
+    ],
+    [
+     "TAP - Professor (com as vantagens)",
+     2.0
+    ],
+    [
+     "Tecnico Ref. Alfabetiza - Especialista",
+     2.0
+    ],
+    [
+     "Apoio Adm Financeiro- Assistente Adm",
+     1.0
+    ],
+    [
+     "Apoio Administrativo da Gestão",
+     1.0
+    ],
+    [
+     "Apoio Pedagogico-Especialista",
+     1.0
+    ],
+    [
+     "Assessor de Gestão Pedagogica - Especialista",
+     1.0
+    ],
+    [
+     "Coord Regional Infra-Logistica Especialista",
+     1.0
+    ],
+    [
+     "Dirigente-Especialista",
+     1.0
+    ],
+    [
+     "Lider Nucleo Curr e Formação-Especialista",
+     1.0
+    ],
+    [
+     "PROFESSOR FORMADOR CIENCIAS DA NATUREZA",
+     1.0
+    ],
+    [
+     "Pedag. Professor- Tec.Acompanhamento",
+     1.0
+    ],
+    [
+     "Pedagogico c/ Hab. TI-Professor norm",
+     1.0
+    ],
+    [
+     "Pedagogico com Hab TI-Professor",
+     1.0
+    ],
+    [
+     "Professor Desporto Escolar (com vantagens)",
+     1.0
+    ],
+    [
+     "Professor Formador Ciencias Humanas",
+     1.0
+    ],
+    [
+     "Professor Formador Matematica",
+     1.0
+    ],
+    [
+     "Protocolista",
+     1.0
+    ],
+    [
+     "TAP - Especialista",
+     1.0
+    ],
+    [
+     "Tec Progamas e Mod - Prof. c/vantagens",
+     1.0
+    ],
+    [
+     "Tecnico Censo e Matricula-Assis Administ",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Alimentação Escolar",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Gestão da Vida Funcional",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Transporte Escolar",
+     1.0
+    ],
+    [
+     "Tecnico Tempo Integral-Professor",
+     1.0
+    ],
+    [
+     "Tecnico de Ref. de Lotação",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE ANANINDEUA 2",
+   "total": 36.0,
+   "vinculo": {
+    "EFETIVO": 34,
+    "CONTRATO TEMPORARIO": 2
+   },
+   "categoria": {
+    "Administração geral": 9,
+    "Magistério básico": 27,
+    "Função gratificada": 4
+   },
+   "atividades": [
+    [
+     "TAP - Professor (com as vantagens)",
+     3.0
+    ],
+    [
+     "Assistente Social",
+     2.0
+    ],
+    [
+     "Formador Alfabetiza - Professor",
+     2.0
+    ],
+    [
+     "Psicologo",
+     2.0
+    ],
+    [
+     "Tecnico Acompanhamento Adm-Esp em Educação",
+     2.0
+    ],
+    [
+     "Apoio Pedagogico-Especialista",
+     1.0
+    ],
+    [
+     "Apoio administrativo da Gestão Readaptado",
+     1.0
+    ],
+    [
+     "Assessor Coord Pedagogica-Prof.Readaptado",
+     1.0
+    ],
+    [
+     "Coord Regional Infra-Logistica Especialista",
+     1.0
+    ],
+    [
+     "Coord. Reg Pedagogico- Prof.(c/vantagens)",
+     1.0
+    ],
+    [
+     "Coord. Regional Pedagogico- Especialista",
+     1.0
+    ],
+    [
+     "Dirigente-Especialista",
+     1.0
+    ],
+    [
+     "Formador Alfabetiza - Especialista",
+     1.0
+    ],
+    [
+     "PROFESSOR FORMADOR CIENCIAS DA NATUREZA",
+     1.0
+    ],
+    [
+     "Pedag. Professor- Tec.Acompanhamento",
+     1.0
+    ],
+    [
+     "Pedagogico c/ Hab. TI-Professor norm",
+     1.0
+    ],
+    [
+     "Pedagogico com Hab TI-Professor",
+     1.0
+    ],
+    [
+     "Professor Desporto Escolar (com vantagens)",
+     1.0
+    ],
+    [
+     "Professor Formador Ciencias Humanas",
+     1.0
+    ],
+    [
+     "Professor Formador Linguagem",
+     1.0
+    ],
+    [
+     "Professor Formador Matematica",
+     1.0
+    ],
+    [
+     "Protocolista",
+     1.0
+    ],
+    [
+     "TAP - Especialista",
+     1.0
+    ],
+    [
+     "TECNICO PROG e MOD - PROF. READP",
+     1.0
+    ],
+    [
+     "Tecnico Acompanhamento Adm - Assistente Adm",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Censo e Matricula-Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Gestão da Vida Funcional",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Politicas de Leitura",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Tempo Integral - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico de Ref. de Lotação",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE BELEM 7",
+   "total": 36.0,
+   "vinculo": {
+    "EFETIVO": 35,
+    "CONTRATO TEMPORARIO": 1
+   },
+   "categoria": {
+    "Administração geral": 11,
+    "Magistério básico": 25,
+    "Função gratificada": 2
+   },
+   "atividades": [
+    [
+     "TAP - Professor (com as vantagens)",
+     3.0
+    ],
+    [
+     "Assistente Social",
+     2.0
+    ],
+    [
+     "Formador Alfabetiza - Professor",
+     2.0
+    ],
+    [
+     "Pedag. Professor- Tec.Acompanhamento",
+     2.0
+    ],
+    [
+     "Psicologo",
+     2.0
+    ],
+    [
+     "Tecnico Acompanhamento Adm-Esp em Educação",
+     2.0
+    ],
+    [
+     "Apoio Administrativo da Gestão",
+     1.0
+    ],
+    [
+     "Apoio Pedagogico-Especialista",
+     1.0
+    ],
+    [
+     "Assessor de Gestao pedagogico - Prof. normal",
+     1.0
+    ],
+    [
+     "Coord. Reg. Adm-Financeiro - Especialista",
+     1.0
+    ],
+    [
+     "Coord. Regional Pedagogico- Especialista",
+     1.0
+    ],
+    [
+     "Formador Alfabetiza - Especialista",
+     1.0
+    ],
+    [
+     "PROFESSOR FORMADOR CIENCIAS DA NATUREZA",
+     1.0
+    ],
+    [
+     "Pedagogico c/ Hab. TI-Professor norm",
+     1.0
+    ],
+    [
+     "Pedagogico com Hab TI-Professor",
+     1.0
+    ],
+    [
+     "Professor Desporto Escolar (com vantagens)",
+     1.0
+    ],
+    [
+     "Professor Formador Ciencias Humanas",
+     1.0
+    ],
+    [
+     "Professor Formador Linguagem",
+     1.0
+    ],
+    [
+     "Professor Formador Matematica",
+     1.0
+    ],
+    [
+     "TAP - Especialista",
+     1.0
+    ],
+    [
+     "Tec Progamas e Mod - Prof. c/vantagens",
+     1.0
+    ],
+    [
+     "Tecnico Acompanhamento Adm - Assistente Adm",
+     1.0
+    ],
+    [
+     "Tecnico Censo e Matricula-Assis Administ",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Alfabetiza - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Gestão da Vida Funcional",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Politicas de Leitura",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Tempo Integral - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Transporte Escolar",
+     1.0
+    ],
+    [
+     "Tecnico de Ref. de Lotação",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE BREVES",
+   "total": 36.0,
+   "vinculo": {
+    "EFETIVO": 33,
+    "CONTRATO TEMPORARIO": 3
+   },
+   "categoria": {
+    "Administração geral": 11,
+    "Magistério básico": 25,
+    "Função gratificada": 4
+   },
+   "atividades": [
+    [
+     "TAP - Especialista",
+     4.0
+    ],
+    [
+     "Pedagogico c/ Hab. TI-Especialista",
+     2.0
+    ],
+    [
+     "TAP - Professor (com as vantagens)",
+     2.0
+    ],
+    [
+     "Tecnico Acompanhamento Adm - Tecnico em Gestao",
+     2.0
+    ],
+    [
+     "Tecnico Acompanhamento Adm-Esp em Educação",
+     2.0
+    ],
+    [
+     "Tecnico Prog e Modalidades-Especialista",
+     2.0
+    ],
+    [
+     "Apoio Administrativo da Gestão",
+     1.0
+    ],
+    [
+     "Apoio Operacional - Motorista",
+     1.0
+    ],
+    [
+     "Apoio Operacional - Servente",
+     1.0
+    ],
+    [
+     "Apoio Operacional - Vigia",
+     1.0
+    ],
+    [
+     "Apoio Pedagogico-Especialista",
+     1.0
+    ],
+    [
+     "Assessor de Gestão Pedagogica - Especialista",
+     1.0
+    ],
+    [
+     "Coord Regional Infra-Logistica Assistente Adm",
+     1.0
+    ],
+    [
+     "Coord. Reg. Adm-Financeiro - Especialista",
+     1.0
+    ],
+    [
+     "Coord. Regional Pedagogico- Especialista",
+     1.0
+    ],
+    [
+     "DRE TEC GESTAO PUBLICA CIENCIAS CONTABES",
+     1.0
+    ],
+    [
+     "Dirigente-Especialista",
+     1.0
+    ],
+    [
+     "Pedag. Professor- Tec.Acompanhamento",
+     1.0
+    ],
+    [
+     "Professor Desporto Escolar (com vantagens)",
+     1.0
+    ],
+    [
+     "Professor Formador Ciencias Humanas",
+     1.0
+    ],
+    [
+     "Professor Formador Linguagem",
+     1.0
+    ],
+    [
+     "Professor Formador Matematica",
+     1.0
+    ],
+    [
+     "Tecnico Alfabetiza - Professor",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Engenharia Civil",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Gestão da Vida Funcional",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Polit. de Leitura- Prof. Norm",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Tempo Integral - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico de Ref. de Lotação",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE BENEVIDES",
+   "total": 34.0,
+   "vinculo": {
+    "CONTRATO TEMPORARIO": 8,
+    "EFETIVO": 26
+   },
+   "categoria": {
+    "Administração geral": 9,
+    "Magistério básico": 25,
+    "Função gratificada": 4
+   },
+   "atividades": [
+    [
+     "TAP - Professor (com as vantagens)",
+     4.0
+    ],
+    [
+     "Pedag. Professor- Tec.Acompanhamento",
+     3.0
+    ],
+    [
+     "Formador Alfabetiza - Professor",
+     2.0
+    ],
+    [
+     "Professor Formador Linguagem",
+     2.0
+    ],
+    [
+     "Psicologo",
+     2.0
+    ],
+    [
+     "Assistente Social",
+     1.0
+    ],
+    [
+     "Coord Regional Infra-Logistica Professor",
+     1.0
+    ],
+    [
+     "Coord. Reg. Adm-Financeiro - Especialista",
+     1.0
+    ],
+    [
+     "Coord. Regional Pedagogico- Especialista",
+     1.0
+    ],
+    [
+     "DRE TEC GESTAO PUBLICA CIENCIAS CONTABES",
+     1.0
+    ],
+    [
+     "Dirigente-Professor",
+     1.0
+    ],
+    [
+     "PROFESSOR FORMADOR CIENCIAS DA NATUREZA",
+     1.0
+    ],
+    [
+     "Pedagogico c/ Hab. TI-Especialista",
+     1.0
+    ],
+    [
+     "Pedagogico c/ Hab. TI-Professor norm",
+     1.0
+    ],
+    [
+     "Professor Formador Ciencias Humanas",
+     1.0
+    ],
+    [
+     "Professor Formador Matematica",
+     1.0
+    ],
+    [
+     "Protocolista",
+     1.0
+    ],
+    [
+     "Tecnico Acompanhamento Adm - Assistente Adm",
+     1.0
+    ],
+    [
+     "Tecnico Acompanhamento Adm-Esp em Educação",
+     1.0
+    ],
+    [
+     "Tecnico Prog e Modalidades-Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Alfabetiza - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Censo e Matricula-Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Gestão da Vida Funcional",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Politicas de Leitura",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Tempo Integral - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico de Ref. de Lotação",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE CAPANEMA",
+   "total": 34.0,
+   "vinculo": {
+    "EFETIVO": 27,
+    "CONTRATO TEMPORARIO": 7
+   },
+   "categoria": {
+    "Administração geral": 11,
+    "Magistério básico": 23,
+    "Função gratificada": 4
+   },
+   "atividades": [
+    [
+     "TAP - Especialista",
+     3.0
+    ],
+    [
+     "TAP - Professor (com as vantagens)",
+     3.0
+    ],
+    [
+     "Apoio Operacional - Motorista",
+     2.0
+    ],
+    [
+     "DRE TEC GESTAO PUBLICA CIENCIAS CONTABES",
+     2.0
+    ],
+    [
+     "Psicologo",
+     2.0
+    ],
+    [
+     "Assessor de Gestao pedagogico - Prof. normal",
+     1.0
+    ],
+    [
+     "Assistente Social",
+     1.0
+    ],
+    [
+     "Coord. Reg. Adm-Financeiro - Especialista",
+     1.0
+    ],
+    [
+     "Coord. Regional Pedagogico- Especialista",
+     1.0
+    ],
+    [
+     "Coordenador Reg Infra-Logistica Prof Readap",
+     1.0
+    ],
+    [
+     "Dirigente-Especialista",
+     1.0
+    ],
+    [
+     "Formador Alfabetiza - Professor",
+     1.0
+    ],
+    [
+     "Lider Nucleo Curri Av.Prog-Especialista",
+     1.0
+    ],
+    [
+     "PROFESSOR FORMADOR CIENCIAS DA NATUREZA",
+     1.0
+    ],
+    [
+     "Pedag. Professor- Tec.Acompanhamento",
+     1.0
+    ],
+    [
+     "Pedagogico com Hab TI-Professor",
+     1.0
+    ],
+    [
+     "Professor Desporto Escolar (com vantagens)",
+     1.0
+    ],
+    [
+     "Professor Formador Ciencias Humanas",
+     1.0
+    ],
+    [
+     "Professor Formador Linguagem",
+     1.0
+    ],
+    [
+     "Protocolista",
+     1.0
+    ],
+    [
+     "Tecnico Alfabetiza - Professor",
+     1.0
+    ],
+    [
+     "Tecnico Prog e Modalidades-Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Censo e Matricula-Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Engenharia Civil",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Engenharia Eletrica",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Tempo Integral - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico de Ref. de Lotação",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE TUCURUI",
+   "total": 34.0,
+   "vinculo": {
+    "EFETIVO": 28,
+    "CONTRATO TEMPORARIO": 6
+   },
+   "categoria": {
+    "Administração geral": 13,
+    "Magistério básico": 21,
+    "Função gratificada": 4
+   },
+   "atividades": [
+    [
+     "TAP - Professor (com as vantagens)",
+     4.0
+    ],
+    [
+     "Apoio Operacional - Servente",
+     2.0
+    ],
+    [
+     "Tecnico Ref. Alfabetiza - Especialista",
+     2.0
+    ],
+    [
+     "Apoio Adsmisntrativo Financeiro-Auxiliar",
+     1.0
+    ],
+    [
+     "Apoio administrativo da Gestão Readaptado",
+     1.0
+    ],
+    [
+     "Assessor Coord Pedag - Prof. Readap",
+     1.0
+    ],
+    [
+     "Assistente Social",
+     1.0
+    ],
+    [
+     "Coord. Reg Pedagogico- Prof.(c/vantagens)",
+     1.0
+    ],
+    [
+     "DRE TEC GESTAO PUBLICA CIENCIAS CONTABES",
+     1.0
+    ],
+    [
+     "Formador Alfabetiza - Especialista",
+     1.0
+    ],
+    [
+     "PROFESSOR DIRIGENTE",
+     1.0
+    ],
+    [
+     "PROFESSOR FORMADOR CIENCIAS DA NATUREZA",
+     1.0
+    ],
+    [
+     "PROFESSOR READ COORD. REG. INFRA-LOGISTICA",
+     1.0
+    ],
+    [
+     "Pedag. Professor- Tec.Acompanhamento",
+     1.0
+    ],
+    [
+     "Pedagogico c/ Hab. TI-Professor norm",
+     1.0
+    ],
+    [
+     "Professor Desporto Escolar (com vantagens)",
+     1.0
+    ],
+    [
+     "Professor Formador Ciencias Humanas",
+     1.0
+    ],
+    [
+     "Professor Formador Linguagem",
+     1.0
+    ],
+    [
+     "Professor Formador Matematica",
+     1.0
+    ],
+    [
+     "Protocolista",
+     1.0
+    ],
+    [
+     "Psicologo",
+     1.0
+    ],
+    [
+     "Tec Progamas e Mod - Prof. c/vantagens",
+     1.0
+    ],
+    [
+     "Tecnico Censo e Matricula-Assis Administ",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Engenharia Civil",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Gestão da Vida Funcional",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Polit. de Leitura- Prof. Norm",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Transporte Escolar",
+     1.0
+    ],
+    [
+     "Tecnico Tempo Integral-Professor",
+     1.0
+    ],
+    [
+     "Tecnico de Ref. de Lotação",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE MARACANA",
+   "total": 33.0,
+   "vinculo": {
+    "EFETIVO": 23,
+    "CONTRATO TEMPORARIO": 10
+   },
+   "categoria": {
+    "Administração geral": 13,
+    "Magistério básico": 20,
+    "Função gratificada": 4
+   },
+   "atividades": [
+    [
+     "Pedag. Professor- Tec.Acompanhamento",
+     4.0
+    ],
+    [
+     "TAP - Professor (com as vantagens)",
+     3.0
+    ],
+    [
+     "Apoio Operacional - Servente",
+     2.0
+    ],
+    [
+     "Formador Alfabetiza - Professor",
+     2.0
+    ],
+    [
+     "PROFESSOR FORMADOR CIENCIAS DA NATUREZA",
+     2.0
+    ],
+    [
+     "Pedagogico com Hab TI-Professor",
+     2.0
+    ],
+    [
+     "Psicologo",
+     2.0
+    ],
+    [
+     "Apoio Administrativo da Gestão",
+     1.0
+    ],
+    [
+     "Assistente Social",
+     1.0
+    ],
+    [
+     "Coord Regional Infra-Logistica Assistente Adm",
+     1.0
+    ],
+    [
+     "Coord. Reg. Adm-Financeiro - Especialista",
+     1.0
+    ],
+    [
+     "Coord. Reg. Pedagogico- Prof.Readaptado",
+     1.0
+    ],
+    [
+     "DRE TEC GESTAO PUBLICA CIENCIAS CONTABES",
+     1.0
+    ],
+    [
+     "Dirigente-Especialista",
+     1.0
+    ],
+    [
+     "Professor Desporto Escolar (com vantagens)",
+     1.0
+    ],
+    [
+     "Professor Formador Linguagem",
+     1.0
+    ],
+    [
+     "Protocolista",
+     1.0
+    ],
+    [
+     "Tecnico Alfabetiza - Professor",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Engenharia Civil",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Gestão da Vida Funcional",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Politicas de Leitura",
+     1.0
+    ],
+    [
+     "Tecnico Tempo Integral-Professor",
+     1.0
+    ],
+    [
+     "Tecnico de Ref. de Lotação",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE PARAUAPEBAS",
+   "total": 33.0,
+   "vinculo": {
+    "CONTRATO TEMPORARIO": 8,
+    "EFETIVO": 25
+   },
+   "categoria": {
+    "Administração geral": 6,
+    "Magistério básico": 27,
+    "Função gratificada": 3
+   },
+   "atividades": [
+    [
+     "Pedag. Professor- Tec.Acompanhamento",
+     6.0
+    ],
+    [
+     "TAP - Professor (com as vantagens)",
+     4.0
+    ],
+    [
+     "Pedagogico c/ Hab. TI-Professor norm",
+     2.0
+    ],
+    [
+     "Apoio Operacional - Servente",
+     1.0
+    ],
+    [
+     "Assessor de Gestao pedagogico - Prof. normal",
+     1.0
+    ],
+    [
+     "Assistente Social",
+     1.0
+    ],
+    [
+     "DRE TEC GESTAO PUBLICA CIENCIAS CONTABES",
+     1.0
+    ],
+    [
+     "Formador Alfabetiza - Especialista",
+     1.0
+    ],
+    [
+     "Formador Alfabetiza - Professor",
+     1.0
+    ],
+    [
+     "PROFESSOR COORD. REG. PEDAGOGICO",
+     1.0
+    ],
+    [
+     "PROFESSOR FORMADOR CIENCIAS DA NATUREZA",
+     1.0
+    ],
+    [
+     "PROFESSOR READAP DEF DIRIGENTE",
+     1.0
+    ],
+    [
+     "Professor Desporto Escolar - Readaptado",
+     1.0
+    ],
+    [
+     "Professor Formador Ciencias Humanas",
+     1.0
+    ],
+    [
+     "Professor Formador Linguagem",
+     1.0
+    ],
+    [
+     "Professor Formador Matematica",
+     1.0
+    ],
+    [
+     "Psicologo",
+     1.0
+    ],
+    [
+     "TAP - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Prog e Modalidades-Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Alfabetiza - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Engenharia Civil",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Engenharia Eletrica",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Polit. de Leitura- Prof. Norm",
+     1.0
+    ],
+    [
+     "Tecnico Tempo Integral-Professor",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE MARABA",
+   "total": 32.0,
+   "vinculo": {
+    "EFETIVO": 27,
+    "CONTRATO TEMPORARIO": 5
+   },
+   "categoria": {
+    "Magistério básico": 23,
+    "Administração geral": 9,
+    "Função gratificada": 3
+   },
+   "atividades": [
+    [
+     "TAP - Professor (com as vantagens)",
+     8.0
+    ],
+    [
+     "Apoio Operacional - Motorista",
+     1.0
+    ],
+    [
+     "Apoio Operacional - Servente",
+     1.0
+    ],
+    [
+     "Apoio Pedagogico - Professor",
+     1.0
+    ],
+    [
+     "Apoio Pedagogico-Especialista",
+     1.0
+    ],
+    [
+     "Assessor de Gestão Pedagogica - Especialista",
+     1.0
+    ],
+    [
+     "Assistente Social",
+     1.0
+    ],
+    [
+     "Coord. Regional Pedagogico- Especialista",
+     1.0
+    ],
+    [
+     "DRE TEC GESTAO PUBLICA CIENCIAS CONTABES",
+     1.0
+    ],
+    [
+     "Dirigente-Especialista",
+     1.0
+    ],
+    [
+     "PROFESSOR FORMADOR CIENCIAS DA NATUREZA",
+     1.0
+    ],
+    [
+     "PROFESSOR READ COORD. REG. FINANCEIRO",
+     1.0
+    ],
+    [
+     "Pedagogico c/ Hab. TI-Especialista",
+     1.0
+    ],
+    [
+     "Pedagogico com Hab TI-Professor",
+     1.0
+    ],
+    [
+     "Professor Formador Ciencias Humanas",
+     1.0
+    ],
+    [
+     "Professor Formador Linguagem",
+     1.0
+    ],
+    [
+     "Professor Formador Matematica",
+     1.0
+    ],
+    [
+     "Protocolista",
+     1.0
+    ],
+    [
+     "Psicologo",
+     1.0
+    ],
+    [
+     "Tec Progamas e Mod - Prof. c/vantagens",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Alfabetiza - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Censo e Matricula-Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Engenharia Civil",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Engenharia Eletrica",
+     1.0
+    ],
+    [
+     "Tecnico de Ref. de Lotação",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE BELEM 1",
+   "total": 30.0,
+   "vinculo": {
+    "EFETIVO": 27,
+    "CONTRATO TEMPORARIO": 3
+   },
+   "categoria": {
+    "Magistério básico": 24,
+    "Administração geral": 6,
+    "Função gratificada": 5
+   },
+   "atividades": [
+    [
+     "Pedag. Professor- Tec.Acompanhamento",
+     4.0
+    ],
+    [
+     "TAP - Professor (com as vantagens)",
+     4.0
+    ],
+    [
+     "Assessor de Gestão Pedagogica - Especialista",
+     2.0
+    ],
+    [
+     "Tecnico Alfabetiza - Professor",
+     2.0
+    ],
+    [
+     "Apoio Adm Financeiro- Assistente Adm",
+     1.0
+    ],
+    [
+     "Apoio Pedagogico-Especialista",
+     1.0
+    ],
+    [
+     "Assistente Social",
+     1.0
+    ],
+    [
+     "Coord Regional Infra-Logistica Especialista",
+     1.0
+    ],
+    [
+     "Coord. Reg Pedagogico- Prof.(c/vantagens)",
+     1.0
+    ],
+    [
+     "Dirigente-Especialista",
+     1.0
+    ],
+    [
+     "PROFESSOR FORMADOR CIENCIAS DA NATUREZA",
+     1.0
+    ],
+    [
+     "Pedagogico c/ Hab. TI-Professor norm",
+     1.0
+    ],
+    [
+     "Professor Desporto Escolar (com vantagens)",
+     1.0
+    ],
+    [
+     "Protocolista",
+     1.0
+    ],
+    [
+     "Psicologo",
+     1.0
+    ],
+    [
+     "TAP - Especialista",
+     1.0
+    ],
+    [
+     "Tec Progamas e Mod - Prof. c/vantagens",
+     1.0
+    ],
+    [
+     "Tecnico Acompanhamento Adm-Esp em Educação",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Alfabetiza - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Politicas de Leitura",
+     1.0
+    ],
+    [
+     "Tecnico Tempo Integral-Professor",
+     1.0
+    ],
+    [
+     "Tecnico de Ref. de Lotação",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE ANANINDEUA 4",
+   "total": 29.0,
+   "vinculo": {
+    "EFETIVO": 28,
+    "CONTRATO TEMPORARIO": 1
+   },
+   "categoria": {
+    "Administração geral": 11,
+    "Magistério básico": 18,
+    "Função gratificada": 4
+   },
+   "atividades": [
+    [
+     "Apoio Administrativo da Gestão",
+     2.0
+    ],
+    [
+     "Pedagogico com Hab TI-Professor",
+     2.0
+    ],
+    [
+     "TAP - Professor (com as vantagens)",
+     2.0
+    ],
+    [
+     "Apoio Adm Infra-Logistica - Assistente Adm.",
+     1.0
+    ],
+    [
+     "Apoio Pedagogico-Especialista",
+     1.0
+    ],
+    [
+     "Assessor de Gestão Pedagogica - Especialista",
+     1.0
+    ],
+    [
+     "Assistente Social",
+     1.0
+    ],
+    [
+     "Coord Reg Adm-Financeiro - Assistente Adm",
+     1.0
+    ],
+    [
+     "Coord Regional Infra-Logistica Professor",
+     1.0
+    ],
+    [
+     "Coord. Regional Pedagogico- Especialista",
+     1.0
+    ],
+    [
+     "Formador Alfabetiza - Especialista",
+     1.0
+    ],
+    [
+     "PROFESSOR DIRIGENTE",
+     1.0
+    ],
+    [
+     "Pedag. Professor- Tec.Acompanhamento",
+     1.0
+    ],
+    [
+     "Professor Formador Ciencias Humanas",
+     1.0
+    ],
+    [
+     "Professor Formador Matematica",
+     1.0
+    ],
+    [
+     "Protocolista",
+     1.0
+    ],
+    [
+     "Psicologo",
+     1.0
+    ],
+    [
+     "Tecnico Acompanhamento Adm-Esp em Educação",
+     1.0
+    ],
+    [
+     "Tecnico Prog e Modalidades-Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Alfabetiza - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Alimentação Escolar",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Censo e Matricula-Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Engenharia Civil",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Politicas de Leitura",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Tempo Integral - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico de Ref. de Lotação",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE MAE DO RIO",
+   "total": 29.0,
+   "vinculo": {
+    "EFETIVO": 17,
+    "CONTRATO TEMPORARIO": 12
+   },
+   "categoria": {
+    "Magistério básico": 24,
+    "Função gratificada": 4,
+    "Administração geral": 5
+   },
+   "atividades": [
+    [
+     "Pedag. Professor- Tec.Acompanhamento",
+     5.0
+    ],
+    [
+     "TAP - Professor (com as vantagens)",
+     4.0
+    ],
+    [
+     "Formador Alfabetiza - Professor",
+     2.0
+    ],
+    [
+     "Pedagogico com Hab TI-Professor",
+     2.0
+    ],
+    [
+     "Apoio Adm Financeiro- Assistente Adm",
+     1.0
+    ],
+    [
+     "Apoio Pedagogico-Especialista",
+     1.0
+    ],
+    [
+     "Coord Regional Infra-Logistica Especialista",
+     1.0
+    ],
+    [
+     "Coord. Reg Pedagogico- Prof.(c/vantagens)",
+     1.0
+    ],
+    [
+     "Coord. Reg. Adm-Financeiro - Especialista",
+     1.0
+    ],
+    [
+     "DRE TEC GESTAO PUBLICA CIENCIAS CONTABES",
+     1.0
+    ],
+    [
+     "PROFESSOR DIRIGENTE",
+     1.0
+    ],
+    [
+     "Professor Desporto Escolar (com vantagens)",
+     1.0
+    ],
+    [
+     "Professor Formador Ciencias Humanas",
+     1.0
+    ],
+    [
+     "Professor Formador Linguagem",
+     1.0
+    ],
+    [
+     "Professor Formador Matematica",
+     1.0
+    ],
+    [
+     "Protocolista",
+     1.0
+    ],
+    [
+     "TAP PROF READAPT NORM",
+     1.0
+    ],
+    [
+     "Tecnico Alfabetiza - Professor",
+     1.0
+    ],
+    [
+     "Tecnico Censo e Matricula-Assis Administ",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Gestão da Vida Funcional",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE BELEM 6",
+   "total": 28.0,
+   "vinculo": {
+    "EFETIVO": 23,
+    "CONTRATO TEMPORARIO": 5
+   },
+   "categoria": {
+    "Administração geral": 10,
+    "Magistério básico": 18,
+    "Função gratificada": 4
+   },
+   "atividades": [
+    [
+     "TAP - Professor (com as vantagens)",
+     3.0
+    ],
+    [
+     "Apoio Adm Financeiro- Assistente Adm",
+     1.0
+    ],
+    [
+     "Apoio Administrativo da Gestão",
+     1.0
+    ],
+    [
+     "Assessor de Gestao pedagogico - Prof. normal",
+     1.0
+    ],
+    [
+     "Assistente Social",
+     1.0
+    ],
+    [
+     "Coord Reg Adm-Financeiro - Assistente Adm",
+     1.0
+    ],
+    [
+     "Coord Regional Infra-Logistica Assistente Adm",
+     1.0
+    ],
+    [
+     "Coord. Reg Pedagogico- Prof.(c/vantagens)",
+     1.0
+    ],
+    [
+     "Coord. Regional Pedagogico- Especialista",
+     1.0
+    ],
+    [
+     "Formador Alfabetiza - Especialista",
+     1.0
+    ],
+    [
+     "Formador Alfabetiza - Professor",
+     1.0
+    ],
+    [
+     "PROFESSOR DIRIGENTE",
+     1.0
+    ],
+    [
+     "PROFESSOR FORMADOR CIENCIAS DA NATUREZA",
+     1.0
+    ],
+    [
+     "Pedag. Professor- Tec.Acompanhamento",
+     1.0
+    ],
+    [
+     "Pedagogico c/ Hab. TI-Professor norm",
+     1.0
+    ],
+    [
+     "Professor Desporto Escolar (com vantagens)",
+     1.0
+    ],
+    [
+     "Professor Formador Ciencias Humanas",
+     1.0
+    ],
+    [
+     "Professor Formador Matematica",
+     1.0
+    ],
+    [
+     "Psicologo",
+     1.0
+    ],
+    [
+     "Tec Progamas e Mod - Prof. c/vantagens",
+     1.0
+    ],
+    [
+     "Tecnico Alfabetiza - Professor",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Censo e Matricula - ADM",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Gestão da Vida Funcional",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Politicas de Leitura",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Tempo Integral - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico de Ref. de Lotação",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE CAPITAO POCO",
+   "total": 28.0,
+   "vinculo": {
+    "EFETIVO": 16,
+    "CONTRATO TEMPORARIO": 10,
+    "CONTR TEMP INDIGENA": 2
+   },
+   "categoria": {
+    "Administração geral": 9,
+    "Magistério básico": 19,
+    "Função gratificada": 4
+   },
+   "atividades": [
+    [
+     "Pedag. Professor- Tec.Acompanhamento",
+     2.0
+    ],
+    [
+     "TAP - Professor (com as vantagens)",
+     2.0
+    ],
+    [
+     "Apoio Administrativo da Gestão",
+     1.0
+    ],
+    [
+     "Apoio Operacional - Motorista",
+     1.0
+    ],
+    [
+     "Assessor de Gestão Pedagogica - Especialista",
+     1.0
+    ],
+    [
+     "Assistente Social",
+     1.0
+    ],
+    [
+     "Coord Regional Infra-Logistica Especialista",
+     1.0
+    ],
+    [
+     "Coord. Reg Pedagogico- Prof.(c/vantagens)",
+     1.0
+    ],
+    [
+     "Coord. Reg. Adm-Financeiro - Especialista",
+     1.0
+    ],
+    [
+     "Coord. Regional Pedagogico- Especialista",
+     1.0
+    ],
+    [
+     "DRE TEC GESTAO PUBLICA CIENCIAS CONTABES",
+     1.0
+    ],
+    [
+     "Formador Alfabetiza - Professor",
+     1.0
+    ],
+    [
+     "PROFESSOR DIRIGENTE",
+     1.0
+    ],
+    [
+     "PROFESSOR FORMADOR CIENCIAS DA NATUREZA",
+     1.0
+    ],
+    [
+     "Pedagogico com Hab TI-Professor",
+     1.0
+    ],
+    [
+     "Professor Formador Ciencias Humanas",
+     1.0
+    ],
+    [
+     "Professor Formador Linguagem",
+     1.0
+    ],
+    [
+     "Professor Formador Matematica",
+     1.0
+    ],
+    [
+     "Protocolista",
+     1.0
+    ],
+    [
+     "Psicologo",
+     1.0
+    ],
+    [
+     "Tec Progamas e Mod - Prof. c/vantagens",
+     1.0
+    ],
+    [
+     "Tecnico Alfabetiza - Professor",
+     1.0
+    ],
+    [
+     "Tecnico Censo e Matricula-Assis Administ",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Engenharia Civil",
+     1.0
+    ],
+    [
+     "Tecnico Tempo Integral-Professor",
+     1.0
+    ],
+    [
+     "Tecnico de Ref. de Lotação",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE ITAITUBA",
+   "total": 27.0,
+   "vinculo": {
+    "EFETIVO": 23,
+    "CONTRATO TEMPORARIO": 4
+   },
+   "categoria": {
+    "Administração geral": 8,
+    "Magistério básico": 19,
+    "Função gratificada": 4
+   },
+   "atividades": [
+    [
+     "TAP - Professor (com as vantagens)",
+     4.0
+    ],
+    [
+     "Formador Alfabetiza - Professor",
+     2.0
+    ],
+    [
+     "Apoio Administrativo da Gestão",
+     1.0
+    ],
+    [
+     "Apoio Pedagogico-Especialista",
+     1.0
+    ],
+    [
+     "Assessor de Gestao pedagogico - Prof. normal",
+     1.0
+    ],
+    [
+     "Assistente Social",
+     1.0
+    ],
+    [
+     "Coord Reg Adm-Financeiro - Assistente Adm",
+     1.0
+    ],
+    [
+     "Coord Regional Infra-Logistica Especialista",
+     1.0
+    ],
+    [
+     "Coord. Regional Pedagogico- Especialista",
+     1.0
+    ],
+    [
+     "DRE TEC GESTAO PUBLICA CIENCIAS CONTABES",
+     1.0
+    ],
+    [
+     "Dirigente-Especialista",
+     1.0
+    ],
+    [
+     "PROFESSOR FORMADOR CIENCIAS DA NATUREZA",
+     1.0
+    ],
+    [
+     "Pedagogico com Hab TI-Professor",
+     1.0
+    ],
+    [
+     "Professor Desporto Escolar (com vantagens)",
+     1.0
+    ],
+    [
+     "Professor Formador Ciencias Humanas",
+     1.0
+    ],
+    [
+     "Professor Formador Linguagem",
+     1.0
+    ],
+    [
+     "Professor Formador Matematica",
+     1.0
+    ],
+    [
+     "Protocolista",
+     1.0
+    ],
+    [
+     "Tecnico Censo e Matricula-Assis Administ",
+     1.0
+    ],
+    [
+     "Tecnico Prog e Modalidades-Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Engenharia Civil",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Gestão da Vida Funcional",
+     1.0
+    ],
+    [
+     "Tecnico de Ref. de Lotação",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE XINGUARA",
+   "total": 27.0,
+   "vinculo": {
+    "CONTRATO TEMPORARIO": 14,
+    "EFETIVO": 13
+   },
+   "categoria": {
+    "Administração geral": 3,
+    "Magistério básico": 24,
+    "Função gratificada": 3
+   },
+   "atividades": [
+    [
+     "Pedag. Professor- Tec.Acompanhamento",
+     4.0
+    ],
+    [
+     "TAP - Professor (com as vantagens)",
+     3.0
+    ],
+    [
+     "Formador Alfabetiza - Professor",
+     2.0
+    ],
+    [
+     "Pedagogico com Hab TI-Professor",
+     2.0
+    ],
+    [
+     "Assessor de Gestao pedagogico - Prof. normal",
+     1.0
+    ],
+    [
+     "Assistente Social",
+     1.0
+    ],
+    [
+     "DRE TEC GESTAO PUBLICA CIENCIAS CONTABES",
+     1.0
+    ],
+    [
+     "PROFESSOR COORD. REG. PEDAGOGICO",
+     1.0
+    ],
+    [
+     "PROFESSOR DIRIGENTE",
+     1.0
+    ],
+    [
+     "PROFESSOR FORMADOR CIENCIAS DA NATUREZA",
+     1.0
+    ],
+    [
+     "Professor Desporto Escolar (com vantagens)",
+     1.0
+    ],
+    [
+     "Professor Formador Ciencias Humanas",
+     1.0
+    ],
+    [
+     "Professor Formador Linguagem",
+     1.0
+    ],
+    [
+     "Professor Formador Matematica",
+     1.0
+    ],
+    [
+     "Psicologo",
+     1.0
+    ],
+    [
+     "Tec Progamas e Mod - Prof. c/vantagens",
+     1.0
+    ],
+    [
+     "Tecnico Alfabetiza - Professor",
+     1.0
+    ],
+    [
+     "Tecnico Censo e Matricula - Professor",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Polit. de Leitura- Prof. Norm",
+     1.0
+    ],
+    [
+     "Tecnico Tempo Integral-Professor",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE BELEM 2",
+   "total": 26.0,
+   "vinculo": {
+    "EFETIVO": 24,
+    "CONTRATO TEMPORARIO": 2
+   },
+   "categoria": {
+    "Administração geral": 11,
+    "Magistério básico": 15,
+    "Função gratificada": 4
+   },
+   "atividades": [
+    [
+     "Psicologo",
+     2.0
+    ],
+    [
+     "TAP - Especialista",
+     2.0
+    ],
+    [
+     "Tecnico Ref. Transporte Escolar",
+     2.0
+    ],
+    [
+     "Apoio Adm Financeiro- Assistente Adm",
+     1.0
+    ],
+    [
+     "Apoio Adm Infra-Logistica - Assistente Adm.",
+     1.0
+    ],
+    [
+     "Apoio Administrativo da Gestão",
+     1.0
+    ],
+    [
+     "Apoio Pedagogico-Especialista",
+     1.0
+    ],
+    [
+     "Assistente Social",
+     1.0
+    ],
+    [
+     "Coord Reg Adm-Financeiro - Assistente Adm",
+     1.0
+    ],
+    [
+     "Coord Regional Infra-Logistica Especialista",
+     1.0
+    ],
+    [
+     "Coord. Regional Pedagogico- Especialista",
+     1.0
+    ],
+    [
+     "Formador Alfabetiza - Professor",
+     1.0
+    ],
+    [
+     "PROFESSOR DIRIGENTE",
+     1.0
+    ],
+    [
+     "PROFESSOR FORMADOR CIENCIAS DA NATUREZA",
+     1.0
+    ],
+    [
+     "Professor Formador Ciencias Humanas",
+     1.0
+    ],
+    [
+     "Professor Formador Linguagem",
+     1.0
+    ],
+    [
+     "TAP - Professor (com as vantagens)",
+     1.0
+    ],
+    [
+     "Tec Progamas e Mod - Prof. c/vantagens",
+     1.0
+    ],
+    [
+     "Tecnico Censo e Matricula-Assis Administ",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Alfabetiza - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Gestão da Vida Funcional",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Tempo Integral - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico de Ref. de Lotacao - Especialista",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE BELEM 5",
+   "total": 26.0,
+   "vinculo": {
+    "EFETIVO": 26
+   },
+   "categoria": {
+    "Administração geral": 4,
+    "Magistério básico": 22,
+    "Função gratificada": 4
+   },
+   "atividades": [
+    [
+     "Tecnico Acompanhamento Adm-Esp em Educação",
+     3.0
+    ],
+    [
+     "Apoio Administrativo da Gestão",
+     1.0
+    ],
+    [
+     "Apoio Pedagogico-Especialista",
+     1.0
+    ],
+    [
+     "Assessor de Gestao pedagogico - Prof. normal",
+     1.0
+    ],
+    [
+     "Assessor de Gestão Pedagogica - Especialista",
+     1.0
+    ],
+    [
+     "Assistente Social",
+     1.0
+    ],
+    [
+     "Coord Regional Infra-Logistica Especialista",
+     1.0
+    ],
+    [
+     "Coord. Reg. Adm-Financeiro-Prof Readaptado",
+     1.0
+    ],
+    [
+     "Coord. Regional Pedagogico- Especialista",
+     1.0
+    ],
+    [
+     "Formador Alfabetiza - Especialista",
+     1.0
+    ],
+    [
+     "Formador Alfabetiza - Professor",
+     1.0
+    ],
+    [
+     "PROFESSOR DIRIGENTE",
+     1.0
+    ],
+    [
+     "PROFESSOR FORMADOR CIENCIAS DA NATUREZA",
+     1.0
+    ],
+    [
+     "Pedagogico com Hab TI-Professor",
+     1.0
+    ],
+    [
+     "Professor Desporto Escolar (com vantagens)",
+     1.0
+    ],
+    [
+     "Professor Formador Linguagem",
+     1.0
+    ],
+    [
+     "Professor Formador Matematica",
+     1.0
+    ],
+    [
+     "Psicologo",
+     1.0
+    ],
+    [
+     "TAP - Especialista",
+     1.0
+    ],
+    [
+     "TAP - Professor (com as vantagens)",
+     1.0
+    ],
+    [
+     "Tecnico Alfabetiza - Professor",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Censo e Matricula-Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Tempo Integral - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico de Ref. de Lotação",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE BELEM 8",
+   "total": 26.0,
+   "vinculo": {
+    "EFETIVO": 16,
+    "CONTRATO TEMPORARIO": 10
+   },
+   "categoria": {
+    "Administração geral": 8,
+    "Magistério básico": 18,
+    "Função gratificada": 4
+   },
+   "atividades": [
+    [
+     "Assistente Social",
+     2.0
+    ],
+    [
+     "Formador Alfabetiza - Professor",
+     2.0
+    ],
+    [
+     "Pedag. Professor- Tec.Acompanhamento",
+     2.0
+    ],
+    [
+     "TAP - Professor (com as vantagens)",
+     2.0
+    ],
+    [
+     "Apoio Administrativo da Gestão",
+     1.0
+    ],
+    [
+     "Assessor de Gestao pedagogico - Prof. normal",
+     1.0
+    ],
+    [
+     "Coord Regional Infra-Logistica Professor",
+     1.0
+    ],
+    [
+     "Coord. Reg. Adm-Financeiro - Especialista",
+     1.0
+    ],
+    [
+     "Coord. Regional Pedagogico- Especialista",
+     1.0
+    ],
+    [
+     "PROFESSOR DIRIGENTE",
+     1.0
+    ],
+    [
+     "Pedagogico c/ Hab. TI-Professor norm",
+     1.0
+    ],
+    [
+     "Professor Desporto Escolar (com vantagens)",
+     1.0
+    ],
+    [
+     "Professor Formador Ciencias Humanas",
+     1.0
+    ],
+    [
+     "Professor Formador Linguagem",
+     1.0
+    ],
+    [
+     "Protocolista",
+     1.0
+    ],
+    [
+     "Psicologo",
+     1.0
+    ],
+    [
+     "Tec Progamas e Mod - Prof. c/vantagens",
+     1.0
+    ],
+    [
+     "Tecnico Alfabetiza - Professor",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Gestão da Vida Funcional",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Politicas de Leitura",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Tempo Integral - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico de Ref. de Lotação",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE CAMETA",
+   "total": 26.0,
+   "vinculo": {
+    "EFETIVO": 23,
+    "CONTRATO TEMPORARIO": 3
+   },
+   "categoria": {
+    "Magistério básico": 15,
+    "Função gratificada": 4,
+    "Administração geral": 11
+   },
+   "atividades": [
+    [
+     "Psicologo",
+     2.0
+    ],
+    [
+     "TAP - Professor (com as vantagens)",
+     2.0
+    ],
+    [
+     "Apoio Pedagogico-Especialista",
+     1.0
+    ],
+    [
+     "Coord Regional Infra-Logistica Especialista",
+     1.0
+    ],
+    [
+     "Coord. Reg. Adm-Financeiro - Especialista",
+     1.0
+    ],
+    [
+     "Coord. Regional Pedagogico- Especialista",
+     1.0
+    ],
+    [
+     "DRE TEC GESTAO PUBLICA CIENCIAS CONTABES",
+     1.0
+    ],
+    [
+     "Dirigente-Professor",
+     1.0
+    ],
+    [
+     "Formador Alfabetiza - Professor",
+     1.0
+    ],
+    [
+     "Professor Formador Ciencias Humanas",
+     1.0
+    ],
+    [
+     "Professor Formador Linguagem",
+     1.0
+    ],
+    [
+     "Professor Formador Matematica",
+     1.0
+    ],
+    [
+     "Protocolista",
+     1.0
+    ],
+    [
+     "TAP - Especialista",
+     1.0
+    ],
+    [
+     "Tec Progamas e Mod - Prof. c/vantagens",
+     1.0
+    ],
+    [
+     "Tecnico Acompanhamento Adm - Assistente Adm",
+     1.0
+    ],
+    [
+     "Tecnico Acompanhamento Adm - Tecnico em Gestao",
+     1.0
+    ],
+    [
+     "Tecnico Alfabetiza - Professor",
+     1.0
+    ],
+    [
+     "Tecnico Censo e Matricula-Assis Administ",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Engenharia Civil",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Gestão da Vida Funcional",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Transporte Escolar",
+     1.0
+    ],
+    [
+     "Tecnico Tempo Integral-Professor",
+     1.0
+    ],
+    [
+     "Tecnico de Ref. de Lotação",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE OBIDOS",
+   "total": 26.0,
+   "vinculo": {
+    "EFETIVO": 16,
+    "CONTRATO TEMPORARIO": 10
+   },
+   "categoria": {
+    "Magistério básico": 22,
+    "Administração geral": 4,
+    "Função gratificada": 5
+   },
+   "atividades": [
+    [
+     "TAP - Professor (com as vantagens)",
+     4.0
+    ],
+    [
+     "Formador Alfabetiza - Especialista",
+     3.0
+    ],
+    [
+     "Pedag. Professor- Tec.Acompanhamento",
+     2.0
+    ],
+    [
+     "TAP - Especialista",
+     2.0
+    ],
+    [
+     "Assessor de Gestão Pedagogica - Especialista",
+     1.0
+    ],
+    [
+     "Assistente Social",
+     1.0
+    ],
+    [
+     "Coord. Reg Pedagogico- Prof.(c/vantagens)",
+     1.0
+    ],
+    [
+     "Coord. Reg. Adm-Financeiro - Especialista",
+     1.0
+    ],
+    [
+     "PROFESSOR FORMADOR CIENCIAS DA NATUREZA",
+     1.0
+    ],
+    [
+     "PROFESSOR READAP DEF DIRIGENTE",
+     1.0
+    ],
+    [
+     "Professor Formador Ciencias Humanas",
+     1.0
+    ],
+    [
+     "Professor Formador Linguagem",
+     1.0
+    ],
+    [
+     "Professor Formador Matematica",
+     1.0
+    ],
+    [
+     "Psicologo",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Alfabetiza - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Engenharia Civil",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Gestão da Vida Funcional",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Tempo Integral - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico de Ref. de Lotacao - Especialista",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE ANANINDEUA 3",
+   "total": 25.0,
+   "vinculo": {
+    "EFETIVO": 22,
+    "CONTRATO TEMPORARIO": 3
+   },
+   "categoria": {
+    "Magistério básico": 16,
+    "Administração geral": 9,
+    "Função gratificada": 4
+   },
+   "atividades": [
+    [
+     "TAP - Professor (com as vantagens)",
+     2.0
+    ],
+    [
+     "Apoio Operacional - Servente",
+     1.0
+    ],
+    [
+     "Apoio Pedagogico-Especialista",
+     1.0
+    ],
+    [
+     "Assessor de Gestao pedagogico - Prof. normal",
+     1.0
+    ],
+    [
+     "Assistente Social",
+     1.0
+    ],
+    [
+     "Coord Regional Infra-Logistica Assistente Adm",
+     1.0
+    ],
+    [
+     "Coord. Reg. Adm-Financeiro - Especialista",
+     1.0
+    ],
+    [
+     "Coord. Regional Pedagogico- Especialista",
+     1.0
+    ],
+    [
+     "Formador Alfabetiza - Especialista",
+     1.0
+    ],
+    [
+     "Formador Alfabetiza - Professor",
+     1.0
+    ],
+    [
+     "PROFESSOR COORD. REG. PEDAGOGICO",
+     1.0
+    ],
+    [
+     "PROFESSOR DIRIGENTE",
+     1.0
+    ],
+    [
+     "Pedagogico com Hab TI-Professor",
+     1.0
+    ],
+    [
+     "Professor Formador Linguagem",
+     1.0
+    ],
+    [
+     "Protocolista",
+     1.0
+    ],
+    [
+     "Psicologo",
+     1.0
+    ],
+    [
+     "TAP - Especialista",
+     1.0
+    ],
+    [
+     "Tec Progamas e Mod - Prof. c/vantagens",
+     1.0
+    ],
+    [
+     "Tecnico Censo e Matricula-Assis Administ",
+     1.0
+    ],
+    [
+     "Tecnico Ref Gest da Vida Func Readaptado Adm",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Alfabetiza - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Politicas de Leitura",
+     1.0
+    ],
+    [
+     "Tecnico de Acompanhamento Adm - Professor",
+     1.0
+    ],
+    [
+     "Tecnico de Ref. de Lotação",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE BELEM 4",
+   "total": 25.0,
+   "vinculo": {
+    "EFETIVO": 24,
+    "CONTRATO TEMPORARIO": 1
+   },
+   "categoria": {
+    "Administração geral": 10,
+    "Magistério básico": 15,
+    "Função gratificada": 4
+   },
+   "atividades": [
+    [
+     "Formador Alfabetiza - Especialista",
+     2.0
+    ],
+    [
+     "Psicologo",
+     2.0
+    ],
+    [
+     "TAP - Especialista",
+     2.0
+    ],
+    [
+     "Apoio Adm Infra-Logistica - Assistente Adm.",
+     1.0
+    ],
+    [
+     "Apoio Operacional - Vigia",
+     1.0
+    ],
+    [
+     "Apoio Pedagogico-Especialista",
+     1.0
+    ],
+    [
+     "Assistente Social",
+     1.0
+    ],
+    [
+     "Coord Reg Adm-Financeiro - Assistente Adm",
+     1.0
+    ],
+    [
+     "Coord Regional Infra-Logistica Assistente Adm",
+     1.0
+    ],
+    [
+     "Coord. Regional Pedagogico- Especialista",
+     1.0
+    ],
+    [
+     "Dirigente-Especialista",
+     1.0
+    ],
+    [
+     "PROFESSOR DIRIGENTE",
+     1.0
+    ],
+    [
+     "Pedagogico com Hab TI-Professor",
+     1.0
+    ],
+    [
+     "Professor Desporto Escolar (com vantagens)",
+     1.0
+    ],
+    [
+     "Professor Formador Ciencias Humanas",
+     1.0
+    ],
+    [
+     "Protocolista",
+     1.0
+    ],
+    [
+     "TAP - Professor (com as vantagens)",
+     1.0
+    ],
+    [
+     "Tecnico Acompanhamento Adm-Esp em Educação",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Alfabetiza - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Gestão da Vida Funcional",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Politicas de Leitura",
+     1.0
+    ],
+    [
+     "Tecnico Tempo Integral-Professor",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE MONTE ALEGRE",
+   "total": 25.0,
+   "vinculo": {
+    "EFETIVO": 15,
+    "CONTRATO TEMPORARIO": 10
+   },
+   "categoria": {
+    "Administração geral": 4,
+    "Magistério básico": 21,
+    "Função gratificada": 4
+   },
+   "atividades": [
+    [
+     "Pedag. Professor- Tec.Acompanhamento",
+     5.0
+    ],
+    [
+     "Professor Formador Linguagem",
+     2.0
+    ],
+    [
+     "TAP - Professor (com as vantagens)",
+     2.0
+    ],
+    [
+     "Assessor de Gestao pedagogico - Prof. normal",
+     1.0
+    ],
+    [
+     "Assistente Social",
+     1.0
+    ],
+    [
+     "Coord Regional Infra-Logistica Professor",
+     1.0
+    ],
+    [
+     "Coord. Reg. Adm-Financeiro - Especialista",
+     1.0
+    ],
+    [
+     "Coord. Regional Pedagogico- Especialista",
+     1.0
+    ],
+    [
+     "Formador Alfabetiza - Professor",
+     1.0
+    ],
+    [
+     "PROFESSOR FORMADOR CIENCIAS DA NATUREZA",
+     1.0
+    ],
+    [
+     "PROFESSOR READAP DEF DIRIGENTE",
+     1.0
+    ],
+    [
+     "Professor Formador Ciencias Humanas",
+     1.0
+    ],
+    [
+     "Professor Formador Matematica",
+     1.0
+    ],
+    [
+     "Psicologo",
+     1.0
+    ],
+    [
+     "TAP - Especialista",
+     1.0
+    ],
+    [
+     "Tec Progamas e Mod - Prof. c/vantagens",
+     1.0
+    ],
+    [
+     "Tecnico Censo e Matricula-Assis Administ",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Gestão da Vida Funcional",
+     1.0
+    ],
+    [
+     "Tecnico Tempo Integral-Professor",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE SANTA BARBARA",
+   "total": 25.0,
+   "vinculo": {
+    "EFETIVO": 14,
+    "CONTRATO TEMPORARIO": 11
+   },
+   "categoria": {
+    "Magistério básico": 19,
+    "Administração geral": 6,
+    "Função gratificada": 1
+   },
+   "atividades": [
+    [
+     "TAP - Professor (com as vantagens)",
+     3.0
+    ],
+    [
+     "Formador Alfabetiza - Professor",
+     2.0
+    ],
+    [
+     "Pedag. Professor- Tec.Acompanhamento",
+     2.0
+    ],
+    [
+     "Apoio Pedagogico-Especialista",
+     1.0
+    ],
+    [
+     "Assistente Social",
+     1.0
+    ],
+    [
+     "DRE TEC GESTAO PUBLICA CIENCIAS CONTABES",
+     1.0
+    ],
+    [
+     "Dirigente-Especialista",
+     1.0
+    ],
+    [
+     "PROFESSOR FORMADOR CIENCIAS DA NATUREZA",
+     1.0
+    ],
+    [
+     "Pedagogico c/ Hab. TI-Especialista",
+     1.0
+    ],
+    [
+     "Pedagogico c/ Hab. TI-Professor norm",
+     1.0
+    ],
+    [
+     "Professor Desporto Escolar (com vantagens)",
+     1.0
+    ],
+    [
+     "Professor Formador Ciencias Humanas",
+     1.0
+    ],
+    [
+     "Professor Formador Linguagem",
+     1.0
+    ],
+    [
+     "Professor Formador Matematica",
+     1.0
+    ],
+    [
+     "Psicologo",
+     1.0
+    ],
+    [
+     "Tec Progamas e Mod - Prof. c/vantagens",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Alfabetiza - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Censo e Matricula - ADM",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Gestão da Vida Funcional",
+     1.0
+    ],
+    [
+     "Tecnico de Ref. de Lotação",
+     1.0
+    ],
+    [
+     "Tecnico de Ref. de Polit de Leit.-Prof. Readap",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE ANANINDEUA 5",
+   "total": 24.0,
+   "vinculo": {
+    "EFETIVO": 18,
+    "CONTRATO TEMPORARIO": 6
+   },
+   "categoria": {
+    "Administração geral": 7,
+    "Magistério básico": 17,
+    "Função gratificada": 4
+   },
+   "atividades": [
+    [
+     "TAP - Professor (com as vantagens)",
+     3.0
+    ],
+    [
+     "Formador Alfabetiza - Professor",
+     2.0
+    ],
+    [
+     "Pedagogico c/ Hab. TI-Professor norm",
+     2.0
+    ],
+    [
+     "Apoio Adm Infra-Logistica - Assistente Adm.",
+     1.0
+    ],
+    [
+     "Apoio Administrativo da Gestão",
+     1.0
+    ],
+    [
+     "Assessor de Gestao pedagogico - Prof. normal",
+     1.0
+    ],
+    [
+     "Assistente Social",
+     1.0
+    ],
+    [
+     "Coord Regional Infra-Logistica Professor",
+     1.0
+    ],
+    [
+     "Coord. Reg. Adm-Financeiro - Especialista",
+     1.0
+    ],
+    [
+     "Coord. Regional Pedagogico- Especialista",
+     1.0
+    ],
+    [
+     "PROFESSOR DIRIGENTE",
+     1.0
+    ],
+    [
+     "Professor Desporto Escolar (com vantagens)",
+     1.0
+    ],
+    [
+     "Professor Formador Linguagem",
+     1.0
+    ],
+    [
+     "Psicologo",
+     1.0
+    ],
+    [
+     "Tec Progamas e Mod - Prof. c/vantagens",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Alfabetiza - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Engenharia Civil",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Engenharia Eletrica",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Politicas de Leitura",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Tempo Integral - Especialista",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE BELEM 10",
+   "total": 24.0,
+   "vinculo": {
+    "EFETIVO": 16,
+    "CONTRATO TEMPORARIO": 7,
+    "NAO ESTAVEL": 1
+   },
+   "categoria": {
+    "Administração geral": 5,
+    "Magistério básico": 19,
+    "Função gratificada": 4
+   },
+   "atividades": [
+    [
+     "TAP - Professor (com as vantagens)",
+     5.0
+    ],
+    [
+     "Coord. Regional Pedagogico- Especialista",
+     2.0
+    ],
+    [
+     "Tecnico Acompanhamento Adm-Esp em Educação",
+     2.0
+    ],
+    [
+     "Apoio Administrativo da Gestão",
+     1.0
+    ],
+    [
+     "Assistente Social",
+     1.0
+    ],
+    [
+     "Coord. Reg. Adm-Financeiro - Especialista",
+     1.0
+    ],
+    [
+     "Formador Alfabetiza - Especialista",
+     1.0
+    ],
+    [
+     "Formador Alfabetiza - Professor",
+     1.0
+    ],
+    [
+     "PROFESSOR DIRIGENTE",
+     1.0
+    ],
+    [
+     "Pedag. Professor- Tec.Acompanhamento",
+     1.0
+    ],
+    [
+     "Professor Formador Ciencias Humanas",
+     1.0
+    ],
+    [
+     "Professor Formador Matematica",
+     1.0
+    ],
+    [
+     "Protocolista",
+     1.0
+    ],
+    [
+     "Tecnico Alfabetiza - Professor",
+     1.0
+    ],
+    [
+     "Tecnico Prog e Modalidades-Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Politicas de Leitura",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Tempo Integral - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico de Ref. de Lotação",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE CONCEICAO DO ARAGUAIA",
+   "total": 23.0,
+   "vinculo": {
+    "CONTRATO TEMPORARIO": 4,
+    "EFETIVO": 19
+   },
+   "categoria": {
+    "Administração geral": 4,
+    "Magistério básico": 19,
+    "Função gratificada": 3
+   },
+   "atividades": [
+    [
+     "Pedagogico com Hab TI-Professor",
+     2.0
+    ],
+    [
+     "TAP - Especialista",
+     2.0
+    ],
+    [
+     "Assistente Social",
+     1.0
+    ],
+    [
+     "Coord. Regional Pedagogico- Especialista",
+     1.0
+    ],
+    [
+     "Dirigente-Especialista",
+     1.0
+    ],
+    [
+     "Formador Alfabetiza - Especialista",
+     1.0
+    ],
+    [
+     "PROFESSOR READ COORD. REG. FINANCEIRO",
+     1.0
+    ],
+    [
+     "Professor Formador Ciencias Humanas",
+     1.0
+    ],
+    [
+     "Professor Formador Linguagem",
+     1.0
+    ],
+    [
+     "Professor Formador Matematica",
+     1.0
+    ],
+    [
+     "Psicologo",
+     1.0
+    ],
+    [
+     "TAP - Professor (com as vantagens)",
+     1.0
+    ],
+    [
+     "Tec Progamas e Mod - Prof. c/vantagens",
+     1.0
+    ],
+    [
+     "Tecnico Acompanhamento Adm - Prof. Readaptado",
+     1.0
+    ],
+    [
+     "Tecnico Acompanhamento Adm-Esp em Educação",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Alfabetiza - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Censo e Matricula-Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Engenharia Civil",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Engenharia Eletrica",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Tempo Integral - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico de Ref. de Lotacao - Especialista",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE ANANINDEUA 1",
+   "total": 19.0,
+   "vinculo": {
+    "CONTRATO TEMPORARIO": 6,
+    "EFETIVO": 12,
+    "NAO ESTAVEL": 1
+   },
+   "categoria": {
+    "Administração geral": 7,
+    "Magistério básico": 12,
+    "Função gratificada": 4
+   },
+   "atividades": [
+    [
+     "Formador Alfabetiza - Professor",
+     2.0
+    ],
+    [
+     "Apoio Operacional - Servente",
+     1.0
+    ],
+    [
+     "Assistente Social",
+     1.0
+    ],
+    [
+     "Coord Regional Infra-Logistica Especialista",
+     1.0
+    ],
+    [
+     "Coord. Reg. Adm-Financeiro - Especialista",
+     1.0
+    ],
+    [
+     "Coord. Regional Pedagogico- Especialista",
+     1.0
+    ],
+    [
+     "Dirigente-Especialista",
+     1.0
+    ],
+    [
+     "Pedagogico c/ Hab. TI-Professor norm",
+     1.0
+    ],
+    [
+     "Professor Formador Linguagem",
+     1.0
+    ],
+    [
+     "Protocolista",
+     1.0
+    ],
+    [
+     "Psicologo",
+     1.0
+    ],
+    [
+     "TAP - Especialista",
+     1.0
+    ],
+    [
+     "TAP - Professor (com as vantagens)",
+     1.0
+    ],
+    [
+     "Tecnico Alfabetiza - Professor",
+     1.0
+    ],
+    [
+     "Tecnico Censo e Matricula-Assis Administ",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Engenharia Civil",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Gestão da Vida Funcional",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Tempo Integral - Especialista",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE BELEM 9",
+   "total": 17.0,
+   "vinculo": {
+    "EFETIVO": 12,
+    "CONTRATO TEMPORARIO": 4,
+    "NAO ESTAVEL": 1
+   },
+   "categoria": {
+    "Administração geral": 5,
+    "Magistério básico": 12,
+    "Função gratificada": 4
+   },
+   "atividades": [
+    [
+     "Formador Alfabetiza - Professor",
+     2.0
+    ],
+    [
+     "Apoio Adsmisntrativo Financeiro-Auxiliar",
+     1.0
+    ],
+    [
+     "Assistente Social",
+     1.0
+    ],
+    [
+     "Coord Regional Infra-Logistica Especialista",
+     1.0
+    ],
+    [
+     "Coord. Reg. Adm-Financeiro - Especialista",
+     1.0
+    ],
+    [
+     "Coord. Regional Pedagogico- Especialista",
+     1.0
+    ],
+    [
+     "Dirigente-Especialista",
+     1.0
+    ],
+    [
+     "Professor Formador Ciencias Humanas",
+     1.0
+    ],
+    [
+     "Protocolista",
+     1.0
+    ],
+    [
+     "Psicologo",
+     1.0
+    ],
+    [
+     "TAP - Especialista",
+     1.0
+    ],
+    [
+     "TAP - Professor (com as vantagens)",
+     1.0
+    ],
+    [
+     "Tec Progamas e Mod - Prof. c/vantagens",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Alfabetiza - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Tempo Integral-Professor",
+     1.0
+    ],
+    [
+     "Tecnico de Ref. de Lotação",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE CACHOEIRA DO ARARI",
+   "total": 16.0,
+   "vinculo": {
+    "CONTRATO TEMPORARIO": 5,
+    "EFETIVO": 11
+   },
+   "categoria": {
+    "Magistério básico": 15,
+    "Administração geral": 1,
+    "Função gratificada": 2
+   },
+   "atividades": [
+    [
+     "Professor Formador Ciencias Humanas",
+     2.0
+    ],
+    [
+     "TAP - Especialista",
+     2.0
+    ],
+    [
+     "TAP - Professor (com as vantagens)",
+     2.0
+    ],
+    [
+     "DRE TEC GESTAO PUBLICA CIENCIAS CONTABES",
+     1.0
+    ],
+    [
+     "Formador Alfabetiza - Professor",
+     1.0
+    ],
+    [
+     "PROFESSOR COORD. REG. PEDAGOGICO",
+     1.0
+    ],
+    [
+     "PROFESSOR DIRIGENTE",
+     1.0
+    ],
+    [
+     "Pedag. Professor- Tec.Acompanhamento",
+     1.0
+    ],
+    [
+     "Professor Formador Linguagem",
+     1.0
+    ],
+    [
+     "Professor Formador Matematica",
+     1.0
+    ],
+    [
+     "Tecnico Acompanhamento Adm-Esp em Educação",
+     1.0
+    ],
+    [
+     "Tecnico Ref. Alfabetiza - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Tempo Integral-Professor",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE CURRALINHO",
+   "total": 13.0,
+   "vinculo": {
+    "CONTRATO TEMPORARIO": 8,
+    "EFETIVO": 5
+   },
+   "categoria": {
+    "Magistério básico": 13,
+    "Função gratificada": 3
+   },
+   "atividades": [
+    [
+     "Pedag. Professor- Tec.Acompanhamento",
+     3.0
+    ],
+    [
+     "TAP - Professor (com as vantagens)",
+     2.0
+    ],
+    [
+     "Formador Alfabetiza - Professor",
+     1.0
+    ],
+    [
+     "PROFESSOR COORD. REG. PEDAGOGICO",
+     1.0
+    ],
+    [
+     "PROFESSOR DIRIGENTE",
+     1.0
+    ],
+    [
+     "PROFESSOR FORMADOR CIENCIAS DA NATUREZA",
+     1.0
+    ],
+    [
+     "Professor Formador Linguagem",
+     1.0
+    ],
+    [
+     "Professor Formador Matematica",
+     1.0
+    ],
+    [
+     "TAP - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Censo e Matricula - Professor",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "DRE AFUA",
+   "total": 3.0,
+   "vinculo": {
+    "EFETIVO": 3
+   },
+   "categoria": {
+    "Magistério básico": 3,
+    "Função gratificada": 1
+   },
+   "atividades": [
+    [
+     "PROFESSOR DIRIGENTE",
+     1.0
+    ],
+    [
+     "TAP - Especialista",
+     1.0
+    ],
+    [
+     "Tecnico Acompanhamento Adm-Esp em Educação",
+     1.0
+    ]
+   ]
+  },
+  {
+   "dre": "SEDUC SEDE",
+   "total": 1.0,
+   "vinculo": {
+    "EFETIVO": 1
+   },
+   "categoria": {
+    "Magistério básico": 1,
+    "Função gratificada": 1
+   },
+   "atividades": []
+  }
+ ]
+}

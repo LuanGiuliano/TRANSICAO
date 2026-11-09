@@ -78,6 +78,7 @@ export function formatarRotuloVisual(r) {
     s = s.toLowerCase().replace(/(?:^|\s)\S/g, (a) => a.toUpperCase())
   }
   s = s.replace(/\bmagisterio\b/gi, 'Magistério')
+  if (/^comiss[aã]o$/i.test(s)) return 'Exclusivamente Comissionado'
 
   return s
 }

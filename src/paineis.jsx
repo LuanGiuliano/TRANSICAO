@@ -3,6 +3,7 @@ import dados from './data/planilhas.json'
 import { F07 as DF07 } from './data/f07.js'
 import agaData from './data/aga_data.json'
 import f06Data from './data/f06_data.json'
+import LotacaoDre from './LotacaoDre.jsx'
 import {
   Kpi, Bloco, HBars, HBarsPct, Donut, Colunas, ColunasEixo, Linhas, Proporcao, Abas,
   LimiteControle, aplicarLimite, fmt, fmtMoeda, fmtBRL,
@@ -199,6 +200,7 @@ function F02() {
           <HBars dados={discsExibidas} cor="#7b5ea7" />
         </Bloco>
       </div>
+      <LotacaoDre />
     </>
   )
 }
