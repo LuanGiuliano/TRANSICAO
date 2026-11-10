@@ -1,15 +1,34 @@
 import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || ''
-const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || ''
+const limpar = (v) => String(v || '').trim().replace(/^["']|["']$/g, '')
+
+const rawUrl = limpar(import.meta.env.VITE_SUPABASE_URL)
+const supabaseAnonKey = limpar(import.meta.env.VITE_SUPABASE_ANON_KEY)
+
+// Aceita URL completa, domínio sem https:// ou apenas o ID do projeto Supabase
+const supabaseUrl = !rawUrl || rawUrl.includes('seu-projeto')
+  ? ''
+  : /^https?:\/\//i.test(rawUrl)
+    ? rawUrl
+    : rawUrl.includes('.')
+      ? `https://${rawUrl}`
+      : `https://${rawUrl}.supabase.co`
 
 /** Verifica se as credenciais do Supabase foram preenchidas no .env ou na Vercel */
 export const isSupabaseConfigured = Boolean(
   supabaseUrl &&
   supabaseAnonKey &&
   supabaseUrl.startsWith('https://') &&
-  !supabaseUrl.includes('seu-projeto')
+  !supabaseAnonKey.includes('sua-chave')
 )
+
+export const supabaseDiagnostico = !isSupabaseConfigured
+  ? !supabaseUrl && !supabaseAnonKey
+    ? 'Nenhuma variável do Supabase chegou neste build (se já adicionou na Vercel, marque Production e faça um Redeploy sem cache).'
+    : !supabaseUrl
+      ? 'Chave encontrada, mas VITE_SUPABASE_URL está ausente ou inválida.'
+      : 'URL encontrada, mas VITE_SUPABASE_ANON_KEY está ausente.'
+  : ''
 
 export const supabase = isSupabaseConfigured
   ? createClient(supabaseUrl, supabaseAnonKey, {

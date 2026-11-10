@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import brasao from './assets/brasao.png'
-import { supabase, isSupabaseConfigured, registrarAcesso, buscarPerfil } from './supabase.js'
+import { supabase, isSupabaseConfigured, supabaseDiagnostico, registrarAcesso, buscarPerfil } from './supabase.js'
 
 export default function Login({ onLogin, aviso }) {
   const [modo, setModo] = useState('login') // 'login' | 'cadastro'
@@ -26,7 +26,7 @@ export default function Login({ onLogin, aviso }) {
     }
 
     if (!isSupabaseConfigured) {
-      setErro('Conexão com o Supabase não configurada nesta publicação. Adicione VITE_SUPABASE_URL e VITE_SUPABASE_ANON_KEY nas Environment Variables da Vercel e faça Redeploy, ou use o botão de avaliação rápida acima.')
+      setErro(`Conexão com o Supabase não configurada nesta publicação. ${supabaseDiagnostico}`)
       return
     }
 
@@ -128,7 +128,7 @@ export default function Login({ onLogin, aviso }) {
               <strong>Configuração de Chaves Pendente</strong>
             </div>
             <p className="login-aviso-supabase__txt">
-              Insira <code>VITE_SUPABASE_URL</code> e <code>VITE_SUPABASE_ANON_KEY</code> no arquivo <code>.env</code> para conectar ao seu banco real.
+              {supabaseDiagnostico}
             </p>
             <button type="button" className="login-btn-demo" onClick={handleEntrarDemo}>
               Entrar em modo de avaliação rápida ›
