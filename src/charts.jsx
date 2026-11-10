@@ -173,17 +173,18 @@ export function aplicarLimite(lista, limite) {
 }
 
 /** Barras horizontais com tooltip integrado e rótulos otimizados */
-export function HBars({ dados, cor = 'var(--teal)', unidade = '', max }) {
+export function HBars({ dados, cor = 'var(--teal)', unidade = '', max, formatador }) {
   const [tooltip, setTooltip] = useState(null)
   const m = max ?? Math.max(...dados.map((d) => d[1]), 1)
   const longo = dados.length > 16
+  const fmtVal = formatador || ((v) => `${fmt(v)}${unidade}`)
 
   const handleEnter = (e, r, v) => {
     setTooltip({
       x: e.clientX,
       y: e.clientY,
       titulo: r,
-      valor: `${fmt(v)}${unidade}`,
+      valor: fmtVal(v),
       cor,
     })
   }
@@ -211,7 +212,7 @@ export function HBars({ dados, cor = 'var(--teal)', unidade = '', max }) {
               <span className="hbars__trilho">
                 <i style={{ width: `${(v / m) * 100}%`, background: cor, animationDelay: `${Math.min(i, 15) * 30}ms` }} />
               </span>
-              <b className="hbars__v">{fmt(v)}{unidade}</b>
+              <b className="hbars__v">{fmtVal(v)}</b>
             </li>
           )
         })}
@@ -274,9 +275,13 @@ export function HBarsPct({ dados, cor = 'var(--teal)' }) {
 }
 
 /** Rosca em SVG com tooltip interativo e sem caixas pretas */
-export function Donut({ dados, centro, sub }) {
+export function Donut({ dados, centro, sub, formatador }) {
   const [tooltip, setTooltip] = useState(null)
   const total = dados.reduce((s, d) => s + d[1], 0) || 1
+  const fmtVal = formatador || fmt
+  const centroTxt = centro ?? fmtVal(total)
+  const lenC = String(centroTxt).length
+  const tamCentro = lenC > 7 ? `${Math.max(2.3, 30 / lenC).toFixed(2)}px` : undefined
   const R = 15.915
   let acc = 0
 
@@ -307,7 +312,7 @@ export function Donut({ dados, centro, sub }) {
                 x: e.clientX,
                 y: e.clientY,
                 titulo: r,
-                valor: fmt(v),
+                valor: fmtVal(v),
                 pct: `${fmt(pct, 1)}%`,
                 cor,
               })}
@@ -317,8 +322,10 @@ export function Donut({ dados, centro, sub }) {
           acc += pct
           return el
         })}
-        <text x="21" y="21.5" textAnchor="middle" className="donut__c">{centro ?? fmt(total)}</text>
-        {sub && <text x="21" y="26" textAnchor="middle" className="donut__s">{sub}</text>}
+        <text x="21" y="21.2" textAnchor="middle" className="donut__c" style={tamCentro ? { fontSize: tamCentro } : undefined}>
+          {centroTxt}
+        </text>
+        {sub && <text x="21" y="25.8" textAnchor="middle" className="donut__s">{sub}</text>}
       </svg>
       <ul className="legenda">
         {dados.map(([r, v], i) => {
@@ -328,12 +335,12 @@ export function Donut({ dados, centro, sub }) {
             <li
               key={r}
               style={{ cursor: 'pointer' }}
-              onMouseEnter={(e) => setTooltip({ x: e.clientX, y: e.clientY, titulo: r, valor: fmt(v), pct, cor })}
+              onMouseEnter={(e) => setTooltip({ x: e.clientX, y: e.clientY, titulo: r, valor: fmtVal(v), pct, cor })}
               onMouseLeave={() => setTooltip(null)}
             >
               <i style={{ background: cor }} />
               <span>{formatarRotuloVisual(r)}</span>
-              <b>{fmt(v)} <small>({pct})</small></b>
+              <b>{fmtVal(v)} <small>({pct})</small></b>
             </li>
           )
         })}

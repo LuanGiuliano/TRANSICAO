@@ -916,6 +916,14 @@ function F08() {
           sub={`${fmt(d.nao_analisados_total?.qtd)} processos pendentes`}
           cor="#c4841d"
         />
+        {d.cessao_receber && (
+          <Kpi
+            rotulo="Cessão – valores a receber"
+            valor={fmtBRL(d.cessao_receber.valor)}
+            sub="reembolso de cedidos (nov/2016 a out/2026)"
+            cor="#07547b"
+          />
+        )}
       </div>
 
       <div className="blocos">
@@ -924,6 +932,7 @@ function F08() {
           <HBars
             dados={d.nao_analisados.map((x) => [x.descricao, x.valor])}
             cor="#c0504d"
+            formatador={fmtBRL}
           />
         </Bloco>
 
@@ -933,8 +942,9 @@ function F08() {
               ['Analisados em 2026', d.analisados_total?.valor],
               ['Não analisados', d.nao_analisados_total?.valor],
             ]}
-            centro={fmtBRL(totalGeral)}
+            centro={fmtMoeda(totalGeral)}
             sub="total DEAs"
+            formatador={fmtBRL}
           />
         </Bloco>
       </div>
@@ -944,6 +954,7 @@ function F08() {
         <HBars
           dados={analTopN.map((x) => [x.descricao.toLowerCase(), x.valor])}
           cor="#153a4d"
+          formatador={fmtBRL}
         />
       </Bloco>
 
@@ -1007,6 +1018,28 @@ function F08() {
           </table>
         </div>
       </Bloco>
+
+      {d.cessao_receber && (
+        <Bloco titulo="Cessão de Pessoal – Valores a Receber" span="full"
+          nota="Créditos a receber registrados pela DIFOB referentes a ressarcimento de servidores cedidos.">
+          <div className="tabela-wrap">
+            <table className="tabela">
+              <thead>
+                <tr>
+                  <th>Descrição</th>
+                  <th className="num">Valor (R$)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style={{ background: '#f2f7fa', fontWeight: 700 }}>
+                  <td>{d.cessao_receber.descricao}</td>
+                  <td className="num" style={{ color: '#07547b', fontSize: 15 }}>{fmtR(d.cessao_receber.valor)}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </Bloco>
+      )}
     </>
   )
 }

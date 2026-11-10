@@ -241,24 +241,34 @@ for r in range(5, 10):
     elif nome:
         nao_anal.append({'descricao': nome, 'qtd': int(qtd) if qtd else 0, 'valor': val})
 
-# Bloco 2: DEAs analisados em 2026 (L12..L41)
+# Bloco 2: DEAs analisados em 2026 (L12..L41) e Cessão a receber nas últimas linhas
 anal = []
+anal_total = {'qtd': 0, 'valor': 0.0}
+cessao_receber = None
+pos_total_anal = False
 for r in range(12, f8.max_row + 1):
     nome = txt(f8.cell(r, 1).value)
-    qtd = num(f8.cell(r, 2).value)
-    val = num(f8.cell(r, 3).value)
     if not nome:
         continue
-    if nome.lower().startswith('total'):
-        anal_total = {'qtd': int(qtd) if qtd else 0, 'valor': float(val) if val else 0.0}
+    qtd = num(f8.cell(r, 2).value)
+    val = parse_brl(f8.cell(r, 3).value)
+    if not pos_total_anal:
+        if nome.lower().startswith('total'):
+            anal_total = {'qtd': int(qtd) if qtd else 0, 'valor': float(val) if val else 0.0}
+            pos_total_anal = True
+        else:
+            anal.append({'descricao': nome, 'qtd': int(qtd) if qtd else 0, 'valor': float(val) if val else 0.0})
     else:
-        anal.append({'descricao': nome, 'qtd': int(qtd) if qtd else 0, 'valor': float(val) if val else 0.0})
+        val_extra = parse_brl(f8.cell(r, 2).value) or parse_brl(f8.cell(r, 3).value)
+        if val_extra > 0:
+            cessao_receber = {'descricao': nome, 'valor': float(val_extra)}
 
 res['DIFOB']['F-08'] = {
     'nao_analisados': nao_anal,
     'nao_analisados_total': nao_anal_total,
     'analisados': anal,
     'analisados_total': anal_total,
+    'cessao_receber': cessao_receber,
 }
 
 

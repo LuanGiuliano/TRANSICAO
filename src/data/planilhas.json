@@ -3101,6 +3101,10 @@
    "analisados_total": {
     "qtd": 871,
     "valor": 4576667.49
+   },
+   "cessao_receber": {
+    "descricao": "CESSÃO - Valores a receber (reembolso de cedidos- período Novembro de 2016 a Outubro de 2026)",
+    "valor": 4297630.12
    }
   }
  },
