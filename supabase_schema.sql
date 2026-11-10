@@ -88,6 +88,35 @@ create trigger on_auth_user_created
   for each row execute function public.criar_perfil_novo_usuario();
 
 -- ---------------------------------------------------------------------
+-- 4b. Ao aprovar no painel, confirma o e-mail no Auth automaticamente
+--     (evita erro "Email not confirmed" quando o e-mail corporativo bloqueia)
+-- ---------------------------------------------------------------------
+create or replace function public.confirmar_email_ao_aprovar()
+returns trigger language plpgsql security definer set search_path = public, auth as $$
+begin
+  if new.status = 'aprovado' then
+    update auth.users
+       set email_confirmed_at = coalesce(email_confirmed_at, now())
+     where id = new.user_id and email_confirmed_at is null;
+  end if;
+  return new;
+end;
+$$;
+
+drop trigger if exists on_perfil_aprovado on public.perfis;
+create trigger on_perfil_aprovado
+  after insert or update on public.perfis
+  for each row execute function public.confirmar_email_ao_aprovar();
+
+-- Desbloqueia usuários que já estavam aprovados antes desta trigger
+update auth.users u
+   set email_confirmed_at = coalesce(u.email_confirmed_at, now())
+  from public.perfis p
+ where p.user_id = u.id
+   and p.status = 'aprovado'
+   and u.email_confirmed_at is null;
+
+-- ---------------------------------------------------------------------
 -- 5. Políticas de segurança (RLS)
 --    Remove políticas antigas das duas tabelas e recria do zero.
 --    O usuário comum NÃO consegue alterar o próprio status.

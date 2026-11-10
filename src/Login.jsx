@@ -34,7 +34,7 @@ export default function Login({ onLogin, aviso }) {
     try {
       if (modo === 'login') {
         const { data, error } = await supabase.auth.signInWithPassword({
-          email: email.trim(),
+          email: email.trim().toLowerCase(),
           password: senha,
         })
 
@@ -42,7 +42,7 @@ export default function Login({ onLogin, aviso }) {
           if (error.message.includes('Invalid login credentials')) {
             setErro('E-mail ou senha incorretos. Verifique suas credenciais.')
           } else if (error.message.includes('Email not confirmed')) {
-            setErro('E-mail ainda não confirmado. Verifique sua caixa de entrada.')
+            setErro('E-mail ainda não confirmado no Supabase. Peça ao administrador para aprovar/confirmar no banco ou desativar "Confirm email" em Authentication → Providers → Email.')
           } else {
             setErro(`Erro ao entrar: ${error.message}`)
           }
@@ -66,7 +66,7 @@ export default function Login({ onLogin, aviso }) {
         onLogin({ ...data.user, perfil })
       } else {
         const { data, error } = await supabase.auth.signUp({
-          email: email.trim(),
+          email: email.trim().toLowerCase(),
           password: senha,
           options: {
             data: {
