@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
-import { listarPerfis, decidirPerfil, listarAcessos } from './supabase.js'
+import { listarPerfis, decidirPerfil, alterarPapelPerfil, listarAcessos } from './supabase.js'
 
 const ROTULO = { pendente: 'Pendente', aprovado: 'Aprovado', rejeitado: 'Rejeitado' }
 const fmtData = (iso) => (iso ? new Date(iso).toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' }) : '–')
@@ -13,14 +13,18 @@ export default function AdminAcessos({ aberto, onClose, adminEmail, onContagem }
   const [erro, setErro] = useState('')
   const [ocupado, setOcupado] = useState(null)
 
-  const carregar = useCallback(async () => {
+  const carregar = useCallback(async (ajustarFiltroInicial = false) => {
     setCarregando(true)
     setErro('')
     try {
       const [p, a] = await Promise.all([listarPerfis(), listarAcessos(100)])
       setPerfis(p)
       setAcessos(a)
-      onContagem?.(p.filter((x) => x.status === 'pendente').length)
+      const qtdPend = p.filter((x) => x.status === 'pendente').length
+      onContagem?.(qtdPend)
+      if (ajustarFiltroInicial) {
+        setFiltro(qtdPend > 0 ? 'pendente' : 'aprovado')
+      }
     } catch (err) {
       setErro(err.message || 'Falha ao carregar dados do Supabase.')
     } finally {
@@ -28,7 +32,7 @@ export default function AdminAcessos({ aberto, onClose, adminEmail, onContagem }
     }
   }, [onContagem])
 
-  useEffect(() => { if (aberto) carregar() }, [aberto, carregar])
+  useEffect(() => { if (aberto) carregar(true) }, [aberto, carregar])
 
   const decidir = async (p, status) => {
     setOcupado(p.user_id)
@@ -38,6 +42,19 @@ export default function AdminAcessos({ aberto, onClose, adminEmail, onContagem }
       await carregar()
     } catch (err) {
       setErro(err.message || 'Não foi possível atualizar o usuário.')
+    } finally {
+      setOcupado(null)
+    }
+  }
+
+  const mudarPapel = async (p, novoPapel) => {
+    setOcupado(p.user_id)
+    setErro('')
+    try {
+      await alterarPapelPerfil(p.user_id, novoPapel, adminEmail)
+      await carregar()
+    } catch (err) {
+      setErro(err.message || 'Não foi possível alterar o nível de permissão.')
     } finally {
       setOcupado(null)
     }
@@ -66,7 +83,7 @@ export default function AdminAcessos({ aberto, onClose, adminEmail, onContagem }
           <button type="button" className={`adm-aba ${aba === 'acessos' ? 'adm-aba--on' : ''}`} onClick={() => setAba('acessos')}>
             Acessos recentes
           </button>
-          <button type="button" className="adm-atualizar" onClick={carregar} disabled={carregando}>
+          <button type="button" className="adm-atualizar" onClick={() => carregar()} disabled={carregando}>
             {carregando ? 'Atualizando...' : '↻ Atualizar'}
           </button>
         </div>
@@ -93,36 +110,52 @@ export default function AdminAcessos({ aberto, onClose, adminEmail, onContagem }
                 <p className="vazio-txt">Nenhum usuário nesta lista.</p>
               ) : (
                 <ul className="adm-lista">
-                  {lista.map((p) => (
-                    <li key={p.user_id} className="adm-item">
-                      <div className="adm-item__dados">
-                        <strong>{p.nome || p.email}</strong>
-                        <span>{p.email}</span>
-                        {p.unidade && <span className="adm-item__unid">{p.unidade}</span>}
-                        <span className="adm-item__data">Solicitado em {fmtData(p.criado_em)}</span>
-                      </div>
-                      <span className={`adm-status adm-status--${p.status}`}>
-                        {p.papel === 'admin' ? 'Administrador' : ROTULO[p.status]}
-                      </span>
-                      <div className="adm-item__acoes">
-                        {p.papel !== 'admin' && p.status !== 'aprovado' && (
-                          <button type="button" className="adm-btn adm-btn--ok" disabled={ocupado === p.user_id} onClick={() => decidir(p, 'aprovado')}>
-                            Aprovar
-                          </button>
-                        )}
-                        {p.papel !== 'admin' && p.status === 'pendente' && (
-                          <button type="button" className="adm-btn adm-btn--nao" disabled={ocupado === p.user_id} onClick={() => decidir(p, 'rejeitado')}>
-                            Rejeitar
-                          </button>
-                        )}
-                        {p.papel !== 'admin' && p.status === 'aprovado' && (
-                          <button type="button" className="adm-btn adm-btn--nao" disabled={ocupado === p.user_id} onClick={() => decidir(p, 'rejeitado')}>
-                            Revogar
-                          </button>
-                        )}
-                      </div>
-                    </li>
-                  ))}
+                  {lista.map((p) => {
+                    const ehProprio = p.email?.toLowerCase() === adminEmail?.toLowerCase()
+                    return (
+                      <li key={p.user_id} className="adm-item">
+                        <div className="adm-item__dados">
+                          <strong>
+                            {p.nome || p.email}
+                            {ehProprio && <span className="adm-voce"> (Você)</span>}
+                          </strong>
+                          <span>{p.email}</span>
+                          {p.unidade && <span className="adm-item__unid">{p.unidade}</span>}
+                          <span className="adm-item__data">Solicitado em {fmtData(p.criado_em)}</span>
+                        </div>
+                        <span className={`adm-status ${p.papel === 'admin' ? 'adm-status--admin' : `adm-status--${p.status}`}`}>
+                          {p.papel === 'admin' ? 'Administrador' : ROTULO[p.status]}
+                        </span>
+                        <div className="adm-item__acoes">
+                          {p.status !== 'aprovado' && (
+                            <button type="button" className="adm-btn adm-btn--ok" disabled={ocupado === p.user_id} onClick={() => decidir(p, 'aprovado')}>
+                              Aprovar
+                            </button>
+                          )}
+                          {p.status === 'pendente' && (
+                            <button type="button" className="adm-btn adm-btn--nao" disabled={ocupado === p.user_id} onClick={() => decidir(p, 'rejeitado')}>
+                              Rejeitar
+                            </button>
+                          )}
+                          {!ehProprio && p.status === 'aprovado' && p.papel !== 'admin' && (
+                            <button type="button" className="adm-btn adm-btn--adm" disabled={ocupado === p.user_id} onClick={() => mudarPapel(p, 'admin')}>
+                              Tornar Admin
+                            </button>
+                          )}
+                          {!ehProprio && p.status === 'aprovado' && p.papel === 'admin' && (
+                            <button type="button" className="adm-btn adm-btn--neutro" disabled={ocupado === p.user_id} onClick={() => mudarPapel(p, 'usuario')}>
+                              Remover Admin
+                            </button>
+                          )}
+                          {!ehProprio && p.status === 'aprovado' && p.papel !== 'admin' && (
+                            <button type="button" className="adm-btn adm-btn--nao" disabled={ocupado === p.user_id} onClick={() => decidir(p, 'rejeitado')}>
+                              Revogar
+                            </button>
+                          )}
+                        </div>
+                      </li>
+                    )
+                  })}
                 </ul>
               )}
             </>
@@ -151,3 +184,4 @@ export default function AdminAcessos({ aberto, onClose, adminEmail, onContagem }
     </div>
   )
 }
+

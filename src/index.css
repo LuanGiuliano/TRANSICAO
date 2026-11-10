@@ -1109,14 +1109,18 @@ main.container { padding-top: 26px; padding-bottom: 40px; }
 .adm-item__dados strong { color: var(--ink); font-size: 13.5px; }
 .adm-item__unid { color: var(--petrol); font-weight: 600; }
 .adm-item__data { color: var(--muted); font-size: 11px; }
+.adm-voce { font-size: 11px; font-weight: 700; color: var(--petrol); }
 .adm-status { font-size: 11px; font-weight: 800; padding: 3px 10px; border-radius: 99px; white-space: nowrap; }
 .adm-status--pendente { background: #fff3e0; color: #b78103; }
 .adm-status--aprovado { background: #e8f5e9; color: #1b7f52; }
 .adm-status--rejeitado { background: #fdf0f2; color: var(--sagep-red); }
-.adm-item__acoes { display: flex; gap: 6px; }
+.adm-status--admin { background: var(--petrol-soft); color: var(--petrol); border: 1px solid var(--card-border); }
+.adm-item__acoes { display: flex; gap: 6px; flex-wrap: wrap; }
 .adm-btn { font: inherit; font-size: 12px; font-weight: 800; border: none; border-radius: 8px; padding: 7px 14px; cursor: pointer; color: #fff; }
 .adm-btn:disabled { opacity: .6; cursor: wait; }
 .adm-btn--ok { background: #1b7f52; }
+.adm-btn--adm { background: var(--petrol); }
+.adm-btn--neutro { background: #587080; }
 .adm-btn--nao { background: var(--sagep-red); }
 @media (max-width: 640px) { .adm-item { grid-template-columns: 1fr; } }
 @media print { .barra-usuario-topo, .adm-overlay { display: none !important; } }

@@ -88,6 +88,15 @@ export async function decidirPerfil(userId, status, decididoPor) {
   if (error) throw error
 }
 
+/** [Admin] promove usuário para admin ou rebaixa para usuário comum */
+export async function alterarPapelPerfil(userId, papel, decididoPor) {
+  const { error } = await supabase
+    .from('perfis')
+    .update({ papel, decidido_em: new Date().toISOString(), decidido_por: decididoPor })
+    .eq('user_id', userId)
+  if (error) throw error
+}
+
 /** [Admin] últimos acessos registrados */
 export async function listarAcessos(limite = 100) {
   if (!supabase) return []
