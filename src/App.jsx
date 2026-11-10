@@ -241,6 +241,24 @@ export default function App() {
     }
   }, [usuario])
 
+  // Atualiza papel/status ao voltar para a aba (ex: após aprovar ou promover admin no Supabase)
+  useEffect(() => {
+    if (!supabase || !usuario?.id) return
+    const sync = async () => {
+      const perfil = await buscarPerfil(usuario.id)
+      if (!perfil || perfil.status !== 'aprovado') {
+        await supabase.auth.signOut()
+        setUsuario(null)
+        return
+      }
+      if (perfil.papel !== usuario.perfil?.papel || perfil.status !== usuario.perfil?.status) {
+        setUsuario((u) => (u ? { ...u, perfil } : u))
+      }
+    }
+    window.addEventListener('focus', sync)
+    return () => window.removeEventListener('focus', sync)
+  }, [usuario?.id, usuario?.perfil?.papel, usuario?.perfil?.status])
+
   const handleLogin = (user) => {
     setUsuario(user)
     if (!supabase) {
@@ -289,6 +307,11 @@ export default function App() {
             <span className="barra-usuario-topo__email">{usuario.email}</span>
             {usuario.user_metadata?.nome && (
               <span className="barra-usuario-topo__nome">({usuario.user_metadata.nome})</span>
+            )}
+            {!supabase && (
+              <span className="barra-usuario-topo__modo-local" title="Configure VITE_SUPABASE_URL e VITE_SUPABASE_ANON_KEY na Vercel e faça Redeploy">
+                Modo local (sem Supabase)
+              </span>
             )}
           </div>
           <div className="barra-usuario-topo__acoes">

@@ -126,9 +126,17 @@ create policy "acessos: ver o proprio" on public.acessos_painel
 
 -- ---------------------------------------------------------------------
 -- 6. PASSO MANUAL: torne a SUA conta administradora.
---    1) Cadastre-se normalmente no painel (a conta ficará "pendente")
---    2) Troque o e-mail abaixo pelo seu e rode só este comando:
+--    1) Cadastre-se no painel (Solicitar Acesso) ou crie o usuário em Auth -> Users
+--    2) Troque o e-mail abaixo pelo seu e rode estes 2 comandos:
 -- ---------------------------------------------------------------------
--- update public.perfis
+-- update auth.users
+--    set email_confirmed_at = coalesce(email_confirmed_at, now())
+--  where lower(email) = lower('SEU_EMAIL_AQUI');
+--
+-- insert into public.perfis (user_id, email, nome, papel, status, decidido_em, decidido_por)
+-- select id, email, coalesce(raw_user_meta_data->>'nome', split_part(email, '@', 1)), 'admin', 'aprovado', now(), 'inicial'
+--   from auth.users
+--  where lower(email) = lower('SEU_EMAIL_AQUI')
+-- on conflict (user_id) do update
 --    set papel = 'admin', status = 'aprovado', decidido_em = now(), decidido_por = 'inicial'
---  where email = 'SEU_EMAIL_AQUI';
+-- returning user_id, email, papel, status;

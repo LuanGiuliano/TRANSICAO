@@ -26,12 +26,7 @@ export default function Login({ onLogin, aviso }) {
     }
 
     if (!isSupabaseConfigured) {
-      onLogin({
-        id: 'demo-user-id',
-        email: email.trim(),
-        user_metadata: { nome: nome || email.split('@')[0] },
-        perfil: { papel: 'usuario', status: 'aprovado' },
-      })
+      setErro('Conexão com o Supabase não configurada nesta publicação. Adicione VITE_SUPABASE_URL e VITE_SUPABASE_ANON_KEY nas Environment Variables da Vercel e faça Redeploy, ou use o botão de avaliação rápida acima.')
       return
     }
 
