@@ -1060,3 +1060,63 @@ main.container { padding-top: 26px; padding-bottom: 40px; }
   font-weight: 700;
   color: #d6e8f2;
 }
+
+/* ===== Aprovação de cadastros e gestão de acessos ===== */
+.login-msg--aviso { background: #fff7e8; border: 1px solid #f2dbb3; color: #8c4a00; }
+.barra-usuario-topo__btn-adm {
+  font: inherit; font-size: 11px; font-weight: 700; color: #ffffff;
+  background: rgba(7, 84, 123, 0.9); border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 3px 12px; border-radius: 6px; cursor: pointer; transition: all .15s ease;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.barra-usuario-topo__btn-adm:hover { background: var(--petrol); transform: translateY(-1px); }
+.adm-badge { background: var(--sagep-red); color: #fff; font-size: 10px; font-weight: 800; padding: 1px 7px; border-radius: 99px; }
+
+.adm-overlay {
+  position: fixed; inset: 0; z-index: 10000; background: rgba(15, 51, 73, 0.72); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: center; padding: clamp(10px, 2vw, 28px);
+}
+.adm-janela {
+  width: 100%; max-width: 860px; max-height: 90vh; background: #fff; border-radius: 16px;
+  border: 1px solid var(--card-border); box-shadow: 0 28px 70px rgba(7, 84, 123, 0.35);
+  display: flex; flex-direction: column; overflow: hidden;
+}
+.adm-topo {
+  background: #0f3349; color: #fff; padding: 14px 20px; border-bottom: 3.5px solid var(--sagep-red);
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+}
+.adm-titulo { display: block; font-size: 16px; font-weight: 800; }
+.adm-sub { display: block; font-size: 11.5px; color: #cfe0e8; margin-top: 2px; }
+.adm-fechar { background: transparent; border: none; color: #fff; font-size: 26px; width: 36px; height: 36px; border-radius: 8px; cursor: pointer; }
+.adm-fechar:hover { background: rgba(200, 26, 56, 0.85); }
+.adm-abas { display: flex; align-items: center; gap: 8px; padding: 12px 18px 0; border-bottom: 1px solid var(--card-border); }
+.adm-aba {
+  font: inherit; font-size: 13px; font-weight: 700; color: var(--muted); background: transparent; border: none;
+  border-bottom: 3px solid transparent; padding: 8px 12px; cursor: pointer; display: inline-flex; gap: 6px; align-items: center;
+}
+.adm-aba--on { color: var(--petrol); border-bottom-color: var(--petrol); }
+.adm-atualizar { margin-left: auto; font: inherit; font-size: 12px; font-weight: 700; color: var(--petrol); background: #f2f6f8; border: 1px solid var(--card-border); border-radius: 8px; padding: 5px 12px; cursor: pointer; }
+.adm-corpo { padding: 16px 18px 20px; overflow-y: auto; }
+.adm-filtros { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+.adm-filtro { font: inherit; font-size: 12px; font-weight: 700; padding: 5px 12px; border-radius: 99px; border: 1.5px solid var(--card-border); background: #fff; color: var(--ink); cursor: pointer; }
+.adm-filtro--on { background: var(--petrol); border-color: var(--petrol); color: #fff; }
+.adm-lista { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.adm-item {
+  display: grid; grid-template-columns: 1fr auto auto; gap: 14px; align-items: center;
+  padding: 12px 14px; border: 1px solid var(--card-border); border-radius: 10px; background: #f8fafb;
+}
+.adm-item__dados { display: flex; flex-direction: column; gap: 1px; font-size: 12.5px; min-width: 0; overflow-wrap: anywhere; }
+.adm-item__dados strong { color: var(--ink); font-size: 13.5px; }
+.adm-item__unid { color: var(--petrol); font-weight: 600; }
+.adm-item__data { color: var(--muted); font-size: 11px; }
+.adm-status { font-size: 11px; font-weight: 800; padding: 3px 10px; border-radius: 99px; white-space: nowrap; }
+.adm-status--pendente { background: #fff3e0; color: #b78103; }
+.adm-status--aprovado { background: #e8f5e9; color: #1b7f52; }
+.adm-status--rejeitado { background: #fdf0f2; color: var(--sagep-red); }
+.adm-item__acoes { display: flex; gap: 6px; }
+.adm-btn { font: inherit; font-size: 12px; font-weight: 800; border: none; border-radius: 8px; padding: 7px 14px; cursor: pointer; color: #fff; }
+.adm-btn:disabled { opacity: .6; cursor: wait; }
+.adm-btn--ok { background: #1b7f52; }
+.adm-btn--nao { background: var(--sagep-red); }
+@media (max-width: 640px) { .adm-item { grid-template-columns: 1fr; } }
+@media print { .barra-usuario-topo, .adm-overlay { display: none !important; } }

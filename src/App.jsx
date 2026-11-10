@@ -3,7 +3,8 @@ import brasao from './assets/brasao.png'
 import Painel, { resumoCapa, temDados } from './paineis.jsx'
 import SagepModal from './SagepModal.jsx'
 import Login from './Login.jsx'
-import { supabase, isSupabaseConfigured } from './supabase.js'
+import AdminAcessos from './AdminAcessos.jsx'
+import { supabase, buscarPerfil } from './supabase.js'
 import {
   RELATORIOS, DIRETORIAS, PROCESSO,
 } from './data.js'
@@ -188,21 +189,33 @@ function Detalhe({ r, onBack, onOpenSagep }) {
 export default function App() {
   const [usuario, setUsuario] = useState(null)
   const [verificandoSessao, setVerificandoSessao] = useState(true)
+  const [avisoLogin, setAvisoLogin] = useState('')
+  const [adminAberto, setAdminAberto] = useState(false)
+  const [pendentes, setPendentes] = useState(0)
   const [aberto, setAberto] = useState(() => window.location.hash.replace('#', '') || null)
   const [filtro, setFiltro] = useState('TODAS')
   const [sagepModalAberto, setSagepModalAberto] = useState(false)
 
   useEffect(() => {
     if (supabase) {
-      supabase.auth.getSession().then(({ data: { session } }) => {
-        setUsuario(session?.user || null)
+      // Sessão salva só vale se o perfil estiver aprovado pelo administrador
+      supabase.auth.getSession().then(async ({ data: { session } }) => {
+        if (session?.user) {
+          const perfil = await buscarPerfil(session.user.id)
+          if (perfil?.status === 'aprovado') {
+            setUsuario({ ...session.user, perfil })
+          } else {
+            await supabase.auth.signOut()
+            setAvisoLogin('Seu acesso ainda não está autorizado pelo administrador.')
+          }
+        }
         setVerificandoSessao(false)
       }).catch(() => {
         setVerificandoSessao(false)
       })
 
-      const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
-        setUsuario(session?.user || null)
+      const { data: { subscription } } = supabase.auth.onAuthStateChange((evento) => {
+        if (evento === 'SIGNED_OUT') setUsuario(null)
       })
 
       return () => subscription?.unsubscribe()
@@ -220,6 +233,13 @@ export default function App() {
     window.addEventListener('hashchange', onHash)
     return () => window.removeEventListener('hashchange', onHash)
   }, [])
+
+  useEffect(() => {
+    if (usuario?.perfil?.papel === 'admin' && supabase) {
+      supabase.from('perfis').select('user_id', { count: 'exact', head: true }).eq('status', 'pendente')
+        .then(({ count }) => setPendentes(count || 0))
+    }
+  }, [usuario])
 
   const handleLogin = (user) => {
     setUsuario(user)
@@ -256,7 +276,7 @@ export default function App() {
   }
 
   if (!usuario) {
-    return <Login onLogin={handleLogin} />
+    return <Login onLogin={handleLogin} aviso={avisoLogin} />
   }
 
   return (
@@ -272,6 +292,12 @@ export default function App() {
             )}
           </div>
           <div className="barra-usuario-topo__acoes">
+            {usuario.perfil?.papel === 'admin' && (
+              <button type="button" className="barra-usuario-topo__btn-adm" onClick={() => setAdminAberto(true)}>
+                Gestão de acessos
+                {pendentes > 0 && <span className="adm-badge">{pendentes}</span>}
+              </button>
+            )}
             <button
               type="button"
               className="barra-usuario-topo__btn-sair"
@@ -283,6 +309,15 @@ export default function App() {
           </div>
         </div>
       </div>
+
+      {usuario.perfil?.papel === 'admin' && (
+        <AdminAcessos
+          aberto={adminAberto}
+          onClose={() => setAdminAberto(false)}
+          adminEmail={usuario.email}
+          onContagem={setPendentes}
+        />
+      )}
 
       <header className="hero">
         <div className="container hero__inner">
