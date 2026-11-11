@@ -683,6 +683,223 @@ function F06() {
         </Bloco>
       )}
 
+      {/* ============ SEÇÃO: CESSÃO DE SERVIDORES ============ */}
+
+      {/* 4.1 Cessão para o Tribunal Regional Eleitoral */}
+      {f.cessao_tre && (
+        <Bloco
+          titulo={f.cessao_tre.titulo}
+          span="full"
+          nota="Servidores da SEDUC cedidos/requisitados ao Tribunal Regional Eleitoral do Pará, com ônus para a SEDUC."
+        >
+          <div className="tabela-wrap">
+            <table className="tabela">
+              <thead>
+                <tr>
+                  <th>TIPO</th>
+                  <th>ÓRGÃO CESSIONÁRIO</th>
+                  <th className="num">QUANTIDADE</th>
+                  <th>ÓRGÃO PAGADOR</th>
+                  <th className="num">VALOR MENSAL</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style={{ background: '#f2f7fa', fontWeight: 600 }}>
+                  <td><strong>{f.cessao_tre.tipo}</strong></td>
+                  <td>{f.cessao_tre.orgao_cessionario}</td>
+                  <td className="num" style={{ fontWeight: 700, fontSize: 14 }}>{fmt(f.cessao_tre.quantidade)}</td>
+                  <td><span className="tag-aga" style={{ background: '#e3f2fd', color: '#1565c0', fontWeight: 700 }}>{f.cessao_tre.orgao_pagador}</span></td>
+                  <td className="num" style={{ color: '#07547b', fontWeight: 800, fontSize: 15 }}>{fmtBRL(f.cessao_tre.valor_mensal)}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </Bloco>
+      )}
+
+      {/* 4.3 Cessão Via Convênio de Cessão Recíproca */}
+      {f.cessao_convenio && (
+        <Bloco titulo={f.cessao_convenio.titulo} span="full">
+
+          {/* Resumo */}
+          <div className="tabela-wrap" style={{ marginBottom: 20 }}>
+            <table className="tabela">
+              <thead>
+                <tr>
+                  <th>TIPO</th>
+                  <th>ÓRGÃO CESSIONÁRIO</th>
+                  <th className="num">QUANTIDADE</th>
+                  <th>ÓRGÃO PAGADOR</th>
+                  <th className="num">VALOR MENSAL</th>
+                </tr>
+              </thead>
+              <tbody>
+                {f.cessao_convenio.resumo.map((row, i) => (
+                  <tr key={i} style={{ background: row.tipo === 'DIFERENÇA' ? '#fff8e1' : '#f2f7fa', fontWeight: row.tipo === 'DIFERENÇA' ? 700 : 600 }}>
+                    <td><strong>{row.tipo}</strong></td>
+                    <td>{row.orgao_cessionario}</td>
+                    <td className="num" style={{ fontWeight: 700 }}>{fmt(row.quantidade)}</td>
+                    <td>{row.orgao_pagador}</td>
+                    <td className="num" style={{ color: row.tipo === 'DIFERENÇA' ? '#c4841d' : '#07547b', fontWeight: 800, fontSize: 14 }}>
+                      {row.valor_mensal > 0 ? fmtBRL(row.valor_mensal) : '–'}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          {/* Nota explicativa */}
+          <div style={{ background: '#f0f7ff', border: '1px solid #b3d1f5', borderRadius: 10, padding: '14px 18px', marginBottom: 20, fontSize: 13, color: '#1a3a5c', lineHeight: 1.6 }}>
+            {f.cessao_convenio.nota}
+          </div>
+
+          {/* Fluxo por município e ônus por convênio lado a lado */}
+          <div className="blocos">
+            <Bloco titulo="Fluxo por Convênio / Município">
+              <div className="tabela-wrap">
+                <table className="tabela">
+                  <thead>
+                    <tr>
+                      <th>Convênio</th>
+                      <th className="num">Cedidos pela SEDUC</th>
+                      <th className="num">Cedidos para SEDUC</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {f.cessao_convenio.fluxo_municipios.map((row, i) => (
+                      <tr key={i}>
+                        <td>{row.convenio}</td>
+                        <td className="num">{fmt(row.pela_seduc)}</td>
+                        <td className="num" style={{ color: '#2e9e6b', fontWeight: 600 }}>{fmt(row.para_seduc)}</td>
+                      </tr>
+                    ))}
+                    <tr style={{ background: '#eef3f6', fontWeight: 800 }}>
+                      <td>TOTAL</td>
+                      <td className="num">{fmt(f.cessao_convenio.fluxo_municipios.reduce((s, r) => s + r.pela_seduc, 0))}</td>
+                      <td className="num" style={{ color: '#2e9e6b' }}>{fmt(f.cessao_convenio.fluxo_municipios.reduce((s, r) => s + r.para_seduc, 0))}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </Bloco>
+
+            <Bloco titulo="Ônus Financeiro por Convênio">
+              <div className="tabela-wrap">
+                <table className="tabela">
+                  <thead>
+                    <tr>
+                      <th>Convênio</th>
+                      <th className="num">Pessoas</th>
+                      <th className="num">Ônus SEDUC</th>
+                      <th className="num">Ônus Município</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {f.cessao_convenio.onus_por_convenio.map((row, i) => (
+                      <tr key={i}>
+                        <td>{row.convenio}</td>
+                        <td className="num">{fmt(row.pessoas)}</td>
+                        <td className="num" style={{ color: '#c4841d' }}>{fmtBRL(row.onus_seduc)}</td>
+                        <td className="num" style={{ color: '#2e9e6b' }}>{fmtBRL(row.onus_municipio)}</td>
+                      </tr>
+                    ))}
+                    <tr style={{ background: '#eef3f6', fontWeight: 800 }}>
+                      <td>TOTAL</td>
+                      <td className="num">{fmt(f.cessao_convenio.onus_por_convenio.reduce((s, r) => s + r.pessoas, 0))}</td>
+                      <td className="num" style={{ color: '#c4841d' }}>{fmtBRL(f.cessao_convenio.onus_por_convenio.reduce((s, r) => s + r.onus_seduc, 0))}</td>
+                      <td className="num" style={{ color: '#2e9e6b' }}>{fmtBRL(f.cessao_convenio.onus_por_convenio.reduce((s, r) => s + r.onus_municipio, 0))}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </Bloco>
+          </div>
+        </Bloco>
+      )}
+
+      {/* 4.4 Cessão Via Decreto Estadual – Cedidos PARA a SEDUC */}
+      {f.cessao_decreto_para_seduc && (
+        <Bloco
+          titulo={f.cessao_decreto_para_seduc.titulo}
+          span="full"
+          nota="Servidores de outros órgãos cedidos à SEDUC por decreto estadual, sem reembolso."
+        >
+          <div className="tabela-wrap">
+            <table className="tabela">
+              <thead>
+                <tr>
+                  <th>TIPO DE ÔNUS</th>
+                  <th>ÓRGÃO CEDENTE</th>
+                  <th>GRUPO DE CESSÃO</th>
+                  <th className="num">QTD</th>
+                  <th className="num">VALOR TOTAL</th>
+                </tr>
+              </thead>
+              <tbody>
+                {f.cessao_decreto_para_seduc.linhas.map((row, i) => (
+                  <tr key={i}>
+                    <td><span style={{ fontSize: 11, fontWeight: 700, background: row.tipo_onus.includes('DESTINO') ? '#e3f2fd' : '#fce4ec', color: row.tipo_onus.includes('DESTINO') ? '#1565c0' : '#c62828', padding: '2px 8px', borderRadius: 5 }}>{row.tipo_onus}</span></td>
+                    <td>{row.orgao_cedente}</td>
+                    <td>{row.grupo}</td>
+                    <td className="num">{fmt(row.quantidade)}</td>
+                    <td className="num" style={{ color: '#07547b', fontWeight: 700 }}>{row.valor > 0 ? fmtBRL(row.valor) : '–'}</td>
+                  </tr>
+                ))}
+              </tbody>
+              <tfoot>
+                <tr style={{ background: '#eef3f6', fontWeight: 800 }}>
+                  <td colSpan="3">Total Geral</td>
+                  <td className="num">{fmt(f.cessao_decreto_para_seduc.total_quantidade)}</td>
+                  <td className="num" style={{ color: 'var(--teal)', fontSize: 14 }}>{fmtBRL(f.cessao_decreto_para_seduc.total_valor)}</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </Bloco>
+      )}
+
+      {/* 4.5 Cessão Via Decreto Estadual – Cedidos PELA SEDUC */}
+      {f.cessao_decreto_pela_seduc && (
+        <Bloco
+          titulo={f.cessao_decreto_pela_seduc.titulo}
+          span="full"
+          nota="Servidores da SEDUC cedidos a outros órgãos por decreto estadual, com e sem reembolso."
+        >
+          <div className="tabela-wrap">
+            <table className="tabela">
+              <thead>
+                <tr>
+                  <th>TIPO DE ÔNUS</th>
+                  <th>ÓRGÃO CEDENTE</th>
+                  <th>GRUPO DE CESSÃO</th>
+                  <th className="num">QTD</th>
+                  <th className="num">VALOR TOTAL</th>
+                </tr>
+              </thead>
+              <tbody>
+                {f.cessao_decreto_pela_seduc.linhas.map((row, i) => (
+                  <tr key={i}>
+                    <td><span style={{ fontSize: 11, fontWeight: 700, background: row.tipo_onus.includes('DESTINO') ? '#e3f2fd' : '#fce4ec', color: row.tipo_onus.includes('DESTINO') ? '#1565c0' : '#c62828', padding: '2px 8px', borderRadius: 5 }}>{row.tipo_onus}</span></td>
+                    <td>{row.orgao_cedente || '–'}</td>
+                    <td><span style={{ fontSize: 11, fontWeight: 600, background: row.grupo === 'COM REEMBOLSO' ? '#e8f5e9' : '#f3f4f6', color: row.grupo === 'COM REEMBOLSO' ? '#2e7d32' : '#374151', padding: '2px 8px', borderRadius: 5 }}>{row.grupo}</span></td>
+                    <td className="num">{fmt(row.quantidade)}</td>
+                    <td className="num" style={{ color: '#07547b', fontWeight: 700 }}>{fmtBRL(row.valor)}</td>
+                  </tr>
+                ))}
+              </tbody>
+              <tfoot>
+                <tr style={{ background: '#eef3f6', fontWeight: 800 }}>
+                  <td colSpan="3">Total Geral</td>
+                  <td className="num">{fmt(f.cessao_decreto_pela_seduc.total_quantidade)}</td>
+                  <td className="num" style={{ color: 'var(--teal)', fontSize: 14 }}>{fmtBRL(f.cessao_decreto_pela_seduc.total_valor)}</td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+        </Bloco>
+      )}
+
       {/* Diretrizes Institucionais da Entrega F-06 */}
       <Bloco titulo="Diretrizes do Bloco F – Folha de Pagamento" span="full">
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: 16 }}>

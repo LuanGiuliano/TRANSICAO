@@ -1988,5 +1988,289 @@
     "valor_mensal": 81092.73
   },
   "fonte": "CFOP / SAGEP - Sistemas SIGRH e PAE",
-  "nota": "Ano 2026 composto por realizado (Jan a Out) e projeção CFOP (Nov, Dez e 13º Salário)."
+  "nota": "Ano 2026 composto por realizado (Jan a Out) e projeção CFOP (Nov, Dez e 13º Salário).",
+  "cessao_tre": {
+    "titulo": "4.1 CESSÃO PARA O TRIBUNAL REGIONAL ELEITORAL",
+    "tipo": "CEDIDOS/REQUISITADOS",
+    "orgao_cessionario": "Tribunal Regional Eleitoral",
+    "quantidade": 22,
+    "orgao_pagador": "SEDUC",
+    "valor_mensal": 194632.63
+  },
+  "cessao_convenio": {
+    "titulo": "4.3 CESSÃO VIA CONVÊNIO DE CESSÃO RECÍPROCA",
+    "resumo": [
+      {
+        "tipo": "CEDIDO PARA A SEDUC",
+        "orgao_cessionario": "VÁRIOS",
+        "quantidade": 101,
+        "orgao_pagador": "VÁRIOS",
+        "valor_mensal": 716406.19
+      },
+      {
+        "tipo": "CEDIDOS PELA SEDUC",
+        "orgao_cessionario": "SEDUC",
+        "quantidade": 61,
+        "orgao_pagador": "SEDUC",
+        "valor_mensal": 761174.75
+      },
+      {
+        "tipo": "DIFERENÇA",
+        "orgao_cessionario": "",
+        "quantidade": 40,
+        "orgao_pagador": "",
+        "valor_mensal": 44768.56
+      }
+    ],
+    "fluxo_municipios": [
+      {
+        "convenio": "01/2026 – Almeirim",
+        "pela_seduc": 1,
+        "para_seduc": 2
+      },
+      {
+        "convenio": "02/2025 – Belém",
+        "pela_seduc": 29,
+        "para_seduc": 33
+      },
+      {
+        "convenio": "07/2026 – São Francisco do Pará",
+        "pela_seduc": 2,
+        "para_seduc": 4
+      },
+      {
+        "convenio": "08/2026 – Jacundá",
+        "pela_seduc": 1,
+        "para_seduc": 3
+      },
+      {
+        "convenio": "10/2025 – Castanhal",
+        "pela_seduc": 8,
+        "para_seduc": 10
+      },
+      {
+        "convenio": "11/2025 – Abaetetuba",
+        "pela_seduc": 4,
+        "para_seduc": 9
+      },
+      {
+        "convenio": "13/2025 – Marapanim",
+        "pela_seduc": 1,
+        "para_seduc": 2
+      },
+      {
+        "convenio": "14/2065 – Monte Alegre",
+        "pela_seduc": 2,
+        "para_seduc": 4
+      },
+      {
+        "convenio": "16/2025 – Santa Maria",
+        "pela_seduc": 2,
+        "para_seduc": 4
+      },
+      {
+        "convenio": "17/2025 – Capanema",
+        "pela_seduc": 1,
+        "para_seduc": 2
+      },
+      {
+        "convenio": "21/2026 – São Geraldo do Araguaia",
+        "pela_seduc": 4,
+        "para_seduc": 18
+      },
+      {
+        "convenio": "26/2025 – Santarém Novo",
+        "pela_seduc": 1,
+        "para_seduc": 2
+      },
+      {
+        "convenio": "28/2025 – Chaves",
+        "pela_seduc": 1,
+        "para_seduc": 2
+      },
+      {
+        "convenio": "30/2025 – Marabá",
+        "pela_seduc": 4,
+        "para_seduc": 6
+      }
+    ],
+    "onus_por_convenio": [
+      {
+        "convenio": "01/2026 – Almeirim",
+        "pessoas": 3,
+        "onus_seduc": 10619.48,
+        "onus_municipio": 15288.39
+      },
+      {
+        "convenio": "02/2025 – Belém",
+        "pessoas": 62,
+        "onus_seduc": 327791.41,
+        "onus_municipio": 257476.44
+      },
+      {
+        "convenio": "07/2026 – São Francisco do Pará",
+        "pessoas": 6,
+        "onus_seduc": 35199.42,
+        "onus_municipio": 32941.85
+      },
+      {
+        "convenio": "08/2026 – Jacundá",
+        "pessoas": 4,
+        "onus_seduc": 14885.1,
+        "onus_municipio": 15221.99
+      },
+      {
+        "convenio": "10/2025 – Castanhal",
+        "pessoas": 18,
+        "onus_seduc": 100043.14,
+        "onus_municipio": 107234.31
+      },
+      {
+        "convenio": "11/2025 – Abaetetuba",
+        "pessoas": 13,
+        "onus_seduc": 52629.13,
+        "onus_municipio": 60714.99
+      },
+      {
+        "convenio": "13/2025 – Marapanim",
+        "pessoas": 3,
+        "onus_seduc": 14923.86,
+        "onus_municipio": 17933.67
+      },
+      {
+        "convenio": "14/2025 – Monte Alegre",
+        "pessoas": 6,
+        "onus_seduc": 31904.6,
+        "onus_municipio": 24577.65
+      },
+      {
+        "convenio": "16/2025 – Santa Maria",
+        "pessoas": 6,
+        "onus_seduc": 30830.03,
+        "onus_municipio": 30145.04
+      },
+      {
+        "convenio": "17/2025 – Capanema",
+        "pessoas": 3,
+        "onus_seduc": 22590.5,
+        "onus_municipio": 28086.2
+      },
+      {
+        "convenio": "21/2026 – São Geraldo do Araguaia",
+        "pessoas": 22,
+        "onus_seduc": 55523.85,
+        "onus_municipio": 54111.0
+      },
+      {
+        "convenio": "26/2025 – Santarém Novo",
+        "pessoas": 3,
+        "onus_seduc": 11653.24,
+        "onus_municipio": 12035.48
+      },
+      {
+        "convenio": "28/2025 – Chaves",
+        "pessoas": 3,
+        "onus_seduc": 13226.01,
+        "onus_municipio": 20875.45
+      },
+      {
+        "convenio": "30/2025 – Marabá",
+        "pessoas": 10,
+        "onus_seduc": 39354.98,
+        "onus_municipio": 39763.73
+      }
+    ],
+    "nota": "O demonstrativo evidencia que, dos 162 registros de cessão identificados, 101 correspondem a servidores disponibilizados pelos municípios para atuação na SEDUC, enquanto 61 correspondem a servidores estaduais cedidos às administrações municipais. Isso significa que a SEDUC recebe 40 servidores a mais do que disponibiliza, representando uma vantagem quantitativa na composição da força de trabalho decorrente dos instrumentos de cooperação. Embora a SEDUC suporte R$ 44.768,56 a mais em encargos financeiros, também recebe um quantitativo significativamente superior de profissionais municipais, ampliando sua capacidade de atendimento às necessidades da rede estadual."
+  },
+  "cessao_decreto_para_seduc": {
+    "titulo": "4.4 CESSÃO VIA DECRETO ESTADUAL | CEDIDOS PARA A SEDUC",
+    "linhas": [
+      {
+        "tipo_onus": "ÔNUS - DESTINO",
+        "orgao_cedente": "Fundação Carlos Gomes (FCG)",
+        "grupo": "SEM REEMBOLSO",
+        "quantidade": 1,
+        "valor": 4045.94
+      },
+      {
+        "tipo_onus": "ÔNUS - DESTINO",
+        "orgao_cedente": "Prefeitura Municipal de Capitão Poço",
+        "grupo": "SEM REEMBOLSO",
+        "quantidade": 1,
+        "valor": 30804.96
+      },
+      {
+        "tipo_onus": "ÔNUS - DESTINO",
+        "orgao_cedente": "Prefeitura Municipal de Parauapebas",
+        "grupo": "SEM REEMBOLSO",
+        "quantidade": 1,
+        "valor": 27107.49
+      },
+      {
+        "tipo_onus": "ÔNUS - DESTINO",
+        "orgao_cedente": "Prefeitura Municipal de Xinguara",
+        "grupo": "SEM REEMBOLSO",
+        "quantidade": 1,
+        "valor": 0.0
+      },
+      {
+        "tipo_onus": "ÔNUS - DESTINO",
+        "orgao_cedente": "Secretaria de Estado de Administração",
+        "grupo": "SEM REEMBOLSO",
+        "quantidade": 1,
+        "valor": 0.0
+      },
+      {
+        "tipo_onus": "ÔNUS - DESTINO",
+        "orgao_cedente": "Secretaria de Estado de Desenvolvimento (SEDAP)",
+        "grupo": "SEM REEMBOLSO",
+        "quantidade": 1,
+        "valor": 15540.9
+      },
+      {
+        "tipo_onus": "ÔNUS - ORIGEM",
+        "orgao_cedente": "Prefeitura Municipal de Portel",
+        "grupo": "SEM REEMBOLSO",
+        "quantidade": 1,
+        "valor": 21321.86
+      },
+      {
+        "tipo_onus": "ÔNUS - ORIGEM",
+        "orgao_cedente": "Prefeitura Municipal de Santa Barbara do Pará",
+        "grupo": "SEM REEMBOLSO",
+        "quantidade": 1,
+        "valor": 23568.45
+      }
+    ],
+    "total_quantidade": 8,
+    "total_valor": 122389.6
+  },
+  "cessao_decreto_pela_seduc": {
+    "titulo": "4.5 CESSÃO VIA DECRETO ESTADUAL | CEDIDOS PELA SEDUC",
+    "linhas": [
+      {
+        "tipo_onus": "ÔNUS - DESTINO",
+        "orgao_cedente": "Secretaria de Estado de Educação do Pará (SEDUC)",
+        "grupo": "SEM REEMBOLSO",
+        "quantidade": 139,
+        "valor": 242556.68
+      },
+      {
+        "tipo_onus": "ÔNUS - ORIGEM",
+        "orgao_cedente": "",
+        "grupo": "COM REEMBOLSO",
+        "quantidade": 21,
+        "valor": 412192.0
+      },
+      {
+        "tipo_onus": "ÔNUS - ORIGEM",
+        "orgao_cedente": "",
+        "grupo": "SEM REEMBOLSO",
+        "quantidade": 16,
+        "valor": 299299.55
+      }
+    ],
+    "total_quantidade": 176,
+    "total_valor": 954048.23
+  }
 }
