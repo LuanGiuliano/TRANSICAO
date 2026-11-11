@@ -538,6 +538,14 @@ function F06() {
         <Kpi rotulo="Recursos Tesouro 2026" valor={fmtMoeda(tot26.tesouro + tot26.fundeb_tesouro)} sub="Tesouro + Fundeb/Tesouro" cor="#c4841d" />
         <Kpi rotulo="Encargos Patronais 2026" valor={fmtMoeda(tot26.encargos)} sub="Previdência e encargos sociais" cor="#7b5ea7" />
         <Kpi rotulo="Execução Total 2025" valor={fmtMoeda(tot25.total)} sub="12 meses + 13º Salário" cor="#2e9e6b" />
+        {f.cessao_seduc && (
+          <Kpi
+            rotulo="Cessão para SEDUC"
+            valor={fmtBRL(f.cessao_seduc.valor_mensal)}
+            sub={`${f.cessao_seduc.quantidade} servidores (reembolso mensal)`}
+            cor="#07547b"
+          />
+        )}
       </div>
 
       {/* Seletor de Ano */}
@@ -634,6 +642,46 @@ function F06() {
           </table>
         </div>
       </Bloco>
+
+      {/* 4.2 Cessão para a SEDUC - Via Reembolso */}
+      {f.cessao_seduc && (
+        <Bloco
+          titulo={f.cessao_seduc.titulo}
+          span="full"
+          nota="Demonstrativo de servidores de outros órgãos cedidos para a SEDUC com ônus e pagamento mensal via reembolso da folha de pagamento."
+        >
+          <div className="tabela-wrap">
+            <table className="tabela">
+              <thead>
+                <tr>
+                  <th>TIPO</th>
+                  <th>ÓRGÃO CESSIONÁRIO</th>
+                  <th className="num">QUANTIDADE</th>
+                  <th>ÓRGÃO PAGADOR</th>
+                  <th className="num">VALOR MENSAL</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style={{ background: '#f2f7fa', fontWeight: 600 }}>
+                  <td><strong>{f.cessao_seduc.tipo}</strong></td>
+                  <td>{f.cessao_seduc.orgao_cessionario}</td>
+                  <td className="num" style={{ fontWeight: 700, fontSize: 14 }}>
+                    {fmt(f.cessao_seduc.quantidade)}
+                  </td>
+                  <td>
+                    <span className="tag-aga" style={{ background: '#e0f2f1', color: '#00695c', fontWeight: 700 }}>
+                      {f.cessao_seduc.orgao_pagador}
+                    </span>
+                  </td>
+                  <td className="num" style={{ color: '#07547b', fontWeight: 800, fontSize: 15 }}>
+                    {fmtBRL(f.cessao_seduc.valor_mensal)}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </Bloco>
+      )}
 
       {/* Diretrizes Institucionais da Entrega F-06 */}
       <Bloco titulo="Diretrizes do Bloco F – Folha de Pagamento" span="full">
