@@ -2782,104 +2782,103 @@
     "SOLICITAÇÕES",
     "DEFERIDOS",
     "INDEFERIDOS",
-    "SALDO",
     "EM ANALISE 3.0",
     "EM ANALISE 4.0"
    ],
    "linhas": [
     {
      "produto": "LICENÇA PRÊMIO",
-     "SOLICITAÇÕES": 4211.0,
-     "DEFERIDOS": 4139.0,
+     "SOLICITAÇÕES": 6311,
+     "DEFERIDOS": 4597.0,
      "INDEFERIDOS": 72.0,
-     "SALDO": "não se aplica*",
-     "EM ANALISE 3.0": 700.0,
-     "EM ANALISE 4.0": 1700.0
+     "EM ANALISE 3.0": 400.0,
+     "EM ANALISE 4.0": 1242.0,
+     "link": "https://datastudio.google.com/u/0/reporting/21160219-ab66-479e-910a-cbc2721b6d65/page/p_3vm1t80r8d"
     },
     {
-     "produto": "LICENÇA METERNIDADE",
+     "produto": "LICENÇA MATERNIDADE",
      "SOLICITAÇÕES": 297.0,
      "DEFERIDOS": 293.0,
      "INDEFERIDOS": "não se aplica",
-     "SALDO": "não se aplica",
      "EM ANALISE 3.0": "não se aplica",
-     "EM ANALISE 4.0": 7.0
+     "EM ANALISE 4.0": 7.0,
+     "link": "https://drive.google.com/drive/u/1/folders/0AD3EUdRbJvb_Uk9PVA"
     },
     {
      "produto": "LICENÇA APRIMORAMENTO",
      "SOLICITAÇÕES": 94.0,
-     "DEFERIDOS": "não se aplica",
-     "INDEFERIDOS": "não se aplica",
-     "SALDO": "não se aplica",
-     "EM ANALISE 3.0": "não se aplica",
-     "EM ANALISE 4.0": 7.0
+     "DEFERIDOS": 87.0,
+     "INDEFERIDOS": 0.0,
+     "EM ANALISE 3.0": 0.0,
+     "EM ANALISE 4.0": 7.0,
+     "link": "https://drive.google.com/drive/u/1/folders/0AD3EUdRbJvb_Uk9PVA"
     },
     {
      "produto": "READAPTAÇÃO",
      "SOLICITAÇÕES": 102.0,
      "DEFERIDOS": "não se aplica",
      "INDEFERIDOS": "não se aplica",
-     "SALDO": "não se aplica",
      "EM ANALISE 3.0": "não se aplica",
-     "EM ANALISE 4.0": 102.0
+     "EM ANALISE 4.0": 102.0,
+     "link": "https://docs.google.com/spreadsheets/d/1QsV4NS9dtzLkEZp0OSFFSCJpYH0WOfpbdSrEz_PHm4U/edit?gid=880278574#gid=880278574"
     },
     {
      "produto": "PERÍCIA SIMPLES",
      "SOLICITAÇÕES": 1635.0,
      "DEFERIDOS": "não se aplica",
      "INDEFERIDOS": "não se aplica",
-     "SALDO": "não se aplica",
      "EM ANALISE 3.0": "não se aplica",
-     "EM ANALISE 4.0": 1635.0
+     "EM ANALISE 4.0": 1635.0,
+     "link": "https://docs.google.com/spreadsheets/d/1QsV4NS9dtzLkEZp0OSFFSCJpYH0WOfpbdSrEz_PHm4U/edit?gid=880278574#gid=880278574"
     },
     {
      "produto": "JUNTA MÉDICA",
      "SOLICITAÇÕES": 348.0,
      "DEFERIDOS": "não se aplica",
      "INDEFERIDOS": "não se aplica",
-     "SALDO": "não se aplica",
      "EM ANALISE 3.0": "não se aplica",
-     "EM ANALISE 4.0": 348.0
+     "EM ANALISE 4.0": 348.0,
+     "link": "https://docs.google.com/spreadsheets/d/1QsV4NS9dtzLkEZp0OSFFSCJpYH0WOfpbdSrEz_PHm4U/edit?gid=880278574#gid=880278574"
     },
     {
      "produto": "LICENÇA ASSITÊNCIA",
      "SOLICITAÇÕES": 74.0,
      "DEFERIDOS": "não se aplica",
      "INDEFERIDOS": "não se aplica",
-     "SALDO": "não se aplica",
      "EM ANALISE 3.0": "não se aplica",
-     "EM ANALISE 4.0": 74.0
+     "EM ANALISE 4.0": 74.0,
+     "link": "https://docs.google.com/spreadsheets/d/1QsV4NS9dtzLkEZp0OSFFSCJpYH0WOfpbdSrEz_PHm4U/edit?gid=880278574#gid=880278574"
     },
     {
-     "produto": "ACIDENTEDE TRABALHO",
+     "produto": "ACIDENTE DE TRABALHO",
      "SOLICITAÇÕES": 3.0,
      "DEFERIDOS": "não se aplica",
      "INDEFERIDOS": "não se aplica",
-     "SALDO": "não se aplica",
      "EM ANALISE 3.0": "não se aplica",
-     "EM ANALISE 4.0": 3.0
+     "EM ANALISE 4.0": 3.0,
+     "link": "https://docs.google.com/spreadsheets/d/1QsV4NS9dtzLkEZp0OSFFSCJpYH0WOfpbdSrEz_PHm4U/edit?gid=880278574#gid=880278574"
     },
     {
      "produto": "INCAPACIDADE DEFINITIVA",
      "SOLICITAÇÕES": 1.0,
      "DEFERIDOS": "não se aplica",
      "INDEFERIDOS": "não se aplica",
-     "SALDO": "não se aplica",
      "EM ANALISE 3.0": "não se aplica",
-     "EM ANALISE 4.0": 1.0
+     "EM ANALISE 4.0": 1.0,
+     "link": "https://docs.google.com/spreadsheets/d/1QsV4NS9dtzLkEZp0OSFFSCJpYH0WOfpbdSrEz_PHm4U/edit?gid=880278574#gid=880278574"
     },
     {
-     "produto": "AGENDAMNTO DE PERÍCIA",
+     "produto": "AGENDAMENTO DE PERÍCIA",
      "SOLICITAÇÕES": 2163.0,
      "DEFERIDOS": "não se aplica",
      "INDEFERIDOS": "não se aplica",
-     "SALDO": "não se aplica",
      "EM ANALISE 3.0": "não se aplica",
-     "EM ANALISE 4.0": 2163.0
+     "EM ANALISE 4.0": 2163.0,
+     "link": "https://docs.google.com/spreadsheets/d/1QsV4NS9dtzLkEZp0OSFFSCJpYH0WOfpbdSrEz_PHm4U/edit?gid=880278574#gid=880278574"
     }
    ],
-   "link": "https://docs.google.com/spreadsheets/d/1QsV4NS9dtzLkEZp0OSFFSCJpYH0WOfpbdSrEz_PHm4U/edit?gid=880278574#gid=880278574",
-   "nota": "*Considerando o quantitativo de servidores ativos que possuem direito ao benefício, não é possível mensurar, de forma global, o saldo remanescente para gozo sem a prévia análise individualizada da situação funcional de cada servidor."
+   "link": "https://datastudio.google.com/u/0/reporting/21160219-ab66-479e-910a-cbc2721b6d65/page/p_3vm1t80r8d",
+   "nota": "Observação - Com relação a licença prêmio, considerando o quantitativo de servidores ativos que possuem direito ao benefício, não é possível mensurar, de forma global, o saldo remanescente para gozo sem a prévia análise individualizada da situação funcional de cada servidor. Informações atualizadas em 11/11/2016."
   },
   "F-04": {
    "colunas": [

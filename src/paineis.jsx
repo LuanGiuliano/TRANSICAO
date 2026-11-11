@@ -439,39 +439,123 @@ function F03() {
   )
 }
 
-/* ---------- F-05 ---------- */
+/* ---------- F-05 LICENÇAS E SAÚDE OCUPACIONAL ---------- */
 function F05() {
   const d = dados.DIFOB['F-05']
   const val = (l, k) => l[k]
   const [premio] = d.linhas
-  const preenchidas = d.linhas.filter((l) => d.colunas.some((c) => typeof l[c] === 'number'))
-  const vazias = d.linhas.filter((l) => !preenchidas.includes(l))
+
+  const numVal = (v) => (typeof v === 'number' ? v : 0)
+  const totalSolicitacoes = d.linhas.reduce((acc, l) => acc + numVal(l['SOLICITAÇÕES']), 0)
+  const totalDeferidos = d.linhas.reduce((acc, l) => acc + numVal(l['DEFERIDOS']), 0)
+  const totalIndeferidos = d.linhas.reduce((acc, l) => acc + numVal(l['INDEFERIDOS']), 0)
+  const totalEmAnalise40 = d.linhas.reduce((acc, l) => acc + numVal(l['EM ANALISE 4.0']), 0)
+  const totalEmAnalise30 = d.linhas.reduce((acc, l) => acc + numVal(l['EM ANALISE 3.0']), 0)
+  const totalEmAnalise = totalEmAnalise40 + totalEmAnalise30
+  const totalPericias = totalSolicitacoes - (premio ? numVal(premio['SOLICITAÇÕES']) : 0)
+
+  // Lista ordenada por volume de solicitações para o gráfico
+  const rankingSolicitacoes = [...d.linhas]
+    .sort((a, b) => numVal(b['SOLICITAÇÕES']) - numVal(a['SOLICITAÇÕES']))
+    .map((l) => [l.produto.toLowerCase(), numVal(l['SOLICITAÇÕES'])])
+
   return (
     <>
       <div className="kpis">
-        <Kpi rotulo="Licença-prêmio – solicitações" valor={fmt(premio['SOLICITAÇÕES'])} sub="01/01 a 30/09/2026" />
-        <Kpi rotulo="Deferidos" valor={fmt(premio['DEFERIDOS'])} cor="#2e9e6b" />
-        <Kpi rotulo="Indeferidos" valor={fmt(premio['INDEFERIDOS'])} cor="#c0504d" />
-        <Kpi rotulo="Em análise (PAE 3.0 + 4.0)" valor={fmt((premio['EM ANALISE 3.0'] || 0) + (premio['EM ANALISE 4.0'] || 0))} cor="#c4841d" />
+        <Kpi
+          rotulo="Total de solicitações"
+          valor={fmt(totalSolicitacoes)}
+          sub="10 produtos monitorados (01/01 a 30/09/2026)"
+          cor="#07547b"
+        />
+        <Kpi
+          rotulo="Deferidos (total)"
+          valor={fmt(totalDeferidos)}
+          sub="licença-prêmio, maternidade e aprimoramento"
+          cor="#2e9e6b"
+        />
+        <Kpi
+          rotulo="Em análise (PAE 4.0 + 3.0)"
+          valor={fmt(totalEmAnalise)}
+          sub={`${fmt(totalEmAnalise40)} no PAE 4.0 + ${fmt(totalEmAnalise30)} no PAE 3.0`}
+          cor="#c4841d"
+        />
+        {premio && (
+          <Kpi
+            rotulo="Licença-prêmio"
+            valor={fmt(premio['SOLICITAÇÕES'])}
+            sub={`${fmt(premio['DEFERIDOS'])} deferidos (${((numVal(premio['DEFERIDOS']) / numVal(premio['SOLICITAÇÕES'])) * 100).toFixed(0)}%)`}
+            cor="#153a4d"
+          />
+        )}
+        <Kpi
+          rotulo="Saúde e perícias"
+          valor={fmt(totalPericias)}
+          sub="agendamentos, perícias, juntas e laudos"
+          cor="#7b5ea7"
+        />
       </div>
+
       <div className="blocos">
-        <Bloco titulo="Licença-prêmio por situação">
-          <Donut dados={[['Deferidos', premio['DEFERIDOS']], ['Indeferidos', premio['INDEFERIDOS']],
-            ['Em análise 3.0', premio['EM ANALISE 3.0']], ['Em análise 4.0', premio['EM ANALISE 4.0']]].filter((x) => x[1])} />
+        <Bloco titulo="Licença-prêmio por situação" nota="Distribuição dos requerimentos de licença-prêmio na DIFOB em 2026.">
+          <Donut
+            dados={[
+              ['Deferidos', premio ? premio['DEFERIDOS'] : 0],
+              ['Indeferidos', premio ? premio['INDEFERIDOS'] : 0],
+              ['Em análise 3.0', premio ? premio['EM ANALISE 3.0'] : 0],
+              ['Em análise 4.0', premio ? premio['EM ANALISE 4.0'] : 0],
+            ].filter((x) => x[1])}
+            centro={premio ? fmt(premio['SOLICITAÇÕES']) : undefined}
+            sub="requerimentos"
+          />
         </Bloco>
-        <Bloco titulo="Solicitações por tipo de licença">
-          <HBars dados={preenchidas.map((l) => [l.produto.toLowerCase(), l['SOLICITAÇÕES'] || 0])} cor="#153a4d" />
+
+        <Bloco titulo="Solicitações por produto / tipo de afastamento" nota="Volume total de solicitações por produto da DIFOB em 2026.">
+          <HBars dados={rankingSolicitacoes} cor="#153a4d" />
         </Bloco>
       </div>
-      <Bloco titulo="Afastamentos de 01/01/2026 a 30/09/2026" span="full">
+
+      <Bloco
+        titulo="Quadro detalhado – Afastamentos, Licenças e Saúde Ocupacional"
+        span="full"
+        nota="Demonstrativo de solicitações, deferimentos e tramitação nos sistemas PAE 3.0 e PAE 4.0 (01/01 a 30/09/2026)."
+      >
         <div className="tabela-wrap">
           <table className="tabela">
-            <thead><tr><th>Produto</th>{d.colunas.map((c) => <th key={c} className="num">{c.toLowerCase()}</th>)}</tr></thead>
+            <thead>
+              <tr>
+                <th>Produto</th>
+                {d.colunas.map((c) => (
+                  <th key={c} className="num">{c.toLowerCase()}</th>
+                ))}
+                <th>Planilha / acompanhamento</th>
+              </tr>
+            </thead>
             <tbody>
-              {d.linhas.map((l) => (
-                <tr key={l.produto}>
-                  <td>{l.produto}</td>
-                  {d.colunas.map((c) => <td key={c} className="num">{typeof val(l, c) === 'number' ? fmt(val(l, c)) : val(l, c) ?? '–'}</td>)}
+              {d.linhas.map((l, idx) => (
+                <tr key={idx}>
+                  <td><strong>{l.produto}</strong></td>
+                  {d.colunas.map((c) => {
+                    const v = val(l, c)
+                    if (typeof v === 'number') {
+                      return <td key={c} className="num">{fmt(v)}</td>
+                    }
+                    if (typeof v === 'string' && /n[aã]o se aplica/i.test(v)) {
+                      return (
+                        <td key={c} className="num" style={{ color: '#9e9e9e', fontSize: 11.5 }}>
+                          não se aplica
+                        </td>
+                      )
+                    }
+                    return <td key={c} className="num">{v ?? '–'}</td>
+                  })}
+                  <td>
+                    {l.link ? (
+                      <a href={l.link} target="_blank" rel="noreferrer" style={{ fontSize: 12, color: 'var(--teal)', fontWeight: 600 }}>
+                        abrir ↗
+                      </a>
+                    ) : '–'}
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -480,15 +564,31 @@ function F05() {
                 <td>TOTAL GERAL (SOMATÓRIA FINAL)</td>
                 {d.colunas.map((c) => {
                   const soma = d.linhas.reduce((acc, l) => acc + (typeof val(l, c) === 'number' ? val(l, c) : 0), 0)
-                  return <td key={c} className="num" style={{ color: 'var(--teal)', fontWeight: 800 }}>{soma > 0 ? fmt(soma) : '–'}</td>
+                  return (
+                    <td key={c} className="num" style={{ color: 'var(--teal)', fontWeight: 800 }}>
+                      {soma > 0 ? fmt(soma) : '–'}
+                    </td>
+                  )
                 })}
+                <td />
               </tr>
             </tfoot>
           </table>
         </div>
-        {vazias.length > 0 && <p className="muted" style={{ marginTop: 10 }}>Aguardando preenchimento: {vazias.map((v) => v.produto.toLowerCase()).join(', ')}.</p>}
-        {d.nota && <p className="muted" style={{ marginTop: 6 }}>{d.nota}</p>}
-        {d.link && <a className="btn-link" href={d.link} target="_blank" rel="noreferrer">Abrir plano de acompanhamento (Data Studio) ↗</a>}
+
+        {d.nota && (
+          <div style={{ marginTop: 14, background: '#f8fafc', borderLeft: '4px solid var(--teal)', borderRadius: 6, padding: '12px 16px', fontSize: 12.5, color: 'var(--text)', lineHeight: 1.55 }}>
+            <strong style={{ color: 'var(--ink)' }}>Nota institucional DIFOB:</strong> {d.nota}
+          </div>
+        )}
+
+        {d.link && (
+          <div style={{ marginTop: 12 }}>
+            <a className="btn-link" href={d.link} target="_blank" rel="noreferrer">
+              Abrir plano de acompanhamento geral (Data Studio) ↗
+            </a>
+          </div>
+        )}
       </Bloco>
     </>
   )

@@ -182,23 +182,38 @@ res['DIOP']['F-07'] = {'links': [l for l in links if l['url']]}
 
 # ---------------- DIFOB ----------------
 wb = openpyxl.load_workbook(os.path.join(ROOT, 'DIFOB.xlsx'), data_only=True)
-res['DIFOB'] = {'capa': capa(wb.worksheets[0])}
+capa_difob = {
+    "UNIDADE E RESPONSÁVEL PRINCIPAL": "Diretoria de Folha e Benefícios (DIFOB)",
+    "COLABORADORES": "Olga Ferreira Nascimento - CFOP",
+    "ELABORADOR E CARGO": "Olga Ferreira Nascimento - Coordenadoria de Folha de Pagamento (CFOP)",
+    "AUTORIDADE QUE CONFIRMA ORIGEM E LOCALIZAÇÃO": "Hellen Nyde da Silva e Souza - Secretária Adjunta SAGEP",
+    "DATA-BASE": "30/09/2026",
+    "SERVIDOR DE REFERÊNCIA E CONTATO INSTITUCIONAL": "Gisele Almeida de Barros - Diretora de Folha e Benefícios (DIFOB) - email: gisele.barros@seduc.pa.gov.br"
+}
+res['DIFOB'] = {'capa': capa_difob}
 f5 = [s for s in wb.worksheets if 'F-05' in s.title][0]
 tab, link = [], None
-cols = [txt(f5.cell(4, c).value) for c in range(1, 9)]
+cols = [txt(f5.cell(4, c).value) for c in range(1, 8)]
+nota_f05 = None
 for r in range(5, 20):
     nome = txt(f5.cell(r, 1).value)
     if not nome or nome.startswith('*'):
         continue
+    # Linha de observação → salvar como nota e não adicionar à tabela
+    if nome.lower().startswith('observa'):
+        nota_f05 = nome
+        continue
     row = {'produto': nome}
-    for c in range(2, 8):
+    for c in range(2, 7):
         row[cols[c - 1]] = f5.cell(r, c).value
-    l = txt(f5.cell(r, 8).value)
-    if l:
-        link = l
+    lnk = txt(f5.cell(r, 7).value)
+    if lnk:
+        row['link'] = lnk
+        if not link:
+            link = lnk
     tab.append(row)
-nota = txt(f5.cell(7, 1).value)
-res['DIFOB']['F-05'] = {'colunas': cols[1:7], 'linhas': tab, 'link': link, 'nota': nota}
+nota = nota_f05 or txt(f5.cell(7, 1).value)
+res['DIFOB']['F-05'] = {'colunas': cols[1:6], 'linhas': tab, 'link': link, 'nota': nota}
 
 # F-04: Carreira e Remuneração
 f4 = [s for s in wb.worksheets if 'F-04' in s.title][0]

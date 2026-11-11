@@ -121,6 +121,14 @@ out_data = {
     'linhas_2025': l2025,
     'linhas_2026': l2026,
     'por_tipo_folha_2026': sorted([[k, v] for k, v in por_tipo_2026.items()], key=lambda x: -x[1]),
+    'cessao_seduc': {
+        'titulo': '4.2 CESSÃO PARA A SEDUC - VIA REEMBOLSO',
+        'tipo': 'CEDIDOS PARA A SEDUC',
+        'orgao_cessionario': 'VÁRIOS',
+        'quantidade': 5,
+        'orgao_pagador': 'SEDUC',
+        'valor_mensal': 81092.73
+    },
     'fonte': 'CFOP / SAGEP - Sistemas SIGRH e PAE',
     'nota': 'Ano 2026 composto por realizado (Jan a Out) e projeção CFOP (Nov, Dez e 13º Salário).'
 }
